@@ -1,0 +1,11 @@
+{
+  "generator-angular-pro": {
+    "version": "2.0.10",
+    "props": {
+      "appName": "Hadra Trance Festival 2016",
+      "target": "mobile",
+      "ui": "ionic",
+      "projectName": "hadra-trance-festival-2016"
+    }
+  }
+}

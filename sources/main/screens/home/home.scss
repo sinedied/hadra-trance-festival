@@ -1,0 +1,30 @@
+// Encapsulate component style into its own "namespace "to avoid naming and css collision
+.home-screen {
+
+  $playing-height: 100px;
+
+  .title-logo {
+    height: 200px;
+    background: url('../images/htf-2016.png') no-repeat center;
+    background-size: cover;
+  }
+
+  .has-playing {
+    bottom: $playing-height;
+  }
+
+  .playing {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: $playing-height;
+  }
+
+  .photo {
+    height: 100px;
+    border-radius: 3px;
+    background: no-repeat center;
+    background-size: cover;
+  }
+
+}

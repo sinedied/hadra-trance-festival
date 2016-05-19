@@ -1,0 +1,16 @@
+/*
+ * Global application theme.
+ * Framework overrides and customization goes here.
+ */
+
+// Enable backdrop also on mobile screens
+.active .modal-backdrop-bg {
+  opacity: .5;
+}
+
+.modal-backdrop-bg {
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+  background-color: #000;
+  opacity: 0;
+}

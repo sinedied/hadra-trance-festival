@@ -1,0 +1,41 @@
+{
+  "name": "hadra",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular-animate": "~1.4.0",
+    "angular-sanitize": "~1.4.0",
+    "angular-ui-router": "~0.2.15",
+    "moment": "~2.10.3",
+    "angular": "~1.4.0",
+    "ionic": "~1.0.1",
+    "marked": "~0.3.3",
+    "angular-gettext": "~2.1.0",
+    "ngCordova": "~0.1.17-alpha",
+    "plangular": "~3.1.1",
+    "soundcloud.custom.player": "*",
+    "jquery": "~2.1.4"
+  },
+  "overrides": {
+    "ionic": {
+      "main": [
+        "scss/ionic.scss",
+        "release/fonts/*",
+        "release/js/ionic.js",
+        "release/js/ionic-angular.js"
+      ]
+    },
+    "soundcloud.custom.player": {
+      "main": [
+        "css/sc-player-minimal.css",
+        "js/soundcloud.player.api.js",
+        "js/sc-player.js"
+      ]
+    }
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.4.0"
+  },
+  "resolutions": {
+    "angular": "~1.4.0"
+  }
+}

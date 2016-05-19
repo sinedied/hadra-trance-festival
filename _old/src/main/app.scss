@@ -1,0 +1,19 @@
+// =================================
+// Entry point for application style
+// =================================
+
+// Need to be put before bower dependencies to override ionic theme
+@import "hadra-theme/_ionic-variables.scss";
+
+/* Do not remove this comments bellow. It's the markers used by wiredep to inject
+   sass dependencies when defined in the bower.json of your dependencies */
+// bower:scss
+// endbower
+
+
+
+
+/* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
+   all your sass files automatically */
+// inject:styles
+// endinject

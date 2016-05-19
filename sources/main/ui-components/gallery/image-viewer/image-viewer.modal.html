@@ -1,0 +1,11 @@
+<ion-modal-view class="ui-gallery image-viewer" on-swipe-down="vm.closeViewer()">
+  <ion-slide-box on-slide-changed="slideChanged($index)" active-slide="vm.activeImage">
+    <ion-slide ng-repeat="image in vm.images">
+      <ion-scroll class="full" direction="xy" scrollbar-x="false" scrollbar-y="false" overflow-scroll="false" zooming="true" min-zoom="1"
+                  delegate-handle="scrollHandle{{$index}}" on-scroll="vm.updateSlideStatus(vm.activeImage)" on-release="vm.updateSlideStatus(vm.activeImage)">
+
+        <div class="image" ng-style="{ 'background-image': 'url(' + image + ')' }" ng-click="vm.closeViewer()"></div>
+      </ion-scroll>
+    </ion-slide>
+  </ion-slide-box>
+</ion-modal-view>

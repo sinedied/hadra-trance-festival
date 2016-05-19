@@ -1,0 +1,73 @@
+  <ion-side-menus id="shell" class="shell" enable-menu-with-back-views="true">
+
+    <!-- View content -->
+    <ion-side-menu-content>
+      <ion-nav-bar class="bar-calm">
+        <ion-nav-back-button></ion-nav-back-button>
+        <ion-nav-buttons side="left">
+          <button class="button button-icon button-clear ion-navicon" menu-toggle="left" ng-hide="$exposeAside.active"></button>
+        </ion-nav-buttons>
+      </ion-nav-bar>
+      <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+
+    <!-- Side menu -->
+    <ion-side-menu side="left" expose-aside-when="(min-width:769px)">
+      <ion-header-bar class="bar-dark">
+        <h1 class="title" translate>APP_NAME</h1>
+      </ion-header-bar>
+      <ion-content class="dark-bg">
+        <ion-list>
+          <ion-item class="item-dark item-icon-left" menu-close href="#/" ng-class="{ active: shell.stateContains('app.home') }">
+            <span class="medium-dark">
+              <i class="icon ion-home icon-large"> </i>
+              <span translate>Home</span>
+            </span>
+          </ion-item>
+          <ion-item class="item-dark item-icon-left text-darker" menu-close href="#/artists" ng-class="{ active: shell.stateContains('app.artists') }">
+            <span class="medium-dark">
+              <i class="icon ion-person icon-large"> </i>
+              <span translate>Artists</span>
+            </span>
+          </ion-item>
+          <ion-item class="item-dark item-icon-left text-darker" menu-close href="#/lineup" ng-class="{ active: shell.stateContains('app.lineup') }">
+            <span class="medium-dark">
+              <i class="icon ion-android-calendar icon-large"> </i>
+              <span translate>Line-up</span>
+            </span>
+          </ion-item>
+          <ion-item class="item-dark item-icon-left text-darker" menu-close href="#/map" ng-class="{ active: shell.stateContains('app.map') }">
+            <span class="medium-dark">
+              <i class="icon ion-location icon-large"> </i>
+              <span translate>Map</span>
+            </span>
+          </ion-item>
+          <ion-item class="item-dark item-icon-left text-darker" menu-close href="#/infos" ng-class="{ active: shell.stateContains('app.infos') }">
+            <span class="medium-dark">
+              <i class="icon ion-information-circled icon-large"> </i>
+              <span translate>Infos</span>
+            </span>
+          </ion-item>
+          <ion-item class="item-dark item-icon-left text-darker" menu-close href="#/favorites" ng-class="{ active: shell.stateContains('app.favorites') }">
+            <span class="medium-dark">
+              <i class="icon ion-android-favorite icon-large"> </i>
+              <span translate>Favorites</span>
+            </span>
+          </ion-item>
+          <ion-item class="item-dark item-icon-left text-darker" menu-close href="#/playlist" ng-class="{ active: shell.stateContains('app.playlist') }">
+            <span class="medium-dark">
+              <i class="icon ion-headphone icon-large"> </i>
+              <span translate>Playlist</span>
+            </span>
+          </ion-item>
+          <ion-item class="item-dark item-icon-left text-darker" menu-close href="#/about" ng-class="{ active: shell.stateContains('app.about') }">
+            <span class="medium-dark">
+              <i class="icon ion-planet icon-large"> </i>
+              <span translate>About</span>
+            </span>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-side-menu>
+
+  </ion-side-menus>
