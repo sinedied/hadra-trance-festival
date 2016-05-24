@@ -9,12 +9,11 @@
     "test": "gulp test"
   },
   "devDependencies": {
-    "cordova": "^6.1.1",
-    "gulp-insert": "^0.5.0",
     "angular-gettext-loader": "^1.0.1",
     "browser-sync": "^2.11.1",
     "browser-sync-spa": "~1.0.3",
     "chalk": "~1.1.1",
+    "cordova": "^6.1.1",
     "del": "~2.2.0",
     "gulp": "~3.9.1",
     "gulp-angular-gettext": "~2.1.0",
@@ -28,6 +27,7 @@
     "gulp-if": "^2.0.0",
     "gulp-imagemin": "~2.4.0",
     "gulp-inject": "^4.0.0",
+    "gulp-insert": "^0.5.0",
     "gulp-intercept": "^0.1.0",
     "gulp-load-plugins": "~1.2.0",
     "gulp-protractor": "^2.2.0",

@@ -10,6 +10,7 @@ export interface IApplicationConfig {
 export interface IApplicationEnvironment {
   debug: boolean;
   server: IServerConfig;
+  googleAnalyticsId: string;
 }
 
 // Do not remove the comments below, or change the values. It's the markers used by gulp build task to change the
@@ -23,21 +24,24 @@ let environment = {
     server: {
       url: '',
       route: 'api'
-    }
+    },
+    googleAnalyticsId: ''
   },
   dev: {
     debug: true,
     server: {
       url: 'http://api.icndb.com',
       route: ''
-    }
+    },
+    googleAnalyticsId: ''
   },
   prod: {
     debug: false,
     server: {
       url: 'http://api.icndb.com',
       route: ''
-    }
+    },
+    googleAnalyticsId: ''
   }
 };
 // endreplace

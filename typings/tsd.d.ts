@@ -33,3 +33,4 @@
 /// <reference path="jquery/jquery.d.ts" />
 /// <reference path="lodash/lodash.d.ts" />
 /// <reference path="webpack/webpack-env.d.ts" />
+/// <reference path="angulartics/angulartics.d.ts" />

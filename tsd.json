@@ -6,42 +6,40 @@
   "bundle": "typings/tsd.d.ts",
   "installed": {
     "angularjs/angular.d.ts": {
-      "commit": "544a35a10866b32afda9c7f029c0764558563f4f"
+      "commit": "8d252184e421915fbc9f56a5debcb098e0d2d68d"
     },
     "webpack/webpack-env.d.ts": {
       "commit": "544a35a10866b32afda9c7f029c0764558563f4f"
     },
-
     "ionic/ionic.d.ts": {
-      "commit": "544a35a10866b32afda9c7f029c0764558563f4f"
+      "commit": "8d252184e421915fbc9f56a5debcb098e0d2d68d"
     },
-
     "angular-ui-router/angular-ui-router.d.ts": {
-      "commit": "544a35a10866b32afda9c7f029c0764558563f4f"
+      "commit": "8d252184e421915fbc9f56a5debcb098e0d2d68d"
     },
     "angular-gettext/angular-gettext.d.ts": {
-      "commit": "544a35a10866b32afda9c7f029c0764558563f4f"
+      "commit": "8d252184e421915fbc9f56a5debcb098e0d2d68d"
     },
     "jasmine-jquery/jasmine-jquery.d.ts": {
-      "commit": "544a35a10866b32afda9c7f029c0764558563f4f"
+      "commit": "8d252184e421915fbc9f56a5debcb098e0d2d68d"
     },
     "jasmine/jasmine.d.ts": {
-      "commit": "544a35a10866b32afda9c7f029c0764558563f4f"
+      "commit": "8d252184e421915fbc9f56a5debcb098e0d2d68d"
     },
     "angularjs/angular-mocks.d.ts": {
-      "commit": "544a35a10866b32afda9c7f029c0764558563f4f"
+      "commit": "8d252184e421915fbc9f56a5debcb098e0d2d68d"
     },
     "angularjs/angular-animate.d.ts": {
-      "commit": "544a35a10866b32afda9c7f029c0764558563f4f"
+      "commit": "8d252184e421915fbc9f56a5debcb098e0d2d68d"
     },
     "angularjs/angular-sanitize.d.ts": {
-      "commit": "544a35a10866b32afda9c7f029c0764558563f4f"
+      "commit": "8d252184e421915fbc9f56a5debcb098e0d2d68d"
     },
     "jquery/jquery.d.ts": {
-      "commit": "544a35a10866b32afda9c7f029c0764558563f4f"
+      "commit": "8d252184e421915fbc9f56a5debcb098e0d2d68d"
     },
     "lodash/lodash.d.ts": {
-      "commit": "544a35a10866b32afda9c7f029c0764558563f4f"
+      "commit": "8d252184e421915fbc9f56a5debcb098e0d2d68d"
     },
     "cordova/cordova.d.ts": {
       "commit": "544a35a10866b32afda9c7f029c0764558563f4f"
@@ -111,6 +109,9 @@
     },
     "cordova-ionic/plugins/keyboard.d.ts": {
       "commit": "544a35a10866b32afda9c7f029c0764558563f4f"
+    },
+    "angulartics/angulartics.d.ts": {
+      "commit": "8d252184e421915fbc9f56a5debcb098e0d2d68d"
     }
   }
 }
