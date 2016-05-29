@@ -20,6 +20,18 @@
     height: $playing-height;
   }
 
+  .image-gallery {
+    .ui-gallery {
+      margin-top: 0;
+      white-space: nowrap;
+
+      .image-thumbnail {
+        border-radius: 3px;
+      }
+
+    }
+  }
+
   .photo {
     height: 100px;
     border-radius: 3px;

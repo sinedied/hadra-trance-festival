@@ -3,6 +3,9 @@
  * Framework overrides and customization goes here.
  */
 
+// Modals
+// --------------------
+
 // Enable backdrop also on mobile screens
 .active .modal-backdrop-bg {
   opacity: .5;
@@ -13,4 +16,20 @@
   transition: opacity 300ms ease-in-out;
   background-color: #000;
   opacity: 0;
+}
+
+// Cards
+// --------------------
+
+.card-close .list.card {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+// Icons
+// --------------------
+
+// Use font awesome as ionic icons
+.ion-fa:before {
+  font-family: FontAwesome;
 }

@@ -3,15 +3,43 @@
  * No theme-related style should goes here, only general helpers.
  */
 
- // Layout helpers
- // --------------
+// Helper functions
+// ----------------
 
- // Center a block element vertically
- .block-vertical-center {
-	 position: relative;
-	 top: 50%;
-	 transform: translateY(-50%);
- }
+@function shade($color, $value){
+  @return mix(#000, $color, $value);
+}
+
+@function tint($color, $value){
+  @return mix(#fff, $color, $value);
+}
+
+// Layout helpers
+// --------------
+
+.relative {
+  position: relative;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.no-padding {
+  padding: 0;
+}
 
 .no-margin {
   margin: 0 !important;
@@ -21,15 +49,57 @@
   padding: 0 !important;
 }
 
+.space-top {
+  margin-top: $padding-base-vertical;
+}
+
+.space-top-big {
+  margin-top: $padding-big;
+}
+
+.space-top-large {
+  margin-top: $padding-large-vertical;
+}
+
+.space-bottom {
+  margin-bottom: $padding-base-vertical;
+}
+
+.space-bottom-big {
+  margin-bottom: $padding-big;
+}
+
+.space-bottom-large {
+  margin-bottom: $padding-large-vertical;
+}
+
+.space-left {
+  margin-left: $padding-base-horizontal / 2;
+}
+
+.space-right {
+  margin-right: $padding-base-horizontal / 2;
+}
+
+// Center a block element vertically
+.block-vertical-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// Text overflow with ellipsis for single line blocks
+.text-overflow {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
 .text-white {
   color: #fff;
 }
 
-.ion-fa:before {
-  font-family: FontAwesome;
-}
-
-.card-close .list.card {
-  margin-top: 0;
-  margin-bottom: 0;
-}

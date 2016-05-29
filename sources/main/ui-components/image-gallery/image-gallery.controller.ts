@@ -1,6 +1,6 @@
 import app from 'main.module';
 
-export class GalleryController {
+export class ImageGalleryController {
 
   activeImage: number;
   modal: ionic.modal.IonicModalController;
@@ -36,5 +36,5 @@ export class GalleryController {
 
 }
 
-app.controller('galleryController', GalleryController);
+app.controller('imageGalleryController', ImageGalleryController);
 

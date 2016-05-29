@@ -2,9 +2,6 @@ import app from 'main.module';
 import {ILogger, LoggerService} from 'helpers/logger/logger';
 import {QuoteService} from 'web-services/quote/quote.service';
 
-/**
- * Displays the home screen.
- */
 export class HomeController {
 
   isLoading: boolean = true;
@@ -13,13 +10,16 @@ export class HomeController {
     'images/home/party1.jpg',
     'images/home/party2.jpg',
     'images/home/party3.jpg',
-    'images/home/party4.jpg'
+    'images/home/party4.jpg',
+    'images/home/party2.jpg?',
+    'images/home/party3.jpg?'
   ];
 
   private logger: ILogger;
   private quoteService: QuoteService;
 
-  constructor(logger: LoggerService,
+  constructor(private $cordovaInAppBrowser: any,
+              logger: LoggerService,
               quoteService: QuoteService) {
 
     this.logger = logger.getLogger('home');
@@ -35,6 +35,10 @@ export class HomeController {
       .finally(() => {
         this.isLoading = false;
       });
+  }
+
+  open(url: string) {
+    this.$cordovaInAppBrowser.open(url, '_system');
   }
 
 }
