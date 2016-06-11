@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.company.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>App</name>
+<widget id="org.nxcode.htf2016" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Hadra Festival</name>
   <description>
-    A mobile app based on Ionic and Cordova.
+    Hadra Trance Festival 2016 official app.
   </description>
-  <author email="you@example.com" href="http://example.com.com/">
-    Your Name Here
+  <author email="contact@nxcode.org" href="http://www.nxcode.org">
+    Yohan Lasorsa
   </author>
   <content src="index.html"/>
   <access origin="*"/>
@@ -64,7 +64,7 @@
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="Orientation" value="portrait"/>
-  <preference name="StatusBarStyle" value="default"/>
+  <preference name="StatusBarStyle" value="lightcontent"/>
   <preference name="AutoHideSplashScreen" value="false"/>
   <preference name="SplashScreen" value="screen"/>
   <preference name="SplashScreenDelay" value="3000"/>
