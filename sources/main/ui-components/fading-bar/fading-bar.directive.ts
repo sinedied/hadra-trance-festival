@@ -28,7 +28,7 @@ import app from 'main.module';
 import {FadingBarService} from 'fading-bar.service';
 
 const SCROLL_THRESHOLD: number = 20;
-const BAR_HEIGHT: number = 20;
+const BAR_HEIGHT: number = 44;
 
 function fadingBarDirective(fadingBarService: FadingBarService,
                             $rootScope: ng.IRootScopeService): ng.IDirective {
@@ -37,7 +37,8 @@ function fadingBarDirective(fadingBarService: FadingBarService,
     link: ($scope: ng.IScope, $element: any, $attr: any) => {
       let targetColor = $attr.fadeToRgb.split(',');
       let imageHeight = parseInt($attr.fadingBar, 10);
-      let navbars = fadingBarService.getNavBars();
+      let navbars = fadingBarService.navbars;
+      let titles = fadingBarService.titles;
       let opacity = 0;
 
       $element.css({top: 0});
@@ -74,6 +75,12 @@ function fadingBarDirective(fadingBarService: FadingBarService,
               borderColor: 'rgba(' + targetColor[0] + ', ' + targetColor[1] + ', ' + targetColor[2] + ', ' + opacity + ')',
               backgroundImage: 'none',
               backgroundColor: 'rgba(' + targetColor[0] + ', ' + targetColor[1] + ', ' + targetColor[2] + ', ' + opacity + ')'
+            });
+          }
+          for (let i = 0; i < titles.length; ++i) {
+            let title = angular.element(titles[i]);
+            title.css({
+              opacity: opacity,
             });
           }
         });

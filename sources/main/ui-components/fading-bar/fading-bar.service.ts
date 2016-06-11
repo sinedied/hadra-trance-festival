@@ -28,9 +28,11 @@ import app from 'main.module';
 
 export class FadingBarService {
   navbars: any;
+  titles: any;
 
   constructor($document: any) {
     this.navbars = $document[0].body.querySelectorAll('.nav-bar-block ion-header-bar');
+    this.titles = $document[0].body.querySelectorAll('.nav-bar-block ion-header-bar .title');
   }
 
   makeNavBarTransparent() {
@@ -40,6 +42,12 @@ export class FadingBarService {
         borderColor: 'transparent',
         backgroundImage: 'none',
         backgroundColor: 'transparent'
+      });
+    }
+    for (let i = 0; i < this.titles.length; ++i) {
+      let title = angular.element(this.titles[i]);
+      title.css({
+        opacity: 0,
       });
     }
   }
@@ -53,10 +61,12 @@ export class FadingBarService {
         backgroundColor: ''
       });
     }
-  }
-
-  getNavBars() {
-    return this.navbars;
+    for (let i = 0; i < this.titles.length; ++i) {
+      let title = angular.element(this.titles[i]);
+      title.css({
+        opacity: '',
+      });
+    }
   }
 
 }
