@@ -35,7 +35,7 @@ function mainConfig($provide: ng.auto.IProvideService,
   $compileProvider.debugInfoEnabled(env.debug);
 
   // Setup analytics
-  if (!env.debug) {
+  if (!env.debug && (<any>window).ga) {
     // TODO: add device UUID for mobile
     // Warning, breaks unit test if included in debug!
     (<any>window).ga('create', env.googleAnalyticsId, 'none');
