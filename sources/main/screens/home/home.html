@@ -1,15 +1,18 @@
 <ion-view id="home-screen" class="home-screen">
   <ion-nav-title>{{viewTitle}}</ion-nav-title>
-  <ion-content class="has-playing">
+  <ion-content class="has-playing" fading-bar="200" fade-to-rgb="68,68,68" state-name="app.home">
     <div class="padding text-center title-logo">
+      <br><br>
       <h1 class="text-white ">HTF 2016 Flyer Logo</h1>
     </div>
     <div class="row">
       <div class="col">
-        <button class="button button-calm button-block no-margin icon-left ion-fa fa-ticket" translate>Tickets</button>
+        <button class="button button-calm button-block no-margin icon-left ion-fa fa-ticket" analytics-on="click" analytics-event="Tickets"
+                ng-click="vm.open('http://www.hadra.net/shop/new/category.php?id_category=6')" translate>Tickets</button>
       </div>
       <div class="col">
-        <button class="button button-royal button-block no-margin icon-left ion-fa fa-shopping-bag" translate>Shop</button>
+        <button class="button button-royal button-block no-margin icon-left ion-fa fa-shopping-bag" analytics-on="click" analytics-event="Shop"
+                ng-click="vm.open('http://www.hadra.net/shop/new/')" translate>Shop</button>
       </div>
     </div>
     <ion-list type="card" class="text-center card-close">
@@ -19,7 +22,15 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.        </p>
       </ion-item>
     </ion-list>
-    <gallery images="vm.images"></gallery>
+    <div class="space-top-large"></div>
+    <h5 class="padding no-margin dark" translate>Featured artists</h5>
+    <div class="image-gallery">
+      <ion-scroll direction="x" image-gallery images="vm.images"></ion-scroll>
+    </div>
+    <h5 class="padding no-margin dark" translate>Photos from last year's edition</h5>
+    <div class="image-gallery">
+      <ion-scroll direction="x" image-gallery images="vm.images"></ion-scroll>
+    </div>
   </ion-content>
   <div class="playing dark-bg">
     TODO
