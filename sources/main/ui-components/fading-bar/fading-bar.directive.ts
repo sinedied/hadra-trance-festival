@@ -44,7 +44,8 @@ function fadingBarDirective(fadingBarService: FadingBarService,
       fadingBarService.makeNavBarTransparent();
 
       function onScroll(event: any) {
-        let scrollTop = event.detail.scrollTop;
+        let detail = event.detail || event.target;
+        let scrollTop = detail.scrollTop;
         if (scrollTop <= imageHeight - BAR_HEIGHT) {
           handleNavBarFade(scrollTop);
         } else {
