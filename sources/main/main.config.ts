@@ -9,7 +9,7 @@ function mainConfig($provide: ng.auto.IProvideService,
                     $analyticsProvider: angulartics.IAnalyticsServiceProvider,
                     $compileProvider: ng.ICompileProvider,
                     config: IApplicationConfig) {
-  
+
   let env = config.environment;
 
   // Extend the $exceptionHandler service to output logs.

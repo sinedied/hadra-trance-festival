@@ -12,5 +12,6 @@ export default angular.module('app', [
   'ngSanitize',
   'ngCordova',
   'ui.router',
-  'ionic'
+  'ionic',
+  'angulartics'
 ]);
