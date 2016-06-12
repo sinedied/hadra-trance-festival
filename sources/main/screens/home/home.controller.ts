@@ -1,11 +1,10 @@
 import app from 'main.module';
 import {ILogger, LoggerService} from 'helpers/logger/logger';
-import {QuoteService} from 'web-services/quote/quote.service';
 
 export class HomeController {
 
-  isLoading: boolean = true;
-  quote: string = null;
+  isLoading = true;
+  animate = false;
   images = [
     'images/home/party1.jpg',
     'images/home/party2.jpg',
@@ -16,25 +15,23 @@ export class HomeController {
   ];
 
   private logger: ILogger;
-  private quoteService: QuoteService;
 
   constructor(private $cordovaInAppBrowser: any,
-              logger: LoggerService,
-              quoteService: QuoteService) {
+              $scope: ng.IScope,
+              $interval: ng.IIntervalService,
+              logger: LoggerService) {
 
     this.logger = logger.getLogger('home');
-    this.quoteService = quoteService;
-
     this.logger.log('init');
 
-    this.quoteService
-      .getRandomJoke({category: 'nerdy'})
-      .then((quote: string) => {
-        this.quote = quote;
-      })
-      .finally(() => {
-        this.isLoading = false;
-      });
+    // Trigger pound animation
+    let poundPromise = $interval(() => {
+      this.animate = !this.animate;
+    }, 5000);
+
+    $scope.$on('destroy', () => {
+      $interval.cancel(poundPromise);
+    });
   }
 
   open(url: string) {

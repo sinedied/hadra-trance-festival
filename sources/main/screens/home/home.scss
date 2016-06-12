@@ -8,8 +8,8 @@
     background: url('../images/htf-2016-banner.jpg') center/cover no-repeat;
   }
 
-  .has-playing {
-    bottom: $playing-height;
+  .has-playing > .scroll {
+    padding-bottom: $playing-height;
   }
 
   .playing {
@@ -17,6 +17,7 @@
     bottom: 0;
     width: 100%;
     height: $playing-height;
+    background: transparentize($royal, .15);
   }
 
   .image-gallery {
@@ -36,6 +37,26 @@
     border-radius: 3px;
     background: no-repeat center;
     background-size: cover;
+  }
+
+  @keyframes pound {
+    to {
+      transform: scale(1.1);
+    }
+  }
+
+  .pound {
+    animation: pound .2s 8 alternate;
+    transform-origin: center
+  }
+
+  .speaker {
+    height: ($playing-height - 2*$content-padding);
+    margin: $content-padding;
+  }
+
+  .playing-info {
+    padding: $content-padding;
   }
 
 }

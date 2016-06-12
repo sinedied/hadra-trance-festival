@@ -13,5 +13,6 @@ export default angular.module('app', [
   'ngCordova',
   'ui.router',
   'ionic',
-  'angulartics'
+  'angulartics',
+  'ion-affix'
 ]);
