@@ -34,9 +34,9 @@ function fadingBarDirective(fadingBarService: FadingBarService,
                             $rootScope: ng.IRootScopeService): ng.IDirective {
   return {
     restrict: 'A',
-    link: ($scope: ng.IScope, $element: any, $attr: any) => {
-      let targetColor = $attr.fadeToRgb.split(',');
-      let imageHeight = parseInt($attr.fadingBar, 10);
+    link: ($scope: ng.IScope, $element: ng.IAugmentedJQuery, $attr: ng.IAttributes) => {
+      let targetColor = $attr['fadeToRgb'].split(',');
+      let imageHeight = parseInt($attr['fadingBar'], 10);
       let navbars = fadingBarService.navbars;
       let titles = fadingBarService.titles;
       let opacity = 0;
@@ -89,13 +89,13 @@ function fadingBarDirective(fadingBarService: FadingBarService,
       $element.bind('scroll', onScroll);
 
       $rootScope.$on('$stateChangeStart', (event: any, toState: any) => {
-        if (toState.name !== $attr.stateName) {
+        if (toState.name !== $attr['stateName']) {
           fadingBarService.resetNavBar();
         }
       });
 
       $rootScope.$on('$stateChangeSuccess', (event: any, toState: any) => {
-        if (toState.name === $attr.stateName) {
+        if (toState.name === $attr['stateName']) {
           setOpacityToNavBar();
         }
       });

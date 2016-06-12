@@ -1,0 +1,9 @@
+<ion-view id="artists-screen" class="artists-screen">
+  <ion-nav-title>{{viewTitle}}</ion-nav-title>
+  <ion-content class="dark-bg">
+    <div class="artist-tile" ng-repeat="artist in vm.artists track by $index" bg-image="artist.photo">
+      <h3 class="name">{{artist.name}}</h3>
+      <div class="type">{{artist.type}}</div>
+    </div>
+  </ion-content>
+</ion-view>

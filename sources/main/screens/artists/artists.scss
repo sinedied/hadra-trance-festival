@@ -1,0 +1,45 @@
+// Encapsulate component style into its own "namespace "to avoid naming and css collision
+.artists-screen {
+
+  .artist-tile {
+    $tile-height: 140px;
+    $type-height: 40px;
+    $name-height: $tile-height - $type-height;
+
+    position: relative;
+    float: left;
+    width: 50%;
+    height: $tile-height;
+    overflow: hidden;
+
+    .name {
+      position: absolute;
+      padding: $padding-small;
+      margin: 0;
+      top: ($name-height / 2);
+      transform: translateY(-50%);
+      width: 100%;
+      max-height: $name-height;
+      text-align: center;
+      text-shadow: 0 0 8px $black, 0 0 2px $superdark;
+      overflow: hidden;
+      color: $white;
+    }
+
+    .type {
+      position: absolute;
+      bottom: 0;
+      height: $type-height;
+      width: 100%;
+      text-align: center;
+      background: transparentize(#000, 0.4);
+      line-height: $type-height;
+      color: $lightgrey;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+  }
+
+
+}
