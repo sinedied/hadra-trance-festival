@@ -1,0 +1,21 @@
+<ion-view id="lineup-screen" class="lineup-screen">
+  <ion-nav-title>{{viewTitle}}</ion-nav-title>
+  <div class="bar bar-subheader">
+    <div class="button-bar ">
+      <a class="button active button-royal" translate>Main floor</a>
+      <a class="button button-royal" translate>Alternative floor</a>
+      <a class="button button-royal" translate>Third floor</a>
+    </div>
+  </div>
+  <ion-content class="dark-bg has-subheader" overflow-scroll="false">
+    <ion-list>
+      <div class="item item-divider" ion-affix data-affix-within-parent-with-class="list">
+        {{'Thursday' | translate}}
+      </div>
+      <ion-item class="item-icon-right" ng-repeat="set in vm.lineup">
+        {{set.artist}}
+        <i class="icon ion-ios-arrow-forward"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
