@@ -13,6 +13,7 @@ function main($window: ng.IWindowService,
               $state: angular.ui.IStateService,
               $timeout: ng.ITimeoutService,
               $cordovaKeyboard: any,
+              $cordovaStatusbar: any,
               $ionicPlatform: ionic.platform.IonicPlatformService,
               gettextCatalog: angular.gettext.gettextCatalog,
               _: _.LoDashStatic,
@@ -119,6 +120,11 @@ function main($window: ng.IWindowService,
 
         if ($window.cordova.plugins.Keyboard) {
           $cordovaKeyboard.disableScroll(true);
+        }
+
+        // Set status bar color on Android ($royal +15% luminance)
+        if (ionic.Platform.isAndroid()) {
+          $cordovaStatusbar.styleHex('#75044a');
         }
 
         window.open = (<any>$window.cordova).InAppBrowser.open;
