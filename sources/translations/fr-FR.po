@@ -14,7 +14,7 @@ msgstr "A propos"
 #: modules/screens/about/about.html:7
 #: modules/shell/shell.html:17
 msgid "APP_NAME"
-msgstr "Hadra Trance Festival 2016"
+msgstr "Hadra Trance Festival"
 
 #: modules/screens/home/home.html:7
 msgid "Hello world !"
