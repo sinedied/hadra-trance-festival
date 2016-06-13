@@ -8,8 +8,8 @@
     background: url('../images/htf-2016-banner.jpg') center/cover no-repeat;
   }
 
-  .has-playing > .scroll {
-    padding-bottom: $playing-height;
+  .has-playing-spacer {
+    height: $playing-height;
   }
 
   .playing {
@@ -46,7 +46,7 @@
   }
 
   .pound {
-    animation: pound .2s 8 alternate;
+    animation: pound .15s 8 alternate;
     transform-origin: center
   }
 
@@ -57,6 +57,10 @@
 
   .playing-info {
     padding: $content-padding;
+
+    .extra-info {
+      margin: 6px 0;
+    }
   }
 
 }

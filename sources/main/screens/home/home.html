@@ -1,6 +1,6 @@
 <ion-view id="home-screen" class="home-screen">
   <ion-nav-title>{{viewTitle}}</ion-nav-title>
-  <ion-content class="has-playing" fading-bar="200" fade-to-rgb="79,10,54" state-name="app.home">
+  <ion-content fading-bar="200" fade-to-rgb="79,10,54" state-name="app.home">
     <div class="padding title-logo"></div>
     <div class="row">
       <div class="col">
@@ -22,19 +22,21 @@
     <div class="space-top-large"></div>
     <h5 class="padding no-margin dark" translate>Featured artists</h5>
     <div class="image-gallery">
-      <ion-scroll direction="x" image-gallery images="vm.images"></ion-scroll>
+      <ion-scroll direction="x" image-gallery images="vm.images" overflow-scroll="false"></ion-scroll>
     </div>
     <h5 class="padding no-margin dark" translate>Photos from last year's edition</h5>
     <div class="image-gallery">
-      <ion-scroll direction="x" image-gallery images="vm.images"></ion-scroll>
+      <ion-scroll direction="x" image-gallery images="vm.images" overflow-scroll="false"></ion-scroll>
     </div>
+    <div class="has-playing-spacer"></div>
   </ion-content>
   <div class="playing dark-bg">
     <img class="speaker left" src="images/speaker.png" ng-class="{pound: vm.animate}"/>
     <img class="speaker right" src="images/speaker.png" ng-class="{pound: vm.animate}"/>
     <div class="playing-info text-center block-vertical-center">
-      <h3 class="artist text-white text-overflow">The Green Nuns of the Revolution</h3>
-      <h4 class="time text-white">22:00 - 0:00</h4>
+      <h5 class="extra-info text-white">Main floor</h5>
+      <h3 class="text-white text-overflow no-margin">The Green Nuns of the Revolution</h3>
+      <h4 class="extra-info text-white">22:00 - 0:00</h4>
     </div>
   </div>
 </ion-view>
