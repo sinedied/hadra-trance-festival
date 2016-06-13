@@ -6,7 +6,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "publish:demo": "gulp build:demo && cd dist && git init && git remote add origin https://github.com/sinedied/hadra-trance-festival.git && git checkout --orphan gh-pages && git add . && git commit -m 'Initial commit' && git push -u origin gh-pages"
   },
   "devDependencies": {
     "angular-gettext-loader": "^1.0.1",
