@@ -6,6 +6,8 @@
 
 An awesome project scaffolded by the [angular-pro](https://github.com/angular-starter-kit/generator-angular-pro) Yeoman generator!
 
+See [Hadra website](http://www.hadra.net/index.php?goto=/festival.php) for more info about the festival.
+
 # Getting started
 
 1. Install required tool `gulp` and `bower`:
