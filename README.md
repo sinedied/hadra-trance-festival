@@ -1,5 +1,7 @@
 # Hadra Trance Festival 2016
 
+[![Build status](https://img.shields.io/travis/sinedied/hadra-trance-festival/master.svg)](https://travis-ci.org/sinedied/hadra-trance-festival)
+
 > WIP
 
 An awesome project scaffolded by the [angular-pro](https://github.com/angular-starter-kit/generator-angular-pro) Yeoman generator!
