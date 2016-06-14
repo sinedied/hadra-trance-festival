@@ -47,7 +47,7 @@ export class FadingBarService {
     for (let i = 0; i < this.titles.length; ++i) {
       let title = angular.element(this.titles[i]);
       title.css({
-        opacity: 0,
+        color: 'rgba(255,255,255,0'
       });
     }
   }
@@ -64,7 +64,7 @@ export class FadingBarService {
     for (let i = 0; i < this.titles.length; ++i) {
       let title = angular.element(this.titles[i]);
       title.css({
-        opacity: '',
+        color: ''
       });
     }
   }

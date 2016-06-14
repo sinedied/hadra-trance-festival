@@ -80,7 +80,7 @@ function fadingBarDirective(fadingBarService: FadingBarService,
           for (let i = 0; i < titles.length; ++i) {
             let title = angular.element(titles[i]);
             title.css({
-              opacity: opacity,
+              color: 'rgba(255,255,255,' + opacity + ')'
             });
           }
         });
