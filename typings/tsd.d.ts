@@ -34,3 +34,4 @@
 /// <reference path="lodash/lodash.d.ts" />
 /// <reference path="webpack/webpack-env.d.ts" />
 /// <reference path="angulartics/angulartics.d.ts" />
+/// <reference path="googlemaps/google.maps.d.ts" />

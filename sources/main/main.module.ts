@@ -14,5 +14,7 @@ export default angular.module('app', [
   'ui.router',
   'ionic',
   'angulartics',
-  'ion-affix'
+  'angulartics.google.analytics',
+  'ion-affix',
+  'uiGmapgoogle-maps'
 ]);
