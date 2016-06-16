@@ -9,7 +9,7 @@ var $ = require('gulp-load-plugins')();
 
 gulp.task('copy:demo', function() {
   var outPath = 'dist';
-  del.sync([outPath]);
+  del.sync([path.join(outPath, '**')]);
 
   return gulp.src(path.join('demo', '**/*'))
     .pipe(gulp.dest(outPath));
