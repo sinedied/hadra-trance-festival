@@ -86,6 +86,7 @@ function main($window: ng.IWindowService,
     let _logger: ILogger = logger.getLogger('main');
     // Enable debug mode for translations
     gettextCatalog.debug = config.environment.debug;
+    gettextCatalog.debugPrefix = 'T_';
 
     vm.setLanguage();
 
@@ -100,7 +101,7 @@ function main($window: ng.IWindowService,
       if (splashScreen) {
         $timeout(() => {
           splashScreen.hide();
-        }, 1000);
+        }, 2000);
       }
 
       // Detect and set default language
@@ -122,9 +123,9 @@ function main($window: ng.IWindowService,
           $cordovaKeyboard.disableScroll(true);
         }
 
-        // Set status bar color on Android ($royal +15% luminance)
+        // Set status bar color on Android ($royal -10% luminance)
         if (ionic.Platform.isAndroid()) {
-          $cordovaStatusbar.styleHex('#75044a');
+          $cordovaStatusbar.styleHex('#360222');
         }
 
         window.open = (<any>$window.cordova).InAppBrowser.open;
