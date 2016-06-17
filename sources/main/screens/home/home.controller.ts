@@ -1,5 +1,6 @@
 import app from 'main.module';
 import {ILogger, LoggerService} from 'helpers/logger/logger';
+import {ScrollService} from 'helpers/scroll/scroll.service';
 
 export class HomeController {
 
@@ -19,7 +20,8 @@ export class HomeController {
   constructor(private $cordovaInAppBrowser: any,
               $scope: ng.IScope,
               $interval: ng.IIntervalService,
-              logger: LoggerService) {
+              logger: LoggerService,
+              scrollService: ScrollService) {
 
     this.logger = logger.getLogger('home');
     this.logger.log('init');
@@ -32,6 +34,9 @@ export class HomeController {
     $scope.$on('destroy', () => {
       $interval.cancel(poundPromise);
     });
+
+    scrollService.fixXScrollWithHandle('artists-scroll');
+    scrollService.fixXScrollWithHandle('photos-scroll');
   }
 
   open(url: string) {

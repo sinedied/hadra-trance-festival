@@ -22,11 +22,11 @@
     <div class="space-top-large"></div>
     <h5 class="padding no-margin dark" translate>Featured artists</h5>
     <div class="image-gallery">
-      <ion-scroll direction="x" image-gallery images="vm.images" overflow-scroll="false"></ion-scroll>
+      <ion-scroll direction="x" delegate-handle="artists-scroll" image-gallery images="vm.images"></ion-scroll>
     </div>
     <h5 class="padding no-margin dark" translate>Photos from last year's edition</h5>
     <div class="image-gallery">
-      <ion-scroll direction="x" image-gallery images="vm.images" overflow-scroll="false"></ion-scroll>
+      <ion-scroll direction="x" delegate-handle="photos-scroll" image-gallery images="vm.images"></ion-scroll>
     </div>
     <div class="has-playing-spacer"></div>
   </ion-content>
