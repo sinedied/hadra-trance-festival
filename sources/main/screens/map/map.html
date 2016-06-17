@@ -1,7 +1,7 @@
 <ion-view id="map-screen" class="map-screen">
   <ion-nav-title>{{viewTitle}}</ion-nav-title>
-  <ion-content scroll="false">
-    <div ui-loading="vm.isMapLoading" ng-class="vm.isMapLoading ? 'padding' : ''"></div>
+  <ion-content scroll="false" class="dark-bg">
+    <div class="block-vertical-center text-white" ui-loading="vm.isMapLoading" ng-class="vm.isMapLoading ? 'padding' : ''"></div>
     <ui-gmap-google-map data-tap-disabled="true" ng-show="!vm.isMapLoading" center="vm.map.center" zoom="vm.map.zoom" options="vm.map.options"></ui-gmap-google-map>
   </ion-content>
 </ion-view>
