@@ -30,7 +30,6 @@ export class ImageGalleryController {
 
   updateSlideStatus(index: number) {
     let zoomFactor = (<any>this.$ionicScrollDelegate.$getByHandle('scrollHandle' + index).getScrollPosition()).zoom;
-    console.log(zoomFactor);
     this.$ionicSlideBoxDelegate.enableSlide(zoomFactor === 1);
   }
 
