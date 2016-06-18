@@ -75,16 +75,6 @@ function routeConfig($stateProvider: angular.ui.IStateProvider,
       },
       data: {title: gettext('Infos')}
     })
-    .state('app.favorites', {
-      url: '/favorites',
-      views: {
-        'menuContent': {
-          template: <string>require('screens/favorites/favorites.html'),
-          controller: 'favoritesController as vm',
-        }
-      },
-      data: {title: gettext('Favorites')}
-    })
     .state('app.playlist', {
       url: '/playlist',
       views: {

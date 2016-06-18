@@ -3,6 +3,7 @@ import {ILogger, LoggerService} from 'helpers/logger/logger';
 
 export class ArtistsController {
 
+  showFavorites = false;
   artists = [
     {
       name: 'Sine Die',
@@ -43,6 +44,10 @@ export class ArtistsController {
 
   showArtist(id: number) {
     this.$state.go('app.artist', {artistId: id});
+  }
+
+  showAll(show: boolean) {
+    this.showFavorites = !show;
   }
 
 }

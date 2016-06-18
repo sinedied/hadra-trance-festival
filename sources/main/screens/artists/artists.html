@@ -1,5 +1,12 @@
 <ion-view id="artists-screen" class="artists-screen royal-bg">
-  <ion-nav-title>{{viewTitle}}</ion-nav-title>
+  <ion-nav-title>
+    <div class="favorites-filter button-bar">
+      <button class="button button-small button-outline" ng-class="{ active: !vm.showFavorites }"
+              ng-click="vm.showAll(true)" translate>All</button>
+      <button class="button button-small button-outline" ng-class="{ active: vm.showFavorites }"
+              ng-click="vm.showAll(false)" translate>Favorites</button>
+    </div>
+  </ion-nav-title>
   <ion-content class="dark-bg">
     <div class="artist-tile" ng-repeat="artist in vm.artists track by $index" ng-click="vm.showArtist($index)">
       <div class="artist-photo" bg-image="artist.photo"></div>
