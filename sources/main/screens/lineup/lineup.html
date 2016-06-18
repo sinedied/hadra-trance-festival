@@ -5,7 +5,7 @@
   </ion-nav-buttons>
   <div class="bar bar-subheader">
     <div class="button-bar">
-      <a class="button button-royal" ng-repeat="floor in vm.floors" ng-click="vm.selectFloor($index)"
+      <a class="button button-positive" ng-repeat="floor in vm.floors" ng-click="vm.selectFloor($index)"
          ng-class="{ active: vm.selectedFloor === $index }" translate>{{floor.name}}</a>
     </div>
   </div>
