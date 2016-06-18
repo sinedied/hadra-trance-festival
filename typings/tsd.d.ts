@@ -35,3 +35,5 @@
 /// <reference path="webpack/webpack-env.d.ts" />
 /// <reference path="angulartics/angulartics.d.ts" />
 /// <reference path="googlemaps/google.maps.d.ts" />
+/// <reference path="moment/moment-node.d.ts" />
+/// <reference path="moment/moment.d.ts" />
