@@ -4,6 +4,7 @@
   $playing-height: 100px;
 
   .title-logo {
+    transform: translate3d(0,0,0);
     height: 200px;
     background: url('../images/htf-2016-banner.jpg') center/cover no-repeat;
   }

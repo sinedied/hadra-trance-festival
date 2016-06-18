@@ -8,7 +8,8 @@ export class LineupController {
 
   private logger: ILogger;
 
-  constructor(logger: LoggerService,
+  constructor(private moment: moment.MomentStatic,
+              logger: LoggerService,
               gettext: gettextFunction) {
 
     this.logger = logger.getLogger('lineup');
@@ -34,6 +35,10 @@ export class LineupController {
 
   selectFloor(index: number) {
     this.selectedFloor = index;
+  }
+
+  formatDate(date: Date) {
+    return this.moment(date).format('hh:mm');
   }
 
 }

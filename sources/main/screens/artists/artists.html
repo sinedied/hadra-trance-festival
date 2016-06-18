@@ -1,8 +1,8 @@
 <ion-view id="artists-screen" class="artists-screen royal-bg">
   <ion-nav-title>{{viewTitle}}</ion-nav-title>
   <ion-content class="dark-bg">
-    <div class="artist-tile" ng-repeat="artist in vm.artists track by $index" bg-image="artist.photo"
-         ng-click="vm.showArtist($index)">
+    <div class="artist-tile" ng-repeat="artist in vm.artists track by $index" ng-click="vm.showArtist($index)">
+      <div class="artist-photo" bg-image="artist.photo"></div>
       <h3 class="name">{{artist.name}}</h3>
       <div class="type">{{artist.type}}</div>
     </div>

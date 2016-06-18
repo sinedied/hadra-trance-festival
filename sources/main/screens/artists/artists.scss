@@ -6,11 +6,27 @@
     $type-height: 40px;
     $name-height: $tile-height - $type-height;
 
+    transform: translate3d(0,0,0);
     position: relative;
     float: left;
     width: 50%;
     height: $tile-height;
     overflow: hidden;
+
+    &.activated, :active {
+      .artist-photo {
+        filter: blur(4px);
+      }
+      .name {
+        opacity: .7;
+      }
+    }
+
+    .artist-photo {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
 
     .name {
       position: absolute;
@@ -32,7 +48,7 @@
       height: $type-height;
       width: 100%;
       text-align: center;
-      background: transparentize(#000, 0.4);
+      background: transparentize($black, 0.4);
       line-height: $type-height;
       color: $lightgrey;
       font-size: 16px;

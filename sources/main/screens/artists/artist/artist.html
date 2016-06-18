@@ -1,26 +1,39 @@
 <ion-view id="artist-screen" class="artist-screen">
-  <ion-nav-title>{{viewTitle}}</ion-nav-title>
-  <ion-content class="dark-bg light text-center" fading-bar="200" fade-to-rgb="79,10,54" state-name="app.artist">
-    <div class="artist-logo" style="height: 200px" bg-image="'images/home/party1.jpg'"></div>
-    <h2>Sine Die vs Driss</h2>
-    <h4>Label</h4>
-    <div>Country</div>
-
-
-    <div class="bio text-justify">
-      Lorem ipsum ipsum tralala Lorem ipsum ipsum tralala Lorem ipsum ipsum tralala Lorem ipsum ipsum tralala Lorem ipsum ipsum tralala
-      Lorem ipsum ipsum tralala Lorem ipsum ipsum tralala Lorem ipsum ipsum tralala Lorem ipsum ipsum tralala Lorem ipsum ipsum tralala
-      Lorem ipsum ipsum tralala Lorem ipsum ipsum tralala Lorem ipsum ipsum tralala Lorem ipsum ipsum tralala Lorem ipsum ipsum tralala
+  <ion-nav-title>{{vm.artist.name}}</ion-nav-title>
+  <ion-nav-buttons side="secondary">
+    <button class="button button-icon button-clear ion-android-favorite" ng-class=" { 'ion-android-favorite-outline': !vm.isFavorite }"
+            ng-click="vm.switchFavorite()"></button>
+  </ion-nav-buttons>
+  <div class="blur-bg" bg-image="vm.artist.background"></div>
+  <ion-content class="transparent-bg light" fading-bar="280" fade-to-rgb="79,10,54" state-name="app.artist">
+    <div class="artist-bg" bg-image="vm.artist.background"></div>
+    <div class="artist-info">
+      <div class="artist-photo" bg-image="vm.artist.photo"></div>
+      <h3 class="artist-name light">{{vm.artist.name}}</h3>
+      <h5 class="artist-label text-overflow">
+        <span>{{vm.artist.label}}</span> / <span class="country">{{vm.artist.country}}</span>
+      </h5>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <div class="social">
+      <button class="button button-small button-clear icon-left ion-fa fa-soundcloud button-light" translate>Soundcloud</button>
+      <button class="button button-small button-clear icon-left ion-social-facebook button-light" translate>Facebook</button>
+      <button class="button button-small button-clear icon-left ion-android-globe button-light" translate>Website</button>
+    </div>
+    <div class="player">
+      <div class="buttons left">
+        <button class="button button-light button-clear ion-play"></button>
+        <button class="button button-light button-clear ion-skip-forward"></button>
+      </div>
+      <div class="track-info light">
+        <span>Test Track</span> <span>2:30</span>
+      </div>
+    </div>
+    <div class="bio text-justify">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+    <div class="set-info">
+      <div class="set">22:00 - 23:30 // Main stage</div>
+      <div class="set">02:00 - 03:00 // Alternative stage</div>
+    </div>
   </ion-content>
 </ion-view>
