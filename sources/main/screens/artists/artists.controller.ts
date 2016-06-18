@@ -28,7 +28,8 @@ export class ArtistsController {
 
   private logger: ILogger;
 
-  constructor(logger: LoggerService) {
+  constructor(private $state: angular.ui.IStateService,
+              logger: LoggerService) {
     this.logger = logger.getLogger('artists');
     this.logger.log('init');
 
@@ -38,6 +39,10 @@ export class ArtistsController {
       artists = artists.concat(this.artists);
     }
     this.artists = artists;
+  }
+
+  showArtist(id: number) {
+    this.$state.go('app.artist', {artistId: id});
   }
 
 }

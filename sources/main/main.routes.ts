@@ -43,7 +43,7 @@ function routeConfig($stateProvider: angular.ui.IStateProvider,
           controller: 'artistController as vm',
         }
       },
-      data: {title: gettext('Artists')}
+      data: {title: gettext('Artist')}
     })
     .state('app.lineup', {
       url: '/lineup',
