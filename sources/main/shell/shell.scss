@@ -1,12 +1,87 @@
 // Encapsulate component style into its own "namespace "to avoid naming and css collision
 .shell {
 
+  $item-padding: $padding-big;
+  $ball-border-size: 5px;
+  $ball-size: 16px;
+
   .icon-large {
     font-size: 150%;
   }
 
   .medium-dark {
-    color: darken($light, 20%);
+    color: darken($light, 30%);
+  }
+
+  .side-menu {
+    .scroll {
+      min-height: 100%;
+
+      &::before, .item-content::before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: $item-padding;
+        top: 0;
+        width: 1px;
+        bottom: 0;
+        border-left: 1px solid transparentize($light, .9);
+      }
+    }
+
+    .item {
+      border-width: 0;
+      text-transform: uppercase;
+      font-size: 14px;
+
+      .icon {
+        left: 36px;
+        display: none;
+      }
+
+      .item-content {
+        padding-left: 40px;
+
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          border-radius: 50%;
+          top: 50%;
+          left: $item-padding;
+          margin-left: -$ball-size/2;
+          margin-top: -$ball-size/2;
+          width: $ball-size;
+          height: $ball-size;
+          background: transparentize($light, .7);
+          z-index: 20;
+          border: $ball-border-size solid $dark;;
+        }
+      }
+
+      &.item-dark.active {
+
+        > .item-content {
+          background: lighten($dark, 5%);
+          overflow: visible;
+
+          &::after {
+            $ball-size: 22px;
+
+            margin-left: -$ball-size/2;
+            margin-top: -$ball-size/2;
+            width: $ball-size;
+            height: $ball-size;
+            background: $positive;
+            border-color: lighten($dark, 5%);;
+          }
+
+          .medium-dark {
+            color: $light;
+          }
+        }
+      }
+    }
   }
 
 }

@@ -12,11 +12,9 @@
     </ion-side-menu-content>
 
     <!-- Side menu -->
-    <ion-side-menu side="left" expose-aside-when="(min-width:769px)">
-      <ion-header-bar class="bar-dark">
-        <h1 class="title" translate>APP_NAME</h1>
-      </ion-header-bar>
+    <ion-side-menu side="left" expose-aside-when="(min-width:769px)" class="side-menu">
       <ion-content class="dark-bg">
+        <div class="hadra-logo padding light text-center" translate>APP_NAME</div>
         <ion-list>
           <ion-item class="item-dark item-icon-left" menu-close href="#/" ng-class="{ active: shell.stateContains('app.home') }">
             <span class="medium-dark">
@@ -48,16 +46,16 @@
               <span translate>Infos</span>
             </span>
           </ion-item>
-          <ion-item class="item-dark item-icon-left text-darker" menu-close href="#/favorites" ng-class="{ active: shell.stateContains('app.favorites') }">
-            <span class="medium-dark">
-              <i class="icon ion-android-favorite icon-large"> </i>
-              <span translate>Favorites</span>
-            </span>
-          </ion-item>
+          <!--<ion-item class="item-dark item-icon-left text-darker" menu-close href="#/favorites" ng-class="{ active: shell.stateContains('app.favorites') }">-->
+            <!--<span class="medium-dark">-->
+              <!--<i class="icon ion-android-favorite icon-large"> </i>-->
+              <!--<span translate>Favorites</span>-->
+            <!--</span>-->
+          <!--</ion-item>-->
           <ion-item class="item-dark item-icon-left text-darker" menu-close href="#/playlist" ng-class="{ active: shell.stateContains('app.playlist') }">
             <span class="medium-dark">
               <i class="icon ion-headphone icon-large"> </i>
-              <span translate>Playlist</span>
+              <span translate>Player</span>
             </span>
           </ion-item>
           <!--<ion-item class="item-dark item-icon-left text-darker" menu-close href="#/about" ng-class="{ active: shell.stateContains('app.about') }">-->
