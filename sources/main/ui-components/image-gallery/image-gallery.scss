@@ -28,8 +28,8 @@
 
   &.image-viewer {
     background: rgba(0, 0, 0, 0.7);
-    height: 100%;
-    width: 100% !important;
+    height: 100vh !important;
+    width: 100vw !important;
     top: 0 !important;
     left: 0 !important;
   }
