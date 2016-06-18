@@ -44,12 +44,12 @@
     <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect"/>
     <preference name="xwalkMode" value="embedded"/>
     <preference name="xwalkMultipleApk" value="true"/>
-    <icon src="resources/android/icon/drawable-ldpi-icon.png" density="ldpi"/>
-    <icon src="resources/android/icon/drawable-mdpi-icon.png" density="mdpi"/>
-    <icon src="resources/android/icon/drawable-hdpi-icon.png" density="hdpi"/>
-    <icon src="resources/android/icon/drawable-xhdpi-icon.png" density="xhdpi"/>
-    <icon src="resources/android/icon/drawable-xxhdpi-icon.png" density="xxhdpi"/>
-    <icon src="resources/android/icon/drawable-xxxhdpi-icon.png" density="xxxhdpi"/>
+    <icon src="resources/android/icon/48.png" density="ldpi"/>
+    <icon src="resources/android/icon/72.png" density="mdpi"/>
+    <icon src="resources/android/icon/96.png" density="hdpi"/>
+    <icon src="resources/android/icon/144.png" density="xhdpi"/>
+    <icon src="resources/android/icon/192.png" density="xxhdpi"/>
+    <icon src="resources/android/icon/512.png" density="xxxhdpi"/>
     <splash src="resources/android/splash/drawable-port-ldpi-screen.png" density="port-ldpi"/>
     <splash src="resources/android/splash/drawable-port-mdpi-screen.png" density="port-mdpi"/>
     <splash src="resources/android/splash/drawable-port-hdpi-screen.png" density="port-hdpi"/>
