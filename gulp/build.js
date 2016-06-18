@@ -110,6 +110,8 @@ gulp.task('other', ['fonts'], function() {
 
 gulp.task('build', ['build:sources', 'other', 'images']);
 
-gulp.task('clean', ['images:clean-cache'], function() {
+gulp.task('clean:build', function() {
   return $.del([conf.paths.dist, conf.paths.tmp]);
 });
+
+gulp.task('clean', ['clean:build', 'images:clean-cache']);
