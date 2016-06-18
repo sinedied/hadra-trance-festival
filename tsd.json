@@ -115,6 +115,12 @@
     },
     "googlemaps/google.maps.d.ts": {
       "commit": "1315d46f8066eec8c197914da88e98629ebc2254"
+    },
+    "moment/moment-node.d.ts": {
+      "commit": "c02b03f677ca88e364cfda5308c58d0832664581"
+    },
+    "moment/moment.d.ts": {
+      "commit": "c02b03f677ca88e364cfda5308c58d0832664581"
     }
   }
 }
