@@ -83,7 +83,7 @@ function routeConfig($stateProvider: angular.ui.IStateProvider,
           controller: 'playlistController as vm',
         }
       },
-      data: {title: gettext('Favorites')}
+      data: {title: gettext('Player')}
     })
     .state('app.about', {
       url: '/about',

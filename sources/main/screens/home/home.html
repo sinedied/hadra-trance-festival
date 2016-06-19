@@ -4,12 +4,12 @@
     <div class="title-logo"></div>
     <div class="row">
       <div class="col">
-        <button class="button button-energized button-block no-margin icon-left ion-fa fa-ticket" analytics-on="click" analytics-event="Tickets"
-                ng-click="vm.open('http://www.hadra.net/shop/new/category.php?id_category=6')" translate>Tickets</button>
+        <button class="button button-raised button-energized button-block no-margin icon-left ion-music-note" analytics-on="click" analytics-event="Tickets"
+                ng-click="vm.open('http://www.hadra.net/shop/new/category.php?id_category=16')" translate>CDs</button>
       </div>
       <div class="col">
-        <button class="button button-energized button-block no-margin icon-left ion-fa fa-shopping-bag" analytics-on="click" analytics-event="Shop"
-                ng-click="vm.open('http://www.hadra.net/shop/new/')" translate>Shop</button>
+        <button class="button button-raised button-energized button-block no-margin icon-left ion-tshirt" analytics-on="click" analytics-event="Shop"
+                ng-click="vm.open('http://www.hadra.net/shop/new/category.php?id_category=13')" translate>T-Shirts</button>
       </div>
     </div>
     <ion-list type="card" class="text-center card-close">
@@ -22,11 +22,21 @@
     <div class="space-top-large"></div>
     <h5 class="padding no-margin dark" translate>Featured artists</h5>
     <div class="image-gallery">
-      <ion-scroll direction="x" delegate-handle="artists-scroll" image-gallery images="vm.images"></ion-scroll>
+      <ion-scroll direction="x" delegate-handle="artists-scroll">
+        <div class="ui-gallery">
+          <div ng-repeat="image in vm.images" bg-image="image" ng-click="vm.showArtist(1)" class="image-thumbnail featured-artist">
+            <div class="artist-name">{{'Shotu vs Driss'}}</div>
+          </div>
+        </div>
+      </ion-scroll>
     </div>
-    <h5 class="padding no-margin dark" translate>Photos from last year's edition</h5>
+    <h5 class="padding no-margin dark" translate>Last edition</h5>
     <div class="image-gallery">
       <ion-scroll direction="x" delegate-handle="photos-scroll" image-gallery images="vm.images"></ion-scroll>
+    </div>
+    <div class="video-player">
+      <ng-youtube-embed url="'https://www.youtube.com/watch?v=RX_95mmz59Y'" autoplay="false" autohide=true" color="white" hl="fr" width="100%" height="190px"
+                        ivloadpolicy="false" showinfo="false"></ng-youtube-embed>
     </div>
     <div class="has-playing-spacer"></div>
   </ion-content>

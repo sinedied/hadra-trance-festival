@@ -33,6 +33,22 @@
     }
   }
 
+  .featured-artist {
+    position: relative;
+    text-align: center;
+    color: $lightgrey;
+    text-shadow: 0 0 8px $black, 0 0 2px $superdark;
+
+    .artist-name {
+      padding: $padding-small;
+      background: transparentize($black, .6);
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      white-space: normal;
+    }
+  }
+
   .photo {
     height: 100px;
     border-radius: 3px;
@@ -61,6 +77,16 @@
 
     .extra-info {
       margin: 6px 0;
+    }
+  }
+
+  .video-player {
+    margin: $content-padding;
+    margin-top: 0;
+    overflow: hidden;
+
+    &, iframe {
+      border-radius: 4px;
     }
   }
 

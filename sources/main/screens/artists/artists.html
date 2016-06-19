@@ -7,7 +7,7 @@
               ng-click="vm.showAll(false)" translate>Favorites</button>
     </div>
   </ion-nav-title>
-  <ion-content class="dark-bg">
+  <ion-content class="dark-bg" delegate-handle="artists-scroll">
     <div class="artist-tile" ng-repeat="artist in vm.artists track by $index" ng-click="vm.showArtist($index)">
       <div class="artist-photo" bg-image="artist.photo"></div>
       <h3 class="name">{{artist.name}}</h3>

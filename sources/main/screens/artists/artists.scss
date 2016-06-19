@@ -3,7 +3,7 @@
 
   .artist-tile {
     $tile-height: 140px;
-    $type-height: 40px;
+    $type-height: 28px;
     $name-height: $tile-height - $type-height;
 
     transform: translate3d(0,0,0);
@@ -15,7 +15,7 @@
 
     &.activated, :active {
       .artist-photo {
-        filter: blur(4px);
+        filter: blur(2px);
       }
       .name {
         opacity: .7;
@@ -37,7 +37,7 @@
       width: 100%;
       max-height: $name-height;
       text-align: center;
-      text-shadow: 0 0 8px $black, 0 0 2px $superdark;
+      text-shadow: 0 0 8px $black;
       overflow: hidden;
       color: $white;
     }
@@ -51,7 +51,7 @@
       background: transparentize($black, 0.4);
       line-height: $type-height;
       color: $lightgrey;
-      font-size: 16px;
+      font-size: 13px;
       text-transform: uppercase;
     }
 

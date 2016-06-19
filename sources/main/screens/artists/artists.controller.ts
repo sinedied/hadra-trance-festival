@@ -11,7 +11,7 @@ export class ArtistsController {
       type: 'Live / DJ'
     },
     {
-      name: 'Shoto',
+      name: 'Shotu',
       photo: 'images/home/party2.jpg',
       type: 'Live / DJ'
     },
@@ -26,11 +26,16 @@ export class ArtistsController {
       type: 'Live'
     }
   ];
+  all = null;
+  favorites = null;
+  scrollView: ionic.scroll.IonicScrollDelegate;
 
   private logger: ILogger;
 
   constructor(private $state: angular.ui.IStateService,
+              $ionicScrollDelegate: ionic.scroll.IonicScrollDelegate,
               logger: LoggerService) {
+
     this.logger = logger.getLogger('artists');
     this.logger.log('init');
 
@@ -40,6 +45,10 @@ export class ArtistsController {
       artists = artists.concat(this.artists);
     }
     this.artists = artists;
+    this.all = artists;
+    this.favorites = artists.slice(0, 2);
+
+    this.scrollView = $ionicScrollDelegate.$getByHandle('artists-scroll');
   }
 
   showArtist(id: number) {
@@ -48,6 +57,8 @@ export class ArtistsController {
 
   showAll(show: boolean) {
     this.showFavorites = !show;
+    this.artists = show ? this.all :  this.favorites;
+    this.scrollView.scrollTop(true);
   }
 
 }

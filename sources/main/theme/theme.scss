@@ -33,3 +33,14 @@
 .ion-fa:before {
   font-family: FontAwesome;
 }
+
+// Buttons
+// ---------------------
+
+.button.button-raised {
+  border-bottom: 3px solid transparentize($black, .9);
+
+  .active, &:active {
+    border-bottom-width: 1px;
+  }
+}

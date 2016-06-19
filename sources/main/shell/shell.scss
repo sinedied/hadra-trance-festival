@@ -5,6 +5,12 @@
   $ball-border-size: 5px;
   $ball-size: 16px;
 
+  .hadra-logo {
+    height: 60px;
+    background: url('/images/hadra-logo.png') center no-repeat;
+    background-size: auto 32px;
+  }
+
   .icon-large {
     font-size: 150%;
   }
@@ -25,9 +31,18 @@
         top: 0;
         width: 1px;
         bottom: 0;
-        border-left: 1px solid transparentize($light, .9);
+        border-left: 1px solid transparentize($balanced, .4);
+      }
+
+      &::before {
+        left: $item-padding - 1;
       }
     }
+
+    //.list {
+    //  border-top: 1px solid transparentize($light, .9);
+    //  border-bottom: 1px solid transparentize($light, .9);
+    //}
 
     .item {
       border-width: 0;
@@ -53,7 +68,7 @@
           margin-top: -$ball-size/2;
           width: $ball-size;
           height: $ball-size;
-          background: transparentize($light, .7);
+          background: mix($light, $dark, 30%);
           z-index: 20;
           border: $ball-border-size solid $dark;;
         }

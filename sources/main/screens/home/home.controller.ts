@@ -18,6 +18,7 @@ export class HomeController {
   private logger: ILogger;
 
   constructor(private $cordovaInAppBrowser: any,
+              private $state: angular.ui.IStateService,
               $scope: ng.IScope,
               $interval: ng.IIntervalService,
               logger: LoggerService,
@@ -37,6 +38,10 @@ export class HomeController {
 
     scrollService.fixXScrollWithHandle('artists-scroll');
     scrollService.fixXScrollWithHandle('photos-scroll');
+  }
+
+  showArtist(artistId: number) {
+    this.$state.go('app.artist', {artistId: artistId});
   }
 
   open(url: string) {
