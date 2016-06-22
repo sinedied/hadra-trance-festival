@@ -5,6 +5,7 @@ export interface IApplicationConfig {
   version: string;
   environment: IApplicationEnvironment;
   supportedLanguages: Array<string>;
+  soundCloudClientId: string;
 }
 
 export interface IApplicationEnvironment {
@@ -25,7 +26,7 @@ let environment = {
       url: '',
       route: 'api'
     },
-    googleAnalyticsId: ''
+    googleAnalyticsId: '',
   },
   dev: {
     debug: true,
@@ -62,7 +63,9 @@ let config: IApplicationConfig = {
   supportedLanguages: [
     'en-US',
     'fr-FR'
-  ]
+  ],
+
+  soundCloudClientId: ''
 
 };
 

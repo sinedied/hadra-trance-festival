@@ -8,6 +8,7 @@ import {ILogger} from 'helpers/logger/logger';
 function mainConfig($provide: ng.auto.IProvideService,
                     $analyticsProvider: angulartics.IAnalyticsServiceProvider,
                     $compileProvider: ng.ICompileProvider,
+                    plangularConfigProvider: any,
                     config: IApplicationConfig) {
 
   let env = config.environment;
@@ -42,6 +43,9 @@ function mainConfig($provide: ng.auto.IProvideService,
   }
   $analyticsProvider.developerMode(env.debug);
   $analyticsProvider.firstPageview(true);
+
+  // Set Soundcloud client ID
+  plangularConfigProvider.clientId = config.soundCloudClientId;
 
 }
 

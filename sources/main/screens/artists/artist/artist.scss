@@ -96,17 +96,50 @@
     .button {
       min-height: $player-height;
       min-width: $player-height;
+      font-size: 1.2em;
+    }
+
+    .next {
+      text-align: left;
     }
   }
 
   .track-info {
     padding: $content-padding/2;
+    padding-left: 0;
     height: $player-height;
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-size: 12px;
+
+    .progress-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .time {
+      white-space: nowrap;
+    }
+
+    .progress {
+      margin: 9px $padding-small 0 0;
+      height: 2px;
+      border-radius: 2px;
+
+      &[value] {
+        &::-webkit-progress-value {
+          background: $light;
+        }
+
+        &::-webkit-progress-bar {
+          background: transparentize($light, .7);
+        }
+      }
+    }
   }
+
 
   .set-info {
     border-top: 1px solid transparentize($white, .4);

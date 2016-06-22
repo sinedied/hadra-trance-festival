@@ -1,6 +1,39 @@
 <ion-view id="player-screen" class="player-screen">
   <ion-nav-title>{{viewTitle}}</ion-nav-title>
-  <ion-content class="">
-    TODO: Soundcloud player
+  <ion-content class="assertive" plangular="https://soundcloud.com/hadrarecords/sets/va-hadra-trance-festival-8-compiled-by-hadra-team-hadra-records">
+    <div>
+      <img ng-src="{{ track.artwork_url  }}" alt="{{ track.title }}" />
+      <img ng-src="{{ track.waveform_url }}" alt="waveform" />
+        <h4>{{playlist.user.username}}</h4>
+      {{track.user.username}} - {{track.title}}
+      <samp>{{ currentTime | hhmmss }} / {{ duration | hhmmss }}</samp>
+      </div>
+      <h3>{{playlist.title}}</h3>
+      <div class="flex flex-center">
+        <button ng-click="previous()" class="button button-clear button-royal ion-ios-skipbackward"></button>
+        <button ng-click="playPause(index)" class="button button-clear button-royal"
+                ng-class="player.playing === track.src ? 'ion-ios-pause' : 'ion-ios-play'"></button>
+        <button ng-click="next()" class="button button-clear button-royal ion-ios-skipforward"></button>
+        <progress class="progress" ng-click="seek($event)" ng-value="currentTime / duration || 0">
+          {{ currentTime / duration }}
+        </progress>
+      </div>
+    </div>
+    <ul>
+      <li ng-repeat="track in tracks">
+        <button ng-click="playPause($index)" class="button button-icon button-clear button-royal ion-ios-play"></button>
+        <span>
+          {{track.user.username}} - {{track.title}}
+        </span>
+        <span>
+          {{ track.duration / 1000 | hhmmss }}
+        </span>
+      </li>
+    </ul>
+    <!--<div plangular="https://soundcloud.com/hadrarecords/tracks">-->
+      <!--<button ng-click="playPause(index)" class="button button-icon button-clear button-royal ion-ios-play"></button>-->
+      <!--<button ng-click="next()" ng-if="track" class="button button-icon button-clear button-royal ion-ios-skipforward"></button>-->
+      <!--{{track.user.username}} - {{track.title}}-->
+    <!--</div>-->
   </ion-content>
 </ion-view>

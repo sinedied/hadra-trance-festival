@@ -17,5 +17,6 @@ export default angular.module('app', [
   'angulartics.google.analytics',
   'ion-affix',
   'uiGmapgoogle-maps',
-  'ngYoutubeEmbed'
+  'ngYoutubeEmbed',
+  'plangular'
 ]);
