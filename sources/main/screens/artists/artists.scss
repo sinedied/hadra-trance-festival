@@ -13,13 +13,8 @@
     height: $tile-height;
     overflow: hidden;
 
-    &.activated, :active {
-      .artist-photo {
-        filter: blur(2px);
-      }
-      .name {
-        opacity: .7;
-      }
+    &.activated, &:active {
+      opacity: .7;
     }
 
     .artist-photo {
