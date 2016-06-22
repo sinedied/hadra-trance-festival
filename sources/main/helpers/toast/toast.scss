@@ -1,0 +1,24 @@
+// Encapsulate component style into its own "namespace "to avoid naming and css collision
+.ui-toast {
+  cursor: default;
+  border-radius: 4px;
+  padding: $content-padding;
+  margin: $padding-big;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  background: transparentize($black, .2);
+  color: $light;
+  z-index: 100;
+  box-shadow: 0 3px 8px transparentize($black, .6);
+
+  &.ng-hide-remove {
+    animation: fadeIn 1s;
+  }
+
+  &.ng-hide-add {
+    animation: fadeOut 1s;
+  }
+}

@@ -1,5 +1,6 @@
 import app from 'main.module';
 import {ILogger, LoggerService} from 'helpers/logger/logger';
+import {ToastService} from 'helpers/toast/toast.service';
 
 export class ArtistController {
 
@@ -15,13 +16,19 @@ export class ArtistController {
 
   private logger: ILogger;
 
-  constructor(logger: LoggerService) {
+  constructor(logger: LoggerService,
+              private toastService: ToastService) {
+
     this.logger = logger.getLogger('artist');
     this.logger.log('init');
   }
 
   switchFavorite() {
     this.isFavorite = !this.isFavorite;
+
+    if (this.isFavorite) {
+      this.toastService.show('Added to favorites!<br>You will now be notified when this artist set starts');
+    }
   }
 
 }
