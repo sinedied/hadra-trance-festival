@@ -16,6 +16,7 @@ function cleanup() {
 trap cleanup ERR
 
 # Build demo
+gulp clean:build
 gulp build:demo
 
 # Build android app and copy APKs
