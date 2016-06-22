@@ -6,12 +6,13 @@ import app from 'main.module';
 export class ToastService {
 
   config = {
-    duration: 3000
+    duration: 5000
   };
   vm = {
     theme: '',
     message: '',
-    show: false
+    show: false,
+    hide: this.hide.bind(this)
   };
   promise: ng.IPromise<any>;
 
@@ -44,6 +45,12 @@ export class ToastService {
   }
 
   hide() {
+    // Cancel previous timeout if needed
+    if (this.promise) {
+      this.$timeout.cancel(this.promise);
+      this.promise = null;
+    }
+
     this.vm.show = false;
   }
 

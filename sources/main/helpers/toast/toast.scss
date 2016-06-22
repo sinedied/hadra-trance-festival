@@ -1,6 +1,6 @@
 // Encapsulate component style into its own "namespace "to avoid naming and css collision
 .ui-toast {
-  cursor: default;
+  cursor: pointer;
   border-radius: 4px;
   padding: $content-padding;
   margin: $padding-big;
