@@ -75,12 +75,12 @@ function routeConfig($stateProvider: angular.ui.IStateProvider,
       },
       data: {title: gettext('Infos')}
     })
-    .state('app.playlist', {
-      url: '/playlist',
+    .state('app.player', {
+      url: '/player',
       views: {
         'menuContent': {
-          template: <string>require('screens/playlist/playlist.html'),
-          controller: 'playlistController as vm',
+          template: <string>require('screens/player/player.html'),
+          controller: 'playerController as vm',
         }
       },
       data: {title: gettext('Player')}
