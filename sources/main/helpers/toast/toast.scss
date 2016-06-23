@@ -15,10 +15,10 @@
   box-shadow: 0 3px 8px transparentize($black, .6);
 
   &.ng-hide-remove {
-    animation: fadeIn 1s;
+    animation: fadeInUp .5s;
   }
 
   &.ng-hide-add {
-    animation: fadeOut 1s;
+    animation: zoomOutDown .5s;
   }
 }
