@@ -1,0 +1,84 @@
+// Encapsulate component style into its own "namespace "to avoid naming and css collision
+.player-screen {
+
+  .player-main {
+    background: $royal;
+  }
+
+  .artwork {
+    height: 100vw;
+    max-height: 50vh;
+  }
+
+  .track-progress {
+    position: relative;
+  }
+
+  .time {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    pointer-events: none;
+  }
+
+  .progress {
+    margin: 0;
+    height: 20px;
+    background: $royal;
+
+    &[value] {
+      &::-webkit-progress-value {
+        background: transparentize($light, .8);
+      }
+
+      &::-webkit-progress-bar {
+        background: transparentize($light, .8);
+      }
+    }
+  }
+
+  .track-info {
+    margin: $content-padding $content-padding 0 $content-padding;
+  }
+
+  .track-name {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .track-artist {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  .player-controls {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .button {
+      font-size: 2em;
+    }
+  }
+
+  .playlist-track.current {
+    color: $royal;
+    font-weight: 500;
+  }
+
+  .playlist-track-info {
+    font-size: 14px;
+    margin-left: -$item-padding;
+
+    .number {
+      margin: 0 $item-padding;
+      text-align: center;
+      display: inline-block;
+      min-width: 20px;
+    }
+  }
+
+}
