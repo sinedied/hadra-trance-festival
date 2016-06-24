@@ -26,7 +26,7 @@
     <ion-list>
       <ion-item class="playlist-track" ng-repeat="track in tracks" ng-click="playPause($index)" ng-class="{ current: player.playing === track.src }">
         <span class="playlist-track-info">
-          <span class="number">{{$index}}</span><span>{{track.title}}</span>
+          <span class="number">{{$index + 1}}</span><span>{{track.title}}</span>
         </span>
         <!--<span>{{track.user.username}}</span>-->
         <!--<span class="item-note">{{ track.duration / 1000 | hhmmss }}</span>-->
