@@ -1,5 +1,6 @@
 import app from 'main.module';
 import {ILogger, LoggerService} from 'helpers/logger/logger';
+import {ToastService} from 'helpers/toast/toast.service';
 import gettextFunction = angular.gettext.gettextFunction;
 
 export class LineupController {
@@ -8,9 +9,11 @@ export class LineupController {
 
   private logger: ILogger;
 
-  constructor(private moment: moment.MomentStatic,
+  constructor(private $ionicListDelegate: ionic.list.IonicListDelegate,
+              private moment: moment.MomentStatic,
               logger: LoggerService,
-              gettext: gettextFunction) {
+              private gettext: gettextFunction,
+              private toastService: ToastService) {
 
     this.logger = logger.getLogger('lineup');
     this.logger.log('init');
@@ -21,7 +24,10 @@ export class LineupController {
         from: new Date(),
         to: new Date(),
         type: 'DJ',
-        artist: 'Shotu vs Driss'
+        artist: {
+          name: 'Shotu vs Driss',
+          isFavorite: false
+        }
       };
     }
 
@@ -39,6 +45,16 @@ export class LineupController {
 
   formatDate(date: Date) {
     return this.moment(date).format('hh:mm');
+  }
+
+  switchFavorite(artist: any) {
+    artist.isFavorite = !artist.isFavorite;
+
+    if (artist.isFavorite) {
+      this.toastService.show(this.gettext('Added to favorites!<br>You will be notified when this set starts.'));
+    }
+
+    this.$ionicListDelegate.closeOptionButtons();
   }
 
 }

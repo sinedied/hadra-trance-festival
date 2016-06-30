@@ -16,8 +16,11 @@
       </div>
       <ion-item class="item-icon-right" ng-repeat="set in vm.floors[vm.selectedFloor].lineup" href="#/artists/1">
         <span class="time">{{vm.formatDate(set.from)}} - {{vm.formatDate(set.to)}}</span>
-        <span>{{set.artist}}</span>
-        <i class="icon ion-ios-arrow-forward"></i>
+        <span>{{set.artist.name}}</span>
+        <!--<i class="icon ion-ios-arrow-forward"></i>-->
+        <ion-option-button class="option-button button-positive ion-android-favorite" ng-click="vm.switchFavorite(set.artist)"
+                           ng-class=" { 'ion-android-favorite-outline': !set.artist.isFavorite }">
+        </ion-option-button>
       </ion-item>
     </ion-list>
   </ion-content>
