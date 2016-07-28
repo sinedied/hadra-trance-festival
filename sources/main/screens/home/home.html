@@ -14,9 +14,8 @@
     </div>
     <ion-list type="card" class="text-center card-close">
       <ion-item class="item-body no-padding">
-        <img class="full-image" src="images/home/place.jpg">
-        <p class="padding no-margin">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.        </p>
+        <img class="full-image" ng-src="{{festival.photo}}">
+        <p class="padding no-margin">{{festival.description}}</p>
       </ion-item>
     </ion-list>
     <div class="space-top-large"></div>
@@ -24,29 +23,29 @@
     <div class="image-gallery">
       <ion-scroll direction="x" delegate-handle="artists-scroll">
         <div class="ui-gallery">
-          <div ng-repeat="image in vm.images" bg-image="image" ng-click="vm.showArtist(1)" class="image-thumbnail featured-artist">
-            <div class="artist-name">{{'Shotu vs Driss'}}</div>
+          <div ng-repeat="artist in festival.featuredArtists track by $index" bg-image="artist.photo" ng-click="vm.showArtist(artist.id)" class="image-thumbnail featured-artist">
+            <div class="artist-name">{{artist.name}}</div>
           </div>
         </div>
       </ion-scroll>
     </div>
     <h5 class="section-title padding no-margin dark" translate>Last edition</h5>
     <div class="image-gallery">
-      <ion-scroll direction="x" delegate-handle="photos-scroll" image-gallery images="vm.images"></ion-scroll>
+      <ion-scroll direction="x" delegate-handle="photos-scroll" image-gallery images="festival.featuredPhotos"></ion-scroll>
     </div>
     <div class="video-player">
-      <ng-youtube-embed url="'https://www.youtube.com/watch?v=RX_95mmz59Y'" autoplay="false" autohide=true" color="white" hl="fr" width="100%" height="190px"
+      <ng-youtube-embed url="festival.featuredVideo" autoplay="false" autohide=true" color="white" hl="fr" width="100%" height="190px"
                         ivloadpolicy="false" showinfo="false"></ng-youtube-embed>
     </div>
     <div class="has-playing-spacer"></div>
   </ion-content>
-  <div class="playing">
+  <div class="playing" ng-click="vm.showArtist(vm.nowPlaying.artist.id)">
     <img class="speaker left" src="images/speaker.png" ng-class="{pound: vm.animate}"/>
     <img class="speaker right" src="images/speaker.png" ng-class="{pound: vm.animate}"/>
     <div class="playing-info text-center block-vertical-center">
-      <h5 class="extra-info text-white">Main floor</h5>
-      <h3 class="text-white text-overflow no-margin">The Green Nuns of the Revolution</h3>
-      <h4 class="extra-info text-white">22:00 - 0:00</h4>
+      <h5 class="extra-info text-white">{{vm.nowPlaying.scene}}</h5>
+      <h3 class="text-white text-overflow no-margin">{{vm.nowPlaying.artist.name}}</h3>
+      <h4 class="extra-info text-white">{{vm.nowPlaying.slot}}</h4>
     </div>
   </div>
 </ion-view>

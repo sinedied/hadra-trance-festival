@@ -1,0 +1,7 @@
+- Data sync
+- Error management when data cannot be loaded (loading screen!)
+- Dynamic playing home
+- Local notifications when artist plays
+- Now playing button on lineup
+- Pause button in shell when plangular playing
+- Add analytics

@@ -4,16 +4,15 @@ import {ScrollService} from 'helpers/scroll/scroll.service';
 
 export class HomeController {
 
-  isLoading = true;
   animate = false;
-  images = [
-    'images/home/party1.jpg',
-    'images/home/party2.jpg',
-    'images/home/party3.jpg',
-    'images/home/party4.jpg',
-    'images/home/party2.jpg?',
-    'images/home/party3.jpg?'
-  ];
+  nowPlaying = {
+    artist: {
+      id: 0,
+      name: 'The Green Nuns of the Revolution'
+    },
+    scene: 'Main floor',
+    slot: '22:00 - 0:00'
+  };
 
   private logger: ILogger;
 
@@ -46,6 +45,10 @@ export class HomeController {
 
   open(url: string) {
     this.$cordovaInAppBrowser.open(url, '_system');
+  }
+
+  updateNowPlayingInfos() {
+
   }
 
 }

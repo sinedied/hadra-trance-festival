@@ -19,6 +19,10 @@
     width: 100%;
     height: $playing-height;
     background: transparentize($royal, .15);
+
+    &.activated {
+      opacity: 0.8;
+    }
   }
 
   .image-gallery {

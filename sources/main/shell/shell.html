@@ -59,6 +59,17 @@
             <!--</span>-->
           <!--</ion-item>-->
         </ion-list>
+        <div class="player" plangular="" ng-if="player.playing">
+          <div class="buttons">
+            <button ng-click="playPause(index)" class="button button-clear button-light"
+                    ng-class="player.playing === track.src  ? 'ion-ios-pause' : 'ion-ios-play'"></button>
+            <button ng-click="next()" class="next button button-light button-clear ion-skip-forward"></button>
+          </div>
+          <div class="track-info light">
+            <div class="text-overflow">{{track.title}}</div>
+          </div>
+        </div>
+
         <!--<a class="button button-clear button-small padding text-center" style="position: absolute; bottom: 0; width: 100%; color: #555">-->
           <!--Made with <i class="icon ion-heart assertive"></i> by sinedied-->
         </a>

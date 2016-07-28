@@ -2,6 +2,7 @@ import app from 'main.module';
 import {IApplicationConfig} from 'main.constants';
 import {RestService} from 'helpers/rest/rest.service';
 import {ILogger, LoggerService} from 'helpers/logger/logger';
+import {FestivalService} from 'web-services/festival/festival.service';
 
 /**
  * Entry point of the application.
@@ -9,6 +10,7 @@ import {ILogger, LoggerService} from 'helpers/logger/logger';
  */
 function main($window: ng.IWindowService,
               $locale: ng.ILocaleService,
+              $ionicLoading: ionic.loading.IonicLoadingService,
               $rootScope: any,
               $state: angular.ui.IStateService,
               $timeout: ng.ITimeoutService,
@@ -18,8 +20,11 @@ function main($window: ng.IWindowService,
               gettextCatalog: angular.gettext.gettextCatalog,
               _: _.LoDashStatic,
               config: IApplicationConfig,
+              festivalService: FestivalService,
               logger: LoggerService,
               restService: RestService) {
+
+  let _logger: ILogger = logger.getLogger('main');
 
   /*
    * Root view model
@@ -29,6 +34,7 @@ function main($window: ng.IWindowService,
 
   vm.pageTitle = '';
   vm.viewTitle = '';
+  vm.festival = null;
 
   /**
    * Utility method to set the language in the tools requiring it.
@@ -83,7 +89,6 @@ function main($window: ng.IWindowService,
    * Initializes the root controller.
    */
   function init() {
-    let _logger: ILogger = logger.getLogger('main');
     // Enable debug mode for translations
     gettextCatalog.debug = config.environment.debug;
     gettextCatalog.debugPrefix = 'T_';
@@ -92,6 +97,9 @@ function main($window: ng.IWindowService,
 
     // Set REST server configuration
     restService.setServer(config.environment.server);
+
+    // Update festival data
+    updateData();
 
     // Cordova platform and plugins init
     $ionicPlatform.ready(() => {
@@ -145,6 +153,25 @@ function main($window: ng.IWindowService,
       vm.viewTitle = gettextCatalog.getString(stateTitle);
       vm.pageTitle += ' | ' + vm.viewTitle;
     }
+  }
+
+  /**
+   * Updates app data.
+   */
+  function updateData() {
+    if (festivalService.festival) {
+      vm.festival = festivalService.festival;
+    } else {
+      $ionicLoading.show();
+    }
+    festivalService
+      .getFestival()
+      .then((response: any) => {
+        _logger.log('Updated festival data');
+        vm.festival = response.data;
+      })
+      .finally($ionicLoading.hide);
+      // TODO: manage errors!
   }
 
 }

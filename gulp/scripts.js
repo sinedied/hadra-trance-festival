@@ -38,6 +38,10 @@ function buildScripts(watch, test, done) {
           loader: 'raw!html-minify'
         },
         {
+          test: /\.json/,
+          loader: 'raw'
+        },
+        {
           test: /\.po$/,
           loader: 'angular-gettext?module=translations'
         }

@@ -65,7 +65,7 @@ let config: IApplicationConfig = {
     'fr-FR'
   ],
 
-  soundCloudClientId: ''
+  soundCloudClientId: 'c893b01b1f81d8cecc69fa8594f68d41'
 
 };
 
