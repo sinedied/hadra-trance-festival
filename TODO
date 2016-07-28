@@ -1,3 +1,6 @@
+- ngYoutubeEmbed issue -> angular-youtube-embed
+- add buy button to player -> shop compilation (+ player url and shop url)
+
 - Data sync
 - Error management when data cannot be loaded (loading screen!)
 - Dynamic playing home
