@@ -1,52 +1,22 @@
 import app from 'main.module';
 import {ILogger, LoggerService} from 'helpers/logger/logger';
+import {Artist} from 'web-services/festival/festival.model';
+import {FavoritesService} from 'helpers/favorites/favorites.service';
 
 export class ArtistsController {
 
   showFavorites = false;
-  artists = [
-    {
-      name: 'Sine Die',
-      photo: 'images/home/party1.jpg',
-      type: 'Live / DJ'
-    },
-    {
-      name: 'Shotu',
-      photo: 'images/home/party2.jpg',
-      type: 'Live / DJ'
-    },
-    {
-      name: 'The Green Nuns of the Revolution',
-      photo: 'images/home/party3.jpg',
-      type: 'Live'
-    },
-    {
-      name: 'Driss',
-      photo: 'images/home/party4.jpg',
-      type: 'Live'
-    }
-  ];
-  all = null;
-  favorites = null;
   scrollView: ionic.scroll.IonicScrollDelegate;
 
   private logger: ILogger;
 
   constructor(private $state: angular.ui.IStateService,
               $ionicScrollDelegate: ionic.scroll.IonicScrollDelegate,
-              logger: LoggerService) {
+              logger: LoggerService,
+              private favoritesService: FavoritesService) {
 
     this.logger = logger.getLogger('artists');
     this.logger.log('init');
-
-    // Put 80 artists for testing
-    let artists = [];
-    for (let i = 0; i < 20; ++i) {
-      artists = artists.concat(this.artists);
-    }
-    this.artists = artists;
-    this.all = artists;
-    this.favorites = artists.slice(0, 2);
 
     this.scrollView = $ionicScrollDelegate.$getByHandle('artists-scroll');
   }
@@ -57,9 +27,12 @@ export class ArtistsController {
 
   showAll(show: boolean) {
     this.showFavorites = !show;
-    this.artists = show ? this.all :  this.favorites;
     this.scrollView.scrollTop(true);
   }
+
+  favoritesFilter() {
+    return (artist: Artist) => !this.showFavorites || this.favoritesService.favorites[artist.id];
+  };
 
 }
 

@@ -19,7 +19,7 @@
         <span>{{set.artist.name}}</span>
         <!--<i class="icon ion-ios-arrow-forward"></i>-->
         <ion-option-button class="option-button button-positive ion-android-favorite" ng-click="vm.switchFavorite(set.artist)"
-                           ng-class=" { 'ion-android-favorite-outline': !set.artist.isFavorite }">
+                           ng-class=" { 'ion-android-favorite-outline': !vm.favorites[set.artist.id] }">
         </ion-option-button>
       </ion-item>
     </ion-list>

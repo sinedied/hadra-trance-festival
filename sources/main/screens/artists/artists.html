@@ -8,10 +8,11 @@
     </div>
   </ion-nav-title>
   <ion-content class="dark-bg" delegate-handle="artists-scroll">
-    <div class="artist-tile" ng-repeat="artist in vm.artists track by $index" ng-click="vm.showArtist($index)">
+    <div class="artist-tile" ng-repeat="artist in festival.artists | filter:vm.favoritesFilter() track by $index"
+         ng-click="vm.showArtist(artist.id)">
       <div class="artist-photo" bg-image="artist.photo"></div>
       <h3 class="name">{{artist.name}}</h3>
-      <div class="type">{{artist.type}}</div>
+      <!--<div class="type">{{artist.type}}</div>-->
     </div>
   </ion-content>
 </ion-view>

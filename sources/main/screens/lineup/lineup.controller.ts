@@ -1,9 +1,11 @@
 import app from 'main.module';
 import {ILogger, LoggerService} from 'helpers/logger/logger';
 import {ToastService} from 'helpers/toast/toast.service';
-import gettextFunction = angular.gettext.gettextFunction;
+import {FavoritesService} from 'helpers/favorites/favorites.service';
 
 export class LineupController {
+
+  favorites: Map<string, boolean>;
   floors = [];
   selectedFloor = 0;
 
@@ -12,11 +14,14 @@ export class LineupController {
   constructor(private $ionicListDelegate: ionic.list.IonicListDelegate,
               private moment: moment.MomentStatic,
               logger: LoggerService,
-              private gettext: gettextFunction,
+              private gettextCatalog: angular.gettext.gettextCatalog,
+              private favoritesService: FavoritesService,
               private toastService: ToastService) {
 
     this.logger = logger.getLogger('lineup');
     this.logger.log('init');
+
+    this.favorites = this.favoritesService.favorites;
 
     let lineup = [];
     for (let i = 0; i < 50; ++i) {
@@ -25,6 +30,7 @@ export class LineupController {
         to: new Date(),
         type: 'DJ',
         artist: {
+          id: '0',
           name: 'Shotu vs Driss',
           isFavorite: false
         }
@@ -32,9 +38,9 @@ export class LineupController {
     }
 
     this.floors = [
-      {name: gettext('Main'), lineup: lineup},
-      {name: gettext('Alternative'), lineup: lineup},
-      {name: gettext('Chillout'), lineup: lineup},
+      {name: gettextCatalog.getString('Main'), lineup: lineup},
+      {name: gettextCatalog.getString('Alternative'), lineup: lineup},
+      {name: gettextCatalog.getString('Chillout'), lineup: lineup},
     ];
 
   }
@@ -48,10 +54,10 @@ export class LineupController {
   }
 
   switchFavorite(artist: any) {
-    artist.isFavorite = !artist.isFavorite;
+    this.favoritesService.toggle(artist.id);
 
-    if (artist.isFavorite) {
-      this.toastService.show(this.gettext('Added to favorites!<br>You will be notified when this set starts.'));
+    if (this.favorites[artist.id]) {
+      this.toastService.show(this.gettextCatalog.getString('Added to favorites!<br>You will be notified when this set starts.'));
     }
 
     this.$ionicListDelegate.closeOptionButtons();
