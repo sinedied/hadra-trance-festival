@@ -35,6 +35,7 @@ function main($window: ng.IWindowService,
   vm.pageTitle = '';
   vm.viewTitle = '';
   vm.festival = null;
+  vm.offline = false;
 
   /**
    * Utility method to set the language in the tools requiring it.
@@ -135,6 +136,58 @@ function main($window: ng.IWindowService,
         if (ionic.Platform.isAndroid()) {
           $cordovaStatusbar.styleHex('#360222');
         }
+
+        /*
+         * App lifecycle hooks
+         */
+
+        // App goes to background
+        $window.document.addEventListener('pause', () => {
+          _logger.log('Application paused in background');
+          vm.foreground = false;
+
+          vm.$broadcast('applicationPause');
+          vm.$apply();
+        }, false);
+
+        // App resume from background
+        $window.document.addEventListener('resume', () => {
+          _logger.log('Application resumed from background');
+          $rootScope.foreground = true;
+
+          // TODO: register for push notification if logged
+
+          vm.$broadcast('applicationResume');
+          vm.$apply();
+        }, false);
+
+        // App online
+        $window.document.addEventListener('online', () => {
+          if ($rootScope.offline) {
+            _logger.log('Application online');
+            vm.offline = false;
+
+            if (vm.foreground) {
+              vm.$broadcast('applicationOnline');
+            }
+
+            vm.$apply();
+          }
+        }, false);
+
+        // App offline
+        $window.document.addEventListener('offline', () => {
+          if (!vm.offline) {
+            _logger.log('Application offline');
+            vm.offline = true;
+
+            if (vm.foreground) {
+              vm.$broadcast('applicationOffline');
+            }
+
+            vm.$apply();
+          }
+        }, false);
 
         window.open = (<any>$window.cordova).InAppBrowser.open;
       }

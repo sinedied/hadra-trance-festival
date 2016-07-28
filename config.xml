@@ -80,5 +80,6 @@
   <plugin name="cordova-plugin-whitelist" spec="~1.2.1"/>
   <plugin name="cordova-plugin-wkwebview-engine" spec="~1.0.1"/>
   <plugin name="cordova-plugin-inappbrowser" spec="~1.4.0"/>
+  <plugin name="cordova-plugin-network-information" spec="~1.2.0" />
   <icon src="resources/android/icon/drawable-xhdpi-icon.png"/>
 </widget>
