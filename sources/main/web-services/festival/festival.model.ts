@@ -6,6 +6,7 @@ export class Festival {
   featuredArtists: Artist[];    // filled by app
   featuredPhotos: string[];
   featuredVideo: string;
+  soundcloudPlayer: string;
   map: MapInfo[] = [];
   infos: InfoPage[] = [];
   lineup: Scene[] = [];
@@ -36,6 +37,7 @@ export class Artist {
     fr: string;
     en: string;
   };
+  sets: Set[];  // filled by app
 }
 
 export class Scene {
@@ -56,7 +58,7 @@ export class Set {
   start: Date;
   end: Date;
   artistId: string; // filled by server
-  artist: Artist;   // filled by app
+//  artist: Artist;   // filled by app
 }
 
 export class InfoPage {

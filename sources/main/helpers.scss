@@ -37,6 +37,13 @@
   height: 100%;
 }
 
+.content-fill-height {
+  > .scroll {
+    min-height: 100%;
+    height: auto;
+  }
+}
+
 .no-padding {
   padding: 0;
 }
@@ -88,6 +95,12 @@
   transform: translateY(-50%);
 }
 
+.block-vertical-center-absolute {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 // Text overflow with ellipsis for single line blocks
 .text-overflow {
   text-overflow: ellipsis;
@@ -103,3 +116,10 @@
   color: #fff;
 }
 
+.icon-big::before {
+  font-size: 2em;
+}
+
+.icon-huge::before {
+  font-size: 3em;
+}

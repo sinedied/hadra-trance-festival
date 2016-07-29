@@ -1,10 +1,7 @@
-- ngYoutubeEmbed issue -> angular-youtube-embed
-- add buy button to player -> shop compilation (+ player url and shop url)
-
 - Data sync
 - Error management when data cannot be loaded (loading screen!)
 - Dynamic playing home
 - Local notifications when artist plays
-- Now playing button on lineup
+- Now playing button on lineup + split by days
 - Pause button in shell when plangular playing
 - Add analytics
