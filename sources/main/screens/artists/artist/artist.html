@@ -4,9 +4,9 @@
     <button class="button button-icon button-clear ion-android-favorite" ng-class=" { 'ion-android-favorite-outline': !vm.favorites[vm.artist.id] }"
             ng-click="vm.switchFavorite()"></button>
   </ion-nav-buttons>
-  <div class="blur-bg" bg-image="vm.artist.background"></div>
+  <div class="blur-bg" bg-image="vm.artist.banner"></div>
   <ion-content class="transparent-bg light" fading-bar="280" fade-to-rgb="79,10,54" state-name="app.artist">
-    <div class="artist-bg" bg-image="vm.artist.background"></div>
+    <div class="artist-bg" bg-image="vm.artist.banner"></div>
     <div class="artist-info">
       <div class="artist-photo" bg-image="vm.artist.photo"></div>
       <h3 class="artist-name light">{{vm.artist.name}}</h3>
@@ -15,11 +15,20 @@
       </h5>
     </div>
     <div class="social">
-      <button class="button button-small button-clear icon-left ion-fa fa-soundcloud button-light" translate>Soundcloud</button>
-      <button class="button button-small button-clear icon-left ion-social-facebook button-light" translate>Facebook</button>
-      <button class="button button-small button-clear icon-left ion-android-globe button-light" translate>Website</button>
+      <button class="button button-small button-clear icon-left ion-fa fa-soundcloud button-light"
+              ng-if="vm.artist.soundcloud" ng-click="vm.open(vm.artist.soundcloud)"
+              translate>Soundcloud</button>
+      <button class="button button-small button-clear icon-left ion-fa fa-mixcloud button-light"
+              ng-if="vm.artist.mixcloud" ng-click="vm.open(vm.artist.mixcloud)"
+              translate>Mixcloud</button>
+      <button class="button button-small button-clear icon-left ion-social-facebook button-light"
+              ng-if="vm.artist.facebook" ng-click="vm.open(vm.artist.facebook)"
+              translate>Facebook</button>
+      <button class="button button-small button-clear icon-left ion-android-globe button-light"
+              ng-if="vm.artist.website" ng-click="vm.open(vm.artist.website)"
+              translate>Website</button>
     </div>
-    <div class="player" plangular="https://soundcloud.com/hadrarecords/life-is-a-joke-promo-mix">
+    <div class="player" ng-if="vm.artist.soundcloud" plangular="{{vm.artist.soundcloud + '/tracks'}}">
       <div class="buttons left">
         <button ng-click="playPause(index)" class="button button-clear button-light"
                 ng-class="player.playing === track.src  ? 'ion-ios-pause' : 'ion-ios-play'"></button>
@@ -34,8 +43,7 @@
       </div>
     </div>
     <div class="bio text-justify">
-      {{'toto' + vm.favorites}}
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      {{vm.artist.bio.fr || vm.artist.bio.en || ('No bio' | translate)}}
     </div>
     <div class="set-info">
       <div class="set">22:00 - 23:30 // Main stage</div>

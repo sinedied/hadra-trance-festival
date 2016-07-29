@@ -2,24 +2,22 @@ import app from 'main.module';
 import {ILogger, LoggerService} from 'helpers/logger/logger';
 import {ToastService} from 'helpers/toast/toast.service';
 import {FavoritesService} from 'helpers/favorites/favorites.service';
+import {FestivalService} from 'web-services/festival/festival.service';
+import {Artist} from 'web-services/festival/festival.model';
 
 export class ArtistController {
 
   favorites: Map<string, boolean>;
-  artist = {
-    id: '0',
-    name: 'Shotu vs Driss',
-    label: 'Hadra Records',
-    country: 'fr',
-    photo: 'images/home/party2.jpg',
-    background: 'images/home/party1.jpg',
-    bio: ''
-  };
+  artist: Artist;
 
   private logger: ILogger;
 
-  constructor(private gettextCatalog: angular.gettext.gettextCatalog,
+  constructor($scope: ng.IScope,
+              $stateParams: angular.ui.IStateParamsService,
+              private $cordovaInAppBrowser: any,
+              private gettextCatalog: angular.gettext.gettextCatalog,
               logger: LoggerService,
+              festivalService: FestivalService,
               private favoritesService: FavoritesService,
               private toastService: ToastService) {
 
@@ -27,6 +25,14 @@ export class ArtistController {
     this.logger.log('init');
 
     this.favorites = this.favoritesService.favorites;
+
+    // Init each time, because of view cache
+    $scope.$on('$ionicView.beforeEnter', () => {
+      let artistId = $stateParams['artistId'];
+      this.logger.log('artistId', artistId);
+
+      this.artist = festivalService.festival.artistById[artistId];
+    });
   }
 
   switchFavorite() {
@@ -35,6 +41,10 @@ export class ArtistController {
     if (this.favorites[this.artist.id]) {
       this.toastService.show(this.gettextCatalog.getString('Added to favorites!<br>You will be notified when its set starts.'));
     }
+  }
+
+  open(url: string) {
+    this.$cordovaInAppBrowser.open(url, '_system');
   }
 
 }
