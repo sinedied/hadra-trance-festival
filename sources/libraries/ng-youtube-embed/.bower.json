@@ -1,7 +1,7 @@
 {
   "name": "ng-youtube-embed",
   "main": "src/ng-youtube-embed.js",
-  "version": "0.2.4",
+  "version": "0.3.3",
   "homepage": "https://github.com/ArunMichaelDsouza/ng-youtube-embed",
   "authors": [
     "Arun Michael Dsouza <amdsouza92@gmail.com>"
@@ -21,14 +21,14 @@
     "test",
     "tests"
   ],
-  "_release": "0.2.4",
+  "_release": "0.3.3",
   "_resolution": {
     "type": "version",
-    "tag": "v0.2.4",
-    "commit": "c44f6b97f7926b860a97566dbebf2a05ba7de38f"
+    "tag": "v0.3.3",
+    "commit": "ae92c19ea45778043236f03a0edd484dd20f4289"
   },
   "_source": "https://github.com/ArunMichaelDsouza/ng-youtube-embed.git",
-  "_target": "^0.2.4",
+  "_target": "^0.3.3",
   "_originalSource": "ng-youtube-embed",
   "_direct": true
 }

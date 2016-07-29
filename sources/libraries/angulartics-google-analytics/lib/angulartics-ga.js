@@ -16,6 +16,8 @@ angular.module('angulartics.google.analytics', ['angulartics'])
   // Set the default settings for this module
   $analyticsProvider.settings.ga = {
     additionalAccountNames: undefined,
+    disableEventTracking: null,
+    disablePageTracking: null,
     userId: null
   };
 
@@ -36,6 +38,10 @@ angular.module('angulartics.google.analytics', ['angulartics'])
   }
 
   $analyticsProvider.registerPageTrack(function (path) {
+    
+    // Do nothing if page tracking is disabled
+    if ($analyticsProvider.settings.ga.disablePageTracking) return;
+
     if (window._gaq) {
       _gaq.push(['_trackPageview', path]);
       angular.forEach($analyticsProvider.settings.ga.additionalAccountNames, function (accountName){
@@ -58,7 +64,7 @@ angular.module('angulartics.google.analytics', ['angulartics'])
    * @name eventTrack
    *
    * @param {string} action Required 'action' (string) associated with the event
-   * @param {object} properties Comprised of the mandatory field 'category' (string) and optional  fields 'label' (string), 'value' (integer) and 'noninteraction' (boolean)
+   * @param {object} properties Comprised of the mandatory field 'category' (string) and optional  fields 'label' (string), 'value' (integer) and 'nonInteraction' (boolean)
    *
    * @link https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide#SettingUpEventTracking
    *
@@ -67,6 +73,9 @@ angular.module('angulartics.google.analytics', ['angulartics'])
   $analyticsProvider.registerEventTrack(eventTrack);
 
   function eventTrack (action, properties) {
+
+    // Do nothing if event tracking is disabled
+    if ($analyticsProvider.settings.ga.disableEventTracking) return;
 
     // Google Analytics requires an Event Category
     if (!properties || !properties.category) {
@@ -81,6 +90,18 @@ angular.module('angulartics.google.analytics', ['angulartics'])
       properties.value = isNaN(parsed) ? 0 : parsed;
     }
 
+    // GA requires that hitCallback be an function, see:
+    // https://developers.google.com/analytics/devguides/collection/analyticsjs/sending-hits#hitcallback
+    if (properties.hitCallback && (typeof properties.hitCallback !== 'function')) {
+      properties.hitCallback = null;
+    }
+
+    // Making nonInteraction parameter more intuitive, includes backwards compatibilty
+    // https://github.com/angulartics/angulartics-google-analytics/issues/49
+    if (!properties.hasOwnProperty('nonInteraction')) {
+      properties.nonInteraction = properties.noninteraction;
+    }
+
     if (window.ga) {
 
       var eventOptions = {
@@ -88,9 +109,10 @@ angular.module('angulartics.google.analytics', ['angulartics'])
         eventAction: action,
         eventLabel: properties.label,
         eventValue: properties.value,
-        nonInteraction: properties.noninteraction,
+        nonInteraction: properties.nonInteraction,
         page: properties.page || window.location.hash.substring(1) || window.location.pathname,
-        userId: $analyticsProvider.settings.ga.userId
+        userId: $analyticsProvider.settings.ga.userId,
+        hitCallback: properties.hitCallback
       };
 
       // Round up any dimensions and metrics for this hit
@@ -109,7 +131,7 @@ angular.module('angulartics.google.analytics', ['angulartics'])
       });
 
     } else if (window._gaq) {
-      _gaq.push(['_trackEvent', properties.category, action, properties.label, properties.value, properties.noninteraction]);
+      _gaq.push(['_trackEvent', properties.category, action, properties.label, properties.value, properties.nonInteraction]);
     }
 
   }
@@ -136,7 +158,7 @@ angular.module('angulartics.google.analytics', ['angulartics'])
    * Set Username
    * @name setUsername
    *
-   * @param {string} userId Registers User ID of user for use with other hits 
+   * @param {string} userId Registers User ID of user for use with other hits
    *
    * @link https://developers.google.com/analytics/devguides/collection/analyticsjs/cookies-user-id#user_id
    */
@@ -148,7 +170,7 @@ angular.module('angulartics.google.analytics', ['angulartics'])
    * Set User Properties
    * @name setUserProperties
    *
-   * @param {object} properties Sets all properties with dimensionN or metricN to their respective values 
+   * @param {object} properties Sets all properties with dimensionN or metricN to their respective values
    *
    * @link https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#customs
    */
@@ -156,7 +178,7 @@ angular.module('angulartics.google.analytics', ['angulartics'])
     if(properties) {
       // add custom dimensions and metrics to each hit
       var dimsAndMets = dimensionsAndMetrics(properties);
-      ga('set', dimsAndMets); 
+      ga('set', dimsAndMets);
     }
   });
 
