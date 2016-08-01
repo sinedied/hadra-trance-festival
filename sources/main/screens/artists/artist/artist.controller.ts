@@ -15,6 +15,7 @@ export class ArtistController {
   constructor($scope: ng.IScope,
               $stateParams: angular.ui.IStateParamsService,
               private $cordovaInAppBrowser: any,
+              private moment: moment.MomentStatic,
               private gettextCatalog: angular.gettext.gettextCatalog,
               logger: LoggerService,
               festivalService: FestivalService,
@@ -41,6 +42,10 @@ export class ArtistController {
     if (this.favorites[this.artist.id]) {
       this.toastService.show(this.gettextCatalog.getString('Added to favorites!<br>You will be notified when its set starts.'));
     }
+  }
+
+  formatDate(date: Date) {
+    return this.moment(date).format('hh:mm');
   }
 
   open(url: string) {

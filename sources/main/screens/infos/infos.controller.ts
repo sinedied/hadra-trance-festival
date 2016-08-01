@@ -6,7 +6,7 @@ export class InfosController {
   private logger: ILogger;
 
   constructor(logger: LoggerService) {
-    this.logger = logger.getLogger('map');
+    this.logger = logger.getLogger('infosController');
     this.logger.log('init');
   }
 

@@ -46,8 +46,9 @@
       {{vm.artist.bio.fr || vm.artist.bio.en || ('No bio' | translate)}}
     </div>
     <div class="set-info">
-      <div class="set">22:00 - 23:30 // Main stage</div>
-      <div class="set">02:00 - 03:00 // Alternative stage</div>
+      <div class="set" ng-repeat="set in vm.artist.sets">
+        {{::vm.formatDate(set.start)}} - {{::vm.formatDate(set.end)}} // {{::set.scene.name}}
+      </div>
     </div>
   </ion-content>
 </ion-view>

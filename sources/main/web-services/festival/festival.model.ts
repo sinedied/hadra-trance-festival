@@ -2,8 +2,7 @@ export class Festival {
   version: number = 1.0;
   photo: string;
   description: string;
-  featuredArtistIds: string[];  // filled by server
-  featuredArtists: Artist[];    // filled by app
+  featuredArtistIds: string[];
   featuredPhotos: string[];
   featuredVideo: string;
   soundcloudPlayer: string;
@@ -13,12 +12,34 @@ export class Festival {
   artists: Artist[] = [];
   artistById: Map<string, Artist>;
 
+  // App data only
+  featuredArtists: Artist[];
+
   buildArtistIndex() {
     this.artistById = {};
     _.each(this.artists, (artist: Artist) => {
       this.artistById[artist.id] = artist;
     });
     this.featuredArtists = _.map(this.featuredArtistIds, id => this.artistById[id]);
+
+    _.each(this.lineup, scene => {
+      _.each(scene.sets, set => {
+        set.artist = this.artistById[set.artistId];
+        set.scene = scene;
+
+        if (!set.artist.sets) {
+          set.artist.sets = [];
+        }
+
+        set.artist.sets.push(set);
+
+        if (!set.artist.type) {
+          set.artist.type = <any>set.type;
+        } else {
+          set.artist.type += ' / ' + <any>set.artist.type;
+        }
+      });
+    });
   }
 }
 
@@ -37,7 +58,10 @@ export class Artist {
     fr: string;
     en: string;
   };
-  sets: Set[];  // filled by app
+
+  // App data only
+  sets: Set[];
+  type: string;
 }
 
 export class Scene {
@@ -57,8 +81,11 @@ export class Set {
   type: SetType;
   start: Date;
   end: Date;
-  artistId: string; // filled by server
-//  artist: Artist;   // filled by app
+  artistId: string;
+
+  // App data only
+  artist: Artist;
+  scene: Scene;
 }
 
 export class InfoPage {

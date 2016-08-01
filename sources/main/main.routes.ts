@@ -75,6 +75,16 @@ function routeConfig($stateProvider: angular.ui.IStateProvider,
       },
       data: {title: gettext('Infos')}
     })
+    .state('app.info', {
+      url: '/infos/:infoId',
+      views: {
+        'menuContent': {
+          template: <string>require('screens/infos/info/info.html'),
+          controller: 'infoController as vm',
+        }
+      },
+      data: {title: gettext('Info')}
+    })
     .state('app.player', {
       url: '/player',
       views: {

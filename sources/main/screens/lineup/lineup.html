@@ -6,7 +6,7 @@
   <div class="bar bar-subheader">
     <div class="button-bar">
       <a class="button button-positive" ng-repeat="floor in festival.lineup" ng-click="vm.selectFloor($index)"
-         ng-class="{ active: vm.selectedFloor === $index }" translate>{{floor.name}}</a>
+         ng-class="{ active: vm.selectedFloor === $index }" translate>{{::floor.name}}</a>
     </div>
   </div>
   <ion-content class="dark-bg has-subheader" overflow-scroll="false">
@@ -15,9 +15,9 @@
         {{'Thursday' | translate}}
       </div>
       <ion-item class="item-icon-right" ng-repeat="set in festival.lineup[vm.selectedFloor].sets"
-                href="#/artists/{{festival.artistById[set.artistId].id}}">
-        <span class="time">{{vm.formatDate(set.start)}} - {{vm.formatDate(set.end)}}</span>
-        <span>{{festival.artistById[set.artistId].name}}</span>
+                href="#/artists/{{set.artistId}}">
+        <span class="time">{{::vm.formatDate(set.start)}} - {{::vm.formatDate(set.end)}}</span>
+        <span>{{::set.artist.name}}</span>
         <!--<i class="icon ion-ios-arrow-forward"></i>-->
         <ion-option-button class="option-button button-positive ion-android-favorite"
                            ng-click="vm.switchFavorite(festival.artistById[set.artistId])"

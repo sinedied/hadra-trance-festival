@@ -64,7 +64,8 @@ function buildScripts(watch, test, done) {
       }
     },
     tslint: {
-      emitErrors: true
+      emitErrors: !watch,
+      failOnHint: !watch
     }
   };
 

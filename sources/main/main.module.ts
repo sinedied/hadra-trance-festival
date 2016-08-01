@@ -18,5 +18,6 @@ export default angular.module('app', [
   'ion-affix',
   'uiGmapgoogle-maps',
   'ngYoutubeEmbed',
-  'plangular'
+  'plangular',
+  'hc.marked'
 ]);

@@ -1,6 +1,11 @@
 <ion-view id="infos-screen" class="infos-screen">
   <ion-nav-title>{{viewTitle}}</ion-nav-title>
-  <ion-content class="">
-    TODO: Additional infos
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-icon-right" ng-repeat="info in festival.infos" href="#/infos/{{$index}}">
+        {{info.title}}
+        <i class="icon ion-ios-arrow-forward"></i>
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>
