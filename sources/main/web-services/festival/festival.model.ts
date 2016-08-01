@@ -2,6 +2,10 @@ export class Festival {
   version: number = 1.0;
   photo: string;
   description: string;
+  playerSoundcloud: string;
+  playerShop: string;
+  buyMusic: string;
+  buyClothes: string;
   featuredArtistIds: string[];
   featuredPhotos: string[];
   featuredVideo: string;
