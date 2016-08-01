@@ -3,6 +3,7 @@ import {IApplicationConfig} from 'main.constants';
 import {RestService} from 'helpers/rest/rest.service';
 import {ILogger, LoggerService} from 'helpers/logger/logger';
 import {FestivalService} from 'web-services/festival/festival.service';
+import {NotificationService} from 'helpers/notification/notification.service';
 
 /**
  * Entry point of the application.
@@ -21,6 +22,7 @@ function main($window: ng.IWindowService,
               _: _.LoDashStatic,
               config: IApplicationConfig,
               festivalService: FestivalService,
+              notificationService: NotificationService,
               logger: LoggerService,
               restService: RestService) {
 
@@ -222,6 +224,7 @@ function main($window: ng.IWindowService,
       .then((response: any) => {
         _logger.log('Updated festival data');
         vm.festival = response.data;
+        notificationService.updateNotifications();
       })
       .finally($ionicLoading.hide);
       // TODO: manage errors!
