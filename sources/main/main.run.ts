@@ -57,7 +57,7 @@ function main($window: ng.IWindowService,
 
     // Fallback if language is not supported
     if (!isSupportedLanguage) {
-      language = 'en-US';
+      language = 'fr-FR';
     }
 
     // Configure translation with gettext

@@ -26,7 +26,7 @@ let environment = {
       url: '',
       route: 'api'
     },
-    googleAnalyticsId: '',
+    googleAnalyticsId: 'UA-81709759-1',
   },
   dev: {
     debug: true,
@@ -34,7 +34,7 @@ let environment = {
       url: 'http://api.icndb.com',
       route: ''
     },
-    googleAnalyticsId: ''
+    googleAnalyticsId: 'UA-81709759-1'
   },
   prod: {
     debug: false,
@@ -42,7 +42,7 @@ let environment = {
       url: 'http://api.icndb.com',
       route: ''
     },
-    googleAnalyticsId: ''
+    googleAnalyticsId: 'UA-81709759-1'
   }
 };
 // endreplace
@@ -61,7 +61,7 @@ let config: IApplicationConfig = {
 
   // Supported languages
   supportedLanguages: [
-    'en-US',
+    // 'en-US',
     'fr-FR'
   ],
 
