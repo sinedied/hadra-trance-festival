@@ -90,6 +90,15 @@ export class Set {
   // App data only
   artist: Artist;
   scene: Scene;
+
+  static getSerializableCopy(set: Set): Set {
+    return <Set>{
+      type: set.type,
+      start: set.start,
+      end: set.end,
+      artistId: set.artistId
+    };
+  }
 }
 
 export class InfoPage {
