@@ -40,7 +40,7 @@ export class ArtistController {
     this.favoritesService.toggle(this.artist.id);
 
     if (this.favorites[this.artist.id]) {
-      this.toastService.show(this.gettextCatalog.getString('Added to favorites!<br>You will be notified when its set starts.'));
+      this.toastService.show(this.gettextCatalog.getString('Added to favorites!<br>You will be notified before its set starts.'));
     }
   }
 

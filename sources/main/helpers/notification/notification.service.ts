@@ -4,16 +4,18 @@ import {FestivalService} from 'web-services/festival/festival.service';
 import {Set, Festival} from 'web-services/festival/festival.model';
 import {FavoritesService} from 'helpers/favorites/favorites.service';
 
-const NOTIFIY_BEFORE_MIN = 10;  // 10 minutes
+const NOTIFY_BEFORE_MIN = 10;  // 10 minutes
+const NOTIFICATION_ID = 'notificationId';
 
 /**
  * Notification service: manages local notifications on the device.
  */
 export class NotificationService {
 
+  private id: number;
   private logger: ILogger;
 
-  constructor($rootScope: ng.IRootScopeService,
+  constructor(private $window: ng.IWindowService,
               private $cordovaLocalNotification: any,
               private gettextCatalog: angular.gettext.gettextCatalog,
               private moment: moment.MomentStatic,
@@ -22,12 +24,14 @@ export class NotificationService {
               private favoritesService: FavoritesService) {
 
     this.logger = logger.getLogger('notificationService');
-
-    $rootScope.$on('$cordovaLocalNotification:trigger', this.onTrigger.bind(this));
-    $rootScope.$on('$cordovaLocalNotification:click', this.onClick.bind(this));
+    this.id = parseInt($window.localStorage.getItem(NOTIFICATION_ID) || '0', 10);
   }
 
   updateNotifications() {
+    // if (!window.cordova) {
+    //   return;
+    // }
+
     // TODO: add set ID???
     this.logger.log('Updating notifications...');
 
@@ -55,7 +59,7 @@ export class NotificationService {
         });
 
         // Add new notifications
-        let now = this.moment().subtract(NOTIFIY_BEFORE_MIN, 'minutes');
+        let now = this.moment().subtract(NOTIFY_BEFORE_MIN, 'minutes');
 
         _.each(favorites, (value: any, id: string) => {
           this.logger.log('setting up notification for artist' + id);
@@ -70,17 +74,17 @@ export class NotificationService {
             console.log('inFuture: ' + inFuture + ' || ' + set.start);
 
             if (!notificationExist && inFuture) {
-              // TODO: add unique ID, ID needs to be a string convertible to an integer
               this.$cordovaLocalNotification.add({
+                id: '' + this.getId(),  // ID needs to be a string convertible to an integer
                 autoCancel: true,
                 title: this.gettextCatalog.getString('{{name}} {{type}} set', {
                   name: set.artist.name,
                   type: set.type
                 }),
                 message: this.gettextCatalog.getString('starts in 10 minutes on {{scene}} floor!', {scene: set.scene.name}),
-                data: Set.getSerializableCopy(set)
-                // at: this.moment(set.start).substract(NOTIFIY_BEFORE_MIN, 'minutes').toDate(),
-                // sound: "file://sounds/message.mp3",
+                data: Set.getSerializableCopy(set),
+                at: this.moment().add(set.artistId, 'minutes').toDate()
+                // at: this.moment(set.start).substract(NOTIFY_BEFORE_MIN, 'minutes').toDate(),
                 // icon: "http://my.domain.de/avatar/user#id=123"
               });
 
@@ -91,19 +95,11 @@ export class NotificationService {
       });
   }
 
-  private onTrigger(event: any, notification: any, state: any) {
-    console.log('notification triggered');
-    console.log(event);
-    console.log(notification);
-    console.log(state);
-  }
-
-  private onClick(event: any, notification: any, state: any) {
-    console.log('notification clicked');
-    console.log(event);
-    console.log(notification);
-    console.log(state);
-//    this.$cordovaLocalNotification.cancel(notification.id);
+  private getId() {
+    let id = this.id++;
+    console.log('newId: ' + id);
+    this.$window.localStorage.setItem(NOTIFICATION_ID, '' + this.id);
+    return id;
   }
 
 }

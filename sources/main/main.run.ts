@@ -157,8 +157,6 @@ function main($window: ng.IWindowService,
           _logger.log('Application resumed from background');
           $rootScope.foreground = true;
 
-          // TODO: register for push notification if logged
-
           vm.$broadcast('applicationResume');
           vm.$apply();
         }, false);

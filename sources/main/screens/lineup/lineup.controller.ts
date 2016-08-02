@@ -57,7 +57,7 @@ export class LineupController {
     this.favoritesService.toggle(artist.id);
 
     if (this.favorites[artist.id]) {
-      this.toastService.show(this.gettextCatalog.getString('Added to favorites!<br>You will be notified when this set starts.'));
+      this.toastService.show(this.gettextCatalog.getString('Added to favorites!<br>You will be notified before this set starts.'));
     }
 
     this.$ionicListDelegate.closeOptionButtons();

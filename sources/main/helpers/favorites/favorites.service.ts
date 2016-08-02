@@ -1,5 +1,6 @@
 import app from 'main.module';
 import {LoggerService, ILogger} from 'helpers/logger/logger';
+import {NotificationService} from 'notification/notification.service';
 
 const FAVORITES_KEY = 'favorites';
 
@@ -10,6 +11,7 @@ export class FavoritesService {
   private logger: ILogger;
 
   constructor(private $window: ng.IWindowService,
+              private notificationService: NotificationService,
               logger: LoggerService) {
 
     this.logger = logger.getLogger('favoritesService');
@@ -19,11 +21,13 @@ export class FavoritesService {
   add(artistId: string) {
     this.favorites[artistId] = true;
     this.save();
+    this.notificationService.updateNotifications();
   }
 
   remove(artistId: string) {
     delete this.favorites[artistId];
     this.save();
+    this.notificationService.updateNotifications();
   }
 
   toggle(artistId: string) {
