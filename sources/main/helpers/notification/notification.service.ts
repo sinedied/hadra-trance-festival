@@ -1,6 +1,7 @@
 import app from 'main.module';
 import {ILogger, LoggerService} from 'helpers/logger/logger';
 import {FestivalService} from 'web-services/festival/festival.service';
+import {Set} from 'web-services/festival/festival.model';
 import {FavoritesService} from 'helpers/favorites/favorites.service';
 
 /**
@@ -12,6 +13,7 @@ export class NotificationService {
 
   constructor($rootScope: ng.IRootScopeService,
               private $cordovaLocalNotification: any,
+              private gettextCatalog: angular.gettext.gettextCatalog,
               logger: LoggerService,
               private festivalService: FestivalService,
               private favoritesService: FavoritesService) {
@@ -23,7 +25,30 @@ export class NotificationService {
   }
 
   updateNotifications() {
-    // TODO
+    let festival = this.festivalService.festival;
+
+    // TODO: list existing notifications artists to remove
+
+    _.each(this.favoritesService.favorites, (value: any, id: string) => {
+      this.logger.log('setting up notification for artist' + id);
+
+      _.each(festival.artistById[id].sets, (set: Set) => {
+
+        // TODO: check if date is > now
+        // TODO: check if exists, else update
+        this.$cordovaLocalNotification.schedule({
+          id: set.artist.id + '_' + set.start,
+          title: this.gettextCatalog.getString('{name} {type} set', {
+            name: set.artist.name,
+            type: set.type
+          }),
+          message: 'starts in 10 minutes!'
+          // at: new Date(),
+          // sound: "file://sounds/message.mp3",
+          // icon: "http://my.domain.de/avatar/user#id=123"
+        });
+      });
+    });
   }
 
   private onTrigger(event: any, notification: any, state: any) {
