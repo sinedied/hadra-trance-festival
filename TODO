@@ -1,4 +1,4 @@
-- bug ios player time overflow
+X bug ios player time overflow
 - Data sync
 - Copy assets
 - Error management when data cannot be loaded (loading screen?)

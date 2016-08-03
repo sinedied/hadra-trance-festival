@@ -82,8 +82,10 @@ export class NotificationService {
             if (!notificationExist && inFuture) {
               this.$cordovaLocalNotification.schedule({
                 id: '' + this.getId(),  // ID needs to be a string convertible to an integer
+                smallicon: 'res://drawable/ic_notification_hadra',
+                icon: 'res://drawable/ic_notification_hadra',
                 // TODO: android icons
-                // TODO: test sound
+                // TODO: test sound ios
                 text: this.gettextCatalog.getString('{{name}} {{type}} set starts in 10 minutes on {{scene}} floor!', {
                   name: set.artist.name,
                   type: set.type,
@@ -92,7 +94,6 @@ export class NotificationService {
                 data: Set.getSerializableCopyWithId(set),
                 at: this.moment().add(set.artistId, 'minutes').toDate()
                 // at: this.moment(set.start).substract(NOTIFY_BEFORE_MIN, 'minutes').toDate(),
-                // icon: "http://my.domain.de/avatar/user#id=123"
               });
 
             }
