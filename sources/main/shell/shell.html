@@ -52,27 +52,16 @@
               <span translate>Player</span>
             </span>
           </ion-item>
-          <!--<ion-item class="item-dark item-icon-left text-darker" menu-close href="#/about" ng-class="{ active: shell.stateContains('app.about') }">-->
-            <!--<span class="medium-dark">-->
-              <!--<i class="icon ion-planet icon-large"> </i>-->
-              <!--<span translate>About</span>-->
-            <!--</span>-->
-          <!--</ion-item>-->
         </ion-list>
-        <div class="player" plangular="" ng-if="player.playing">
-          <div class="buttons">
-            <button ng-click="playPause(index)" class="button button-clear button-light"
-                    ng-class="player.playing === track.src  ? 'ion-ios-pause' : 'ion-ios-play'"></button>
-            <button ng-click="next()" class="next button button-light button-clear ion-skip-forward"></button>
-          </div>
-          <div class="track-info light">
-            <div class="text-overflow">{{track.title}}</div>
-          </div>
+        <div class="player text-center" plangular>
+          <span class="buttons" ng-if="player.playing">
+            <button ng-click="pause()" class="button button-clear button-light ion-ios-pause"></button>
+            <button ng-click="next()" class="button button-clear button-light ion-skip-forward"></button>
+          </span>
         </div>
-
         <!--<a class="button button-clear button-small padding text-center" style="position: absolute; bottom: 0; width: 100%; color: #555">-->
-          <!--Made with <i class="icon ion-heart assertive"></i> by sinedied-->
-        </a>
+          <!--Made with <i class="icon ion-heart assertive"></i> by noda-->
+        <!--</a>-->
       </ion-content>
     </ion-side-menu>
 
