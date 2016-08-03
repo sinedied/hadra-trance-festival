@@ -16,15 +16,14 @@ export class FestivalService {
               private contextService: ContextService) {
   }
 
-  getFestival(context?: any): ng.IPromise<string> {
-    // TODO: save/load from localStorage
-    return this.$q(resolve => {
-      let f = new Festival();
-      angular.extend(f, JSON.parse(<string>require('static/data.json')));
-      f.processData();
-      this.festival = f;
-      resolve({ data: f });
-    });
+  loadFestival(): Festival {
+    // TODO: save/load from localStorage + update from network and reload + error management
+    let f = new Festival();
+    angular.extend(f, JSON.parse(<string>require('static/data.json')));
+    f.processData();
+    this.festival = f;
+
+    return this.festival;
   }
 
 }

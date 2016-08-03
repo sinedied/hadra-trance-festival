@@ -102,11 +102,14 @@ function main($window: ng.IWindowService,
     // Set REST server configuration
     restService.setServer(config.environment.server);
 
+    // Load festival data
+    vm.festival = festivalService.loadFestival();
+
     // Cordova platform and plugins init
     $ionicPlatform.ready(() => {
 
-      // Update festival data
-      updateData();
+      // Updaye notifications
+      notificationService.updateNotifications();
 
       // Hide splash screen
       let splashScreen = $window.navigator.splashscreen;
@@ -207,31 +210,6 @@ function main($window: ng.IWindowService,
       vm.viewTitle = gettextCatalog.getString(stateTitle);
       vm.pageTitle += ' | ' + vm.viewTitle;
     }
-  }
-
-  /**
-   * Updates app data.
-   */
-  function updateData() {
-    _logger.log('Updating festival data...');
-    if (festivalService.festival) {
-      vm.festival = festivalService.festival;
-    } else {
-      $ionicLoading.show();
-    }
-    festivalService
-      .getFestival()
-      .then((response: any) => {
-        _logger.log('Updated festival data');
-        vm.festival = response.data;
-        notificationService.updateNotifications();
-        console.log('afterupdate');
-      })
-      .finally(() => {
-        console.log('finally');
-        $ionicLoading.hide();
-      });
-      // TODO: manage errors!
   }
 
 }
