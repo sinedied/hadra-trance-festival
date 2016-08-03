@@ -44,7 +44,7 @@ let observers: Array<Function> = [];
  * @param {Object?} options Additional log options.
  */
 function log(message: string, source: string, logFunc: Function, level: string, options: any): void {
-  logFunc(source ? '[' + source + ']' : '', message, '');
+  logFunc(source ? '[' + source + ']' : '', message);
   angular.forEach(observers, (observerFunc: any) => {
     observerFunc(message, source, level, options);
   });

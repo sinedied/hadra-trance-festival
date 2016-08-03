@@ -38,6 +38,7 @@ function main($window: ng.IWindowService,
   vm.viewTitle = '';
   vm.festival = null;
   vm.offline = false;
+  vm.foreground = true;
 
   /**
    * Utility method to set the language in the tools requiring it.
@@ -101,11 +102,11 @@ function main($window: ng.IWindowService,
     // Set REST server configuration
     restService.setServer(config.environment.server);
 
-    // Update festival data
-    updateData();
-
     // Cordova platform and plugins init
     $ionicPlatform.ready(() => {
+
+      // Update festival data
+      updateData();
 
       // Hide splash screen
       let splashScreen = $window.navigator.splashscreen;
@@ -148,7 +149,7 @@ function main($window: ng.IWindowService,
           _logger.log('Application paused in background');
           vm.foreground = false;
 
-          vm.$broadcast('applicationPause');
+          vm.$emit('applicationPause');
           vm.$apply();
         }, false);
 
@@ -157,7 +158,7 @@ function main($window: ng.IWindowService,
           _logger.log('Application resumed from background');
           $rootScope.foreground = true;
 
-          vm.$broadcast('applicationResume');
+          vm.$emit('applicationResume');
           vm.$apply();
         }, false);
 
@@ -168,7 +169,7 @@ function main($window: ng.IWindowService,
             vm.offline = false;
 
             if (vm.foreground) {
-              vm.$broadcast('applicationOnline');
+              vm.$emit('applicationOnline');
             }
 
             vm.$apply();
@@ -182,7 +183,7 @@ function main($window: ng.IWindowService,
             vm.offline = true;
 
             if (vm.foreground) {
-              vm.$broadcast('applicationOffline');
+              vm.$emit('applicationOffline');
             }
 
             vm.$apply();
@@ -212,6 +213,7 @@ function main($window: ng.IWindowService,
    * Updates app data.
    */
   function updateData() {
+    _logger.log('Updating festival data...');
     if (festivalService.festival) {
       vm.festival = festivalService.festival;
     } else {
@@ -223,8 +225,12 @@ function main($window: ng.IWindowService,
         _logger.log('Updated festival data');
         vm.festival = response.data;
         notificationService.updateNotifications();
+        console.log('afterupdate');
       })
-      .finally($ionicLoading.hide);
+      .finally(() => {
+        console.log('finally');
+        $ionicLoading.hide();
+      });
       // TODO: manage errors!
   }
 

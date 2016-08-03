@@ -114,4 +114,8 @@ gulp.task('clean:build', function() {
   return $.del([conf.paths.dist, conf.paths.tmp]);
 });
 
+gulp.task('clean:dist', function() {
+  return $.del([conf.paths.dist]);
+});
+
 gulp.task('clean', ['clean:build', 'images:clean-cache']);

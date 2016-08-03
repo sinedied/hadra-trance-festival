@@ -3,7 +3,7 @@
 - Copy assets
 - Error management when data cannot be loaded (loading screen?)
 - Dynamic playing home + time remaining since start
-- Local notifications when artist plays
+X Local notifications when artist plays
 - Now playing button on lineup + icon on playing set + split by days
 - Pause button in shell when plangular playing
 - Add analytics

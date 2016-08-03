@@ -1,17 +1,18 @@
 import app from 'main.module';
 import {LoggerService, ILogger} from 'helpers/logger/logger';
-import {NotificationService} from 'notification/notification.service';
 
 const FAVORITES_KEY = 'favorites';
 
 export class FavoritesService {
 
+  static FAVORITES_UPDATED_EVENT = 'favorites:updated';
+
   favorites: Map<string, boolean> = {};
 
   private logger: ILogger;
 
-  constructor(private $window: ng.IWindowService,
-              private notificationService: NotificationService,
+  constructor(private $rootScope: ng.IRootScopeService,
+              private $window: ng.IWindowService,
               logger: LoggerService) {
 
     this.logger = logger.getLogger('favoritesService');
@@ -21,13 +22,13 @@ export class FavoritesService {
   add(artistId: string) {
     this.favorites[artistId] = true;
     this.save();
-    this.notificationService.updateNotifications();
+    this.$rootScope.$emit(FavoritesService.FAVORITES_UPDATED_EVENT);
   }
 
   remove(artistId: string) {
     delete this.favorites[artistId];
     this.save();
-    this.notificationService.updateNotifications();
+    this.$rootScope.$emit(FavoritesService.FAVORITES_UPDATED_EVENT);
   }
 
   toggle(artistId: string) {

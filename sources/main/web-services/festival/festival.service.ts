@@ -21,7 +21,7 @@ export class FestivalService {
     return this.$q(resolve => {
       let f = new Festival();
       angular.extend(f, JSON.parse(<string>require('static/data.json')));
-      f.buildArtistIndex();
+      f.processData();
       this.festival = f;
       resolve({ data: f });
     });

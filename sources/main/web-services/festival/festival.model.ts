@@ -1,4 +1,96 @@
-export class Festival {
+/*
+ * Interfaces
+ */
+
+export interface IFestival {
+  version: number;
+  photo: string;
+  description: string;
+  playerSoundcloud: string;
+  playerShop: string;
+  buyMusic: string;
+  buyClothes: string;
+  featuredArtistIds: string[];
+  featuredPhotos: string[];
+  featuredVideo: string;
+  soundcloudPlayer: string;
+  map: IMapInfo[];
+  infos: IInfoPage[];
+  lineup: IScene[];
+  artists: IArtist[];
+}
+
+export interface IArtist {
+  id: string;
+  name: string;
+  photo: string;
+  banner: string;
+  label: string;
+  country: string;
+  facebook: string;
+  soundcloud: string;
+  mixcloud: string;
+  website: string;
+  bio: {
+    fr: string;
+    en: string;
+  };
+}
+
+export interface IScene {
+  name: string;
+  sets: Set[];
+}
+
+export interface ISet {
+  id?: string;
+  type: SetType;
+  start: Date;
+  end: Date;
+  artistId: string;
+}
+
+export interface IInfoPage {
+  title: string;
+  content: string;
+}
+
+export interface IMapInfo {
+  lat: number;
+  lon: number;
+  title: string;
+  type: MapInfoType;
+  description: string;
+}
+
+/*
+ * Enums
+ */
+
+export enum SetType {
+  DJ = <any>'dj',
+  LIVE = <any>'live',
+  GIG = <any>'gig',
+  VJ = <any> 'vj',
+  BREAK = <any>'break'
+}
+
+export enum MapInfoType {
+  WATER,
+  TOILET,
+  SCENE,
+  FOOD,
+  SHOP,
+  INFO,
+  SHOWER,
+  HADRA_STAND
+}
+
+/*
+ * Classes
+ */
+
+export class Festival implements IFestival {
   version: number = 1.0;
   photo: string;
   description: string;
@@ -14,12 +106,12 @@ export class Festival {
   infos: InfoPage[] = [];
   lineup: Scene[] = [];
   artists: Artist[] = [];
-  artistById: Map<string, Artist>;
 
   // App data only
+  artistById: Map<string, Artist>;
   featuredArtists: Artist[];
 
-  buildArtistIndex() {
+  processData() {
     this.artistById = {};
     _.each(this.artists, (artist: Artist) => {
       this.artistById[artist.id] = artist;
@@ -28,6 +120,7 @@ export class Festival {
 
     _.each(this.lineup, scene => {
       _.each(scene.sets, set => {
+        set.id = Set.getHashCode(set);
         set.artist = this.artistById[set.artistId];
         set.scene = scene;
 
@@ -47,7 +140,7 @@ export class Festival {
   }
 }
 
-export class Artist {
+export class Artist implements IArtist {
   id: string;
   name: string;
   photo: string;
@@ -68,20 +161,13 @@ export class Artist {
   type: string;
 }
 
-export class Scene {
+export class Scene implements IScene {
   name: string;
   sets: Set[] = [];
 }
 
-export enum SetType {
-  DJ = <any>'dj',
-  LIVE = <any>'live',
-  GIG = <any>'gig',
-  VJ = <any> 'vj',
-  BREAK = <any>'break'
-}
-
-export class Set {
+export class Set implements ISet {
+  id: string;
   type: SetType;
   start: Date;
   end: Date;
@@ -91,7 +177,7 @@ export class Set {
   artist: Artist;
   scene: Scene;
 
-  static getSerializableCopy(set: Set): Set {
+  static getSerializableCopy(set: Set): ISet {
     return <Set>{
       type: set.type,
       start: set.start,
@@ -99,25 +185,42 @@ export class Set {
       artistId: set.artistId
     };
   }
+
+  static getSerializableCopyWithId(set: Set): ISet {
+    return <Set>{
+      id: Set.getHashCode(set),
+      type: set.type,
+      start: set.start,
+      end: set.end,
+      artistId: set.artistId
+    };
+  }
+
+  static getHashCode(set: Set): string {
+    let s = JSON.stringify(Set.getSerializableCopy(set));
+    let char, hash = 0;
+    if (s.length === 0) {
+      return '' + hash;
+    }
+    for (let i = 0; i < s.length; ++i) {
+      char = s.charCodeAt(i);
+      /* tslint:disable */
+      hash = ((hash << 5) - hash) + char;
+      hash = hash & hash;
+      /* tslint:enable */
+    }
+    return '' + hash;
+  }
+
 }
 
-export class InfoPage {
+export class InfoPage implements IInfoPage {
   title: string;
   content: string;
 }
 
-export enum MapInfoType {
-  WATER,
-  TOILET,
-  SCENE,
-  FOOD,
-  SHOP,
-  INFO,
-  SHOWER,
-  HADRA_STAND
-}
 
-export class MapInfo {
+export class MapInfo implements IMapInfo {
   lat: number;
   lon: number;
   title: string;
