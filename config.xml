@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="org.nxcode.htf2016" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="org.nxcode.htf2016" version="1.0.0" xmlns="http://www.w3.org/ns/widgets"
+        xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Hadra Festival</name>
   <description>
     Hadra Trance Festival 2016 official app.
@@ -37,6 +38,9 @@
     <splash height="1024" src="resources/ios/splash/Default-Portrait~ipad.png" width="768"/>
     <splash height="960" src="resources/ios/splash/Default@2x~iphone.png" width="640"/>
     <splash height="480" src="resources/ios/splash/Default~iphone.png" width="320"/>
+    <config-file platform="ios" target="*-Info.plist" parent="UIStatusBarStyle">
+      <string>UIStatusBarStyleLightContent</string>
+    </config-file>
   </platform>
   <platform name="android">
     <preference name="android-minSdkVersion" value="16"/>
@@ -44,6 +48,7 @@
     <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect"/>
     <preference name="xwalkMode" value="embedded"/>
     <preference name="xwalkMultipleApk" value="true"/>
+    <preference name="android-manifest/application/activity/@android:theme" value="@android:style/Theme.DeviceDefault" />
     <icon density="ldpi" src="resources/android/icon/48.png"/>
     <icon density="mdpi" src="resources/android/icon/72.png"/>
     <icon density="hdpi" src="resources/android/icon/96.png"/>
@@ -66,9 +71,9 @@
   <preference name="StatusBarStyle" value="lightcontent"/>
   <preference name="AutoHideSplashScreen" value="false"/>
   <preference name="SplashScreen" value="screen"/>
-  <preference name="SplashMaintainAspectRatio" value="true" />
+  <preference name="SplashMaintainAspectRatio" value="true"/>
   <preference name="ShowSplashScreenSpinner" value="false"/>
-  <preference name="loadUrlTimeoutValue" value="60000" />
+  <preference name="loadUrlTimeoutValue" value="60000"/>
   <engine name="ios" spec="~4.0.1"/>
   <engine name="android" spec="~5.1.1"/>
   <plugin name="ionic-plugin-keyboard" spec="~2.0.1"/>
@@ -80,7 +85,9 @@
   <plugin name="cordova-plugin-whitelist" spec="~1.2.1"/>
   <plugin name="cordova-plugin-wkwebview-engine" spec="~1.0.1"/>
   <plugin name="cordova-plugin-inappbrowser" spec="~1.4.0"/>
-  <plugin name="cordova-plugin-network-information" spec="~1.2.0" />
-  <plugin name="de.appplant.cordova.plugin.local-notification" spec="https://github.com/katzer/cordova-plugin-local-notifications.git#0.8.4" />
+  <plugin name="cordova-plugin-network-information" spec="~1.2.0"/>
+  <plugin name="de.appplant.cordova.plugin.local-notification"
+          spec="https://github.com/katzer/cordova-plugin-local-notifications.git#0.8.4"/>
   <icon src="resources/android/icon/drawable-xhdpi-icon.png"/>
+  <plugin name="cordova-custom-config" spec="~2.0.3"/>
 </widget>
