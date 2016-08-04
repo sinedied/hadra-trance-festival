@@ -53,15 +53,12 @@
             </span>
           </ion-item>
         </ion-list>
-        <div class="player text-center" plangular>
-          <span class="buttons" ng-if="player.playing">
-            <button ng-click="pause()" class="button button-clear button-light ion-ios-pause"></button>
-            <button ng-click="next()" class="button button-clear button-light ion-skip-forward"></button>
-          </span>
+        <div class="pause-control text-center" plangular>
+          <button ng-show="player.playing" ng-click="pause()" class="button button-outline button-light">
+            <i class="icon ion-ios-pause"></i>
+            <span class="space-left" translate>Pause</span>
+          </button>
         </div>
-        <!--<a class="button button-clear button-small padding text-center" style="position: absolute; bottom: 0; width: 100%; color: #555">-->
-          <!--Made with <i class="icon ion-heart assertive"></i> by noda-->
-        <!--</a>-->
       </ion-content>
     </ion-side-menu>
 

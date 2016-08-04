@@ -99,4 +99,26 @@
     }
   }
 
+  .pause-control {
+    position: absolute;
+    bottom: $padding-big;
+    width: 100%;
+
+    .button {
+      min-height: 0;
+
+      &, .icon::before {
+        line-height: 32px;
+      }
+    }
+
+    .ng-hide-remove {
+      animation: fadeInUp .5s;
+    }
+
+    .ng-hide-add {
+      animation: fadeOutDown .5s;
+    }
+  }
+
 }

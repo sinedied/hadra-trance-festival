@@ -1,11 +1,12 @@
-X bug ios player time overflow
+x bug ios player time overflow
 - Data sync
-- Copy assets
 - Error management when data cannot be loaded (loading screen?)
 - Dynamic playing home + time remaining since start
-X Local notifications when artist plays
+x Local notifications when artist plays
 - Now playing button on lineup + icon on playing set + split by days
-- Pause button in shell when plangular playing
+x Pause button in shell when plangular playing
+- Copy assets from JSON base64 to images/
+- About screen
 - Add analytics
 
 DEADLINE: 19 aout
