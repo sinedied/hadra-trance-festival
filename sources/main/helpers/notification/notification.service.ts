@@ -46,7 +46,7 @@ export class NotificationService {
     this.$cordovaLocalNotification
       .getAll()
       .then((notifications: any[]) => {
-        console.log(notifications);
+        this.logger.log('Queued notifications: ' + notifications.length);
 
         // Clean up already scheduled notifications
         _.each(notifications, (notification: any) => {
@@ -69,22 +69,21 @@ export class NotificationService {
         let now = this.moment().subtract(NOTIFY_BEFORE_MIN, 'minutes');
 
         _.each(favorites, (value: any, id: string) => {
-          this.logger.log('Setting up notification for artist' + id);
-
           _.each(festival.artistById[id].sets, (set: Set) => {
             let notificationExist = _.find(notifications, notification => JSON.parse(notification.data).id === set.id);
-            console.log('exist: ' + notificationExist + ' || ' + set.id);
+            // console.log('exist: ' + notificationExist + ' || ' + set.id);
 
             let inFuture = this.moment(set.start).isAfter(now);
-            console.log('inFuture: ' + inFuture + ' || ' + set.start);
+            // console.log('inFuture: ' + inFuture + ' || ' + set.start);
 
             // TODO: custom plugin to enable big notifications
             if (!notificationExist && inFuture) {
+              this.logger.log(`Adding notification for artist: ${id}, set: ${set.start}`);
+
               this.$cordovaLocalNotification.schedule({
                 id: '' + this.getId(),  // ID needs to be a string convertible to an integer
                 smallicon: 'res://drawable/ic_notification_hadra',
                 icon: 'res://drawable/ic_notification_hadra',
-                // TODO: android icons
                 // TODO: test sound ios
                 text: this.gettextCatalog.getString('{{name}} {{type}} set starts in 10 minutes on {{scene}} floor!', {
                   name: set.artist.name,
