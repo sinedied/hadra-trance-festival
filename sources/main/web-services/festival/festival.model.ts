@@ -2,6 +2,8 @@
  * Interfaces
  */
 
+export const SET_UTC_OFFSET = 2; // +1 for Paris GMT, +1 for DST
+
 export interface IFestival {
   version: number;
   photo: string;
@@ -63,6 +65,11 @@ export interface IMapInfo {
   description: string;
 }
 
+export interface IStartInfo {
+  hasStarted: boolean;
+  start: moment.Moment;
+}
+
 /*
  * Enums
  */
@@ -110,6 +117,7 @@ export class Festival implements IFestival {
   // App data only
   artistById: Map<string, Artist>;
   featuredArtists: Artist[];
+  private start: Date;
 
   processData() {
     this.artistById = {};
@@ -117,6 +125,7 @@ export class Festival implements IFestival {
       this.artistById[artist.id] = artist;
     });
     this.featuredArtists = _.map(this.featuredArtistIds, id => this.artistById[id]);
+    this.start = this.lineup[0].sets[0].start;
 
     _.each(this.lineup, scene => {
       _.each(scene.sets, set => {
@@ -135,9 +144,45 @@ export class Festival implements IFestival {
         } else {
           set.artist.type += ' / ' + <any>set.artist.type;
         }
+
+        // Update the first set of the festival
+        if (set.start < this.start) {
+          this.start = set.start;
+        }
       });
     });
   }
+
+  nowPlaying(): Set[] {
+    let now = moment();
+    // console.log('now: ' + now.toDate());
+
+    return _.map(this.lineup, (scene: Scene) => {
+      return _.find(scene.sets, (set: Set) => {
+        let start = this.getMomentDate(set.start);
+        let end = this.getMomentDate(set.end);
+
+        // console.log(set);
+        // console.log(start.toDate());
+        // console.log(end.toDate());
+
+        return now.isBetween(start, end, null, '[)');
+      });
+    });
+  }
+
+  startInfo(): IStartInfo {
+    let start = this.getMomentDate(this.start);
+    return {
+      hasStarted: moment().isAfter(start),
+      start: start
+    };
+  }
+
+  private getMomentDate(date: Date): moment.Moment {
+    return moment.utc(date).subtract(SET_UTC_OFFSET, 'h');
+  }
+
 }
 
 export class Artist implements IArtist {

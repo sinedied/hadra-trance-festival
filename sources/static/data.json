@@ -107,6 +107,12 @@
       "name": "Alternative",
       "sets": [
         {
+          "artistId": "0",
+          "type": "dj",
+          "start": "2016-08-04T16:19:000Z",
+          "end": "2016-09-03T00:00:000Z"
+        },
+        {
           "artistId": "2",
           "type": "dj",
           "start": "2016-09-02T22:00:000Z",

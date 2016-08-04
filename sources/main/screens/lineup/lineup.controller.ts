@@ -50,7 +50,7 @@ export class LineupController {
   }
 
   formatDate(date: Date) {
-    return this.moment(date).format('hh:mm');
+    return this.moment(date).format('HH:mm');
   }
 
   switchFavorite(artist: any) {
