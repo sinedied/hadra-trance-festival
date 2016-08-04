@@ -121,6 +121,7 @@ public class Builder {
 
         builder = new NotificationCompat.Builder(context)
                 .setDefaults(0)
+                .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
                 .setContentTitle(options.getTitle())
                 .setContentText(options.getText())
                 .setNumber(options.getBadgeNumber())
@@ -128,7 +129,8 @@ public class Builder {
                 .setAutoCancel(options.isAutoClear())
                 .setOngoing(options.isOngoing())
                 .setColor(options.getColor())
-                .setLights(options.getLedColor(), 100, 100);
+                .setLights(options.getLedColor(), 100, 100)
+                .setStyle(new NotificationCompat.BigTextStyle().bigText(options.getText()));
 
         if (sound != null) {
             builder.setSound(sound);
