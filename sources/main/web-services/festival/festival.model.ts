@@ -159,8 +159,8 @@ export class Festival implements IFestival {
 
     return _.map(this.lineup, (scene: Scene) => {
       return _.find(scene.sets, (set: Set) => {
-        let start = this.getMomentDate(set.start);
-        let end = this.getMomentDate(set.end);
+        let start = this.getSetDate(set.start);
+        let end = this.getSetDate(set.end);
 
         // console.log(set);
         // console.log(start.toDate());
@@ -172,14 +172,14 @@ export class Festival implements IFestival {
   }
 
   startInfo(): IStartInfo {
-    let start = this.getMomentDate(this.start);
+    let start = this.getSetDate(this.start);
     return {
       hasStarted: moment().isAfter(start),
       start: start
     };
   }
 
-  private getMomentDate(date: Date): moment.Moment {
+  getSetDate(date: Date): moment.Moment {
     return moment.utc(date).subtract(SET_UTC_OFFSET, 'h');
   }
 

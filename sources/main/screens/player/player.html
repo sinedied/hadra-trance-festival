@@ -8,7 +8,8 @@
     <div plangular="{{festival.playerSoundcloud}}" ng-if="!offline">
       <div class="player-main">
         <div class="artwork relative" bg-image="track.artwork_url.replace('large.jpg', 't500x500.jpg')">
-          <h4 class="block-vertical-center-absolute light text-center full-width" ng-if="!track.artwork_url" translate>No cover</h4>
+          <div class="block-vertical-center-absolute text-center full-width light" ui-loading="!track"></div>
+          <h4 class="block-vertical-center-absolute light text-center full-width" ng-if="track && !track.artwork_url" translate>No cover</h4>
         </div>
         <div class="artwork-overlay">
           <div class="track-progress">

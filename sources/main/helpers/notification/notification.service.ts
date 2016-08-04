@@ -66,17 +66,19 @@ export class NotificationService {
         });
 
         // Add new notifications
-        let now = this.moment().subtract(NOTIFY_BEFORE_MIN, 'minutes');
+        let now = this.moment();
 
         _.each(favorites, (value: any, id: string) => {
           _.each(festival.artistById[id].sets, (set: Set) => {
+            console.log(set);
+
             let notificationExist = _.find(notifications, notification => JSON.parse(notification.data).id === set.id);
-            // console.log('exist: ' + notificationExist + ' || ' + set.id);
+            console.log('exist: ' + notificationExist + ' || ' + set.id);
 
-            let inFuture = this.moment(set.start).isAfter(now);
-            // console.log('inFuture: ' + inFuture + ' || ' + set.start);
+            let setNotificationDate = festival.getSetDate(set.start).subtract(NOTIFY_BEFORE_MIN, 'minutes');
+            let inFuture = setNotificationDate.isAfter(now);
+            console.log('inFuture: ' + inFuture + ' || ' + set.start);
 
-            // TODO: custom plugin to enable big notifications
             if (!notificationExist && inFuture) {
               this.logger.log(`Adding notification for artist: ${id}, set: ${set.start}`);
 
@@ -84,6 +86,8 @@ export class NotificationService {
                 id: '' + this.getId(),  // ID needs to be a string convertible to an integer
                 smallicon: 'res://drawable/ic_notification_hadra',
                 icon: 'res://drawable/ic_notification_hadra',
+                color: '9C146A',
+                led: '9C146A',
                 // TODO: test sound ios
                 text: this.gettextCatalog.getString('{{name}} {{type}} set starts in 10 minutes on {{scene}} floor!', {
                   name: set.artist.name,
@@ -91,8 +95,9 @@ export class NotificationService {
                   scene: set.scene.name
                 }),
                 data: Set.getSerializableCopyWithId(set),
-                at: this.moment().add(set.artistId, 'minutes').toDate()
-                // at: this.moment(set.start).substract(NOTIFY_BEFORE_MIN, 'minutes').toDate(),
+                at: setNotificationDate.toDate(),
+                // TODO: do not forget!
+                // at: this.moment().add(set.artistId, 'minutes').toDate()
               });
 
             }

@@ -5,4 +5,11 @@
     vertical-align: middle;
   }
 
+  .light > & {
+    .spinner svg {
+      stroke: $light;
+      fill: $light;
+    }
+  }
+
 }
