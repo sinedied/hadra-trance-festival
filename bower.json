@@ -38,6 +38,12 @@
         "./scss/font-awesome.scss",
         "./fonts/*"
       ]
+    },
+    "moment": {
+      "main": [
+        "moment.js",
+        "locale/fr.js"
+      ]
     }
   },
   "resolutions": {
