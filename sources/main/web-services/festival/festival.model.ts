@@ -41,7 +41,7 @@ export interface IArtist {
 
 export interface IScene {
   name: string;
-  sets: Set[];
+  sets: Set[];  // must be ordered by date
 }
 
 export interface ISet {
@@ -65,9 +65,16 @@ export interface IMapInfo {
   description: string;
 }
 
+// App-only interfaces
+
 export interface IStartInfo {
   hasStarted: boolean;
   start: moment.Moment;
+}
+
+export interface IDailySets {
+  weekday: number;  // moment locale-aware weekday
+  sets: Set[];
 }
 
 /*
@@ -117,6 +124,7 @@ export class Festival implements IFestival {
   // App data only
   artistById: Map<string, Artist>;
   featuredArtists: Artist[];
+
   private start: Date;
 
   processData() {
@@ -128,44 +136,59 @@ export class Festival implements IFestival {
     this.start = this.lineup[0].sets[0].start;
 
     _.each(this.lineup, scene => {
+      let days = {};
+
       _.each(scene.sets, set => {
         set.id = Set.getHashCode(set);
         set.artist = this.artistById[set.artistId];
         set.scene = scene;
 
-        if (!set.artist.sets) {
-          set.artist.sets = [];
-        }
+        // Set !== BREAK
+        if (set.artist) {
+          if (!set.artist.sets) {
+            set.artist.sets = [];
+          }
 
-        set.artist.sets.push(set);
+          set.artist.sets.push(set);
 
-        if (!set.artist.type) {
-          set.artist.type = <any>set.type;
-        } else {
-          set.artist.type += ' / ' + <any>set.artist.type;
+          if (!set.artist.type) {
+            set.artist.type = <any>set.type;
+          } else if (set.artist.type.indexOf(<any>set.type) === -1) {
+            set.artist.type += ' / ' + <any>set.type;
+          }
         }
 
         // Update the first set of the festival
         if (set.start < this.start) {
           this.start = set.start;
         }
+
+        // Split sets by day
+        let weekday = this.getSetDate(set.start).weekday();
+        if (!days[weekday]) {
+          days[weekday] = [];
+        }
+        days[weekday].push(set);
       });
+
+      // Order sets by day
+      scene.setsByDay = [];
+      _.each(days, (sets: Set[], weekday) => {
+        scene.setsByDay.push({
+          weekday: parseInt(weekday, 10),
+          sets: sets
+        });
+      });
+
     });
   }
 
   nowPlaying(): Set[] {
     let now = moment();
-    // console.log('now: ' + now.toDate());
-
     return _.map(this.lineup, (scene: Scene) => {
       return _.find(scene.sets, (set: Set) => {
         let start = this.getSetDate(set.start);
         let end = this.getSetDate(set.end);
-
-        // console.log(set);
-        // console.log(start.toDate());
-        // console.log(end.toDate());
-
         return now.isBetween(start, end, null, '[)');
       });
     });
@@ -209,16 +232,19 @@ export class Artist implements IArtist {
 export class Scene implements IScene {
   name: string;
   sets: Set[] = [];
+
+  // App data only
+  setsByDay: IDailySets[] = [];
 }
 
 export class Set implements ISet {
-  id: string;
   type: SetType;
   start: Date;
   end: Date;
   artistId: string;
 
   // App data only
+  id: string;
   artist: Artist;
   scene: Scene;
 
@@ -247,14 +273,14 @@ export class Set implements ISet {
     if (s.length === 0) {
       return '' + hash;
     }
+    /* tslint:disable */
     for (let i = 0; i < s.length; ++i) {
       char = s.charCodeAt(i);
-      /* tslint:disable */
       hash = ((hash << 5) - hash) + char;
       hash = hash & hash;
-      /* tslint:enable */
     }
-    return '' + hash;
+    return '' + (hash >>> 0);
+    /* tslint:enable */
   }
 
 }

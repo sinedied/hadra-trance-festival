@@ -32,22 +32,40 @@ export class HomeController {
     this.logger.log('init');
 
     this.festival = festivalService.festival;
-    this.updateNowPlayingInfos();
-
-    // Trigger pound animation
-    let poundPromise = $interval(() => {
-      this.animate = !this.animate;
-      if (this.animate) {
-        this.updateNowPlayingInfos();
-      }
-    }, 2500);
-
-    $scope.$on('destroy', () => {
-      $interval.cancel(poundPromise);
-    });
 
     scrollService.fixXScrollWithHandle('artists-scroll');
     scrollService.fixXScrollWithHandle('photos-scroll');
+
+    // Trigger pound animation
+    let poundPromise = null;
+
+    $scope.$on('$ionicView.beforeEnter', () => {
+      this.updateNowPlayingInfos();
+      poundPromise = $interval(() => {
+        this.animate = !this.animate;
+        if (this.animate) {
+          this.updateNowPlayingInfos();
+        }
+      }, 2500);
+    });
+
+    $scope.$on('$ionicView.afterLeave', () => {
+      $interval.cancel(poundPromise);
+
+      if (this.timePromise) {
+        this.$interval.cancel(this.timePromise);
+        this.timePromise = null;
+      }
+    });
+
+    $scope.$on('destroy', () => {
+      $interval.cancel(poundPromise);
+
+      if (this.timePromise) {
+        this.$interval.cancel(this.timePromise);
+        this.timePromise = null;
+      }
+    });
   }
 
   showArtist(artistId: string) {

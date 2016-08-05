@@ -11,7 +11,6 @@ import {NotificationService} from 'helpers/notification/notification.service';
  */
 function main($window: ng.IWindowService,
               $locale: ng.ILocaleService,
-              $ionicLoading: ionic.loading.IonicLoadingService,
               $rootScope: any,
               $state: angular.ui.IStateService,
               $timeout: ng.ITimeoutService,
@@ -19,6 +18,7 @@ function main($window: ng.IWindowService,
               $cordovaStatusbar: any,
               $ionicPlatform: ionic.platform.IonicPlatformService,
               gettextCatalog: angular.gettext.gettextCatalog,
+              moment: moment.MomentStatic,
               _: _.LoDashStatic,
               config: IApplicationConfig,
               festivalService: FestivalService,
@@ -65,7 +65,13 @@ function main($window: ng.IWindowService,
 
     // Configure translation with gettext
     gettextCatalog.setCurrentLanguage(language);
+
+    // Set Angular locale
     $locale.id = language;
+
+    // Set Moment locale
+    moment.locale(language.split('-')[0]);
+
     $window.localStorage.setItem('language', language);
   };
 

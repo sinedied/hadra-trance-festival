@@ -2,55 +2,67 @@ import app from 'main.module';
 import {ILogger, LoggerService} from 'helpers/logger/logger';
 import {ToastService} from 'helpers/toast/toast.service';
 import {FavoritesService} from 'helpers/favorites/favorites.service';
+import {FestivalService} from 'web-services/festival/festival.service';
+import {Set, SetType} from 'web-services/festival/festival.model';
 
 export class LineupController {
 
   favorites: Map<string, boolean>;
-  floors = [];
-  selectedFloor = 0;
+  selectedScene = 0;
+  hasStarted = false;
+  playing = [];
 
+  private festival;
   private logger: ILogger;
 
-  constructor(private $ionicListDelegate: ionic.list.IonicListDelegate,
+  constructor(private $location: ng.ILocationService,
+              private $state: angular.ui.IStateService,
+              private $ionicListDelegate: ionic.list.IonicListDelegate,
+              private $ionicScrollDelegate: ionic.scroll.IonicScrollDelegate,
+              $scope: ng.IScope,
+              private $interval: ng.IIntervalService,
               private moment: moment.MomentStatic,
               logger: LoggerService,
               private gettextCatalog: angular.gettext.gettextCatalog,
               private favoritesService: FavoritesService,
+              festivalService: FestivalService,
               private toastService: ToastService) {
 
     this.logger = logger.getLogger('lineup');
     this.logger.log('init');
 
+    this.festival = festivalService.festival;
     this.favorites = this.favoritesService.favorites;
 
-    let lineup = [];
-    for (let i = 0; i < 50; ++i) {
-      lineup[i] = {
-        from: new Date(),
-        to: new Date(),
-        type: 'DJ',
-        artist: {
-          id: '0',
-          name: 'Shotu vs Driss',
-          isFavorite: false
-        }
-      };
-    }
+    // Update now playing infos
+    let updatePromise = null;
 
-    this.floors = [
-      {name: gettextCatalog.getString('Main'), lineup: lineup},
-      {name: gettextCatalog.getString('Alternative'), lineup: lineup},
-      {name: gettextCatalog.getString('Chillout'), lineup: lineup},
-    ];
+    $scope.$on('$ionicView.beforeEnter', () => {
+      this.updatePlaying();
+      updatePromise = $interval(this.updatePlaying.bind(this), 5000);
+    });
 
+    $scope.$on('$ionicView.afterLeave', () => {
+      $interval.cancel(updatePromise);
+    });
+
+    $scope.$on('destroy', () => {
+      $interval.cancel(updatePromise);
+    });
   }
 
   selectFloor(index: number) {
-    this.selectedFloor = index;
+    this.$ionicScrollDelegate.$getByHandle('lineupScroll').scrollTop();
+    this.selectedScene = index;
   }
 
-  formatDate(date: Date) {
+  formatDate(date: Date): string {
     return this.moment(date).format('HH:mm');
+  }
+
+  getWeekday(weekday: number): string {
+    // Need to cast to any as typing is outdated
+    return (<any>this.moment).weekdays(true, weekday);
   }
 
   switchFavorite(artist: any) {
@@ -61,6 +73,25 @@ export class LineupController {
     }
 
     this.$ionicListDelegate.closeOptionButtons();
+  }
+
+  showArtist(set: Set) {
+    if (set.type !== SetType.BREAK && set.artistId != null) {
+      this.$state.go('app.artist', {artistId: set.artistId});
+    }
+  }
+
+  showPlaying() {
+    let currentSet = this.playing[this.selectedScene];
+    if (currentSet) {
+      this.$location.hash(currentSet.id);
+      this.$ionicScrollDelegate.$getByHandle('lineupScroll').anchorScroll(true);
+    }
+  }
+
+  private updatePlaying() {
+    this.hasStarted = this.festival.startInfo().hasStarted;
+    this.playing = this.festival.nowPlaying();
   }
 
 }

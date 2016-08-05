@@ -11,6 +11,10 @@
     border-radius: 0;
   }
 
+  .list-joined {
+    margin-bottom: -1px;
+  }
+
   .time {
     font-size: 14px;
     font-weight: bold;
@@ -19,6 +23,27 @@
 
   .option-button {
     font-size: 24px;
+  }
+
+  .item .badge {
+    display: inline-block;
+    position: static;
+    float: right;
+    font-size: 10px;
+    min-width: 32px;
+    text-align: center;
+  }
+
+  .item.current .badge {
+    background: $positive;
+  }
+
+  .item-set .item-content {
+    padding-right: $padding-large-horizontal;
+  }
+
+  .item-divider {
+    text-transform: capitalize;
   }
 
 }
