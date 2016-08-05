@@ -122,7 +122,7 @@ function main($window: ng.IWindowService,
       if (splashScreen) {
         $timeout(() => {
           splashScreen.hide();
-        }, 3000);
+        }, 1000);
       }
 
       // Detect and set default language
