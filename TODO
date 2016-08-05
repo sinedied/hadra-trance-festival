@@ -1,6 +1,7 @@
 x bug ios player time overflow
 x bug ios title visible in transparent navbar
 - ios test notification sound + iphone/ipad ios 7/8/9 + set ipad orientation
+- check orientation ios/android
 x Data sync + reload app
 x map -> replace by image
 x Dynamic playing home + time remaining since start
