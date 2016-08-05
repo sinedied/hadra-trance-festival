@@ -2,6 +2,10 @@
 .ui-gallery {
   margin: $content-padding 0;
 
+  &.modal {
+    margin: 0;
+  }
+
   .image-thumbnail {
     display: inline-block;
     background: no-repeat center/cover;
