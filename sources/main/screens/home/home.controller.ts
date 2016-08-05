@@ -99,7 +99,6 @@ export class HomeController {
             seconds: diff.seconds()
           });
           this.nowPlaying.artist = { name: time };
-          this.nowPlaying.scene = null;
           this.nowPlaying.slot = null;
         }, 500);
       }
