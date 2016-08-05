@@ -1,5 +1,5 @@
 x bug ios player time overflow
-- bug ios title visible in transparent navbar
+x bug ios title visible in transparent navbar
 - Data sync
 - Error management when data cannot be loaded (loading screen?)
 x map -> replace by image
