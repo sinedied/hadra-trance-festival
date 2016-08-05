@@ -30,6 +30,7 @@ export class NotificationService {
     this.id = parseInt($window.localStorage.getItem(NOTIFICATION_KEY) || '0', 10);
 
     this.$rootScope.$on(FavoritesService.FAVORITES_UPDATED_EVENT, this.updateNotifications.bind(this));
+    this.$rootScope.$on(FestivalService.FESTIVAL_UPDATED_EVENT, this.updateNotifications.bind(this));
     this.$rootScope.$on('$cordovaLocalNotification:trigger', this.onTrigger.bind(this));
   }
 

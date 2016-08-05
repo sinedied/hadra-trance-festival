@@ -7,18 +7,12 @@ import {ILogger, LoggerService} from 'helpers/logger/logger';
  */
 export class ShellController {
 
-  currentLocale: ng.ILocaleService;
-
   private logger: ILogger;
 
   constructor(private $state: ng.ui.IStateService,
-              $locale: ng.ILocaleService,
-              private _: _.LoDashStatic,
               logger: LoggerService) {
 
-    this.currentLocale = $locale;
     this.logger = logger.getLogger('shell');
-
     this.logger.log('init');
   }
 
@@ -28,7 +22,7 @@ export class ShellController {
    * @return {boolean} True if the specified name is contained in the current navigation state.
    */
   stateContains(name: string): boolean {
-    return this._.startsWith(this.$state.current.name, name);
+    return _.startsWith(this.$state.current.name, name);
   }
 
 }

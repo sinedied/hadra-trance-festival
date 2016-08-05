@@ -31,13 +31,13 @@ export class LineupController {
     this.logger = logger.getLogger('lineup');
     this.logger.log('init');
 
-    this.festival = festivalService.festival;
     this.favorites = this.favoritesService.favorites;
 
     // Update now playing infos
     let updatePromise = null;
 
     $scope.$on('$ionicView.beforeEnter', () => {
+      this.festival = festivalService.festival;
       this.updatePlaying();
       updatePromise = $interval(this.updatePlaying.bind(this), 5000);
     });

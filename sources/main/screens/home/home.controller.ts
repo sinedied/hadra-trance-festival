@@ -31,8 +31,6 @@ export class HomeController {
     this.logger = logger.getLogger('home');
     this.logger.log('init');
 
-    this.festival = festivalService.festival;
-
     scrollService.fixXScrollWithHandle('artists-scroll');
     scrollService.fixXScrollWithHandle('photos-scroll');
 
@@ -40,7 +38,9 @@ export class HomeController {
     let poundPromise = null;
 
     $scope.$on('$ionicView.beforeEnter', () => {
+      this.festival = festivalService.festival;
       this.updateNowPlayingInfos();
+
       poundPromise = $interval(() => {
         this.animate = !this.animate;
         if (this.animate) {
@@ -99,6 +99,8 @@ export class HomeController {
             seconds: diff.seconds()
           });
           this.nowPlaying.artist = { name: time };
+          this.nowPlaying.scene = null;
+          this.nowPlaying.slot = null;
         }, 500);
       }
       return;

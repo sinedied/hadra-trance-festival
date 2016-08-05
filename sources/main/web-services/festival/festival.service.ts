@@ -3,15 +3,19 @@ import {Festival} from 'festival.model';
 import {IApplicationConfig} from 'main.constants';
 import {LoggerService, ILogger} from 'helpers/logger/logger';
 
-// const FESTIVAL_KEY = 'festivalData';
+const FESTIVAL_KEY = 'festivalData';
 
 export class FestivalService {
+
+  static FESTIVAL_UPDATED_EVENT = 'festival:updated';
 
   festival = null;
 
   private logger: ILogger;
 
-  constructor(private $http: ng.IHttpService,
+  constructor(private $rootScope: ng.IRootScopeService,
+              private $window: ng.IWindowService,
+              private $http: ng.IHttpService,
               private config: IApplicationConfig,
               logger: LoggerService) {
 
@@ -19,9 +23,10 @@ export class FestivalService {
   }
 
   loadFestival(): Festival {
-    // TODO: save/load from localStorage + update from network and reload + error management
+    let updatedData = angular.fromJson(this.$window.localStorage.getItem(FESTIVAL_KEY));
+
     let f = new Festival();
-    angular.extend(f, JSON.parse(<string>require('static/data.json')));
+    angular.extend(f, updatedData || angular.fromJson(<string>require('static/data.json')));
     f.processData();
     this.festival = f;
 
@@ -39,15 +44,38 @@ export class FestivalService {
 
         if (update.version > this.festival.version) {
           this.logger.log('Newer data version available!');
-          this.startUpdate(update.url);
+          this.startUpdate(update.version, update.url);
         } else {
           this.logger.log('No newer data version available');
         }
       });
   }
 
-  private startUpdate(url: string) {
+  private startUpdate(version: number, url: string) {
+    this.logger.log('Starting data update...');
+    this.$http
+      .get(url)
+      .then((response: any) => {
+        if (response.data && response.data.artists) {
+          this.logger.log('Updated data downloaded');
+          let data = angular.fromJson(response.data);
+          data.version = version;
 
+          this.$window.localStorage.setItem(FESTIVAL_KEY, angular.toJson(data));
+          this.logger.log('Updated data saved');
+
+          // Reload data
+          let f = new Festival();
+          angular.extend(f, data);
+          f.processData();
+          this.festival = f;
+          this.$rootScope['festival'] = this.festival;
+          this.$rootScope.$emit(FestivalService.FESTIVAL_UPDATED_EVENT);
+          this.logger.log('Festival data reloaded');
+        } else {
+          this.logger.log('Bad update data!');
+        }
+      });
   }
 
 }

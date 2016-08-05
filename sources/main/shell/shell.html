@@ -24,7 +24,7 @@
               <span translate>Home</span>
             </span>
           </ion-item>
-          <ion-item class="item-dark item-icon-left text-darker" menu-close href="#/lineup"
+          <ion-item ng-if="festival.lineup" class="item-dark item-icon-left text-darker" menu-close href="#/lineup"
                     ng-class="{ active: shell.stateContains('app.lineup') }">
             <span class="medium-dark">
               <i class="icon ion-android-calendar icon-large"> </i>
@@ -52,8 +52,8 @@
               <span translate>Infos</span>
             </span>
           </ion-item>
-          <ion-item class="item-dark item-icon-left text-darker" menu-close href="#/player"
-                    ng-class="{ active: shell.stateContains('app.player') }">
+          <ion-item ng-if="festival.playerSoundcloud" class="item-dark item-icon-left text-darker"
+                    menu-close href="#/player" ng-class="{ active: shell.stateContains('app.player') }">
             <span class="medium-dark">
               <i class="icon ion-headphone icon-large"> </i>
               <span translate>Player</span>
