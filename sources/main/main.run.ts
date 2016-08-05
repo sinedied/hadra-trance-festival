@@ -167,6 +167,10 @@ function main($window: ng.IWindowService,
           _logger.log('Application resumed from background');
           $rootScope.foreground = true;
 
+          if (!vm.offline) {
+            festivalService.checkUpdate();
+          }
+
           vm.$emit('applicationResume');
           vm.$apply();
         }, false);

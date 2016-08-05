@@ -1,19 +1,21 @@
 import app from 'main.module';
-import {RestService} from 'helpers/rest/rest.service';
-import {ContextService} from 'helpers/context/context.service';
 import {Festival} from 'festival.model';
+import {IApplicationConfig} from 'main.constants';
+import {LoggerService, ILogger} from 'helpers/logger/logger';
+
+// const FESTIVAL_KEY = 'festivalData';
 
 export class FestivalService {
 
   festival = null;
 
-  // private ROUTES = {
-  //   festival: '/festival'
-  // };
+  private logger: ILogger;
 
-  constructor(private $q: ng.IQService,
-              private restService: RestService,
-              private contextService: ContextService) {
+  constructor(private $http: ng.IHttpService,
+              private config: IApplicationConfig,
+              logger: LoggerService) {
+
+    this.logger = logger.getLogger('festivalService');
   }
 
   loadFestival(): Festival {
@@ -23,7 +25,29 @@ export class FestivalService {
     f.processData();
     this.festival = f;
 
+    // Check for newer version to download
+    this.checkUpdate();
+
     return this.festival;
+  }
+
+  checkUpdate() {
+    this.$http
+      .get(this.config.environment.updateUrl)
+      .then((response: any) => {
+        let update = angular.fromJson(response.data);
+
+        if (update.version > this.festival.version) {
+          this.logger.log('Newer data version available!');
+          this.startUpdate(update.url);
+        } else {
+          this.logger.log('No newer data version available');
+        }
+      });
+  }
+
+  private startUpdate(url: string) {
+
   }
 
 }

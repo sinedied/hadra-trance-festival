@@ -10,6 +10,7 @@ export interface IApplicationConfig {
 
 export interface IApplicationEnvironment {
   debug: boolean;
+  updateUrl: string;
   server: IServerConfig;
   googleAnalyticsId: string;
 }
@@ -20,6 +21,7 @@ export interface IApplicationEnvironment {
 let environment = {
   local: {
     debug: true,
+    updateUrl: 'https://dl.dropboxusercontent.com/u/1119242/updates/htf2016/update.json?dl=1',
 
     // REST backend configuration, used for all web services using restService
     server: {
@@ -30,6 +32,7 @@ let environment = {
   },
   dev: {
     debug: true,
+    updateUrl: 'https://dl.dropboxusercontent.com/u/1119242/updates/htf2016/update.json?dl=1',
     server: {
       url: 'http://api.icndb.com',
       route: ''
@@ -38,6 +41,7 @@ let environment = {
   },
   prod: {
     debug: false,
+    updateUrl: 'https://dl.dropboxusercontent.com/u/1119242/updates/htf2016/update.json?dl=1',
     server: {
       url: 'http://api.icndb.com',
       route: ''
