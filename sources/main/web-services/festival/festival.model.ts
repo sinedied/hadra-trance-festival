@@ -2,10 +2,9 @@
  * Interfaces
  */
 
-export const SET_UTC_OFFSET = 2; // +1 for Paris GMT, +1 for DST
-
 export interface IFestival {
   version: number;
+  utcOffset: number;
   photo: string;
   description: string;
   playerSoundcloud: string;
@@ -105,6 +104,7 @@ export enum SetType {
 
 export class Festival implements IFestival {
   version: number = 1.0;
+  utcOffset: number = 0;
   photo: string;
   description: string;
   playerSoundcloud: string;
@@ -201,7 +201,7 @@ export class Festival implements IFestival {
   }
 
   getSetDate(date: Date): moment.Moment {
-    return moment.utc(date).subtract(SET_UTC_OFFSET, 'h');
+    return moment.utc(date).subtract(this.utcOffset, 'h');
   }
 
 }
