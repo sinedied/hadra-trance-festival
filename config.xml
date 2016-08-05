@@ -73,7 +73,7 @@
   <preference name="SplashScreen" value="screen"/>
   <preference name="SplashMaintainAspectRatio" value="true"/>
   <preference name="FadeSplashScreen" value="true" />
-  <preference name="FadeSplashScreenDuration" value="1000" />
+  <preference name="FadeSplashScreenDuration" value="500" />
   <preference name="ShowSplashScreenSpinner" value="false"/>
   <preference name="loadUrlTimeoutValue" value="60000"/>
   <engine name="ios" spec="~4.0.1"/>
@@ -81,7 +81,7 @@
   <plugin name="ionic-plugin-keyboard" spec="~2.0.1"/>
   <plugin name="cordova-plugin-statusbar" spec="~2.0.0"/>
   <plugin name="cordova-plugin-device" spec="~1.1.1"/>
-  <plugin name="cordova-plugin-splashscreen" spec="~3.0.0"/>
+  <plugin name="cordova-plugin-splashscreen" spec="~3.2.2"/>
   <plugin name="cordova-plugin-globalization" spec="~1.0.3"/>
   <plugin name="cordova-plugin-crosswalk-webview" spec="~1.7.2"/>
   <plugin name="cordova-plugin-whitelist" spec="~1.2.1"/>
