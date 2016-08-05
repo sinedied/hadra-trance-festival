@@ -1,16 +1,12 @@
 // Encapsulate component style into its own "namespace "to avoid naming and css collision
 .map-screen {
 
-  .angular-google-map {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  .full .scroll {
+    height: 100%;
   }
 
-  .angular-google-map-container {
-    height: 100%;
+  .block-vertical-center {
+    top: calc(50% - #{$bar-height / 2})
   }
 
 }

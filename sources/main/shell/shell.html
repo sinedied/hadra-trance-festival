@@ -5,7 +5,8 @@
       <ion-nav-bar class="bar-royal">
         <ion-nav-back-button></ion-nav-back-button>
         <ion-nav-buttons side="left">
-          <button class="button button-icon button-clear ion-navicon" menu-toggle="left" ng-hide="$exposeAside.active"></button>
+          <button class="button button-icon button-clear ion-navicon" menu-toggle="left"
+                  ng-hide="$exposeAside.active"></button>
         </ion-nav-buttons>
       </ion-nav-bar>
       <ion-nav-view name="menuContent"></ion-nav-view>
@@ -16,37 +17,43 @@
       <ion-content class="dark-bg">
         <div class="hadra-logo padding light text-center"></div>
         <ion-list>
-          <ion-item class="item-dark item-icon-left" menu-close href="#/" ng-class="{ active: shell.stateContains('app.home') }">
+          <ion-item class="item-dark item-icon-left" menu-close href="#/"
+                    ng-class="{ active: shell.stateContains('app.home') }">
             <span class="medium-dark">
               <i class="icon ion-home icon-large"> </i>
               <span translate>Home</span>
             </span>
           </ion-item>
-          <ion-item class="item-dark item-icon-left text-darker" menu-close href="#/lineup" ng-class="{ active: shell.stateContains('app.lineup') }">
+          <ion-item class="item-dark item-icon-left text-darker" menu-close href="#/lineup"
+                    ng-class="{ active: shell.stateContains('app.lineup') }">
             <span class="medium-dark">
               <i class="icon ion-android-calendar icon-large"> </i>
               <span translate>Line-up</span>
             </span>
           </ion-item>
-          <ion-item class="item-dark item-icon-left text-darker" menu-close href="#/artists" ng-class="{ active: shell.stateContains('app.artists') }">
+          <ion-item class="item-dark item-icon-left text-darker" menu-close href="#/artists"
+                    ng-class="{ active: shell.stateContains('app.artists') }">
             <span class="medium-dark">
               <i class="icon ion-music-note icon-large"> </i>
               <span translate>Artists</span>
             </span>
           </ion-item>
-          <ion-item class="item-dark item-icon-left text-darker" menu-close href="#/map" ng-class="{ active: shell.stateContains('app.map') }">
+          <ion-item ng-if="festival.map" class="item-dark item-icon-left text-darker" menu-close href="#/map"
+                    ng-class="{ active: shell.stateContains('app.map') }">
             <span class="medium-dark">
               <i class="icon ion-location icon-large"> </i>
               <span translate>Map</span>
             </span>
           </ion-item>
-          <ion-item class="item-dark item-icon-left text-darker" menu-close href="#/infos" ng-class="{ active: shell.stateContains('app.infos') }">
+          <ion-item class="item-dark item-icon-left text-darker" menu-close href="#/infos"
+                    ng-class="{ active: shell.stateContains('app.infos') }">
             <span class="medium-dark">
               <i class="icon ion-information-circled icon-large"> </i>
               <span translate>Infos</span>
             </span>
           </ion-item>
-          <ion-item class="item-dark item-icon-left text-darker" menu-close href="#/player" ng-class="{ active: shell.stateContains('app.player') }">
+          <ion-item class="item-dark item-icon-left text-darker" menu-close href="#/player"
+                    ng-class="{ active: shell.stateContains('app.player') }">
             <span class="medium-dark">
               <i class="icon ion-headphone icon-large"> </i>
               <span translate>Player</span>

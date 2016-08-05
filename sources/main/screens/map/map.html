@@ -1,7 +1,9 @@
 <ion-view id="map-screen" class="map-screen">
   <ion-nav-title>{{viewTitle}}</ion-nav-title>
-  <ion-content scroll="false" class="dark-bg">
-    <div class="block-vertical-center text-white" ui-loading="vm.isMapLoading" ng-class="vm.isMapLoading ? 'padding' : ''"></div>
-    <ui-gmap-google-map data-tap-disabled="true" ng-show="!vm.isMapLoading" center="vm.map.center" zoom="vm.map.zoom" options="vm.map.options"></ui-gmap-google-map>
+  <ion-content scroll="false" class="dark-bg full">
+    <ion-scroll class="full" direction="xy" scrollbar-x="false" scrollbar-y="false" overflow-scroll="false"
+                zooming="true" min-zoom="1" locking="false">
+      <img class="block-vertical-center" ng-src="{{festival.map}}" alt=""/>
+    </ion-scroll>
   </ion-content>
 </ion-view>

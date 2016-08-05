@@ -1,7 +1,7 @@
 x bug ios player time overflow
 - Data sync
 - Error management when data cannot be loaded (loading screen?)
-- map -> replace by image
+x map -> replace by image
 x Dynamic playing home + time remaining since start
 x Local notifications when artist plays
 x Now playing button on lineup + icon on playing set + split by days

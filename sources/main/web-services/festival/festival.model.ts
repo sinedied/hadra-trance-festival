@@ -15,8 +15,7 @@ export interface IFestival {
   featuredArtistIds: string[];
   featuredPhotos: string[];
   featuredVideo: string;
-  soundcloudPlayer: string;
-  map: IMapInfo[];
+  map: string;
   infos: IInfoPage[];
   lineup: IScene[];
   artists: IArtist[];
@@ -57,13 +56,13 @@ export interface IInfoPage {
   content: string;
 }
 
-export interface IMapInfo {
-  lat: number;
-  lon: number;
-  title: string;
-  type: MapInfoType;
-  description: string;
-}
+// export interface IMapInfo {
+//   lat: number;
+//   lon: number;
+//   title: string;
+//   type: MapInfoType;
+//   description: string;
+// }
 
 // App-only interfaces
 
@@ -89,16 +88,16 @@ export enum SetType {
   BREAK = <any>'break'
 }
 
-export enum MapInfoType {
-  WATER,
-  TOILET,
-  SCENE,
-  FOOD,
-  SHOP,
-  INFO,
-  SHOWER,
-  HADRA_STAND
-}
+// export enum MapInfoType {
+//   WATER,
+//   TOILET,
+//   SCENE,
+//   FOOD,
+//   SHOP,
+//   INFO,
+//   SHOWER,
+//   HADRA_STAND
+// }
 
 /*
  * Classes
@@ -115,8 +114,7 @@ export class Festival implements IFestival {
   featuredArtistIds: string[];
   featuredPhotos: string[];
   featuredVideo: string;
-  soundcloudPlayer: string;
-  map: MapInfo[] = [];
+  map: string;
   infos: InfoPage[] = [];
   lineup: Scene[] = [];
   artists: Artist[] = [];
@@ -290,11 +288,10 @@ export class InfoPage implements IInfoPage {
   content: string;
 }
 
-
-export class MapInfo implements IMapInfo {
-  lat: number;
-  lon: number;
-  title: string;
-  type: MapInfoType;
-  description: string;
-}
+// export class MapInfo implements IMapInfo {
+//   lat: number;
+//   lon: number;
+//   title: string;
+//   type: MapInfoType;
+//   description: string;
+// }
