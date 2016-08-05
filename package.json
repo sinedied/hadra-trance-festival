@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Hadra Trance Festival 2016 official app",
   "keywords": [],
-  "license": "MIT",
+  "license": "GPL-3.0",
   "private": true,
   "scripts": {
     "test": "gulp test && gulp build",

@@ -2,11 +2,9 @@
 
 [![Build status](https://img.shields.io/travis/sinedied/hadra-trance-festival/master.svg)](https://travis-ci.org/sinedied/hadra-trance-festival)
 
-> WIP
-
-An awesome project scaffolded by the [angular-pro](https://github.com/angular-starter-kit/generator-angular-pro) Yeoman generator!
-
 See [Hadra website](http://www.hadra.net/index.php?goto=/festival.php) for more info about the festival.
+
+Another awesome project scaffolded by the [angular-pro](https://github.com/angular-starter-kit/generator-angular-pro) Yeoman generator!
 
 # Getting started
 
@@ -111,52 +109,22 @@ about multiple build environments management.
 - [All gulp tasks](docs/tasks.md)
 - [Updating dependencies](docs/updating.md)
 
-# Features
-
-#### Languages
-- [TypeScript](http://www.typescriptlang.org), JavaScript
-- [Sass](http://sass-lang.com/), CSS
-- [Gettext](https://angular-gettext.rocketeer.be) (for translations)
-
-#### Quality
-- [TSLint](https://github.com/palantir/tslint)
-- [JSHint](http://jshint.com)
-- [JSCS](http://jscs.info)
-- Unit tests ([Jasmine](http://jasmine.github.io))
-- End-to-end tests ([Protractor](https://github.com/angular/protractor))
-
-#### Development
-- Automation with [gulp](http://gulpjs.com)
-- Development server with API proxy and live reload ([BrowserSync](http://www.browsersync.io))
-
-#### Build
-- JS+CSS+HTML bundling and minification ([useref](https://github.com/jonkemp/gulp-useref), 
-  [uglify](https://github.com/terinjokes/gulp-uglify), 
-  [htmlmin](https://github.com/jonschlinkert/gulp-htmlmin), 
-  [clean-css](https://www.npmjs.com/package/gulp-clean-css) 
-- CSS browser support ([autoprefixer](https://github.com/sindresorhus/gulp-autoprefixer))
-- Images optimization ([imagemin](https://github.com/sindresorhus/gulp-imagemin))
-- Automatic angular module annotation ([ngAnnotate](https://github.com/Kagami/gulp-ng-annotate))
-- Asset revisionning ([rev](https://github.com/sindresorhus/gulp-rev))
-
-#### Libraries
-- [AngularJS](https://angularjs.org)
-- [Angular-gettext](https://angular-gettext.rocketeer.be)
-- [AngularUI Router](https://github.com/angular-ui/ui-router)
-- [Ionic](http://ionicframework.com/)
-- [Lodash](https://lodash.com)
-- [ngCordova](http://ngcordova.com/)
-
-#### Cordova plugins
-- [ionic-plugin-keyboard](https://github.com/driftyco/ionic-plugin-keyboard)
-- [cordova-plugin-statusbar](https://github.com/apache/cordova-plugin-statusbar)
-- [cordova-plugin-device](https://github.com/apache/cordova-plugin-device)
-- [cordova-plugin-splashscreen](https://github.com/apache/cordova-plugin-splashscreen)
-- [cordova-plugin-globalization](https://github.com/apache/cordova-plugin-globalization)
-- [cordova-plugin-whitelist](https://github.com/apache/cordova-plugin-whitelist)
-- [cordova-plugin-crosswalk-webview](https://github.com/crosswalk-project/cordova-plugin-crosswalk-webview)
-- [cordova-plugin-wkwebview-engine](https://github.com/apache/cordova-plugin-wkwebview-engine)
-
 # License
 
-[MIT](LICENSE)
+[GNU GPLv3](LICENSE)
+
+Hadra Trance Festival - The Official Mobile Application
+Copyright (C) 2016 Yohan Lasorsa (Hadra)
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
