@@ -5,6 +5,7 @@ export interface IApplicationConfig {
   version: string;
   environment: IApplicationEnvironment;
   supportedLanguages: Array<string>;
+  googleAnalyticsId: string;
   soundCloudClientId: string;
 }
 
@@ -12,7 +13,6 @@ export interface IApplicationEnvironment {
   debug: boolean;
   updateUrl: string;
   server: IServerConfig;
-  googleAnalyticsId: string;
 }
 
 // Do not remove the comments below, or change the values. It's the markers used by gulp build task to change the
@@ -22,31 +22,26 @@ let environment = {
   local: {
     debug: true,
     updateUrl: 'https://dl.dropboxusercontent.com/u/1119242/updates/htf2016/update.json?dl=1',
-
-    // REST backend configuration, used for all web services using restService
     server: {
       url: '',
       route: 'api'
-    },
-    googleAnalyticsId: 'UA-81709759-1',
+    }
   },
   dev: {
     debug: true,
     updateUrl: 'https://dl.dropboxusercontent.com/u/1119242/updates/htf2016/update.json?dl=1',
     server: {
-      url: 'http://api.icndb.com',
-      route: ''
+      url: '',
+      route: 'api'
     },
-    googleAnalyticsId: 'UA-81709759-1'
   },
   prod: {
     debug: false,
     updateUrl: 'https://dl.dropboxusercontent.com/u/1119242/updates/htf2016/update.json?dl=1',
     server: {
-      url: 'http://api.icndb.com',
-      route: ''
-    },
-    googleAnalyticsId: 'UA-81709759-1'
+      url: '',
+      route: 'api'
+    }
   }
 };
 // endreplace
@@ -69,6 +64,7 @@ let config: IApplicationConfig = {
     'fr-FR'
   ],
 
+  googleAnalyticsId: 'UA-81709759-1',
   soundCloudClientId: 'c893b01b1f81d8cecc69fa8594f68d41'
 
 };

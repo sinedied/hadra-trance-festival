@@ -1,7 +1,7 @@
 x bug ios player time overflow
 x bug ios title visible in transparent navbar
-- Data sync
-- Error management when data cannot be loaded (loading screen?)
+- ios test notification sound + iphone/ipad ios 7/8/9 + set ipad orientation
+- Data sync + reload app
 x map -> replace by image
 x Dynamic playing home + time remaining since start
 x Local notifications when artist plays
@@ -10,6 +10,6 @@ x Pause button in shell when plangular playing
 - Copy assets from JSON base64 to images/ (-> script?)
 - About screen
 - FR translation
-- Add analytics
+- Add analytics + creer nouvel id GA / soundcloud hors github
 
 DEADLINE: 19 aout

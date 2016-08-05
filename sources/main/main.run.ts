@@ -16,6 +16,7 @@ function main($window: ng.IWindowService,
               $timeout: ng.ITimeoutService,
               $cordovaKeyboard: any,
               $cordovaStatusbar: any,
+              $cordovaDevice: any,
               $ionicPlatform: ionic.platform.IonicPlatformService,
               gettextCatalog: angular.gettext.gettextCatalog,
               moment: moment.MomentStatic,
@@ -139,6 +140,16 @@ function main($window: ng.IWindowService,
 
 
       if ($window.cordova) {
+
+        // Setup analytics
+        if (!config.environment.debug && $window['ga']) {
+          // Warning, breaks unit test if included in debug!
+          $window['ga']('create', {
+            trackingId: config.googleAnalyticsId,
+            cookieDomain: 'none',
+            userId: $cordovaDevice.getUUID()
+          });
+        }
 
         if ($window.cordova.plugins.Keyboard) {
           $cordovaKeyboard.disableScroll(true);
