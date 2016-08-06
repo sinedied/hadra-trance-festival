@@ -16,17 +16,13 @@
     </div>
     <div class="social">
       <button class="button button-small button-clear icon-left ion-fa fa-soundcloud button-light"
-              ng-if="vm.artist.soundcloud" ng-click="vm.open(vm.artist.soundcloud)"
-              translate>Soundcloud</button>
+              ng-if="vm.artist.soundcloud" ng-click="vm.open(vm.artist.soundcloud)">Soundcloud</button>
       <button class="button button-small button-clear icon-left ion-fa fa-mixcloud button-light"
-              ng-if="vm.artist.mixcloud" ng-click="vm.open(vm.artist.mixcloud)"
-              translate>Mixcloud</button>
+              ng-if="vm.artist.mixcloud" ng-click="vm.open(vm.artist.mixcloud)">Mixcloud</button>
       <button class="button button-small button-clear icon-left ion-social-facebook button-light"
-              ng-if="vm.artist.facebook" ng-click="vm.open(vm.artist.facebook)"
-              translate>Facebook</button>
+              ng-if="vm.artist.facebook" ng-click="vm.open(vm.artist.facebook)">Facebook</button>
       <button class="button button-small button-clear icon-left ion-android-globe button-light"
-              ng-if="vm.artist.website" ng-click="vm.open(vm.artist.website)"
-              translate>Website</button>
+              ng-if="vm.artist.website" ng-click="vm.open(vm.artist.website)" translate>Website</button>
     </div>
     <div class="player" ng-if="!offline && vm.artist.soundcloud" plangular="{{vm.artist.soundcloud + '/tracks'}}">
       <div class="buttons left">
