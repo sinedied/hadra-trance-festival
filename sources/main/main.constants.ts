@@ -7,6 +7,8 @@ export interface IApplicationConfig {
   supportedLanguages: Array<string>;
   googleAnalyticsId: string;
   soundCloudClientId: string;
+  appStoreUrl: string;
+  playStoreUrl: string;
 }
 
 export interface IApplicationEnvironment {
@@ -63,6 +65,10 @@ let config: IApplicationConfig = {
     // 'en-US',
     'fr-FR'
   ],
+
+  // TODO: update URLs
+  appStoreUrl: '',
+  playStoreUrl: '',
 
   googleAnalyticsId: 'UA-81709759-1',
   soundCloudClientId: 'c893b01b1f81d8cecc69fa8594f68d41'

@@ -17,6 +17,7 @@ function main($window: ng.IWindowService,
               $cordovaKeyboard: any,
               $cordovaStatusbar: any,
               $cordovaDevice: any,
+              $cordovaAppRate: any,
               $ionicPlatform: ionic.platform.IonicPlatformService,
               gettextCatalog: angular.gettext.gettextCatalog,
               moment: moment.MomentStatic,
@@ -138,7 +139,6 @@ function main($window: ng.IWindowService,
         }, null);
       }
 
-
       if ($window.cordova) {
 
         // Setup analytics
@@ -150,6 +150,20 @@ function main($window: ng.IWindowService,
             userId: $cordovaDevice.getUUID()
           });
         }
+
+        // App rating prompt
+        $window['AppRate'].preferences = {
+          useLanguage: $locale.id.split('-')[0],
+          displayAppName: gettextCatalog.getString('APP_NAME'),
+          openStoreInApp: true,
+          usesUntilPrompt: 3,
+          promptAgainForEachNewVersion: true,
+          storeAppURL: {
+            ios: config.appStoreUrl,
+            android: config.playStoreUrl
+          }
+        };
+        $cordovaAppRate.promptForRating(config.environment.debug);
 
         if ($window.cordova.plugins.Keyboard) {
           $cordovaKeyboard.disableScroll(true);
