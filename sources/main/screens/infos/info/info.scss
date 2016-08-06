@@ -1,0 +1,8 @@
+// Encapsulate component style into its own "namespace "to avoid naming and css collision
+.info-screen {
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $royal;
+  }
+
+}

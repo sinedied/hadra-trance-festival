@@ -9,6 +9,7 @@ function mainConfig($provide: ng.auto.IProvideService,
                     $analyticsProvider: angulartics.IAnalyticsServiceProvider,
                     $compileProvider: ng.ICompileProvider,
                     plangularConfigProvider: any,
+                    markedProvider: any,
                     config: IApplicationConfig) {
 
   let env = config.environment;
@@ -40,6 +41,15 @@ function mainConfig($provide: ng.auto.IProvideService,
 
   // Set Soundcloud client ID
   plangularConfigProvider.clientId = config.soundCloudClientId;
+
+  // Customize markdown compilation
+  markedProvider.setRenderer({
+    link: (href, title, text) => {
+      let isExternal = href.indexOf('http') === 0;
+      return '<a ' + (isExternal ? 'ng-click="vm.open(\'' + href + '\')"' : 'href="' + href + '"') +
+        (title ? ' title="' + title + '"' : '') + '>' + text + '</a>';
+    }
+  });
 
 }
 

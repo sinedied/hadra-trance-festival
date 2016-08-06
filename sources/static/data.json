@@ -18,7 +18,7 @@
   "infos": [
     {
       "title": "Hadra",
-      "content": "# Titre\n## sous-titre\nBla bla bla\n"
+      "content": "# Titre\n## sous-titre\nBla bla bla [Hadra website](http://www.hadra.net)\n"
     },
     {
       "title": "Chiens",

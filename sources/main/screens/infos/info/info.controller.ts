@@ -11,6 +11,7 @@ export class InfoController {
 
   constructor($scope: ng.IScope,
               $stateParams: angular.ui.IStateParamsService,
+              private $cordovaInAppBrowser: any,
               festivalService: FestivalService,
               logger: LoggerService) {
 
@@ -24,6 +25,10 @@ export class InfoController {
 
       this.info = festivalService.festival.infos[infoId];
     });
+  }
+
+  open(url: string) {
+    this.$cordovaInAppBrowser.open(url, '_system');
   }
 
 }
