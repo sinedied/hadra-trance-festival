@@ -113,6 +113,7 @@ about multiple build environments management.
 
 [GNU GPLv3](LICENSE)
 
+```
 Hadra Trance Festival - The Official Mobile Application
 Copyright (C) 2016 Yohan Lasorsa (Hadra)
 
@@ -128,3 +129,4 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
+```

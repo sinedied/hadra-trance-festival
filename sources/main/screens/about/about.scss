@@ -1,0 +1,32 @@
+// Encapsulate component style into its own "namespace "to avoid naming and css collision
+.about-screen {
+
+  .hadra-festival {
+    padding: $padding-big;
+  }
+
+  .version {
+    color: $lightgrey;
+  }
+
+  .separator {
+    height: 1px;
+    margin: $padding-big;
+    border-bottom: 1px solid $light;
+  }
+
+  .credits {
+    font-size: 120%;
+  }
+
+  .credits, .open-source {
+    margin-left: $padding-big;
+    margin-right: $padding-big;
+  }
+
+  .license {
+    font-size: 85%;
+    white-space: pre-line;
+  }
+
+}

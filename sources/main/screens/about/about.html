@@ -1,20 +1,27 @@
-<ion-view id="about-screen">
+<ion-view id="about-screen" class="about-screen">
   <ion-nav-title>{{viewTitle}}</ion-nav-title>
-  <ion-content>
-    <ion-list type="card">
-      <ion-item class="text-center">
-        <h1>
-          <i class="icon ion-bookmark"></i> <span translate>APP_NAME</span>
-        </h1>
-        <p>
-          <span translate>Version</span> {{vm.version}}
-        </p>
-      </ion-item>
-    </ion-list>
-    <div class="text-center">
-      <a class="button button-clear padding">
-        Made with <i class="icon ion-heart assertive"></i> by noda
-      </a>
+  <ion-content class="dark-bg light text-center">
+    <img class="hadra-festival full-width" src="images/hadra-logo.png"/>
+    <div class="version">
+      <span translate>App version</span>: {{vm.version}}<br/>
+      <span translate>Data version</span>: {{festival.version.toFixed(1)}}
     </div>
+    <div class="separator"></div>
+    <div class="credits">
+      <p translate>Made with <i class="ion-heart assertive"></i> by noda</p>
+      <p translate>Special thanks to nstCastus</p>
+    </div>
+    <div class="separator"></div>
+    <p class="open-source">
+      <span>This software is free and open source, you can contribute to make it better!</span>
+      <br/><br/>
+      <button class="button button-small button-outline button-light space-right"
+              ng-click="vm.open('https://github.com/sinedied/hadra-trance-festival')">
+        <i class="icon ion-social-github"></i>
+        <span translate>Show on Github</span>
+      </button>
+      <button class="button button-small button-outline button-balanced"
+              ng-click="vm.showLicense()" translate>License</button>
+    </p>
   </ion-content>
 </ion-view>
