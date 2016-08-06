@@ -35,7 +35,6 @@ function mainConfig($provide: ng.auto.IProvideService,
 
   // Disable angular debug info in production version
   $compileProvider.debugInfoEnabled(env.debug);
-
   $analyticsProvider.developerMode(env.debug);
   $analyticsProvider.firstPageview(true);
 

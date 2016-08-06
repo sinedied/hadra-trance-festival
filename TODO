@@ -1,18 +1,19 @@
 x bug ios player time overflow
 x bug ios title visible in transparent navbar
-- ios test notification sound + iphone/ipad ios 7/8/9 + set ipad orientation
-- check orientation ios/android
 x Data sync + reload app
 x map -> replace by image
 x Dynamic playing home + time remaining since start
 x Local notifications when artist plays
 x Now playing button on lineup + icon on playing set + split by days
 x Pause button in shell when plangular playing
-- Copy assets from JSON base64 to images/ (-> script?)
 x About screen
-- add plugin apprate
-- add social links to home page (facebook, twitter, soundcloud, youtube...)
+x add social links to home page (facebook, twitter, soundcloud, youtube...)
 - FR translation
+- ios test notification sound + iphone/ipad ios 7/8/9 + set ipad orientation
+- check orientation ios/android
+- mail backend + data infos, accueil, photo/video/featured
+- Copy assets from JSON base64 to images/ (-> script?)
 - Add analytics + creer nouvel id GA / soundcloud hors github
+- add store URLs
 
 DEADLINE: 19 aout

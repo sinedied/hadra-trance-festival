@@ -5,6 +5,13 @@
 export interface IFestival {
   version: number;
   utcOffset: number;
+  social?: {
+    facebook?: string;
+    website?: string;
+    twitter?: string;
+    soundcloud?: string;
+    youtube?: string;
+  };
   photo: string;
   description: string;
   playerSoundcloud: string;
@@ -14,7 +21,7 @@ export interface IFestival {
   featuredArtistIds: string[];
   featuredPhotos: string[];
   featuredVideo: string;
-  map: string;
+  map?: string;
   infos: IInfoPage[];
   lineup: IScene[];
   artists: IArtist[];
@@ -105,6 +112,7 @@ export enum SetType {
 export class Festival implements IFestival {
   version: number = 1.0;
   utcOffset: number = 0;
+  social = null;
   photo: string;
   description: string;
   playerSoundcloud: string;
