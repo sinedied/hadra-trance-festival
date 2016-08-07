@@ -1,0 +1,147 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: fr_FR\n"
+
+#: app.ts.js:500 app.ts.js:568
+msgid "APP_NAME"
+msgstr "Hadra Trance Festival"
+
+#: app.ts.js:322 main/screens/infos/infos.html:10
+msgid "About"
+msgstr "A propos"
+
+#: app.ts.js:2387
+msgid "Added to favorites!<br>You will be notified before its set starts."
+msgstr "Ajouté aux favoris!<br>Vous recevrez une notification avant le début de son set."
+
+#: app.ts.js:1970
+msgid "Added to favorites!<br>You will be notified before this set starts."
+msgstr "Ajouté aux favoris!<br>Vous recevrez une notification avant le début de ce set."
+
+#: main/screens/artists/artists.html:4
+msgid "All"
+msgstr "Tous"
+
+#: main/screens/player/player.html:45
+msgid "An internet connection is required to use the player"
+msgstr "Une connexion Internet est nécessaire pour utiliser le lecteur"
+
+#: main/screens/about/about.html:6
+msgid "App version"
+msgstr "Version de l'app"
+
+#: app.ts.js:262
+msgid "Artist"
+msgstr "Artiste"
+
+#: app.ts.js:252 main/shell/shell.html:39
+msgid "Artists"
+msgstr "Artistes"
+
+#: app.ts.js:1884
+msgid "Break"
+msgstr "Pause"
+
+#: main/screens/about/about.html:7
+msgid "Data version"
+msgstr "Version des données"
+
+#: app.ts.js:1885
+msgid "Enjoy some silence..."
+msgstr "Profitez du silence..."
+
+#: main/screens/artists/artists.html:6
+msgid "Favorites"
+msgstr "Favoris"
+
+#: main/screens/home/home.html:34
+msgid "Featured artists"
+msgstr "Artistes présents"
+
+#: app.ts.js:1855
+msgid "Festival starts in"
+msgstr "Début du festival dans"
+
+#: app.ts.js:242 main/shell/shell.html:25
+msgid "Home"
+msgstr "Accueil"
+
+#: app.ts.js:302
+msgid "Info"
+msgstr "Info"
+
+#: app.ts.js:292 main/shell/shell.html:53
+msgid "Infos"
+msgstr "Infos"
+
+#: main/screens/home/home.html:44
+msgid "Last edition"
+msgstr "Dernière édition"
+
+#: main/screens/about/about.html:23
+#: main/screens/about/license/license.modal.html:6
+msgid "License"
+msgstr "Licence"
+
+#: app.ts.js:272 main/shell/shell.html:32
+msgid "Line-up"
+msgstr "Line-up"
+
+#: main/screens/about/about.html:11
+msgid "Made with <i class=\"ion-heart assertive\"></i> by noda"
+msgstr "Fait avec <i class=\"ion-heart assertive\"></i> par noda"
+
+#: app.ts.js:282 main/shell/shell.html:46
+msgid "Map"
+msgstr "Plan"
+
+#: main/screens/home/home.html:7
+msgid "Music"
+msgstr "Musique"
+
+#: main/screens/player/player.html:12
+msgid "No cover"
+msgstr "Pas de jaquette"
+
+#: main/screens/artists/artists.html:18
+msgid "No favorites yet!"
+msgstr "Aucun favoris"
+
+#: main/shell/shell.html:67
+msgid "Pause"
+msgstr "Pause"
+
+#: app.ts.js:312 main/shell/shell.html:60
+msgid "Player"
+msgstr "Musique"
+
+#: main/screens/about/about.html:21
+msgid "Show on Github"
+msgstr "Voir sur Github"
+
+#: main/screens/about/about.html:12
+msgid "Special thanks to nstCastus"
+msgstr "Merci également à nstCactus"
+
+#: main/screens/home/home.html:11
+msgid "T-Shirts"
+msgstr "T-Shirts"
+
+#: main/screens/about/about.html:16
+msgid "This software is free and open source, you can contribute to make it better!"
+msgstr "Ce logiciel est libre est open source, vous pouvez contribuer à l'améliorer!"
+
+#: main/screens/artists/artist/artist.html:24
+msgid "Website"
+msgstr "Site web"
+
+#: app.ts.js:1860
+msgid "{{days}}d {{hours}}h {{minutes}}m {{seconds}}s"
+msgstr "{{days}}j {{hours}}h {{minutes}}m {{seconds}}s"
+
+#: app.ts.js:1054
+msgid "{{name}} {{type}} set starts in 10 minutes on {{scene}} floor!"
+msgstr "Le {{type}} set de {{name}} démarre dans 10 min sur la scène {{scene}}!"

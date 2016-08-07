@@ -62,8 +62,8 @@ let config: IApplicationConfig = {
 
   // Supported languages
   supportedLanguages: [
-    // 'en-US',
-    'fr-FR'
+    // 'en_US',
+    'fr_FR'
   ],
 
   // TODO: update URLs

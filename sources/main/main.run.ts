@@ -50,11 +50,12 @@ function main($window: ng.IWindowService,
    */
   vm.setLanguage = function(language?: string) {
     language = language || $window.localStorage.getItem('language');
+    language = language ? language.replace('-', '_') : language;
     let isSupportedLanguage = _.includes(config.supportedLanguages, language);
 
     // If no exact match is found, search without the region
     if (!isSupportedLanguage && language) {
-      let languagePart = language.split('-')[0];
+      let languagePart = language.split('_')[0];
       language = _.find(config.supportedLanguages,
         (supportedLanguage: string) => _.startsWith(supportedLanguage, languagePart));
       isSupportedLanguage = !!language;
@@ -62,7 +63,7 @@ function main($window: ng.IWindowService,
 
     // Fallback if language is not supported
     if (!isSupportedLanguage) {
-      language = 'fr-FR';
+      language = 'fr_FR';
     }
 
     // Configure translation with gettext
@@ -72,7 +73,7 @@ function main($window: ng.IWindowService,
     $locale.id = language;
 
     // Set Moment locale
-    moment.locale(language.split('-')[0]);
+    moment.locale(language.split('_')[0]);
 
     $window.localStorage.setItem('language', language);
   };
@@ -104,6 +105,7 @@ function main($window: ng.IWindowService,
     // Enable debug mode for translations
     gettextCatalog.debug = config.environment.debug;
     gettextCatalog.debugPrefix = 'T_';
+    gettextCatalog.baseLanguage = 'en_US';
 
     vm.setLanguage();
 
@@ -153,7 +155,7 @@ function main($window: ng.IWindowService,
 
         // App rating prompt
         $window['AppRate'].preferences = {
-          useLanguage: $locale.id.split('-')[0],
+          useLanguage: $locale.id.split('_')[0],
           displayAppName: gettextCatalog.getString('APP_NAME'),
           openStoreInApp: true,
           usesUntilPrompt: 3,
