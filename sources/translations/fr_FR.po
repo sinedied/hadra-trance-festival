@@ -132,7 +132,7 @@ msgstr "T-Shirts"
 
 #: main/screens/about/about.html:16
 msgid "This software is free and open source, you can contribute to make it better!"
-msgstr "Ce logiciel est libre est open source, vous pouvez contribuer à l'améliorer!"
+msgstr "Cette application est libre et open source, vous pouvez contribuer à l'améliorer!"
 
 #: main/screens/artists/artist/artist.html:24
 msgid "Website"
