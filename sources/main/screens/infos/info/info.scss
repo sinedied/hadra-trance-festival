@@ -5,4 +5,16 @@
     color: $royal;
   }
 
+  ol, ul {
+    padding-left: $padding-big;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
 }

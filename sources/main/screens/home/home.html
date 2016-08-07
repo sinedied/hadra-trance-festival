@@ -12,7 +12,7 @@
                 ng-click="vm.open(festival.buyClothes)" translate>T-Shirts</button>
       </div>
     </div>
-    <ion-list type="card" class="text-center card-close">
+    <ion-list type="card" class="card-close">
       <ion-item class="item-body no-padding">
         <img class="full-image" ng-src="{{festival.photo}}">
         <div class="social" ng-if="festival.social">
@@ -27,7 +27,7 @@
           <button class="button button-small button-clear icon-left ion-android-globe button-royal"
                   ng-if="festival.social.website" ng-click="vm.open(festival.social.website)"></button>
         </div>
-        <p class="padding no-margin">{{festival.description}}</p>
+        <p class="padding no-margin text-justify" ng-bind-html="festival.description"></p>
       </ion-item>
     </ion-list>
     <div class="space-top-large"></div>

@@ -154,7 +154,7 @@ function main($window: ng.IWindowService,
         }
 
         // App rating prompt
-        $window['AppRate'].preferences = {
+        angular.extend($window['AppRate'].preferences, {
           useLanguage: $locale.id.split('_')[0],
           displayAppName: gettextCatalog.getString('APP_NAME'),
           openStoreInApp: true,
@@ -164,7 +164,7 @@ function main($window: ng.IWindowService,
             ios: config.appStoreUrl,
             android: config.playStoreUrl
           }
-        };
+        });
         $cordovaAppRate.promptForRating(config.environment.debug);
 
         if ($window.cordova.plugins.Keyboard) {
