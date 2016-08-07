@@ -1,15 +1,6 @@
-x bug ios player time overflow
-x bug ios title visible in transparent navbar
-x Data sync + reload app
-x map -> replace by image
-x Dynamic playing home + time remaining since start
-x Local notifications when artist plays
-x Now playing button on lineup + icon on playing set + split by days
-x Pause button in shell when plangular playing
-x About screen
-x add social links to home page (facebook, twitter, soundcloud, youtube...)
-x FR translation
-- ios test notification sound + iphone/ipad ios 7/8/9 + set ipad orientation
+x ios test notification sound
+- iphone/ipad ios 7/8/9
+x set ipad orientation
 - check orientation ios/android
 - mail backend + data infos, accueil, photo/video/featured
 - Copy assets from JSON base64 to images/ (-> script?)

@@ -40,6 +40,14 @@
         <config-file parent="UIStatusBarStyle" platform="ios" target="*-Info.plist">
             <string>UIStatusBarStyleLightContent</string>
         </config-file>
+        <config-file parent="UISupportedInterfaceOrientations~ipad" platform="ios" target="*-Info.plist">
+          <array>
+            <string>UIInterfaceOrientationPortrait</string>
+            <string>UIInterfaceOrientationPortraitUpsideDown</string>
+            <string>UIInterfaceOrientationLandscapeRight</string>
+            <string>UIInterfaceOrientationLandscapeLeft</string>
+          </array>
+        </config-file>
     </platform>
     <platform name="android">
         <preference name="android-minSdkVersion" value="16" />

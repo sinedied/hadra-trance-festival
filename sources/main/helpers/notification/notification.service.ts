@@ -89,7 +89,6 @@ export class NotificationService {
                 icon: 'res://drawable/ic_notification_hadra',
                 color: '9C146A',
                 led: '9C146A',
-                // TODO: test sound ios
                 text: this.gettextCatalog.getString('{{name}} {{type}} set starts in 10 minutes on {{scene}} floor!', {
                   name: set.artist.name,
                   type: set.type,
@@ -97,8 +96,6 @@ export class NotificationService {
                 }),
                 data: Set.getSerializableCopyWithId(set),
                 at: setNotificationDate.toDate(),
-                // TODO: do not forget!
-                // at: this.moment().add(set.artistId, 'minutes').toDate()
               });
 
             }
