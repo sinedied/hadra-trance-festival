@@ -176,6 +176,10 @@ function main($window: ng.IWindowService,
           $cordovaStatusbar.styleHex('#360222');
         }
 
+        // Update initial connection status
+        vm.offline = $window.navigator.connection.type === Connection.NONE;
+        _logger.log('Network status: ' + (vm.offline ? 'offline' : 'online'));
+
         /*
          * App lifecycle hooks
          */
