@@ -4,30 +4,33 @@
     <button class="button button-icon button-clear ion-ios-cart-outline" ng-if="festival.playerShop"
             ng-click="vm.open(festival.playerShop)"></button>
   </ion-nav-buttons>
-  <ion-content class="light content-fill-height" fading-bar="280" fade-to-rgb="79,10,54" state-name="app.player">
-    <div plangular="{{festival.playerSoundcloud}}" ng-if="!offline">
+  <ion-content class="light content-fill-height" fading-bar="280" fade-to-rgb="79,10,54" state-name="app.player"
+               on-scroll="vm.onScroll(this.scrollCtrl)">
+    <div ng-if="!offline" plangular="{{festival.playerSoundcloud}}">
+      <!-- Little trick to expose plangular's scope in the view model -->
+      <div ng-init="vm.plangular = this"></div>
       <div class="player-main">
         <div class="artwork relative" bg-image="track.artwork_url.replace('large.jpg', 't500x500.jpg')">
           <div class="block-vertical-center-absolute text-center full-width light" ui-loading="!track"></div>
           <h4 class="block-vertical-center-absolute light text-center full-width" ng-if="track && !track.artwork_url" translate>No cover</h4>
         </div>
-        <div class="artwork-overlay">
-          <div class="track-progress">
-            <samp class="time">{{ currentTime | hhmmss }} / {{ duration | hhmmss }}</samp>
-            <progress class="progress" ng-click="seek($event)" ng-value="currentTime / duration || 0"></progress>
-          </div>
-          <div class="track-info">
-            <h4 class="track-name text-center text-overflow light">{{track.title}}</h4>
-            <div class="track-artist text-center text-overflow">{{track.user.username}}</div>
-          </div>
-          <!--<h4>{{playlist.user.username}}</h4>-->
-          <!--<h3>{{playlist.title}}</h3>-->
-          <div class="player-controls">
-            <button ng-click="previous()" class="button button-clear button-light ion-ios-skipbackward"></button>
-            <button ng-click="playPause(index)" class="button button-clear button-light"
-                    ng-class="player.playing === track.src ? 'ion-ios-pause' : 'ion-ios-play'"></button>
-            <button ng-click="next()" class="button button-clear button-light ion-ios-skipforward"></button>
-          </div>
+      </div>
+      <div class="artwork-overlay">
+        <div class="track-progress">
+          <samp class="time">{{ currentTime | hhmmss }} / {{ duration | hhmmss }}</samp>
+          <progress class="progress" ng-click="seek($event)" ng-value="currentTime / duration || 0"></progress>
+        </div>
+        <div class="track-info">
+          <h4 class="track-name text-center text-overflow light">{{track.title}}</h4>
+          <div class="track-artist text-center text-overflow">{{track.user.username}}</div>
+        </div>
+        <!--<h4>{{playlist.user.username}}</h4>-->
+        <!--<h3>{{playlist.title}}</h3>-->
+        <div class="player-controls">
+          <button ng-click="previous()" class="button button-clear button-light ion-ios-skipbackward"></button>
+          <button ng-click="playPause(index)" class="button button-clear button-light"
+                  ng-class="player.playing === track.src ? 'ion-ios-pause' : 'ion-ios-play'"></button>
+          <button ng-click="next()" class="button button-clear button-light ion-ios-skipforward"></button>
         </div>
       </div>
       <ion-list>
@@ -45,4 +48,21 @@
       <h4 class="light" translate>An internet connection is required to use the player</h4>
     </div>
   </ion-content>
+  <div class="artwork-overlay sticky light royal-bg" ng-if="!offline" ng-show="vm.stickyControls">
+    <div class="track-progress">
+      <samp class="time">{{ vm.plangular.currentTime | hhmmss }} / {{ vm.plangular.duration | hhmmss }}</samp>
+      <progress class="progress" ng-click="vm.plangular.seek($event)"
+                ng-value="vm.plangular.currentTime / vm.plangular.duration || 0"></progress>
+    </div>
+    <div class="track-info">
+      <h4 class="track-name text-center text-overflow light">{{vm.plangular.track.title}}</h4>
+      <div class="track-artist text-center text-overflow">{{vm.plangular.track.user.username}}</div>
+    </div>
+    <div class="player-controls">
+      <button ng-click="vm.plangular.previous()" class="button button-clear button-light ion-ios-skipbackward"></button>
+      <button ng-click="vm.plangular.playPause(index)" class="button button-clear button-light"
+              ng-class="vm.plangular.player.playing === vm.plangular.track.src ? 'ion-ios-pause' : 'ion-ios-play'"></button>
+      <button ng-click="vm.plangular.next()" class="button button-clear button-light ion-ios-skipforward"></button>
+    </div>
+  </div>
 </ion-view>
