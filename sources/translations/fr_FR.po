@@ -116,7 +116,7 @@ msgstr "Pause"
 
 #: app.ts.js:312 main/shell/shell.html:60
 msgid "Player"
-msgstr "Musique"
+msgstr "Lecteur"
 
 #: main/screens/about/about.html:21
 msgid "Show on Github"
