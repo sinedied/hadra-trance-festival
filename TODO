@@ -1,8 +1,9 @@
-- iphone/ipad ios 7/8/9
-- check orientation ios/android
-- mail backend + data infos, accueil, photo/video/featured
+x iphone/ipad ios 7/8/9
+x check orientation ios/android
+x mail backend + data infos, accueil, photo/video/featured
 - Copy assets from JSON base64 to images/ (-> script?)
-- Add analytics + creer nouvel id GA / soundcloud hors github
+- Add analytics
+- create new GA id / soundcloud id outside github
 - add store URLs
 
 DEADLINE: 19 aout
