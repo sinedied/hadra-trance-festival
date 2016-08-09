@@ -47,6 +47,7 @@
     "html-minify-loader": "^1.1.0",
     "http-proxy-middleware": "^0.15.2",
     "https-proxy-agent": "^1.0.0",
+    "iconv-lite": "^0.4.13",
     "jasmine-spec-reporter": "^2.4.0",
     "jshint": "^2.9.1",
     "karma": "^0.13.22",

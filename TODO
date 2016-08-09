@@ -1,6 +1,8 @@
-x iphone/ipad ios 7/8/9
+x iphone/ipad ios 8/9
 x check orientation ios/android
 x mail backend + data infos, accueil, photo/video/featured
+- bug info map agrandissement
+- ios7
 - Copy assets from JSON base64 to images/ (-> script?)
 - Add analytics
 - create new GA id / soundcloud id outside github

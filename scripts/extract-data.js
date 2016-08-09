@@ -9,6 +9,8 @@ var args = process.argv.splice(2);
 var fs = require('fs');
 var path = require('path');
 
+var iconvlite = require('iconv-lite');
+
 var json = require(path.isAbsolute(args[0]) ? args[0] : path.join(__dirname, args[0]));
 var outFolder = args[1] || 'out';
 var imagesFolder = path.join(outFolder, 'images');
@@ -50,7 +52,7 @@ json.forEach(function(i) {
 
   // Cleanup
   artist.id = '' + artist.id;
-  artist.bio = { fr: fixBio(artist.bioFr) };
+  artist.bio = { fr: fixBio(fixUnicode(artist.bioFr)) };
   artist.website = cleanUrl(artist.website);
   artist.mixcloud = cleanUrl(artist.mixcloud);
   artist.soundcloud = cleanUrl(artist.soundcloud);
@@ -76,6 +78,7 @@ json.forEach(function(i) {
   delete artist.isFavorite;
 
   artists.push(artist);
+
 });
 
 fs.writeFileSync(path.join(outFolder, 'artists.json'), JSON.stringify(artists, null, 2));
@@ -84,6 +87,18 @@ console.log('Extracted: ' + numPhotos + ' photos, ' + numBanners + ' banners');
 
 // Internal
 // ------------------------------------
+
+function fixUrl(url, site) {
+  if (!url) {
+    return null;
+  }
+
+  if (url.indexOf(site) === -1) {
+    return site + '/' + url;
+  }
+
+  return url;
+}
 
 function cleanUrl(url) {
   if (!url) {
@@ -106,5 +121,19 @@ function fixBio(bio) {
     return null;
   }
 
-  return bio.replace(/\\r\\n/g, '<br>');
+  return bio
+    .replace(/\r\n/g, '<br>')
+    .replace(/\t/g, '');
+}
+
+function fixUnicode(str) {
+  if (!str) {
+    return;
+  }
+
+  // Fix bad DB encoding (utf8 encoded as latin1)
+  str = iconvlite.encode(str, 'latin1');
+  str = iconvlite.decode(str, 'utf8');
+
+  return str;
 }
