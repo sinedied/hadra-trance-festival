@@ -9,6 +9,7 @@ export class ArtistController {
 
   favorites: Map<string, boolean>;
   artist: Artist;
+  noBio: string;
 
   private logger: ILogger;
 
@@ -25,6 +26,7 @@ export class ArtistController {
     this.logger = logger.getLogger('artist');
     this.logger.log('init');
 
+    this.noBio = gettextCatalog.getString('No bio');
     this.favorites = this.favoritesService.favorites;
 
     // Init each time, because of view cache

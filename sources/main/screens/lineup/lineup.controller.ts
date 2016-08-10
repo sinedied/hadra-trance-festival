@@ -11,6 +11,7 @@ export class LineupController {
   selectedScene = 0;
   hasStarted = false;
   playing = [];
+  breakTime: string;
 
   private festival;
   private logger: ILogger;
@@ -31,6 +32,7 @@ export class LineupController {
     this.logger = logger.getLogger('lineup');
     this.logger.log('init');
 
+    this.breakTime = this.gettextCatalog.getString('Break');
     this.favorites = this.favoritesService.favorites;
 
     // Update now playing infos

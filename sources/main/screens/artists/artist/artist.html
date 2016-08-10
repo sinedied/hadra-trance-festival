@@ -4,11 +4,11 @@
     <button class="button button-icon button-clear ion-android-favorite" ng-class=" { 'ion-android-favorite-outline': !vm.favorites[vm.artist.id] }"
             ng-click="vm.switchFavorite()"></button>
   </ion-nav-buttons>
-  <div class="blur-bg" bg-image="vm.artist.banner"></div>
+  <div class="blur-bg" bg-image="vm.artist.banner || 'images/no-banner.jpg'"></div>
   <ion-content class="transparent-bg light" fading-bar="280" fade-to-rgb="79,10,54" state-name="app.artist">
-    <div class="artist-bg" bg-image="vm.artist.banner"></div>
+    <div class="artist-bg" bg-image="vm.artist.banner || 'images/no-banner.jpg'"></div>
     <div class="artist-info">
-      <div class="artist-photo" bg-image="vm.artist.photo"></div>
+      <div class="artist-photo" bg-image="vm.artist.photo || 'images/no-photo.jpg'"></div>
       <h3 class="artist-name light">{{vm.artist.name}}</h3>
       <h5 class="artist-label text-overflow">
         <span>{{vm.artist.label}}</span> / <span class="country">{{vm.artist.country}}</span>
@@ -38,9 +38,7 @@
         </div>
       </div>
     </div>
-    <div class="bio text-justify">
-      {{vm.artist.bio.fr || vm.artist.bio.en || ('No bio' | translate)}}
-    </div>
+    <div class="bio text-justify" ng-bind-html="vm.artist.bio.fr || vm.artist.bio.en || vm.noBio"></div>
     <div class="set-info">
       <div class="set" ng-repeat="set in vm.artist.sets">
         {{::vm.formatDate(set.start)}} - {{::vm.formatDate(set.end)}} // {{::set.type}} @ <span class="text-lowercase">{{::set.scene.name}}</span>

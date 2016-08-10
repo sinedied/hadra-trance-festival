@@ -7,7 +7,8 @@
   "private": true,
   "scripts": {
     "test": "gulp test && gulp build",
-    "deploy": "./scripts/deploy-demo.sh"
+    "deploy": "./scripts/deploy-demo.sh",
+    "update-data": "./scripts/update-data.sh"
   },
   "devDependencies": {
     "angular-gettext-loader": "^1.0.1",

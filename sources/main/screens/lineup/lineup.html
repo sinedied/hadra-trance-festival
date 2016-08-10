@@ -18,7 +18,7 @@
       <ion-item class="item-set" ng-repeat="set in day.sets" ng-click="vm.showArtist(set)" id="{{set.id}}"
                 ng-class="{ 'positive current': vm.playing[vm.selectedScene] === set }">
         <span ng-if="::set.artist" class="badge badge-calm">{{::set.type}}</span>
-        <span class="time">{{::vm.formatDate(set.start)}}-{{::vm.formatDate(set.end)}}</span><span>{{::set.artist ? set.artist.name : ('Break' | translate)}}</span>
+        <span class="time">{{::vm.formatDate(set.start)}}-{{::vm.formatDate(set.end)}}</span><span>{{::set.artist ? set.artist.name : vm.breakTime}}</span>
         <ion-option-button class="option-button button-positive ion-android-favorite"
                            ng-click="vm.switchFavorite(festival.artistById[set.artistId])"
                            ng-class=" { 'ion-android-favorite-outline': !vm.favorites[set.artistId] }">

@@ -6,6 +6,7 @@
   }
 
   .block-vertical-center {
+    width: 100%;
     top: calc(50% - #{$bar-height / 2})
   }
 

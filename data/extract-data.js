@@ -13,9 +13,11 @@ var _ = require('lodash');
 var iconvlite = require('iconv-lite');
 
 var json = require(path.isAbsolute(args[0]) ? args[0] : path.join(__dirname, args[0]));
-var fixesFile = args[1] || 'fixes.json';
+var fixesFile = 'fixes.json';
 var fixes = require(path.isAbsolute(fixesFile) ? fixesFile : path.join(__dirname, fixesFile));
-var outFolder = args[1] || 'out';
+var outFolder = 'out';
+var baseJsonPath = args[1] ? path.isAbsolute(args[1]) ? args[1] : path.join(__dirname, args[1]) : null;
+var baseJson = args[1] ? require(baseJsonPath) : null;
 var imagesFolder = path.join(outFolder, 'artists');
 var imagesPrefix = 'images/artists/';
 var artists = []
@@ -109,9 +111,19 @@ scenes.forEach(function(scene) {
   scene.sets = _.sortBy(scene.sets, ['start']);
 });
 
-fs.writeFileSync(path.join(outFolder, 'data.json'), JSON.stringify({ lineup: scenes, artists: artists}, null, 2));
+var newJson = { lineup: scenes, artists: artists};
+
+fs.writeFileSync(path.join(outFolder, 'data.json'), JSON.stringify(newJson, null, 2));
 
 console.log('Extracted: ' + numPhotos + ' photos, ' + numBanners + ' banners');
+
+if (baseJson) {
+  _.assign(baseJson, newJson);
+
+  fs.writeFileSync(baseJsonPath, JSON.stringify(baseJson, null, 2));
+
+  console.log('Updated ' + baseJsonPath);
+}
 
 // Internal
 // ------------------------------------
