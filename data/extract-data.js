@@ -102,10 +102,12 @@ json.forEach(function(i) {
     start: i.start,
     end: i.end,
     artistId: artist.id
-  }
+  };
   scenes[i.stage.id - 1].sets.push(set);
 
 });
+
+artists = _.sortBy(artists, ['name']);
 
 scenes.forEach(function(scene) {
   scene.sets = _.sortBy(scene.sets, ['start']);

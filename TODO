@@ -4,7 +4,8 @@ x mail backend + data infos, accueil, photo/video/featured
 x bug info map agrandissement (wontfix)
 x Copy assets from JSON base64 to images/ (-> script?)
 - Fix lineup/artist data...
-- Add performance/stands infos
+- Identify favorites sets
+- Add performance/stands infos (use cards)
 - Add analytics
 - create new GA id / soundcloud id outside github
 - add store URLs

@@ -136,3 +136,28 @@
 .icon-huge::before {
   font-size: 3em;
 }
+
+
+.button.button-facebook {
+  $facebook-blue: #3B5998;
+  @include button-clear($facebook-blue);
+}
+
+.button.button-twitter {
+  $twitter-blue: #4099ff;
+  @include button-clear($twitter-blue);
+}
+
+.button.button-soundcloud {
+  $soundcloud-orange: #ff7700;
+  @include button-clear($soundcloud-orange);
+}
+
+.button.button-youtube {
+  $youtube-red: #c4302b;
+  @include button-clear($youtube-red);
+}
+
+.button-social.icon-left::before {
+  font-size: 20px;
+}

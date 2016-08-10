@@ -20,26 +20,6 @@
     }
   }
 
-  .button-facebook {
-    $facebook-blue: #3B5998;
-    @include button-clear($facebook-blue);
-  }
-
-  .button-twitter {
-    $twitter-blue: #4099ff;
-    @include button-clear($twitter-blue);
-  }
-
-  .button-soundcloud {
-    $soundcloud-orange: #ff7700;
-    @include button-clear($soundcloud-orange);
-  }
-
-  .button-youtube {
-    $youtube-red: #c4302b;
-    @include button-clear($youtube-red);
-  }
-
   .has-playing-spacer {
     height: $playing-height;
   }
