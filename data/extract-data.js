@@ -9,13 +9,26 @@ var args = process.argv.splice(2);
 var fs = require('fs');
 var path = require('path');
 
+var _ = require('lodash');
 var iconvlite = require('iconv-lite');
 
 var json = require(path.isAbsolute(args[0]) ? args[0] : path.join(__dirname, args[0]));
+var fixesFile = args[1] || 'fixes.json';
+var fixes = require(path.isAbsolute(fixesFile) ? fixesFile : path.join(__dirname, fixesFile));
 var outFolder = args[1] || 'out';
-var imagesFolder = path.join(outFolder, 'images');
+var imagesFolder = path.join(outFolder, 'artists');
 var imagesPrefix = 'images/artists/';
-var artists = [];
+var artists = []
+var scenes = [
+  {
+    "name": "Main",
+    "sets": []
+  },
+  {
+    "name": "Alternative",
+    "sets": []
+  }
+];
 
 if (!fs.existsSync(outFolder)){
   fs.mkdirSync(outFolder);
@@ -29,10 +42,11 @@ console.log('Loaded ' + json.length + ' artists');
 
 json.forEach(function(i) {
   var artist = i.artist;
+  var buffer, filename;
 
   if (artist.photo) {
-    var buffer = new Buffer(artist.photo, 'base64');
-    var filename = 'photo_' + artist.id + '.jpg';
+    buffer = new Buffer(artist.photo, 'base64');
+    filename = 'photo-' + artist.id + '.jpg';
     fs.writeFileSync(path.join(imagesFolder, filename), buffer);
     numPhotos++;
     artist.photo = imagesPrefix + filename;
@@ -41,8 +55,8 @@ json.forEach(function(i) {
   }
 
   if (artist.banner) {
-    var buffer = new Buffer(artist.banner, 'base64');
-    var filename = 'banner_' + artist.id + '.jpg';
+    buffer = new Buffer(artist.banner, 'base64');
+    filename = 'banner-' + artist.id + '.jpg';
     fs.writeFileSync(path.join(imagesFolder, filename), buffer);
     numBanners++;
     artist.banner = imagesPrefix + filename;
@@ -52,13 +66,14 @@ json.forEach(function(i) {
 
   // Cleanup
   artist.id = '' + artist.id;
+  artist.name = fixName(fixUnicode(artist.name));
+  artist.country = fixUnicode(artist.origin);
+  artist.label = fixUnicode(artist.label);
   artist.bio = { fr: fixBio(fixUnicode(artist.bioFr)) };
   artist.website = cleanUrl(artist.website);
-  artist.mixcloud = cleanUrl(artist.mixcloud);
-  artist.soundcloud = cleanUrl(artist.soundcloud);
-  artist.facebook = cleanUrl(artist.facebook);
-
-  // TODO: add soundcloud.com if needed
+  artist.mixcloud = cleanUrl(fixUrl(artist.mixcloud, 'mixcloud.com'));
+  artist.soundcloud = cleanUrl(fixUrl(artist.soundcloud, 'soundcloud.com'));
+  artist.facebook = cleanUrl(fixUrl(artist.facebook, 'facebook.com'));
 
   if (!artist.bioFr) {
     console.warn('Artist ' + artist.name + ' does not have a bio!');
@@ -68,20 +83,33 @@ json.forEach(function(i) {
     console.log('Artist ' + artist.name + ' has website');
   }
 
+  delete artist.origin;
   delete artist.bannerXOffset;
   delete artist.bannerYOffset;
-  delete artist.isfavorite;
   delete artist.createdAt;
   delete artist.updatedAt;
   delete artist.bioEn;
   delete artist.bioFr;
   delete artist.isFavorite;
 
+  artist = applyManualFix(artist);
   artists.push(artist);
+
+  var set = {
+    type: i.type,
+    start: i.start,
+    end: i.end,
+    artistId: artist.id
+  }
+  scenes[i.stage.id - 1].sets.push(set);
 
 });
 
-fs.writeFileSync(path.join(outFolder, 'artists.json'), JSON.stringify(artists, null, 2));
+scenes.forEach(function(scene) {
+  scene.sets = _.sortBy(scene.sets, ['start']);
+});
+
+fs.writeFileSync(path.join(outFolder, 'data.json'), JSON.stringify({ lineup: scenes, artists: artists}, null, 2));
 
 console.log('Extracted: ' + numPhotos + ' photos, ' + numBanners + ' banners');
 
@@ -111,7 +139,12 @@ function cleanUrl(url) {
     url = 'https://' + url;
   }
 
-  url = url.replace('?fref=ts', '');
+  url = url
+    .replace('?fref=ts', '')
+    .replace('//facebook.com', '//www.facebook.com')
+    .replace('//mixcloud.com', '//www.mixcloud.com')
+    .replace('m.facebook.com', 'www.facebook.com')
+    .replace('m.soundcloud.com', 'soundcloud.com')
 
   return url;
 }
@@ -123,7 +156,10 @@ function fixBio(bio) {
 
   return bio
     .replace(/\r\n/g, '<br>')
-    .replace(/\t/g, '');
+    .replace(/\t/g, '')
+    .replace(/&amp;/g, '&')
+    .replace(/&quot;/g, '"')
+    .replace(/�\?\?/g, '\'');
 }
 
 function fixUnicode(str) {
@@ -136,4 +172,25 @@ function fixUnicode(str) {
   str = iconvlite.decode(str, 'utf8');
 
   return str;
+}
+
+function fixName(name) {
+  return capitalize(name.toLowerCase())
+    .replace('Dj', 'DJ');
+}
+
+function applyManualFix(artist) {
+  var fix = _.find(fixes, { id: artist.id });
+
+  if (fix) {
+    _.assign(artist, fix);
+  }
+
+  return artist;
+}
+
+function capitalize(str) {
+  return str.replace(/\b\w/g, function(l){
+    return l.toUpperCase();
+  });
 }

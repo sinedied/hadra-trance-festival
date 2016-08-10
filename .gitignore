@@ -40,3 +40,6 @@ xcuserdata/
 ## Maven
 target/
 log/
+
+## Others
+/data/out/
