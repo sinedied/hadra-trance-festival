@@ -11,7 +11,7 @@
     <access origin="*" />
     <allow-navigation href="*" />
     <platform name="ios">
-        <preference name="deployment-target" value="7.0" />
+        <preference name="deployment-target" value="8.0" />
         <preference name="UIWebViewBounce" value="false" />
         <preference name="BackupWebStorage" value="none" />
         <icon height="57" src="resources/ios/icon/Icon.png" width="57" />
