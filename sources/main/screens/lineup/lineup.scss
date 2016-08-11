@@ -30,8 +30,11 @@
     position: static;
     float: right;
     font-size: 10px;
-    min-width: 32px;
     text-align: center;
+  }
+
+  .badge .badge-calm {
+    min-width: 32px;
   }
 
   .item.current .badge {
