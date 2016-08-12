@@ -5,9 +5,13 @@ x bug info map agrandissement (wontfix)
 x Copy assets from JSON base64 to images/ (-> script?)
 x Identify favorites sets on lineup screen
 - Fix lineup/artist data...
-- Add performance/stands infos (use cards)
+- Add stands infos
+x Fix android icon
+x Allow no lineup
+- Add music controls plugin
+- Make screenshots + builds for stores
 - Add analytics
-- create new GA id / soundcloud id outside github
-- add store URLs
+- Create new GA id / soundcloud id outside github
+- Add reall store URLs
 
 DEADLINE: 19 aout

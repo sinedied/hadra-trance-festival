@@ -1090,6 +1090,7 @@
       }
     }
   ],
+  "showLineup": true,
   "lineup": [
     {
       "name": "Main",

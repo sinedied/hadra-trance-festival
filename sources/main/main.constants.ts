@@ -67,8 +67,8 @@ let config: IApplicationConfig = {
   ],
 
   // TODO: update URLs
-  appStoreUrl: '',
-  playStoreUrl: '',
+  appStoreUrl: 'https://itunes.apple.com/fr/app/hadra-trance-festival-2016/id1143449911',
+  playStoreUrl: 'https://play.google.com/store/apps/details?id=org.nxcode.htf2016',
 
   googleAnalyticsId: 'UA-81709759-1',
   soundCloudClientId: 'c893b01b1f81d8cecc69fa8594f68d41'

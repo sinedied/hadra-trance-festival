@@ -23,6 +23,7 @@ export interface IFestival {
   featuredVideo: string;
   map?: string;
   infos: IInfoPage[];
+  showLineup: boolean;
   lineup: IScene[];
   artists: IArtist[];
 }
@@ -124,6 +125,7 @@ export class Festival implements IFestival {
   featuredVideo: string;
   map: string;
   infos: InfoPage[] = [];
+  showLineup: boolean = true;
   lineup: Scene[] = [];
   artists: Artist[] = [];
 
