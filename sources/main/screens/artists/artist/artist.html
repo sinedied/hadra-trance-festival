@@ -26,7 +26,7 @@
     </div>
     <div class="player" ng-if="!offline && vm.artist.soundcloud" plangular="{{vm.artist.soundcloud + '/tracks'}}">
       <div class="buttons left">
-        <button ng-click="playPause(index)" class="button button-clear button-light"
+        <button ng-click="playPause(index); vm.updatePlayerContext(this)" class="button button-clear button-light"
                 ng-class="player.playing === track.src  ? 'ion-ios-pause' : 'ion-ios-play'"></button>
         <button ng-click="next()" class="next button button-light button-clear ion-skip-forward"></button>
       </div>

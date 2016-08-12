@@ -4,6 +4,7 @@ import {ToastService} from 'helpers/toast/toast.service';
 import {FavoritesService} from 'helpers/favorites/favorites.service';
 import {FestivalService} from 'web-services/festival/festival.service';
 import {Artist} from 'web-services/festival/festival.model';
+import {PlayerService} from 'helpers/player/player.service';
 
 export class ArtistController {
 
@@ -20,6 +21,7 @@ export class ArtistController {
               private gettextCatalog: angular.gettext.gettextCatalog,
               logger: LoggerService,
               festivalService: FestivalService,
+              private playerService: PlayerService,
               private favoritesService: FavoritesService,
               private toastService: ToastService) {
 
@@ -52,6 +54,10 @@ export class ArtistController {
 
   open(url: string) {
     this.$cordovaInAppBrowser.open(url, '_system');
+  }
+
+  updatePlayerContext(scope: ng.IScope) {
+    this.playerService.updateContext(scope);
   }
 
 }

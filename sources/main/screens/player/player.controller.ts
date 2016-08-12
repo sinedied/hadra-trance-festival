@@ -1,5 +1,6 @@
 import app from 'main.module';
 import {ILogger, LoggerService} from 'helpers/logger/logger';
+import {PlayerService} from 'helpers/player/player.service';
 
 export class PlayerController {
 
@@ -10,6 +11,7 @@ export class PlayerController {
   constructor(private $scope: ng.IScope,
               private $window: ng.IWindowService,
               private $cordovaInAppBrowser: any,
+              private playerService: PlayerService,
               logger: LoggerService) {
 
     this.logger = logger.getLogger('player');
@@ -26,6 +28,10 @@ export class PlayerController {
     this.$scope.$apply(() => {
       this.stickyControls = scrollTop >= threshold;
     });
+  }
+
+  updatePlayerContext(scope: ng.IScope) {
+    this.playerService.updateContext(scope);
   }
 
 }
