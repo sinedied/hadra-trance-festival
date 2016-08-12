@@ -23,7 +23,8 @@ export class PlayerController {
   }
 
   onScroll(scrollDelagte: ionic.scroll.IonicScrollDelegate) {
-    let threshold = this.$window.innerHeight / 2 - 44;  // 50vh - $bar-height
+    let offset = ionic.Platform.isIOS ? 64 : 44;            // $bar-height + $ios-statusbar-height / $bar-height
+    let threshold = this.$window.innerHeight / 2 - offset;  // 50vh - offset
     let scrollTop = scrollDelagte.getScrollPosition().top;
     this.$scope.$apply(() => {
       this.stickyControls = scrollTop >= threshold;

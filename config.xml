@@ -99,5 +99,6 @@
     <plugin name="cordova-custom-config" spec="~2.0.3" />
     <icon src="resources/android/icon/drawable-xhdpi-icon.png" />
     <plugin name="cordova-plugin-apprate" spec="~1.2" />
-    <plugin name="cordova-plugin-music-controls" spec="https://github.com/homerours/cordova-music-controls-plugin#58f27f825ae81f6f4c15e4ddf13cccd87efbd473" />
+    <plugin name="cordova-plugin-music-controls" spec="./custom-plugins/cordova-music-controls-plugin" />
+    <plugin name="com.rd11.remote-controls" spec="./custom-plugins/com.rd11.remote-controls" />
 </widget>

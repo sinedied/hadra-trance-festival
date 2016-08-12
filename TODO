@@ -5,6 +5,7 @@ x bug info map agrandissement (wontfix)
 x Copy assets from JSON base64 to images/ (-> script?)
 x Identify favorites sets on lineup screen
 - Fix lineup/artist data...
+- Find duplicate artists + holes in sets
 - Add stands infos
 x Fix android icon
 x Allow no lineup
