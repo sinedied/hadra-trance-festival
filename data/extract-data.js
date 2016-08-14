@@ -2,14 +2,17 @@
 
 /*
  * Extract images from specified JSON file, and put result in a separate folder.
- * Also cleanup the JSON during the process.
+ * Also cleanup the JSON during the process, and gets missing picture/banners from facebook.
  */
 
 var args = process.argv.splice(2);
 var fs = require('fs');
 var path = require('path');
-
+var FB = new require('fb');
+var request = require('request-promise');
+var cheerio = require('cheerio');
 var _ = require('lodash');
+var Promise = require("bluebird");
 var iconvlite = require('iconv-lite');
 
 var json = require(path.isAbsolute(args[0]) ? args[0] : path.join(__dirname, args[0]));
@@ -32,19 +35,32 @@ var scenes = [
   }
 ];
 
-if (!fs.existsSync(outFolder)){
+if (!fs.existsSync(outFolder)) {
   fs.mkdirSync(outFolder);
   fs.mkdirSync(imagesFolder);
 }
 
 var numPhotos = 0;
 var numBanners = 0;
+var promises = [];
+var auth = facebookAuth();
 
 console.log('Loaded ' + json.length + ' artists');
 
-json.forEach(function(i) {
+json.forEach(function (i) {
   var artist = i.artist;
-  var buffer, filename;
+  var buffer, filename, promise;
+
+  // Cleanup
+  artist.id = '' + artist.id;
+  artist.name = fixName(fixUnicode(artist.name));
+  artist.country = fixUnicode(artist.origin);
+  artist.label = fixUnicode(artist.label);
+  artist.bio = {fr: fixBio(fixUnicode(artist.bioFr))};
+  artist.website = cleanUrl(artist.website);
+  artist.mixcloud = cleanUrl(fixUrl(artist.mixcloud, 'mixcloud.com'));
+  artist.soundcloud = cleanUrl(fixUrl(artist.soundcloud, 'soundcloud.com'));
+  artist.facebook = cleanUrl(fixUrl(artist.facebook, 'facebook.com'));
 
   if (artist.photo) {
     buffer = new Buffer(artist.photo, 'base64');
@@ -52,6 +68,24 @@ json.forEach(function(i) {
     fs.writeFileSync(path.join(imagesFolder, filename), buffer);
     numPhotos++;
     artist.photo = imagesPrefix + filename;
+  // } else if (artist.facebook) {
+  //   promise = getFacebookUserId(artist.facebook)
+  //     .then(function(id) {
+  //       return getFacebookPhoto(id);
+  //     })
+  //     .then(function(data) {
+  //       console.log('Got ' + artist.name + '\'s photo from facebook');
+  //       // var buffer = new Buffer(data, 'binary');
+  //       var filename = 'photo-' + artist.id + '.jpg';
+  //       fs.writeFileSync(path.join(imagesFolder, filename), data, 'binary');
+  //       numPhotos++;
+  //       artist.photo = imagesPrefix + filename;
+  //     })
+  //     .catch(function(err) {
+  //       console.warn('Error, cannot get artist ' + artist.name + ' photo from facebook!');
+  //       // console.warn('Error details: ' + err);
+  //     })
+  //   promises.push(promise);
   } else {
     console.warn('Artist ' + artist.name + ' does not have a photo!');
   }
@@ -62,20 +96,25 @@ json.forEach(function(i) {
     fs.writeFileSync(path.join(imagesFolder, filename), buffer);
     numBanners++;
     artist.banner = imagesPrefix + filename;
-  } else {
+  // } else if (artist.facebook) {
+  //   promise = getFacebookUserId(artist.facebook)
+  //     .then(function(id) {
+  //       return getFacebookCover(id);
+  //     })
+  //     .then(function(data) {
+  //       console.log('Got ' + artist.name + '\'s cover from facebook');
+  //       var filename = 'banner-' + artist.id + '.jpg';
+  //       fs.writeFileSync(path.join(imagesFolder, filename), data, 'binary');
+  //       numBanners++;
+  //       artist.banner = imagesPrefix + filename;
+  //     })
+  //     .catch(function(err) {
+  //       console.warn('Error, cannot get artist ' + artist.name + ' cover from facebook!');
+  //     })
+  //   promises.push(promise);
+  // } else {
     console.warn('Artist ' + artist.name + ' does not have a banner!');
   }
-
-  // Cleanup
-  artist.id = '' + artist.id;
-  artist.name = fixName(fixUnicode(artist.name));
-  artist.country = fixUnicode(artist.origin);
-  artist.label = fixUnicode(artist.label);
-  artist.bio = { fr: fixBio(fixUnicode(artist.bioFr)) };
-  artist.website = cleanUrl(artist.website);
-  artist.mixcloud = cleanUrl(fixUrl(artist.mixcloud, 'mixcloud.com'));
-  artist.soundcloud = cleanUrl(fixUrl(artist.soundcloud, 'soundcloud.com'));
-  artist.facebook = cleanUrl(fixUrl(artist.facebook, 'facebook.com'));
 
   if (!artist.bioFr) {
     console.warn('Artist ' + artist.name + ' does not have a bio!');
@@ -109,23 +148,26 @@ json.forEach(function(i) {
 
 artists = _.sortBy(artists, ['name']);
 
-scenes.forEach(function(scene) {
+scenes.forEach(function (scene) {
   scene.sets = _.sortBy(scene.sets, ['start']);
 });
 
-var newJson = { lineup: scenes, artists: artists};
+var newJson = {lineup: scenes, artists: artists};
 
-fs.writeFileSync(path.join(outFolder, 'data.json'), JSON.stringify(newJson, null, 2));
+Promise.all(promises).then(function() {
+  fs.writeFileSync(path.join(outFolder, 'data.json'), JSON.stringify(newJson, null, 2));
 
-console.log('Extracted: ' + numPhotos + ' photos, ' + numBanners + ' banners');
+  console.log('Extracted: ' + numPhotos + ' photos, ' + numBanners + ' banners');
 
-if (baseJson) {
-  _.assign(baseJson, newJson);
+  if (baseJson) {
+    _.assign(baseJson, newJson);
 
-  fs.writeFileSync(baseJsonPath, JSON.stringify(baseJson, null, 2));
+    fs.writeFileSync(baseJsonPath, JSON.stringify(baseJson, null, 2));
 
-  console.log('Updated ' + baseJsonPath);
-}
+    console.log('Updated ' + baseJsonPath);
+  }
+});
+
 
 // Internal
 // ------------------------------------
@@ -194,7 +236,7 @@ function fixName(name) {
 }
 
 function applyManualFix(artist) {
-  var fix = _.find(fixes, { id: artist.id });
+  var fix = _.find(fixes, {id: artist.id});
 
   if (fix) {
     _.assign(artist, fix);
@@ -204,7 +246,84 @@ function applyManualFix(artist) {
 }
 
 function capitalize(str) {
-  return str.replace(/\b\w/g, function(l){
+  return str.replace(/\b\w/g, function (l) {
     return l.toUpperCase();
   });
+}
+
+function getFacebookUserId(url) {
+  return request({
+    // Use mobile version as it does not require JS
+    uri: url.replace('www.', 'm.'),
+    transform: function (body) {
+      return cheerio.load(body);
+    },
+    headers: {
+      // Simulate Chrome
+      'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36'
+    }
+  })
+  .then(function ($) {
+    // Get facebook user id
+    var content = $.html();
+    var re = /fbid=.*?id=(\d*?)&/gm;
+    var match = re.exec(content);
+
+    if (!match || match[1]) {
+      console.warn('Could not find FB user id for url: ' + url + ', trying with url');
+      return url;
+    }
+
+    return match[1];
+  });
+}
+
+function facebookAuth() {
+  return new Promise(function (resolve, reject) {
+    FB.api('oauth/access_token', {
+      client_id: '1795175897368530',
+      client_secret: process.env.FB_SECRET,
+      grant_type: 'client_credentials'
+    }, function (res) {
+      if (!res || res.error) {
+        console.log(!res ? 'error occurred' : res.error);
+        reject();
+      } else {
+        var accessToken = res.access_token;
+        FB.setAccessToken(accessToken);
+        resolve(accessToken);
+      }
+    });
+  });
+}
+
+function getFacebookPhoto(userId) {
+  return auth.then(function () {
+    return new Promise(function (resolve, reject) {
+      FB.api(userId + '/picture?height=720&width=720', function (res) {
+        if (!res) {
+          reject();
+        } else {
+          resolve(res);
+        }
+      });
+    });
+  });
+}
+
+function getFacebookCover(userId) {
+  return auth
+    .then(function () {
+      return new Promise(function (resolve, reject) {
+        FB.api(userId + '?fields=cover', function (res) {
+          if (!res || res.error) {
+            console.log(!res ? 'error occurred' : res.error);
+            reject();
+          } else {
+            resolve(res.cover.source);
+          }
+        });
+      });
+    })
+    .then(function (url) { return request(url); });
 }

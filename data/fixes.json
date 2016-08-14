@@ -41,6 +41,9 @@
   {
     "id": "14",
     "label": "Hadra Records",
+    "facebook": "https://www.facebook.com/manuhadra",
+    "photo": "images/artists/photo-14.jpg",
+    "banner": "images/artists/banner-14.jpg",
     "country": "FR",
     "bio": {
       "fr": "Investi dans l'association Hadra depuis plus de 10 ans, Manu a intégré son label comme DJ dès 2008. <br>Résolument orienté vers la face sombre d'Hadra Records, il partage régulièrement la scène en versus avec Shotu, par ailleurs binôme de choix pour la sortie en 2011 sur le label de la compilation Twisted Vision #3. Manu s'attache à promouvoir via des DJ Sets exceptionnels la scène psyche dark internationale avec un faible non dissimulé pour les artistes de Parvati et Wildthings !"
@@ -125,6 +128,10 @@
   {
     "id": "85",
     "label": "Dragonfly / Suntrip",
+    "photo": "images/artists/photo-85.jpg",
+    "banner": "images/artists/banner-85.jpg",
+    "facebook": "https://www.facebook.com/Shakta-Seb-Taylor-179526058746351/",
+    "soundcloud": "https://soundcloud.com/seb-taylor-kaya-project",
     "country": "UK",
     "bio": {
       "en": "SHAKTA<br><br>Shakta (Seb Taylor) is one of the original pioneers of the UK Goa Trance scene, His first Album 'Silicon trip' was released in 1997 & is highly regarded as one of the landmarks of the psytrance scene in it's early years. His Live sets now focus on the classic Shakta releases recorded between 1995 to 1999 which many refer to as the Golden age of trance. Throughout the years Shakta has released on Labels such as Dragonfly, Transient, Phantasm, BNE, Flying Rhino, Matsuri, Phonokol, Alchemy, Nova Tekk, Distance & many more. In 2014 the belgian Label SUNTRIP Records released the latese album of Shakta, a compilation of rare & remastered classic tracks entitled 'RetroScape'."
@@ -243,6 +250,8 @@
     "id": "71",
     "label": "Hadra Records",
     "country": "FR",
+    "photo": "images/artists/photo-71.jpg",
+    "banner": "images/artists/banner-71.jpg",
     "bio": {
       "fr": "Passionnée de musique et baignée depuis toujours dans un univers musical varié et coloré, Gina découvre le mouvement trance à l'aube des années 2000. Fascinée par la richesse de styles de la psytrance et les possibilités infinies de combinaison, elle se prend au jeu du DJing dès 2011 avant d�?intégrer, en 2014, le label Hadra.<br><br>Avec une attirance marquée pour l'esthétique psygressive, Gina compose des mixes dynamiques et atmosphériques qui content une histoire aux multiples facettes et transporte le dancefloor dans un voyage sonore captivant !",
       "en": "Always passionate about music, I had the chance to grow up in an manifold musical universe.<br>The abundance of the different styles and the possibilitys to combine them, pushed and motivated me to create mixes since 2011 in the style psychedelic progressive.<br><br>Drift away, melt away and forget that time even exists, <br>Listen to the story and allow you on the dancefloor to release all your energy!"
@@ -251,6 +260,8 @@
   {
     "id": "73",
     "label": "Worldpeople Production",
+    "facebook": "https://www.facebook.com/Steven.worldpeople",
+    "banner": "images/artists/banner-73.jpg",
     "country": "FR"
   },
   {
@@ -330,6 +341,7 @@
   },
   {
     "id": "25",
+    "banner": "images/artists/banner-25.jpg",
     "country": "FR"
   },
   {
@@ -394,6 +406,9 @@
   {
     "id": "83",
     "label": "DubMission Records",
+    "facebook": "https://www.facebook.com/eric.agid",
+    "photo": "images/artists/photo-83.jpg",
+    "banner": "images/artists/banner-83.jpg",
     "country": "FR",
     "bio": {
       "en": "Eric aka Wacamolo started djying in San Francisco but turned over Downbeat Grooves as soon as the first OTT and likes of Youth came out...He nows plays mostly in Asia wherever the Sun sets down, Bali, Goa or Thailand."

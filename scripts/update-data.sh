@@ -7,6 +7,7 @@ export SCRIPT_FOLDER=`dirname "${BASH_SOURCE[0]}"`
 export DATA_FOLDER=$CWD/data
 export OUT_DIR=$DATA_FOLDER/out
 export NEW_IMAGES_FOLDER=$OUT_DIR/artists
+export FIXED_IMAGES_FOLDER=$DATA_FOLDER/fixes/artists
 export NEW_DATA_FILE=$OUT_DIR/festival.data
 
 export SRC_FOLDER=$CWD/sources
@@ -19,6 +20,7 @@ rm -rf $OUT_DIR
 ./extract-data.js festival.json $TARGET_DATA_FILE
 
 cp -Rf $NEW_IMAGES_FOLDER $TARGET_IMAGES_FOLDER
+cp -Rf $FIXED_IMAGES_FOLDER $TARGET_IMAGES_FOLDER
 
 echo
 echo "Updated data successfully!"
