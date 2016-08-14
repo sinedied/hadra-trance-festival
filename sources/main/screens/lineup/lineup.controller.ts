@@ -79,6 +79,7 @@ export class LineupController {
 
   showArtist(set: Set) {
     if (set.type !== SetType.BREAK && set.artistId != null) {
+      this.$ionicListDelegate.closeOptionButtons();
       this.$state.go('app.artist', {artistId: set.artistId});
     }
   }
