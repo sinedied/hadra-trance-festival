@@ -270,21 +270,6 @@
       }
     },
     {
-      "id": "79",
-      "name": "Dreamstalker",
-      "label": "Merkaba",
-      "photo": "images/artists/photo-79.jpg",
-      "banner": "images/artists/banner-79.jpg",
-      "facebook": "https://www.facebook.com/dreamstalkerclub",
-      "soundcloud": "https://soundcloud.com/dreamstalker",
-      "mixcloud": null,
-      "website": null,
-      "country": "RU",
-      "bio": {
-        "en": "Dreamstalker is a wide range musical project. Loving music at all, coming from different sonic background, I am creating new blend in every track. <br>First Album \"Eclectronica\" was released in 2012 and gave a big resonance in psychill community ' it was an intelligent idm-ish chillout with Psy-Trance touch. <br>Second work \"Digital Inllusions\" released by Canadian Altar Records in late 2012 came as more Psygressive experiment.<br>Next stop was Zenon records with Album \"Sensorial Experience\" which opened way to melodic Psy-Trance wuth natural touch of world instruments, especially powerful flute player Avi Adir.<br>Working with Zenon-artists gave a way to Remix Album \"Zen Remixes\" with tracks from Kliment, Ivort, Zeamoon, Sourone and Merkaba remixed by Dreamstalker.<br>June 2016 will be marked with new Album \"Memory\", released by Merkaba music. Where Dreamstalker gives a new edge of psygressive chillout music. <br>Supported by: Zenon, Altar, Merkaba, Uroboros, Microcosmos, Trimurti, GlitchyTonic, Asisozial, Joof."
-      }
-    },
-    {
       "id": "36",
       "name": "Driss",
       "label": "Hadra Records",
@@ -1478,7 +1463,7 @@
           "type": "dj",
           "start": null,
           "end": null,
-          "artistId": "79"
+          "artistId": "78"
         },
         {
           "type": "live",

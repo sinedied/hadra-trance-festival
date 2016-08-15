@@ -23,7 +23,7 @@ var baseJsonPath = args[1] ? path.isAbsolute(args[1]) ? args[1] : path.join(__di
 var baseJson = args[1] ? require(baseJsonPath) : null;
 var imagesFolder = path.join(outFolder, 'artists');
 var imagesPrefix = 'images/artists/';
-var artists = []
+var artists = [];
 var scenes = [
   {
     "name": "Main",
@@ -43,6 +43,7 @@ if (!fs.existsSync(outFolder)) {
 var numPhotos = 0;
 var numBanners = 0;
 var promises = [];
+var duplicates = {};
 var auth = facebookAuth();
 
 console.log('Loaded ' + json.length + ' artists');
@@ -139,13 +140,30 @@ json.forEach(function (i) {
     console.warn('Artist ' + artist.name + ' does not have a banner! | ' + artist.id);
   }
 
-  artists.push(artist);
+  var duplicate = _.find(artists, { name: artist.name });
+  var skip = false;
+
+  if (duplicate) {
+    console.warn('Duplicate artist ' + artist.name + ' | ' + artist.id + ', ' + duplicate.id);
+    duplicates[artist.name] = duplicate;
+    skip = true;
+    console.log('Fixed duplicate artist ' + artist.name + ' | ' + artist.id + ', ' + duplicate.id);
+  }
+
+  var duplicateInfos = _.find(artists, { facebook: artist.facebook });
+  if (!duplicate && duplicateInfos) {
+    console.warn('Duplicate artist info ' + artist.name + ' | ' + artist.id + ' -> ' + duplicateInfos.id);
+  }
+
+  if (!skip) {
+    artists.push(artist);
+  }
 
   var set = {
     type: i.type,
     start: i.start,
     end: i.end,
-    artistId: artist.id
+    artistId: duplicate ? duplicates[artist.name].id : artist.id
   };
   scenes[i.stage.id - 1].sets.push(set);
 
