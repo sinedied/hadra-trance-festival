@@ -30,7 +30,7 @@ export class PlayerService {
             track: track.title,
             artist: track.user.username,
             cover: cover,
-            isPlaying: this.context.player.playing,
+            isPlaying: !!this.context.player.playing,
             dismissable: true,
 
             // hide previous/next/close buttons:
@@ -40,7 +40,7 @@ export class PlayerService {
 
             // Android only, optional
             // text displayed in the status bar when the notification (and the ticker) are updated
-            ticker: this.context.player.playing ? 'Lecture de ' + track.title : null
+            // ticker: this.context.player.playing ? 'Lecture de ' + track.title : null
           });
           musicControls.subscribe(this.eventHandler.bind(this));
         }
