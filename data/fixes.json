@@ -114,6 +114,7 @@
   {
     "id": "36",
     "country": "FR",
+    "photo": "images/artists/photo-36.jpg",
     "bio": {
       "fr": "Driss est un DJ emblématique du label Hadra Records et l'un de ses fondateurs. Son expérience de la scène trance en France et à l'international, en qualité d'organisateur ou pour ses DJsets acclamés dans certains des plus grands festivals mondiaux (Ozora en Hongrie, Nautica en Russie, Transahara au Maroc et bien d'autres), n'a cessé de nourrir son attachement pour la Trance goa, un style musical auquel il s'identifie pleinement. La musique trance et ses sonorités hypnotisantes aux accents tribals qui réveille en lui la transe spirituelle, la \"hadra\" en arabe, telle qu'elle est pratiquée par la tribu marocaine ancestrales des Aissaouas et qui a rythmé son enfance.<br>Depuis son arrivée en France au milieu des années 90 et l'aventure de l'association Spiritual Freequencies dont il est l'un des initiateurs, Driss s'est nourri de l'énergie de la trance et des rencontres qu'elle permet pour mener à bien son projet musical et ainsi participer à la création et au développement de l'association Hadra, de son label et de son festival !",
       "en": "Driss is one of the key Dj of the Hadra Records Label and one of its founders. His experience of the Trance scene in France and abroad, as an organizer or for his crazy DJsets, acclaimed in some of the biggest festivals of the world (Ozora in Hungary, Nautica in Russia, Tansahara in Morocco and many others), has never ceased growing his attachment for the goa trance, a musical style to which he identifies himself completely. Trance music and its hypnotizing sonorities with tribal accents reminds him of the spiritual trance, the \"hadra\" in Arabic, the way it is practiced by the ancestral Moroccan tribe of the Aissaouas and to the sound of which he grew up.<br>Since his arrival in France in the middle of the 90's and the adventure of the association Spiritual Freequencies of which he is one of the initiators, Driss fed himself with the energy given by the trance and of the encounters it enables to manage his musical project and to participate to the creation and to the development of the Hadra association, its label and its festival!"
@@ -292,7 +293,8 @@
   {
     "id": "84",
     "label": "Hadra Records",
-    "country": "FR"
+    "country": "FR",
+    "photo": "images/artists/photo-84.jpg"
   },
   {
     "id": "90",
@@ -303,7 +305,7 @@
   },
   {
     "id": "20",
-    "name": "BBrain",
+    "name": "B.Brain",
     "country": "FR",
     "bio": {
       "fr": "B.Brain est incontestablement le maître vinyle du label Hadra Records ainsi que sa couleur dub et jungle. Aussi à l'aise en set DJ que live act, il a sorti son premier album 'Experiences' sur le label en 2013. Issu des scènes underground acid techno du sud de la France, ses mixes sont quant à eux aussi éclectiques qu'explosifs. Egalement chef décorateur de l'équipe des Lucioles d'Hadra, B.Brain est donc un artiste aux mille ressources qu'il est bon d'avoir toujours près de soi ! <br><br>2 ans après son premier album 'Experiences', Dr B.Brain revient sur le devant de la scène avec un nouvel EP 'Piqure de Rappel'. Dans la lignée du premier volume et fidèle à son poste de représentant dub du label Hadra Records, B.Brain propose dans cet EP 4 morceaux résolument roots qui rassemblent tous les ingrédients chers aux 'reggae lovers'. Skanks sautillants, rythmiques entrainantes, delays et reverbs à l'ancienne feront vibrer les hauts-parleurs de tous les sound systems dub de France et de Navare ! La surprise de cet EP revient au morceau 'Watch how you function' pour lequel B.Brain s'associe au trompettiste Lakay dans un duo grandiose. Let's dub Rude Boys !",
@@ -313,7 +315,10 @@
   {
     "id": "21",
     "label": "Hadra Records",
-    "country": "FR"
+    "country": "FR",
+    "bio": {
+      "fr": "Tête pensante de la branche « Chill » du label Hadra Records et programmateur du Hadra Trance Festival, Sysyphe est un artiste complet en recherche constante de nouvelles perles musicales.<br>Après deux compilations Hadravision et un premier album Running Up That Hill produits par Hadra, Sysyphe poursuit son chemin avec un très attendu deuxième album The Cities of Silver Trees, récit d'une quête intérieure dans les méandres d'une forêt nourricière, havre de paix et source de toute vie. Les arbres de sève, de pierre et de lumière sont le décor de cet univers aussi réel qu'imaginaire auquel Sysyphe nous invite à prendre part, le temps d'une simple balade ou d'un cheminement plus lointain et intime. Résolument downtempo, cet album marque le pas d'une incursion sensible et déterminée au coeur de notre nature profonde. Laissez vous guider..."
+    }
   },
   {
     "id": "22",
@@ -341,6 +346,7 @@
   },
   {
     "id": "25",
+    "photo": "images/artists/photo-25.jpg",
     "banner": "images/artists/banner-25.jpg",
     "country": "FR"
   },
@@ -359,18 +365,21 @@
   },
   {
     "id": "30",
+    "photo": "images/artists/photo-30.jpg",
     "label": "Altar Records",
     "country": "CA"
   },
   {
     "id": "28",
     "country": "FR",
+    "photo": "images/artists/photo-28.jpg",
     "bio": {
       "en": "Land Switcher is a new force in Psydub, bringing a fresh and exciting sound that melds Reggae influences and organic samples with the futuristic intensity of Psytrance and the massive bass roars of Dubstep. Liquid, mutating beasts squish, swoop and stomp over driving percussion, conjuring radioactive swamplands filled with suspense, mystery and adventure. It is a meeting of ancient and future, of organic and synthetic, of peace and brutality, evoking the spectrum of emotions between."
     }
   },
   {
     "id": "31",
+    "photo": "images/artists/photo-31.jpg",
     "label": null,
     "country": "FR"
   },
@@ -381,6 +390,10 @@
     "bio": {
       "fr": "Passionnée d'Ambient depuis les années 90, Opale fut invitée à jouer pour la première fois dans le désert marocain en 2001... Quelle performance magique ce fut !! Un baptême de feu qui l'engage depuis aux quatre coins du monde à partager son amour de l'Ambient ethnique-psychédélique et sa passion pour les sons downtempo de la scène transe...<br>Depuis  2010, elle accélère le tempo et nous régale sur des sons ethniques, des ambiances tribales.  Des samples d'ailleurs mariés à des nappes d'émotions, accompagnés de voix du monde...br>En Angleterre  pour Chaos Unlimited  ou pour Chrysalid & Wildthings , en Suisse pour Natur'Alp organisé par Psyberpunk, puis Ypy Poty au Brésil, Shiva Moon, Zagoa,,.. Boom in Potugal,  Ozora in Hungary, Burning Man festival in Nevada et bien sûr en France,  Ambiosonic , World People or Hadra...<br>Opale vous invite à la rejoindre dans l'ivresse des profondeurs... Des plus célestes aux plus tribales�?� Des plus sensibles aux plus mentales.<br>Toujours fidèle à Ultimae records, le premier label qui a cru en elle, elle collabore aussi avec l'équipe de NAGUAL Hypnotik et gère la programmation musicale du festival Harmonic.<br><br>Opale aura le grand plaisir et l'honneur d'être accompagnées  par Askata , aux percus électroniques.<br>Askata collabore dans plusieurs projets musicaux et ponctue chacun des projets  de ses rythmes savants ,subtils ou déchaînés."
     }
+  },
+  {
+    "id": "64",
+    "photo": "images/artists/photo-64.jpg"
   },
   {
     "id": "56",

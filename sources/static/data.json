@@ -105,7 +105,7 @@
     },
     {
       "id": "20",
-      "name": "BBrain",
+      "name": "B.Brain",
       "label": "Hadra Records",
       "photo": "images/artists/photo-20.jpg",
       "banner": "images/artists/banner-20.jpg",
@@ -136,9 +136,9 @@
     },
     {
       "id": "25",
-      "name": "Benzhino",
+      "name": "Benzinho",
       "label": "Indépendant",
-      "photo": null,
+      "photo": "images/artists/photo-25.jpg",
       "banner": "images/artists/banner-25.jpg",
       "facebook": null,
       "soundcloud": "https://soundcloud.com/benzinho",
@@ -146,7 +146,7 @@
       "website": null,
       "country": "FR",
       "bio": {
-        "fr": null
+        "fr": "Engagé depuis 2008 dans le développement de l’association Hadra comme directeur et programmateur du festival, Benoît quitte en 2016 l’ombre pour la lumière de la scène avec un projet DJ baptisé Benzinho. Ce dernier s’inscrit dans la continuité de son travail de programmation et propose une épopée au coeur des esthétiques psydub, funk et glitch en faisant la part belle aux artistes de Merkaba Music, Shanti Planti ou encore Maia Brasil Records. Les basses rondes et les sonorités à la fois groovy, mélodiques et instrumentales de sa sélection font de ses sets un voyage éclectique et scintillant. <br><br><br>Involved in Hadra since 2008 as general manager and musical programmer for the Hadra Trance Festival, Benoît stepped into the limelight of the stage in 2016 with a DJ project named Benzinho. Carrying on with his role of programmer, he proposes a journey in the depths of psydub, funk and glitch international scene featuring artists from Merkaba Music, Shanti Planti or Maia Brasil Records. The groovy, melodic and instrumental sounds of his selections bring eclecticism and brightness to his sets."
       }
     },
     {
@@ -183,9 +183,9 @@
       "id": "29",
       "name": "D.Rec",
       "label": "Ethereal Decibel Records",
-      "photo": null,
-      "banner": null,
-      "facebook": "https://www.facebook.com/Derek Teum EDC",
+      "photo": "images/artists/photo-29.jpg",
+      "banner": "images/artists/banner-29.jpg",
+      "facebook": "https://www.facebook.com/1215561923",
       "soundcloud": "https://soundcloud.com/D.Rec",
       "mixcloud": null,
       "website": null,
@@ -198,15 +198,15 @@
       "id": "30",
       "name": "DJ Chaï",
       "label": "Altar Records",
-      "photo": null,
-      "banner": null,
-      "facebook": "https://www.facebook.com/gregchai.escapeavigmatic",
+      "photo": "images/artists/photo-30.jpg",
+      "banner": "images/artists/banner-30.jpg",
+      "facebook": "https://www.facebook.com/1105916581",
       "soundcloud": "https://soundcloud.com/dj-chai-4",
       "mixcloud": null,
       "website": null,
       "country": "CA",
       "bio": {
-        "fr": "Dj Chai ( Altar records) va vous proposer un set ambiant- psytrance mélodique dans un rythme downtempo entre 100 -125 BPM qui mélangent des éléments de trance psychédélique, d'ambient musique ethnique  et new age et vous présentera les dernières tendances du label Altar records (  Canada.). Il est dans le milieu de la Trance depuis 1994 et a participé dans les labels Avigmatic et Escape records en jouant dans de nombreuses soirées en France et à l'Etranger."
+        "fr": "Dj Chai ( Altar records) va vous proposer un set ambiant- psytrance mélodique dans un rythme downtempo entre 100 -125 BPM qui mélangent des éléments de trance psychédélique, d'ambient musique ethnique  et new age et vous présentera les dernières tendances du label Altar records (  Canada.). Il est dans le milieu de la Trance depuis 1994 et a participé dans les labels Avigmatic et Escape records en jouant dans de nombreuses soirées en France et à l’Etranger."
       }
     },
     {
@@ -243,9 +243,9 @@
       "id": "50",
       "name": "Digidep",
       "label": "Hadra Records",
-      "photo": null,
-      "banner": null,
-      "facebook": "https://www.facebook.com/digidep",
+      "photo": "images/artists/photo-50.jpg",
+      "banner": "images/artists/banner-50.jpg",
+      "facebook": "https://www.facebook.com/100000549770712",
       "soundcloud": "https://soundcloud.com/digidep",
       "mixcloud": null,
       "website": null,
@@ -288,9 +288,9 @@
       "id": "36",
       "name": "Driss",
       "label": "Hadra Records",
-      "photo": null,
-      "banner": null,
-      "facebook": "https://www.facebook.com/Dj-Driss-Hadra-174923559253391",
+      "photo": "images/artists/photo-36.jpg",
+      "banner": "images/artists/banner-36.jpg",
+      "facebook": "https://www.facebook.com/174923559253391",
       "soundcloud": "https://soundcloud.com/dj-driss-1",
       "mixcloud": null,
       "website": null,
@@ -304,9 +304,9 @@
       "id": "44",
       "name": "Ekanta vs Aladin",
       "label": "Universo Paralello / FFm Bookings",
-      "photo": null,
-      "banner": null,
-      "facebook": "https://www.facebook.com/Aladin-Omega-210528210596/",
+      "photo": "images/artists/photo-44.jpg",
+      "banner": "images/artists/banner-44.jpg",
+      "facebook": "https://www.facebook.com/210528210596",
       "soundcloud": null,
       "mixcloud": null,
       "website": null,
@@ -332,7 +332,7 @@
     },
     {
       "id": "71",
-      "name": "Gina ",
+      "name": "Gina",
       "label": "Hadra Records",
       "photo": "images/artists/photo-71.jpg",
       "banner": "images/artists/banner-71.jpg",
@@ -350,9 +350,9 @@
       "id": "41",
       "name": "Itchy & Scratchy",
       "label": "Hadra Records",
-      "photo": null,
-      "banner": null,
-      "facebook": "https://www.facebook.com/itchyscratchy.show",
+      "photo": "images/artists/photo-41.jpg",
+      "banner": "images/artists/banner-41.jpg",
+      "facebook": "https://www.facebook.com/100001683281932",
       "soundcloud": "https://soundcloud.com/itchy-and-scratchy",
       "mixcloud": null,
       "website": null,
@@ -382,9 +382,9 @@
       "id": "52",
       "name": "Kasadelica",
       "label": "Hadra Records",
-      "photo": null,
-      "banner": null,
-      "facebook": "https://www.facebook.com/Kasadelica-293917567343729/",
+      "photo": "images/artists/photo-52.jpg",
+      "banner": "images/artists/banner-52.jpg",
+      "facebook": "https://www.facebook.com/293917567343729",
       "soundcloud": "https://soundcloud.com/kasadelica",
       "mixcloud": null,
       "website": null,
@@ -564,9 +564,9 @@
       "id": "42",
       "name": "Oddwave",
       "label": "Hadra Records / Transubtil",
-      "photo": null,
-      "banner": null,
-      "facebook": "https://www.facebook.com/Facebook.com/oddwave",
+      "photo": "images/artists/photo-42.jpg",
+      "banner": "images/artists/banner-42.jpg",
+      "facebook": "https://www.facebook.com/Facebook.com/100003506291470",
       "soundcloud": "https://soundcloud.com/Soundcloud.com/oddwave",
       "mixcloud": null,
       "website": null,
@@ -609,8 +609,8 @@
       "id": "54",
       "name": "Psygroo",
       "label": "Own Spirit",
-      "photo": null,
-      "banner": null,
+      "photo": "images/artists/photo-54.jpg",
+      "banner": "images/artists/banner-54.jpg",
       "facebook": "https://www.facebook.com/FrancescPsygroo",
       "soundcloud": "https://soundcloud.com/psygroo",
       "mixcloud": null,
@@ -638,14 +638,16 @@
     {
       "id": "64",
       "name": "Psysub",
-      "photo": null,
-      "banner": null,
-      "facebook": null,
-      "soundcloud": null,
-      "mixcloud": null,
+      "label": "Project Moon",
+      "photo": "images/artists/photo-64.jpg",
+      "banner": "images/artists/banner-64.jpg",
+      "facebook": "https://www.facebook.com/1238237730",
+      "soundcloud": "https://soundcloud.com/psysub-gero",
+      "mixcloud": "https://www.mixcloud.com/Psysub63/",
       "website": null,
+      "country": "Clermont-Ferrand",
       "bio": {
-        "fr": null
+        "fr": "Depuis toujours Géraud est un passionné de musiques électroniques, mais sa passion pour la musique psychédélique commença en 2005 ou il redécouvrit la Psytrance grâce à une émission de radio \"Pump up the volume\" diffusé sur une radio Clermontoise.<br><br>C'est après avoir fait plusieurs festivals en Europe et en France, tel que Hadra , Ozora ou le Boom pour ne citer que les plus connus, qu'il commença à mixer essentiellement de la Psytrance, puis avec le temps il se concentra plus dans la Psybient et le Downtempo ou encore Deep Trance avec des influences venant du label Altar record ou Ultimae.<br><br>En 2013, il integra l'association \"Project Moon\" (asso qui à pour but de privilégier la musique Trance en Auvergne) ce qui lui permis de jouer dans des soirées et aussi de développer une scène Chill-Out pour la fameuse Stone Moon.<br><br>Depuis il continue à s'investir dans l'asso tout en continuant à mixer des morceaux Psybient, Downtempo."
       }
     },
     {
@@ -667,9 +669,9 @@
       "id": "72",
       "name": "R2",
       "label": "Looney Moon Records",
-      "photo": null,
-      "banner": null,
-      "facebook": "https://www.facebook.com/R2-Looney-Moon-Psynomads--204382392911461/",
+      "photo": "images/artists/photo-72.jpg",
+      "banner": "images/artists/banner-72.jpg",
+      "facebook": "https://www.facebook.com/204382392911461",
       "soundcloud": "https://soundcloud.com/r2lab",
       "mixcloud": null,
       "website": null,
@@ -727,15 +729,15 @@
       "id": "27",
       "name": "Shaktipat",
       "label": "Radio Pays de Gueret 96.5FM",
-      "photo": null,
-      "banner": null,
+      "photo": "images/artists/photo-27.jpg",
+      "banner": "images/artists/banner-27.jpg",
       "facebook": "https://www.facebook.com/Le-petit-chill-out-dans-la-prairie-1589625377980369/",
       "soundcloud": null,
       "mixcloud": null,
       "website": null,
       "country": "FR",
       "bio": {
-        "fr": "Le petit chill out dans la prairie c'est avant tout une émission de radio bimensuelle sur Radio pays de Guéret (23),un programme dédié a l'ambient, a écouter allongé dans l'herbe le dimanche après midi.<br>L'émission est produite par DJ Shaktipat  qui revient a ses premières amours....la radio qu'il débuta en 1981.il vous propose un voyage dans son univers atmosphérique,psychédélique et bucolique pour fêter ses 35 ans d'activisme musicale."
+        "fr": "Le petit chill out dans la prairie c'est avant tout une émission de radio bimensuelle sur Radio pays de Guéret (23),un programme dédié a l'ambient, a écouter allongé dans l'herbe le dimanche après midi.<br>L’émission est produite par DJ Shaktipat  qui revient a ses premières amours....la radio qu'il débuta en 1981.il vous propose un voyage dans son univers atmosphérique,psychédélique et bucolique pour fêter ses 35 ans d'activisme musicale."
       }
     },
     {
@@ -820,7 +822,7 @@
       "id": "73",
       "name": "Steven",
       "label": "Worldpeople Production",
-      "photo": null,
+      "photo": "images/artists/photo-73.jpg",
       "banner": "images/artists/banner-73.jpg",
       "facebook": "https://www.facebook.com/Steven.worldpeople",
       "soundcloud": "https://soundcloud.com/steven-worldpeople",
@@ -835,15 +837,15 @@
       "id": "21",
       "name": "Sysyphe",
       "label": "Hadra Records",
-      "photo": null,
-      "banner": null,
-      "facebook": "https://www.facebook.com/sysyphe.hadra1",
+      "photo": "images/artists/photo-21.jpg",
+      "banner": "images/artists/banner-21.jpg",
+      "facebook": "https://www.facebook.com/100000032161863",
       "soundcloud": "https://soundcloud.com/sysyphe",
       "mixcloud": null,
       "website": null,
       "country": "FR",
       "bio": {
-        "fr": null
+        "fr": "Tête pensante de la branche « Chill » du label Hadra Records et programmateur du Hadra Trance Festival, Sysyphe est un artiste complet en recherche constante de nouvelles perles musicales.<br>Après deux compilations Hadravision et un premier album Running Up That Hill produits par Hadra, Sysyphe poursuit son chemin avec un très attendu deuxième album The Cities of Silver Trees, récit d'une quête intérieure dans les méandres d'une forêt nourricière, havre de paix et source de toute vie. Les arbres de sève, de pierre et de lumière sont le décor de cet univers aussi réel qu'imaginaire auquel Sysyphe nous invite à prendre part, le temps d'une simple balade ou d'un cheminement plus lointain et intime. Résolument downtempo, cet album marque le pas d'une incursion sensible et déterminée au coeur de notre nature profonde. Laissez vous guider..."
       }
     },
     {
@@ -882,9 +884,9 @@
       "id": "31",
       "name": "The Serpent'S Egg",
       "label": null,
-      "photo": null,
-      "banner": null,
-      "facebook": "https://www.facebook.com/The-Serpents-Egg-797741190279304/",
+      "photo": "images/artists/photo-31.jpg",
+      "banner": "images/artists/banner-31.jpg",
+      "facebook": "https://www.facebook.com/797741190279304",
       "soundcloud": "https://soundcloud.com/the-serpents-egg-1",
       "mixcloud": null,
       "website": null,
@@ -912,9 +914,9 @@
       "id": "10",
       "name": "Tweakers",
       "label": "Hadra Records",
-      "photo": null,
-      "banner": null,
-      "facebook": "https://www.facebook.com/TWEAKERS-259475070741044",
+      "photo": "images/artists/photo-10.jpg",
+      "banner": "images/artists/banner-10.jpg",
+      "facebook": "https://www.facebook.com/259475070741044",
       "soundcloud": "https://soundcloud.com/suddhashotu",
       "mixcloud": null,
       "website": null,
@@ -1018,8 +1020,8 @@
       "id": "34",
       "name": "Xerox",
       "label": "HomMega",
-      "photo": null,
-      "banner": null,
+      "photo": "images/artists/photo-34.jpg",
+      "banner": "images/artists/banner-34.jpg",
       "facebook": "https://www.facebook.com/moshe.x.keinan",
       "soundcloud": "https://soundcloud.com/xeroxmusicofficial",
       "mixcloud": null,
@@ -1048,9 +1050,9 @@
       "id": "69",
       "name": "Yamaga",
       "label": "Hadra Records",
-      "photo": null,
-      "banner": null,
-      "facebook": "https://www.facebook.com/yamaga.yann",
+      "photo": "images/artists/photo-69.jpg",
+      "banner": "images/artists/banner-69.jpg",
+      "facebook": "https://www.facebook.com/589457921",
       "soundcloud": "https://soundcloud.com/yamaga-yann",
       "mixcloud": null,
       "website": null,
@@ -1063,9 +1065,9 @@
       "id": "74",
       "name": "Yamato",
       "label": "Libero",
-      "photo": null,
-      "banner": null,
-      "facebook": "https://www.facebook.com/Libero-yamato-official-1076180752415314/",
+      "photo": "images/artists/photo-74.jpg",
+      "banner": "images/artists/banner-74.jpg",
+      "facebook": "https://www.facebook.com/1076180752415314",
       "soundcloud": "https://soundcloud.com/shimpei-yamato-ozawa",
       "mixcloud": null,
       "website": null,
@@ -1086,7 +1088,7 @@
       "website": null,
       "country": "FR",
       "bio": {
-        "fr": "En 2013, après un retour du festival Ozora, Yohan découvre la magie de l'univers psychédélique et se met à mixer dans le registre Psytrance. <br>Son style Psytrance Fullon Night mélange l'énergie de basslines groovy, à des leads psychédéliques avec une rythmique détonante.<br><br>En 2014, démarre l'aventure avec l'association Project Moon ayant pour but la promotion, le développement et la découverte pour tous du mouvement Psytrance en Auvergne et il découvre ses premières grosses scènes en 2015 (Antartica, Stone Moon 4, Outrance).<br><br>Un projet de prodution psytrance est également en cours et les prochaines années seront riches en nouveautés."
+        "fr": "En 2013, après un retour du festival Ozora, Yohan découvre la magie de l’univers psychédélique et se met à mixer dans le registre Psytrance. <br>Son style Psytrance Fullon Night mélange l’énergie de basslines groovy, à des leads psychédéliques avec une rythmique détonante.<br><br>En 2014, démarre l’aventure avec l’association Project Moon ayant pour but la promotion, le développement et la découverte pour tous du mouvement Psytrance en Auvergne et il découvre ses premières grosses scènes en 2015 (Antartica, Stone Moon 4, Outrance).<br><br>Un projet de prodution psytrance est également en cours et les prochaines années seront riches en nouveautés."
       }
     }
   ],
@@ -1096,244 +1098,244 @@
       "name": "Main",
       "sets": [
         {
-          "type": "live",
+          "type": "gig",
           "start": "2016-09-02T16:00:00.000Z",
-          "end": "2016-09-02T17:15:00.000Z",
+          "end": "2016-09-02T17:30:00.000Z",
           "artistId": "84"
         },
         {
           "type": "live",
-          "start": "2016-09-02T17:15:00.000Z",
-          "end": "2016-09-02T18:30:00.000Z",
+          "start": "2016-09-02T17:30:00.000Z",
+          "end": "2016-09-02T18:45:00.000Z",
           "artistId": "40"
         },
         {
           "type": "live",
-          "start": "2016-09-02T18:30:00.000Z",
-          "end": "2016-09-02T19:45:00.000Z",
+          "start": "2016-09-02T18:45:00.000Z",
+          "end": "2016-09-02T20:00:00.000Z",
           "artistId": "41"
         },
         {
+          "type": "dj",
+          "start": "2016-09-02T20:00:00.000Z",
+          "end": "2016-09-02T21:30:00.000Z",
+          "artistId": "70"
+        },
+        {
           "type": "live",
-          "start": "2016-09-02T21:15:00.000Z",
-          "end": "2016-09-02T22:15:00.000Z",
+          "start": "2016-09-02T21:30:00.000Z",
+          "end": "2016-09-02T22:30:00.000Z",
           "artistId": "13"
         },
         {
           "type": "live",
-          "start": "2016-09-02T22:15:00.000Z",
-          "end": "2016-09-02T23:15:00.000Z",
+          "start": "2016-09-02T22:30:00.000Z",
+          "end": "2016-09-02T23:30:00.000Z",
           "artistId": "18"
         },
         {
           "type": "live",
-          "start": "2016-09-02T23:15:00.000Z",
-          "end": "2016-09-03T00:15:00.000Z",
+          "start": "2016-09-02T23:30:00.000Z",
+          "end": "2016-09-03T00:30:00.000Z",
           "artistId": "12"
         },
         {
           "type": "live",
-          "start": "2016-09-03T00:15:00.000Z",
-          "end": "2016-09-03T01:15:00.000Z",
+          "start": "2016-09-03T00:30:00.000Z",
+          "end": "2016-09-03T01:30:00.000Z",
           "artistId": "81"
         },
         {
           "type": "live",
-          "start": "2016-09-03T01:15:00.000Z",
-          "end": "2016-09-03T02:15:00.000Z",
+          "start": "2016-09-03T01:30:00.000Z",
+          "end": "2016-09-03T02:30:00.000Z",
           "artistId": "68"
         },
         {
-          "type": "live",
-          "start": "2016-09-03T02:15:00.000Z",
-          "end": "2016-09-03T03:45:00.000Z",
+          "type": "dj",
+          "start": "2016-09-03T02:30:00.000Z",
+          "end": "2016-09-03T04:00:00.000Z",
           "artistId": "15"
         },
         {
           "type": "live",
-          "start": "2016-09-03T03:45:00.000Z",
-          "end": "2016-09-03T04:45:00.000Z",
+          "start": "2016-09-03T04:00:00.000Z",
+          "end": "2016-09-03T05:00:00.000Z",
           "artistId": "17"
         },
         {
           "type": "live",
-          "start": "2016-09-03T04:45:00.000Z",
-          "end": "2016-09-03T05:45:00.000Z",
+          "start": "2016-09-03T05:00:00.000Z",
+          "end": "2016-09-03T06:00:00.000Z",
           "artistId": "89"
         },
         {
-          "type": "live",
-          "start": "2016-09-03T05:45:00.000Z",
-          "end": "2016-09-03T07:15:00.000Z",
+          "type": "dj",
+          "start": "2016-09-03T06:00:00.000Z",
+          "end": "2016-09-03T07:30:00.000Z",
           "artistId": "33"
         },
         {
-          "type": "live",
-          "start": "2016-09-03T07:15:00.000Z",
-          "end": "2016-09-03T08:45:00.000Z",
+          "type": "dj",
+          "start": "2016-09-03T07:30:00.000Z",
+          "end": "2016-09-03T09:00:00.000Z",
           "artistId": "74"
         },
         {
-          "type": "live",
-          "start": "2016-09-03T08:45:00.000Z",
-          "end": "2016-09-03T10:15:00.000Z",
+          "type": "dj",
+          "start": "2016-09-03T09:00:00.000Z",
+          "end": "2016-09-03T10:30:00.000Z",
           "artistId": "34"
         },
         {
-          "type": "live",
-          "start": "2016-09-03T10:15:00.000Z",
-          "end": "2016-09-03T11:45:00.000Z",
+          "type": "dj",
+          "start": "2016-09-03T10:30:00.000Z",
+          "end": "2016-09-03T12:00:00.000Z",
           "artistId": "44"
         },
         {
           "type": "live",
-          "start": "2016-09-03T11:45:00.000Z",
-          "end": "2016-09-03T12:45:00.000Z",
+          "start": "2016-09-03T12:00:00.000Z",
+          "end": "2016-09-03T13:00:00.000Z",
           "artistId": "90"
         },
         {
-          "type": "live",
-          "start": "2016-09-03T12:45:00.000Z",
-          "end": "2016-09-03T14:15:00.000Z",
+          "type": "dj",
+          "start": "2016-09-03T13:00:00.000Z",
+          "end": "2016-09-03T14:30:00.000Z",
           "artistId": "43"
         },
         {
           "type": "live",
-          "start": "2016-09-03T14:15:00.000Z",
-          "end": "2016-09-03T15:15:00.000Z",
+          "start": "2016-09-03T14:30:00.000Z",
+          "end": "2016-09-03T15:30:00.000Z",
           "artistId": "50"
         },
         {
           "type": "live",
-          "start": "2016-09-03T15:15:00.000Z",
-          "end": "2016-09-03T16:45:00.000Z",
+          "start": "2016-09-03T15:30:00.000Z",
+          "end": "2016-09-03T17:00:00.000Z",
           "artistId": "54"
         },
         {
           "type": "live",
-          "start": "2016-09-03T16:45:00.000Z",
-          "end": "2016-09-03T17:45:00.000Z",
+          "start": "2016-09-03T17:00:00.000Z",
+          "end": "2016-09-03T18:00:00.000Z",
           "artistId": "52"
         },
         {
-          "type": "live",
-          "start": "2016-09-03T17:45:00.000Z",
-          "end": "2016-09-02T19:15:00.000Z",
+          "type": "dj",
+          "start": "2016-09-03T18:00:00.000Z",
+          "end": "2016-09-03T19:30:00.000Z",
+          "artistId": "71"
+        },
+        {
+          "type": "dj",
+          "start": "2016-09-03T18:00:00.000Z",
+          "end": "2016-09-02T19:30:00.000Z",
           "artistId": "69"
         },
         {
           "type": "live",
-          "start": "2016-09-03T17:45:00.000Z",
-          "end": "2016-09-03T19:15:00.000Z",
-          "artistId": "71"
-        },
-        {
-          "type": "live",
-          "start": "2016-09-03T19:15:00.000Z",
-          "end": "2016-09-03T20:45:00.000Z",
+          "start": "2016-09-03T19:30:00.000Z",
+          "end": "2016-09-03T21:00:00.000Z",
           "artistId": "73"
         },
         {
           "type": "live",
-          "start": "2016-09-03T20:45:00.000Z",
-          "end": "2016-09-03T21:45:00.000Z",
+          "start": "2016-09-03T21:00:00.000Z",
+          "end": "2016-09-03T22:00:00.000Z",
           "artistId": "10"
         },
         {
-          "type": "live",
-          "start": "2016-09-03T21:45:00.000Z",
-          "end": "2016-09-03T23:15:00.000Z",
+          "type": "dj",
+          "start": "2016-09-03T22:00:00.000Z",
+          "end": "2016-09-03T23:30:00.000Z",
           "artistId": "14"
         },
         {
-          "type": "live",
-          "start": "2016-09-03T21:45:00.000Z",
-          "end": "2016-09-03T23:15:00.000Z",
+          "type": "dj",
+          "start": "2016-09-03T22:00:00.000Z",
+          "end": "2016-09-03T23:30:00.000Z",
           "artistId": "48"
         },
         {
           "type": "live",
-          "start": "2016-09-03T23:15:00.000Z",
-          "end": "2016-09-04T00:15:00.000Z",
+          "start": "2016-09-03T23:30:00.000Z",
+          "end": "2016-09-04T00:30:00.000Z",
           "artistId": "9"
         },
         {
-          "type": "live",
-          "start": "2016-09-04T00:15:00.000Z",
-          "end": "2016-09-04T01:45:00.000Z",
+          "type": "dj",
+          "start": "2016-09-04T00:30:00.000Z",
+          "end": "2016-09-04T02:00:00.000Z",
           "artistId": "11"
         },
         {
           "type": "live",
-          "start": "2016-09-04T01:45:00.000Z",
-          "end": "2016-09-03T02:45:00.000Z",
+          "start": "2016-09-04T02:00:00.000Z",
+          "end": "2016-09-03T03:00:00.000Z",
           "artistId": "72"
         },
         {
-          "type": "live",
-          "start": "2016-09-04T02:45:00.000Z",
-          "end": "2016-09-04T04:15:00.000Z",
+          "type": "dj",
+          "start": "2016-09-04T03:00:00.000Z",
+          "end": "2016-09-04T04:30:00.000Z",
           "artistId": "35"
         },
         {
-          "type": "live",
-          "start": "2016-09-04T04:15:00.000Z",
-          "end": "2016-09-04T05:45:00.000Z",
+          "type": "dj",
+          "start": "2016-09-04T04:30:00.000Z",
+          "end": "2016-09-04T06:00:00.000Z",
           "artistId": "36"
         },
         {
           "type": "live",
-          "start": "2016-09-04T05:45:00.000Z",
-          "end": "2016-09-04T06:45:00.000Z",
+          "start": "2016-09-04T06:00:00.000Z",
+          "end": "2016-09-04T07:00:00.000Z",
           "artistId": "76"
         },
         {
-          "type": "live",
-          "start": "2016-09-04T06:45:00.000Z",
-          "end": "2016-09-04T08:15:00.000Z",
+          "type": "dj",
+          "start": "2016-09-04T07:00:00.000Z",
+          "end": "2016-09-04T08:30:00.000Z",
           "artistId": "86"
         },
         {
           "type": "live",
-          "start": "2016-09-04T08:15:00.000Z",
-          "end": "2016-09-04T09:15:00.000Z",
+          "start": "2016-09-04T08:30:00.000Z",
+          "end": "2016-09-04T09:30:00.000Z",
           "artistId": "85"
         },
         {
           "type": "live",
-          "start": "2016-09-04T09:15:00.000Z",
-          "end": "2016-09-04T10:30:00.000Z",
+          "start": "2016-09-04T09:30:00.000Z",
+          "end": "2016-09-04T10:45:00.000Z",
           "artistId": "75"
         },
         {
-          "type": "live",
-          "start": "2016-09-04T10:30:00.000Z",
-          "end": "2016-09-04T12:00:00.000Z",
+          "type": "dj",
+          "start": "2016-09-04T10:45:00.000Z",
+          "end": "2016-09-04T12:15:00.000Z",
           "artistId": "82"
         },
         {
           "type": "live",
-          "start": "2016-09-04T12:00:00.000Z",
-          "end": "2016-09-04T13:30:00.000Z",
+          "start": "2016-09-04T12:15:00.000Z",
+          "end": "2016-09-04T13:45:00.000Z",
           "artistId": "42"
         },
         {
-          "type": "live",
-          "start": "2016-09-04T12:00:00.000Z",
-          "end": "2016-09-04T13:30:00.000Z",
+          "type": "dj",
+          "start": "2016-09-04T12:15:00.000Z",
+          "end": "2016-09-04T13:45:00.000Z",
           "artistId": "53"
         },
         {
           "type": "live",
-          "start": "2016-09-04T13:30:00.000Z",
-          "end": "2016-09-04T14:45:00.000Z",
+          "start": "2016-09-04T13:45:00.000Z",
+          "end": "2016-09-04T15:00:00.000Z",
           "artistId": "78"
-        },
-        {
-          "type": "live",
-          "start": null,
-          "end": null,
-          "artistId": "70"
         }
       ]
     },
@@ -1365,13 +1367,13 @@
           "artistId": "23"
         },
         {
-          "type": "live",
+          "type": "dj",
           "start": null,
           "end": null,
           "artistId": "24"
         },
         {
-          "type": "live",
+          "type": "dj",
           "start": null,
           "end": null,
           "artistId": "25"
@@ -1386,6 +1388,12 @@
           "type": "live",
           "start": null,
           "end": null,
+          "artistId": "28"
+        },
+        {
+          "type": "dj",
+          "start": null,
+          "end": null,
           "artistId": "29"
         },
         {
@@ -1398,16 +1406,10 @@
           "type": "live",
           "start": null,
           "end": null,
-          "artistId": "28"
-        },
-        {
-          "type": "live",
-          "start": null,
-          "end": null,
           "artistId": "31"
         },
         {
-          "type": "live",
+          "type": "dj",
           "start": null,
           "end": null,
           "artistId": "91"
@@ -1425,19 +1427,19 @@
           "artistId": "57"
         },
         {
-          "type": "live",
+          "type": "gig",
           "start": null,
           "end": null,
           "artistId": "58"
         },
         {
-          "type": "live",
+          "type": "dj",
           "start": null,
           "end": null,
           "artistId": "83"
         },
         {
-          "type": "live",
+          "type": "dj",
           "start": null,
           "end": null,
           "artistId": "88"
@@ -1455,7 +1457,7 @@
           "artistId": "63"
         },
         {
-          "type": "live",
+          "type": "dj",
           "start": null,
           "end": null,
           "artistId": "64"
@@ -1467,13 +1469,13 @@
           "artistId": "65"
         },
         {
-          "type": "live",
+          "type": "dj",
           "start": null,
           "end": null,
           "artistId": "66"
         },
         {
-          "type": "live",
+          "type": "dj",
           "start": null,
           "end": null,
           "artistId": "79"
@@ -1494,7 +1496,7 @@
           "type": "live",
           "start": null,
           "end": null,
-          "artistId": "94"
+          "artistId": "93"
         },
         {
           "type": "live",
@@ -1506,7 +1508,7 @@
           "type": "live",
           "start": null,
           "end": null,
-          "artistId": "93"
+          "artistId": "94"
         }
       ]
     }

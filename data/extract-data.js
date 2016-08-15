@@ -53,10 +53,10 @@ json.forEach(function (i) {
 
   // Cleanup
   artist.id = '' + artist.id;
-  artist.name = fixName(fixUnicode(artist.name));
-  artist.country = fixUnicode(artist.origin);
-  artist.label = fixUnicode(artist.label);
-  artist.bio = {fr: fixBio(fixUnicode(artist.bioFr))};
+  artist.name = fixName(artist.name);
+  artist.country = artist.origin;
+  artist.label = artist.label;
+  artist.bio = {fr: fixBio(artist.bioFr)};
   artist.website = cleanUrl(artist.website);
   artist.mixcloud = cleanUrl(fixUrl(artist.mixcloud, 'mixcloud.com'));
   artist.soundcloud = cleanUrl(fixUrl(artist.soundcloud, 'soundcloud.com'));
@@ -86,8 +86,6 @@ json.forEach(function (i) {
   //       // console.warn('Error details: ' + err);
   //     })
   //   promises.push(promise);
-  } else {
-    console.warn('Artist ' + artist.name + ' does not have a photo!');
   }
 
   if (artist.banner) {
@@ -112,16 +110,6 @@ json.forEach(function (i) {
   //       console.warn('Error, cannot get artist ' + artist.name + ' cover from facebook!');
   //     })
   //   promises.push(promise);
-  // } else {
-    console.warn('Artist ' + artist.name + ' does not have a banner!');
-  }
-
-  if (!artist.bioFr) {
-    console.warn('Artist ' + artist.name + ' does not have a bio!');
-  }
-
-  if (artist.website) {
-    console.log('Artist ' + artist.name + ' has website');
   }
 
   delete artist.origin;
@@ -134,6 +122,23 @@ json.forEach(function (i) {
   delete artist.isFavorite;
 
   artist = applyManualFix(artist);
+
+  if (!artist.bio || (!artist.bio.fr && !artist.bio.en)) {
+    console.warn('Artist ' + artist.name + ' does not have a bio! | ' + artist.id);
+  }
+
+  if (artist.website) {
+    console.log('Artist ' + artist.name + ' has website');
+  }
+
+  if (!artist.photo) {
+    console.warn('Artist ' + artist.name + ' does not have a photo! | ' + artist.id);
+  }
+
+  if (!artist.banner) {
+    console.warn('Artist ' + artist.name + ' does not have a banner! | ' + artist.id);
+  }
+
   artists.push(artist);
 
   var set = {

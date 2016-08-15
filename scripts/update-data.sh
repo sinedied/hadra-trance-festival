@@ -17,6 +17,8 @@ export TARGET_IMAGES_FOLDER=$SRC_FOLDER/images/
 cd $DATA_FOLDER
 rm -rf $OUT_DIR
 
+# curl http://htf.yohann-bianchi.ovh/festivals -o festival.json
+
 ./extract-data.js festival.json $TARGET_DATA_FILE
 
 cp -Rf $NEW_IMAGES_FOLDER $TARGET_IMAGES_FOLDER
