@@ -26,7 +26,7 @@ export class LineupController {
               logger: LoggerService,
               private gettextCatalog: angular.gettext.gettextCatalog,
               private favoritesService: FavoritesService,
-              festivalService: FestivalService,
+              private festivalService: FestivalService,
               private toastService: ToastService) {
 
     this.logger = logger.getLogger('lineup');
@@ -39,7 +39,7 @@ export class LineupController {
     let updatePromise = null;
 
     $scope.$on('$ionicView.beforeEnter', () => {
-      this.festival = festivalService.festival;
+      this.festival = this.festivalService.festival;
       this.updatePlaying();
       updatePromise = $interval(this.updatePlaying.bind(this), 5000);
     });
@@ -59,7 +59,7 @@ export class LineupController {
   }
 
   formatDate(date: Date): string {
-    return this.moment(date).format('HH:mm');
+    return this.festivalService.festival.getSetDate(date).format('HH:mm');
   }
 
   getWeekday(weekday: number): string {

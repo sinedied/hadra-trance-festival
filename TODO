@@ -1,18 +1,5 @@
-x iphone/ipad ios 8/9
-x check orientation ios/android
-x mail backend + data infos, accueil, photo/video/featured
-x bug info map agrandissement (wontfix)
-x Copy assets from JSON base64 to images/ (-> script?)
-x Identify favorites sets on lineup screen
-x Fix artist data...
-x Fix android icon
-x Allow no lineup
-x Add music controls plugin
-x Find duplicate artists
-- Fix split by days
-- Fix lineup
+- Fix lineup data
 - Find holes in sets
-- Add stands infos
 - Make screenshots + builds for stores
 - Add analytics
 - Create new GA id / soundcloud id outside github

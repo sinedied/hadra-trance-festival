@@ -20,7 +20,7 @@ export class ArtistController {
               private moment: moment.MomentStatic,
               private gettextCatalog: angular.gettext.gettextCatalog,
               logger: LoggerService,
-              festivalService: FestivalService,
+              private festivalService: FestivalService,
               private playerService: PlayerService,
               private favoritesService: FavoritesService,
               private toastService: ToastService) {
@@ -36,7 +36,7 @@ export class ArtistController {
       let artistId = $stateParams['artistId'];
       this.logger.log('artistId', artistId);
 
-      this.artist = festivalService.festival.artistById[artistId];
+      this.artist = this.festivalService.festival.artistById[artistId];
     });
   }
 
@@ -49,7 +49,7 @@ export class ArtistController {
   }
 
   formatDate(date: Date) {
-    return this.moment(date).format('HH:mm');
+    return this.festivalService.festival.getSetDate(date).format('HH:mm');
   }
 
   open(url: string) {

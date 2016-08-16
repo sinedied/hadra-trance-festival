@@ -22,8 +22,6 @@ export class PlayerService {
       this.context.player.playing
     ], () => {
       if (this.context && this.context.player) {
-        console.log('update infos');
-
         let track = this.context.track;
         let cover = track.artwork_url ? track.artwork_url.replace('large.jpg', 't500x500.jpg') : null;
 
