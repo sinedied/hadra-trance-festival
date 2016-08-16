@@ -54,7 +54,7 @@ json.forEach(function (i) {
 
   // Cleanup
   artist.id = '' + artist.id;
-  artist.name = fixName(artist.name);
+  artist.name = fixName(artist.name).trim();
   artist.country = artist.origin;
   artist.label = artist.label;
   artist.bio = {fr: fixBio(artist.bioFr)};
