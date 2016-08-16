@@ -146,7 +146,7 @@
       "website": null,
       "country": "FR",
       "bio": {
-        "fr": "Engagé depuis 2008 dans le développement de l’association Hadra comme directeur et programmateur du festival, Benoît quitte en 2016 l’ombre pour la lumière de la scène avec un projet DJ baptisé Benzinho. Ce dernier s’inscrit dans la continuité de son travail de programmation et propose une épopée au coeur des esthétiques psydub, funk et glitch en faisant la part belle aux artistes de Merkaba Music, Shanti Planti ou encore Maia Brasil Records. Les basses rondes et les sonorités à la fois groovy, mélodiques et instrumentales de sa sélection font de ses sets un voyage éclectique et scintillant. <br><br><br>Involved in Hadra since 2008 as general manager and musical programmer for the Hadra Trance Festival, Benoît stepped into the limelight of the stage in 2016 with a DJ project named Benzinho. Carrying on with his role of programmer, he proposes a journey in the depths of psydub, funk and glitch international scene featuring artists from Merkaba Music, Shanti Planti or Maia Brasil Records. The groovy, melodic and instrumental sounds of his selections bring eclecticism and brightness to his sets."
+        "fr": "Engagé depuis 2008 dans le développement de l’association Hadra comme directeur et programmateur du festival, Benoît quitte en 2016 l’ombre pour la lumière de la scène avec un projet DJ baptisé Benzinho. Ce dernier s’inscrit dans la continuité de son travail de programmation et propose une épopée au coeur des esthétiques psydub, funk et glitch en faisant la part belle aux artistes de Merkaba Music, Shanti Planti ou encore Maia Brasil Records. Les basses rondes et les sonorités à la fois groovy, mélodiques et instrumentales de sa sélection font de ses sets un voyage éclectique et scintillant."
       }
     },
     {
@@ -1211,14 +1211,14 @@
         {
           "type": "dj",
           "start": "2016-09-03T18:00:00.000Z",
-          "end": "2016-09-03T19:30:00.000Z",
-          "artistId": "71"
+          "end": "2016-09-02T19:30:00.000Z",
+          "artistId": "69"
         },
         {
           "type": "dj",
           "start": "2016-09-03T18:00:00.000Z",
-          "end": "2016-09-02T19:30:00.000Z",
-          "artistId": "69"
+          "end": "2016-09-03T19:30:00.000Z",
+          "artistId": "71"
         },
         {
           "type": "live",
@@ -1487,13 +1487,13 @@
           "type": "live",
           "start": null,
           "end": null,
-          "artistId": "95"
+          "artistId": "94"
         },
         {
           "type": "live",
           "start": null,
           "end": null,
-          "artistId": "94"
+          "artistId": "95"
         }
       ]
     }

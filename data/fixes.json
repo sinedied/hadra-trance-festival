@@ -348,7 +348,10 @@
     "id": "25",
     "photo": "images/artists/photo-25.jpg",
     "banner": "images/artists/banner-25.jpg",
-    "country": "FR"
+    "country": "FR",
+    "bio": {
+      "fr": "Engagé depuis 2008 dans le développement de l’association Hadra comme directeur et programmateur du festival, Benoît quitte en 2016 l’ombre pour la lumière de la scène avec un projet DJ baptisé Benzinho. Ce dernier s’inscrit dans la continuité de son travail de programmation et propose une épopée au coeur des esthétiques psydub, funk et glitch en faisant la part belle aux artistes de Merkaba Music, Shanti Planti ou encore Maia Brasil Records. Les basses rondes et les sonorités à la fois groovy, mélodiques et instrumentales de sa sélection font de ses sets un voyage éclectique et scintillant."
+    }
   },
   {
     "id": "27",
