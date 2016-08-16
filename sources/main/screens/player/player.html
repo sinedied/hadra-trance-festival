@@ -29,14 +29,15 @@
         <!--<h3>{{playlist.title}}</h3>-->
         <div class="player-controls">
           <button ng-click="previous()" class="button button-clear button-light ion-ios-skipbackward"></button>
-          <button ng-click="playPause(index); vm.updatePlayerContext(this)" class="button button-clear button-light"
+          <button ng-click="playPause(index); vm.updatePlayerContext(vm.plangular)"
+                  class="button button-clear button-light"
                   ng-class="player.playing === track.src ? 'ion-ios-pause' : 'ion-ios-play'"></button>
           <button ng-click="next()" class="button button-clear button-light ion-ios-skipforward"></button>
         </div>
       </div>
       <ion-list>
         <ion-item class="playlist-track" ng-repeat="track in tracks"
-                  ng-click="playPause($index); vm.updatePlayerContext(this)"
+                  ng-click="playPause($index); vm.updatePlayerContext(vm.plangular)"
                   ng-class="{ current: player.playing === track.src }">
         <span class="playlist-track-info">
           <span class="number">{{$index + 1}}</span><span>{{track.title}}</span>
@@ -63,7 +64,7 @@
     </div>
     <div class="player-controls">
       <button ng-click="vm.plangular.previous()" class="button button-clear button-light ion-ios-skipbackward"></button>
-      <button ng-click="vm.plangular.playPause(index); vm.updatePlayerContext(this)" class="button button-clear button-light"
+      <button ng-click="vm.plangular.playPause(index); vm.updatePlayerContext(vm.plangular)" class="button button-clear button-light"
               ng-class="vm.plangular.player.playing === vm.plangular.track.src ? 'ion-ios-pause' : 'ion-ios-play'"></button>
       <button ng-click="vm.plangular.next()" class="button button-clear button-light ion-ios-skipforward"></button>
     </div>

@@ -6,6 +6,7 @@ export class PlayerService {
   private context: any = null;
   private logger: ILogger;
   private handlerInit: boolean = false;
+  private dismissed: boolean = false;
 
   constructor($rootScope: ng.IRootScopeService,
               $window: ng.IWindowService,
@@ -21,28 +22,26 @@ export class PlayerService {
       this.context.player.playing
     ], () => {
       if (this.context && this.context.player) {
+        console.log('update infos');
+
         let track = this.context.track;
         let cover = track.artwork_url ? track.artwork_url.replace('large.jpg', 't500x500.jpg') : null;
 
         if (ionic.Platform.isAndroid() && musicControls) {
-          musicControls.destroy();
+          if (this.dismissed) {
+            this.dismissed = false;
+            return;
+          }
+
           musicControls.create({
             track: track.title,
             artist: track.user.username,
             cover: cover,
             isPlaying: !!this.context.player.playing,
             dismissable: true,
-
-            // hide previous/next/close buttons:
-            // hasPrev   : false,      // show previous button, optional, default: true
-            // hasNext   : false,      // show next button, optional, default: true
-            // hasClose  : true,       // show close button, optional, default: false
-
-            // Android only, optional
-            // text displayed in the status bar when the notification (and the ticker) are updated
-            // ticker: this.context.player.playing ? 'Lecture de ' + track.title : null
           });
           musicControls.subscribe(this.eventHandler.bind(this));
+          musicControls.listen();
         }
 
         if (ionic.Platform.isIOS() && remoteControls) {
@@ -123,6 +122,7 @@ export class PlayerService {
         this.context.play();
         break;
       case 'music-controls-destroy':
+        this.dismissed = true;
         this.context.pause();
         break;
       // Headset events (Android only)

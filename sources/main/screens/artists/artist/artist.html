@@ -28,7 +28,7 @@
       <div class="buttons left">
         <button ng-click="playPause(index); vm.updatePlayerContext(this)" class="button button-clear button-light"
                 ng-class="player.playing === track.src  ? 'ion-ios-pause' : 'ion-ios-play'"></button>
-        <button ng-click="next()" class="next button button-light button-clear ion-skip-forward"></button>
+        <button ng-click="next(); vm.updatePlayerContext(this)" class="next button button-light button-clear ion-skip-forward"></button>
       </div>
       <div class="track-info light">
         <div class="text-overflow">{{track.title}}</div>
