@@ -28,11 +28,13 @@
         <!--<h4>{{playlist.user.username}}</h4>-->
         <!--<h3>{{playlist.title}}</h3>-->
         <div class="player-controls">
-          <button ng-click="previous()" class="button button-clear button-light ion-ios-skipbackward"></button>
+          <button ng-click="previous(); vm.updatePlayerContext(vm.plangular)"
+                  class="button button-clear button-light ion-ios-skipbackward"></button>
           <button ng-click="playPause(index); vm.updatePlayerContext(vm.plangular)"
                   class="button button-clear button-light"
                   ng-class="player.playing === track.src ? 'ion-ios-pause' : 'ion-ios-play'"></button>
-          <button ng-click="next()" class="button button-clear button-light ion-ios-skipforward"></button>
+          <button ng-click="next(); vm.updatePlayerContext(vm.plangular)"
+                  class="button button-clear button-light ion-ios-skipforward"></button>
         </div>
       </div>
       <ion-list>
@@ -63,10 +65,13 @@
       <div class="track-artist text-center text-overflow">{{vm.plangular.track.user.username}}</div>
     </div>
     <div class="player-controls">
-      <button ng-click="vm.plangular.previous()" class="button button-clear button-light ion-ios-skipbackward"></button>
-      <button ng-click="vm.plangular.playPause(index); vm.updatePlayerContext(vm.plangular)" class="button button-clear button-light"
+      <button ng-click="vm.plangular.previous(); vm.updatePlayerContext(vm.plangular)"
+              class="button button-clear button-light ion-ios-skipbackward"></button>
+      <button ng-click="vm.plangular.playPause(index); vm.updatePlayerContext(vm.plangular)"
+              class="button button-clear button-light"
               ng-class="vm.plangular.player.playing === vm.plangular.track.src ? 'ion-ios-pause' : 'ion-ios-play'"></button>
-      <button ng-click="vm.plangular.next()" class="button button-clear button-light ion-ios-skipforward"></button>
+      <button ng-click="vm.plangular.next(); vm.updatePlayerContext(vm.plangular)"
+              class="button button-clear button-light ion-ios-skipforward"></button>
     </div>
   </div>
 </ion-view>

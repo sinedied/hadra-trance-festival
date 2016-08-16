@@ -59,7 +59,7 @@ export class LineupController {
   }
 
   formatDate(date: Date): string {
-    return this.festivalService.festival.getSetDate(date).format('HH:mm');
+    return date ? this.festivalService.festival.getSetDate(date).format('HH:mm') : '';
   }
 
   getWeekday(weekday: number): string {
