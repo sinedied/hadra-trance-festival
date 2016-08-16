@@ -1,5 +1,5 @@
 {
-  "utcOffset": -2,
+  "utcOffset": 2,
   "social": {
     "facebook": "https://www.facebook.com/hadratrancefestival",
     "website": "http://www.hadra.net",
@@ -569,8 +569,8 @@
       "label": "Hadra Records / Transubtil",
       "photo": "images/artists/photo-42.jpg",
       "banner": "images/artists/banner-42.jpg",
-      "facebook": "https://www.facebook.com/Facebook.com/100003506291470",
-      "soundcloud": "https://soundcloud.com/Soundcloud.com/oddwave",
+      "facebook": "https://www.facebook.com/oddwaveHadra/",
+      "soundcloud": "https://soundcloud.com/oddwave",
       "mixcloud": null,
       "website": null,
       "country": "FR",
