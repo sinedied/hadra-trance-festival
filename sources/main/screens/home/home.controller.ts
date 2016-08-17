@@ -92,7 +92,7 @@ export class HomeController {
       if (!this.timePromise) {
         this.timePromise = this.$interval(() => {
           // Display time to festival first set
-          let diff = moment.duration(startInfo.diff);
+          let diff = moment.duration(startInfo.start.diff(this.moment()));
           let time = this.gettextCatalog.getString('{{days}}d {{hours}}h {{minutes}}m {{seconds}}s', {
             days: Math.floor(diff.asDays()),
             hours: diff.hours(),

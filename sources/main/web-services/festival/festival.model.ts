@@ -69,7 +69,6 @@ export interface IInfoPage {
 export interface IStartInfo {
   hasStarted: boolean;
   start: moment.Moment;
-  diff: number;
 }
 
 export interface IDailySets {
@@ -195,8 +194,7 @@ export class Festival implements IFestival {
     let now = moment();
     return {
       hasStarted: now.isAfter(start),
-      start: start,
-      diff: start.diff(now)
+      start: start
     };
   }
 
