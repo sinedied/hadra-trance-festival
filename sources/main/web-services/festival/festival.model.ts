@@ -192,7 +192,7 @@ export class Festival implements IFestival {
   }
 
   getSetDate(date: Date): moment.Moment {
-    return moment.utc(date).subtract(this.utcOffset, 'h');
+    return moment.utc(date).add(this.utcOffset, 'h');
   }
 
 }

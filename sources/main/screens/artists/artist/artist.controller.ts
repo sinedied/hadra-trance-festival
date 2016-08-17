@@ -49,7 +49,8 @@ export class ArtistController {
   }
 
   formatDate(date: Date) {
-    return this.festivalService.festival.getSetDate(date).format('HH:mm');
+    return date ? this.festivalService.festival.getSetDate(date).format('HH:mm') : '';
+
   }
 
   open(url: string) {
