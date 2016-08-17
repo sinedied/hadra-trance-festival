@@ -178,6 +178,33 @@ scenes.forEach(function (scene) {
   scene.sets = _.sortBy(scene.sets, ['start']);
 });
 
+// Check for orphan artists
+_.each(artists, function (artist) {
+  var sets = [];
+  _.each(scenes, function(scene) {
+    _.each(scene.sets, function(set) {
+      if (set.artistId === artist.id) {
+        sets.push(set);
+      };
+    });
+  });
+  if (!sets.length) {
+    console.warn('Warning, artist ' + artist.name + ' has no sets!');
+  }
+});
+
+// Check for holes in lineup
+_.each(scenes, function(scene) {
+  var previous = null;
+  _.each(scene.sets, function(set) {
+    if (previous && previous.end !== set.start && previous.start !== set.start) {
+      console.warn('Warning, hole between sets: ' + previous.artistId + '[' + previous.end + ']->' + set.artistId + '[' + set.start + '] on scene ' + scene.name);
+    }
+    previous = set;
+  });
+});
+
+
 var newJson = {lineup: scenes, artists: artists};
 
 Promise.all(promises).then(function() {
