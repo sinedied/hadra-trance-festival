@@ -386,6 +386,7 @@
     },
     {
       "id": "31",
+      "name": "The Serpent's Egg",
       "photo": "images/artists/photo-31.jpg",
       "label": null,
       "country": "FR"
@@ -436,7 +437,7 @@
     },
     {
       "id": "88",
-      "name": "Kaya Project meets DJ Hibernation",
+      "name": "Kaya Project meets Hibernation",
       "bio": {
         "en": "KAYA PROJECT<br><br>Kaya Project is a tribal fusion of World Music & Electronica primarily built upon Location recordings from exotic locations around the planet. The Project is the musical incarnation of Seb and Natasha Taylor.  Based in the UK, the duo has achieved a name of world renown via their first three albums 'walking through' (2004), 'elixir' (2005) and '�?�& so it goes' (2008) ' all released on interchill.  their 4th. album, 'desert phase', was released in the spring of 2010 followed by a CD of electronic remixes. Previous kaya project tracks have been heard on tv shows such as showtime's 'sleeper cell', & numerous compilations including claude challe's renowned 'buddha bar' series. angel tears tracks (another of seb's many projects) have been heard on shows such as hbo's sex & the city, the west wing & many others. The Fifth Kaya Project album 'FIREDANCE' was released in May 2014.<br><br>HIBERNATION<br> <br>Hibernation is Seb Taylors outlet for Glitchy experimental chilled Electonica.<br> <br>The first Hibernation album, Some Things Never Change, was released on respected label Aleph Zero in 2008. <br>At this point Seb had released a number of Kaya Project albums to great acclaim and gained a loyal following among downtempo aficionados. With many different projects to his name Seb likes to keep them stylistically distinct and Hibernation is devoted to a more electronic realm than Kaya Project, which features live instrumentation from around the world. Hibernation, as the name suggests, heads inwards and locks onto micro edits, quirky samples, glitches and hyper-fine details. <br>Second Nature is the newest album and was released on Interchill Records in 2012.<br>On this album, Natasha Chamberlain contributes some dreamy vocal flourishes to a number of tunes and Seb also turned to the capable Riad Abji and Vicky Flint for stand up bass and muted trumpet in the signature tune Uncarved Block. With a distinct sonic palette that includes stand up bass, muted trumpet, brush drums, glitches, whomps and warm subs the Hibernation sound is crucial listening.  Seb brings a lifetime of musical experience to his production, composition and arrangements, and it shows. Listening to Second Nature conjures up future memories of dark smoky jazz clubs, Bladerunner cityscapes, parallel universes, dreams half forgotten and epic nights.  This is music with spirit, narrative and detail.<br><br>SEB TAYLOR<br> <br>Seb Taylor has been producing for more than 20 years under a number of aliases; Shakta, Kaya Project, Hibernation, Digitalis, Chaos by Design, SE23, Radiate, and Subterfuge. An accomplished guitar player, Seb also plays the tzoura, zheng, banjoud, harmonica, hammered dulcimer, hang drum, various percussion, flute as well as the occasional vocal. Seb has performed around the world at clubs, parties and festivals; from fear and loathing style scenes in yakuza clubs in Tokyo to the over the top craziness of Shambhala in BC's Kootenay mountains, from Mad Max doofs in the dusty Australian desert to the fabled beaches of Goa. When he's not travelling Seb can be found in the studio in Brighton UK. He has a total of 18 Albums released in various styles, & is currently Producing in the Chillout, World Music & Breakbeat scenes. (under the names Kaya Project, Digitalis, Angel Tears & others) as well as music for TV, Film & Advertising."
       }
@@ -667,7 +668,7 @@
         },
         {
           "type": "live",
-          "start": "2016-09-04T00:30:00.000Z",
+          "start": "2016-09-04T02:00:00.000Z",
           "end": "2016-09-04T03:30:00.000Z",
           "artistId": "78"
         },
