@@ -20,7 +20,11 @@ function mainConfig($provide: ng.auto.IProvideService,
       $delegate(exception, cause);
 
       let logger: ILogger = $injector.get('logger').getLogger('exceptionHandler');
-      logger.error(exception + (cause ? ' (' + cause + ')' : ''));
+      let $analytics: angulartics.IAnalyticsService = $injector.get('$analytics');
+      let message: string = exception + (cause ? ' (' + cause + ')' : '');
+
+      logger.error(message);
+      $analytics.eventTrack('Exception', { category: 'error', value: message });
     };
   });
 
@@ -35,6 +39,7 @@ function mainConfig($provide: ng.auto.IProvideService,
 
   // Disable angular debug info in production version
   $compileProvider.debugInfoEnabled(env.debug);
+
   $analyticsProvider.developerMode(env.debug);
   $analyticsProvider.firstPageview(true);
 

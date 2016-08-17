@@ -16,6 +16,8 @@ export class FestivalService {
   constructor(private $rootScope: ng.IRootScopeService,
               private $window: ng.IWindowService,
               private $http: ng.IHttpService,
+              private $q: ng.IQService,
+              private $analytics: angulartics.IAnalyticsService,
               private config: IApplicationConfig,
               logger: LoggerService) {
 
@@ -72,9 +74,14 @@ export class FestivalService {
           this.$rootScope['festival'] = this.festival;
           this.$rootScope.$emit(FestivalService.FESTIVAL_UPDATED_EVENT);
           this.logger.log('Festival data reloaded');
+          this.$analytics.eventTrack('Data update success', { category: 'update', value: f.version });
         } else {
-          this.logger.log('Bad update data!');
+          return this.$q.reject('Bad update data!');
         }
+      })
+      .catch((reason: any) => {
+        this.logger.warning('Update failed: ' + reason);
+        this.$analytics.eventTrack('Data update failed', { category: 'error', value: reason });
       });
   }
 

@@ -14,9 +14,9 @@ function main($window: ng.IWindowService,
               $rootScope: any,
               $state: angular.ui.IStateService,
               $timeout: ng.ITimeoutService,
+              $analytics: angulartics.IAnalyticsService,
               $cordovaKeyboard: any,
               $cordovaStatusbar: any,
-              $cordovaDevice: any,
               $cordovaAppRate: any,
               $ionicPlatform: ionic.platform.IonicPlatformService,
               gettextCatalog: angular.gettext.gettextCatalog,
@@ -141,17 +141,14 @@ function main($window: ng.IWindowService,
         }, null);
       }
 
-      if ($window.cordova) {
+      // Setup analytics
+      if (!config.environment.debug && $window['ga']) {
+        // Warning, breaks unit tests if included in debug!
+        $window['ga']('create', config.googleAnalyticsId, 'none');
+        $analytics.eventTrack('App started', { value: vm.festival.version });
+      }
 
-        // Setup analytics
-        if (!config.environment.debug && $window['ga']) {
-          // Warning, breaks unit test if included in debug!
-          $window['ga']('create', {
-            trackingId: config.googleAnalyticsId,
-            cookieDomain: 'none',
-            userId: $cordovaDevice.getUUID()
-          });
-        }
+      if ($window.cordova) {
 
         // App rating prompt
         angular.extend($window['AppRate'].preferences, {
@@ -197,6 +194,7 @@ function main($window: ng.IWindowService,
         $window.document.addEventListener('resume', () => {
           _logger.log('Application resumed from background');
           $rootScope.foreground = true;
+          $analytics.eventTrack('App resumed', { value: vm.festival.version });
 
           if (!vm.offline) {
             festivalService.checkUpdate();

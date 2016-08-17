@@ -2,6 +2,7 @@
   <ion-nav-title>{{viewTitle}}</ion-nav-title>
   <ion-nav-buttons side="secondary">
     <button class="button button-icon button-clear ion-ios-cart-outline" ng-if="festival.playerShop"
+            analytics-on="click" analytics-event="Player shop" analytics-category="button"
             ng-click="vm.open(festival.playerShop)"></button>
   </ion-nav-buttons>
   <ion-content class="light content-fill-height" fading-bar="280" fade-to-rgb="79,10,54" state-name="app.player"

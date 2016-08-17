@@ -1,8 +1,11 @@
 <ion-view id="artist-screen" class="artist-screen royal-bg">
   <ion-nav-title>{{vm.artist.name}}</ion-nav-title>
   <ion-nav-buttons side="secondary">
-    <button class="button button-icon button-clear ion-android-favorite" ng-class=" { 'ion-android-favorite-outline': !vm.favorites[vm.artist.id] }"
-            ng-click="vm.switchFavorite()"></button>
+    <button class="button button-icon button-clear ion-android-favorite"
+            ng-class=" { 'ion-android-favorite-outline': !vm.favorites[vm.artist.id] }"
+            ng-click="vm.switchFavorite()" analytics-on="click"
+            analytics-category="button" analytics-event="Add favorite from artist"
+            analytics-value="{{vm.artist.name}}"></button>
   </ion-nav-buttons>
   <div class="blur-bg" bg-image="vm.artist.banner || 'images/no-banner.jpg'"></div>
   <ion-content class="transparent-bg light" fading-bar="280" fade-to-rgb="79,10,54" state-name="app.artist">
@@ -39,7 +42,7 @@
       </div>
     </div>
     <div class="bio text-justify" ng-bind-html="vm.artist.bio.fr || vm.artist.bio.en || vm.noBio"></div>
-    <div class="set-info">
+    <div class="set-info" ng-if="festival.showLineup === true">
       <div class="set" ng-repeat="set in vm.artist.sets">
         {{::vm.formatDate(set.start)}} - {{::vm.formatDate(set.end)}} // {{::set.type}} @ <span class="text-lowercase">{{::set.scene.name}}</span>
       </div>
