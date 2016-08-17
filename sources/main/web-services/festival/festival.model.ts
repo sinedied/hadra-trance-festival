@@ -63,14 +63,6 @@ export interface IInfoPage {
   content: string;
 }
 
-// export interface IMapInfo {
-//   lat: number;
-//   lon: number;
-//   title: string;
-//   type: MapInfoType;
-//   description: string;
-// }
-
 // App-only interfaces
 
 export interface IStartInfo {
@@ -94,17 +86,6 @@ export enum SetType {
   VJ = <any> 'vj',
   BREAK = <any>'break'
 }
-
-// export enum MapInfoType {
-//   WATER,
-//   TOILET,
-//   SCENE,
-//   FOOD,
-//   SHOP,
-//   INFO,
-//   SHOWER,
-//   HADRA_STAND
-// }
 
 /*
  * Classes
@@ -297,11 +278,3 @@ export class InfoPage implements IInfoPage {
   title: string;
   content: string;
 }
-
-// export class MapInfo implements IMapInfo {
-//   lat: number;
-//   lon: number;
-//   title: string;
-//   type: MapInfoType;
-//   description: string;
-// }
