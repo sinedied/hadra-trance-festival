@@ -1240,7 +1240,7 @@
           "artistId": "71"
         },
         {
-          "type": "live",
+          "type": "dj",
           "start": "2016-09-03T19:30:00.000Z",
           "end": "2016-09-03T21:00:00.000Z",
           "artistId": "73"
@@ -1345,7 +1345,7 @@
     },
     {
       "name": "Alternative",
-      "hide": true,
+      "hide": false,
       "sets": [
         {
           "type": "live",
