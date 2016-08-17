@@ -399,7 +399,7 @@
     },
     {
       "id": "88",
-      "name": "Kaya Project - DJ Hibernation",
+      "name": "Kaya Project meets DJ Hibernation",
       "label": "Interchill",
       "photo": "images/artists/photo-88.jpg",
       "banner": "images/artists/banner-88.jpg",
@@ -570,7 +570,7 @@
       "label": "Hadra Records / Transubtil",
       "photo": "images/artists/photo-42.jpg",
       "banner": "images/artists/banner-42.jpg",
-      "facebook": "https://www.facebook.com/oddwaveHadra/",
+      "facebook": "https://www.facebook.com/oddwaveHadra",
       "soundcloud": "https://soundcloud.com/oddwave",
       "mixcloud": null,
       "website": null,
@@ -1348,171 +1348,183 @@
       "hide": false,
       "sets": [
         {
-          "type": "live",
-          "start": null,
-          "end": null,
-          "artistId": "20"
+          "type": "dj",
+          "start": "2016-09-02T14:00:00.000Z",
+          "end": "2016-09-02T16:00:00.000Z",
+          "artistId": "65"
         },
         {
           "type": "live",
-          "start": null,
-          "end": null,
-          "artistId": "21"
-        },
-        {
-          "type": "live",
-          "start": null,
-          "end": null,
+          "start": "2016-09-02T16:00:00.000Z",
+          "end": "2016-09-02T17:00:00.000Z",
           "artistId": "22"
         },
         {
-          "type": "live",
-          "start": null,
-          "end": null,
-          "artistId": "23"
-        },
-        {
           "type": "dj",
-          "start": null,
-          "end": null,
-          "artistId": "24"
-        },
-        {
-          "type": "dj",
-          "start": null,
-          "end": null,
+          "start": "2016-09-02T17:00:00.000Z",
+          "end": "2016-09-02T19:00:00.000Z",
           "artistId": "25"
         },
         {
           "type": "live",
-          "start": null,
-          "end": null,
-          "artistId": "27"
-        },
-        {
-          "type": "live",
-          "start": null,
-          "end": null,
-          "artistId": "28"
-        },
-        {
-          "type": "dj",
-          "start": null,
-          "end": null,
-          "artistId": "29"
-        },
-        {
-          "type": "live",
-          "start": null,
-          "end": null,
-          "artistId": "30"
-        },
-        {
-          "type": "live",
-          "start": null,
-          "end": null,
-          "artistId": "31"
-        },
-        {
-          "type": "dj",
-          "start": null,
-          "end": null,
-          "artistId": "91"
-        },
-        {
-          "type": "live",
-          "start": null,
-          "end": null,
-          "artistId": "56"
-        },
-        {
-          "type": "live",
-          "start": null,
-          "end": null,
+          "start": "2016-09-02T19:00:00.000Z",
+          "end": "2016-09-02T20:30:00.000Z",
           "artistId": "57"
         },
         {
-          "type": "gig",
-          "start": null,
-          "end": null,
-          "artistId": "58"
-        },
-        {
-          "type": "dj",
-          "start": null,
-          "end": null,
-          "artistId": "83"
-        },
-        {
-          "type": "dj",
-          "start": null,
-          "end": null,
-          "artistId": "88"
-        },
-        {
           "type": "live",
-          "start": null,
-          "end": null,
-          "artistId": "62"
-        },
-        {
-          "type": "live",
-          "start": null,
-          "end": null,
-          "artistId": "63"
-        },
-        {
-          "type": "dj",
-          "start": null,
-          "end": null,
-          "artistId": "64"
-        },
-        {
-          "type": "live",
-          "start": null,
-          "end": null,
-          "artistId": "65"
-        },
-        {
-          "type": "dj",
-          "start": null,
-          "end": null,
-          "artistId": "66"
-        },
-        {
-          "type": "dj",
-          "start": null,
-          "end": null,
-          "artistId": "78"
-        },
-        {
-          "type": "live",
-          "start": null,
-          "end": null,
+          "start": "2016-09-02T20:30:00.000Z",
+          "end": "2016-09-02T22:00:00.000Z",
           "artistId": "80"
         },
         {
-          "type": "live",
-          "start": null,
-          "end": null,
-          "artistId": "92"
+          "type": "dj",
+          "start": "2016-09-02T22:00:00.000Z",
+          "end": "2016-09-03T00:00:00.000Z",
+          "artistId": "23"
         },
         {
           "type": "live",
-          "start": null,
-          "end": null,
+          "start": "2016-09-03T00:00:00.000Z",
+          "end": "2016-09-03T01:00:00.000Z",
+          "artistId": "20"
+        },
+        {
+          "type": "live",
+          "start": "2016-09-03T00:00:00.000Z",
+          "end": "2016-09-03T01:00:00.000Z",
+          "artistId": "21"
+        },
+        {
+          "type": "live",
+          "start": "2016-09-03T01:00:00.000Z",
+          "end": "2016-09-03T03:00:00.000Z",
+          "artistId": "83"
+        },
+        {
+          "type": "live",
+          "start": "2016-09-03T03:00:00.000Z",
+          "end": "2016-09-03T04:30:00.000Z",
+          "artistId": "24"
+        },
+        {
+          "type": "live",
+          "start": "2016-09-03T04:30:00.000Z",
+          "end": "2016-09-03T05:30:00.000Z",
           "artistId": "93"
         },
         {
           "type": "live",
-          "start": null,
-          "end": null,
+          "start": "2016-09-03T05:30:00.000Z",
+          "end": "2016-09-03T06:30:00.000Z",
           "artistId": "94"
         },
         {
           "type": "live",
-          "start": null,
-          "end": null,
+          "start": "2016-09-03T06:30:00.000Z",
+          "end": "2016-09-03T07:30:00.000Z",
+          "artistId": "92"
+        },
+        {
+          "type": "live",
+          "start": "2016-09-03T07:30:00.000Z",
+          "end": "2016-09-03T09:30:00.000Z",
+          "artistId": "24"
+        },
+        {
+          "type": "gig",
+          "start": "2016-09-03T09:30:00.000Z",
+          "end": "2016-09-03T11:00:00.000Z",
+          "artistId": "58"
+        },
+        {
+          "type": "dj",
+          "start": "2016-09-03T11:00:00.000Z",
+          "end": "2016-09-03T13:00:00.000Z",
+          "artistId": "27"
+        },
+        {
+          "type": "dj",
+          "start": "2016-09-03T13:00:00.000Z",
+          "end": "2016-09-03T14:30:00.000Z",
+          "artistId": "88"
+        },
+        {
+          "type": "dj",
+          "start": "2016-09-03T14:30:00.000Z",
+          "end": "2016-09-03T16:30:00.000Z",
+          "artistId": "91"
+        },
+        {
+          "type": "live",
+          "start": "2016-09-03T16:30:00.000Z",
+          "end": "2016-09-03T18:00:00.000Z",
+          "artistId": "56"
+        },
+        {
+          "type": "live",
+          "start": "2016-09-03T18:00:00.000Z",
+          "end": "2016-09-03T19:30:00.000Z",
+          "artistId": "63"
+        },
+        {
+          "type": "dj",
+          "start": "2016-09-03T19:30:00.000Z",
+          "end": "2016-09-03T22:00:00.000Z",
+          "artistId": "29"
+        },
+        {
+          "type": "dj",
+          "start": "2016-09-03T22:00:00.000Z",
+          "end": "2016-09-04T00:30:00.000Z",
+          "artistId": "30"
+        },
+        {
+          "type": "live",
+          "start": "2016-09-04T00:30:00.000Z",
+          "end": "2016-09-04T02:00:00.000Z",
+          "artistId": "31"
+        },
+        {
+          "type": "live",
+          "start": "2016-09-04T00:30:00.000Z",
+          "end": "2016-09-04T03:30:00.000Z",
+          "artistId": "78"
+        },
+        {
+          "type": "dj",
+          "start": "2016-09-04T03:30:00.000Z",
+          "end": "2016-09-04T05:30:00.000Z",
+          "artistId": "66"
+        },
+        {
+          "type": "dj",
+          "start": "2016-09-04T05:30:00.000Z",
+          "end": "2016-09-04T07:30:00.000Z",
+          "artistId": "64"
+        },
+        {
+          "type": "dj",
+          "start": "2016-09-04T07:30:00.000Z",
+          "end": "2016-09-04T09:30:00.000Z",
+          "artistId": "21"
+        },
+        {
+          "type": "live",
+          "start": "2016-09-04T09:30:00.000Z",
+          "end": "2016-09-04T11:00:00.000Z",
+          "artistId": "28"
+        },
+        {
+          "type": "live",
+          "start": "2016-09-04T11:00:00.000Z",
+          "end": "2016-09-04T12:30:00.000Z",
+          "artistId": "62"
+        },
+        {
+          "type": "live",
+          "start": "2016-09-04T12:30:00.000Z",
+          "end": "2016-09-04T14:00:00.000Z",
           "artistId": "95"
         }
       ]

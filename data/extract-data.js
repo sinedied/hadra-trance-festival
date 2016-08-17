@@ -27,10 +27,12 @@ var artists = [];
 var scenes = [
   {
     "name": "Main",
+    "hide": false,
     "sets": []
   },
   {
     "name": "Alternative",
+    "hide": false,
     "sets": []
   }
 ];
@@ -122,7 +124,7 @@ json.forEach(function (i) {
   delete artist.bioFr;
   delete artist.isFavorite;
 
-  artist = applyManualFix(artist);
+  artist = applyArtistFix(artist);
 
   if (!artist.bio || (!artist.bio.fr && !artist.bio.en)) {
     console.warn('Artist ' + artist.name + ' does not have a bio! | ' + artist.id);
@@ -172,6 +174,7 @@ json.forEach(function (i) {
 artists = _.sortBy(artists, ['name']);
 
 scenes.forEach(function (scene) {
+  scene = applyLineupFix(scene);
   scene.sets = _.sortBy(scene.sets, ['start']);
 });
 
@@ -258,14 +261,24 @@ function fixName(name) {
     .replace('Dj', 'DJ');
 }
 
-function applyManualFix(artist) {
-  var fix = _.find(fixes, {id: artist.id});
+function applyArtistFix(artist) {
+  var fix = _.find(fixes.artists, {id: artist.id});
 
   if (fix) {
     _.assign(artist, fix);
   }
 
   return artist;
+}
+
+function applyLineupFix(lineup) {
+  var fix = _.find(fixes.lineup, {name: lineup.name});
+
+  if (fix) {
+    _.assign(lineup, fix);
+  }
+
+  return lineup;
 }
 
 function capitalize(str) {

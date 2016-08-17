@@ -1,10 +1,11 @@
 - Fix lineup data
-- Find holes in sets
+- Find holes in sets + check artists with no sets
 - Make builds for stores
 - Add real store URLs
 - Use new GA id / soundcloud id outside github
 - Promo kit (poster + facebook banner)
 - Manage vs sets?
+- Add map
 - Test notifications
 
 DEADLINE: 19 aout
