@@ -32,7 +32,7 @@
       width: 100%;
       max-height: $name-height;
       text-align: center;
-      text-shadow: 0 0 8px $black;
+      text-shadow: 0 0 8px $black, 0 0 2px $superdark;
       overflow: hidden;
       color: $white;
     }
