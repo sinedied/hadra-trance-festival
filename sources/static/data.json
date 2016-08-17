@@ -44,7 +44,8 @@
     "images/home/14.jpg"
   ],
   "featuredVideo": "https://www.youtube.com/watch?v=RX_95mmz59Y",
-  "map": "",
+  "map": "soon",
+  "showLineup": true,
   "infos": [
     {
       "title": "Comment venir",
@@ -1095,10 +1096,10 @@
       }
     }
   ],
-  "showLineup": true,
   "lineup": [
     {
       "name": "Main",
+      "hide": false,
       "sets": [
         {
           "type": "gig",
@@ -1344,6 +1345,7 @@
     },
     {
       "name": "Alternative",
+      "hide": true,
       "sets": [
         {
           "type": "live",

@@ -12,7 +12,7 @@
     </div>
   </div>
   <ion-content class="light-bg has-subheader content-fill-height" overflow-scroll="false" delegate-handle="lineupScroll">
-    <ion-list type="list-joined" ng-if="festival.showLineup === true"
+    <ion-list type="list-joined" ng-if="!festival.lineup[vm.selectedScene].hide"
               ng-repeat="day in festival.lineup[vm.selectedScene].setsByDay">
       <div class="item item-divider" ion-affix data-affix-within-parent-with-class="list">
         {{vm.getWeekday(day.weekday)}}
@@ -30,7 +30,8 @@
         </ion-option-button>
       </ion-item>
     </ion-list>
-    <div ng-if="festival.showLineup === 'soon'" class="block-vertical-center-absolute full-width text-center padding">
+    <div ng-if="festival.lineup[vm.selectedScene].hide"
+         class="block-vertical-center-absolute full-width text-center padding">
       <i class="ion-calendar icon-huge grey"></i><br/>
       <h4 class="grey" translate>Coming soon!</h4>
     </div>

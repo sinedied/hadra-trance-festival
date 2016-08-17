@@ -48,6 +48,7 @@ export interface IArtist {
 export interface IScene {
   name: string;
   sets: Set[];  // must be ordered by date
+  hide: boolean;
 }
 
 export interface ISet {
@@ -221,6 +222,7 @@ export class Artist implements IArtist {
 export class Scene implements IScene {
   name: string;
   sets: Set[] = [];
+  hide: boolean = false;
 
   // App data only
   setsByDay: IDailySets[] = [];

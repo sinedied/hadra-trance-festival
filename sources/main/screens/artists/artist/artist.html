@@ -42,7 +42,7 @@
       </div>
     </div>
     <div class="bio text-justify" ng-bind-html="vm.artist.bio.fr || vm.artist.bio.en || vm.noBio"></div>
-    <div class="set-info" ng-if="festival.showLineup === true">
+    <div class="set-info">
       <div class="set" ng-repeat="set in vm.artist.sets">
         {{::vm.formatDate(set.start)}} - {{::vm.formatDate(set.end)}} // {{::set.type}} @ <span class="text-lowercase">{{::set.scene.name}}</span>
       </div>

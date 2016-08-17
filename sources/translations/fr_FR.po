@@ -12,23 +12,23 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.7\n"
 
-#: app.ts.js:1828
+#: app.ts.js:1978
 msgid "{{days}}d {{hours}}h {{minutes}}m {{seconds}}s"
 msgstr "{{days}}j {{hours}}h {{minutes}}m {{seconds}}s"
 
-#: app.ts.js:896
+#: app.ts.js:1058
 msgid "{{name}} {{type}} set starts in 10 minutes on {{scene}} floor!"
 msgstr "Le {{type}} set de {{name}} démarre dans 10 min sur la scène {{scene}}!"
 
-#: app.ts.js:320 main/screens/infos/infos.html:10
+#: app.ts.js:324 main/screens/infos/infos.html:10
 msgid "About"
 msgstr "A propos"
 
-#: app.ts.js:2431
+#: app.ts.js:2527
 msgid "Added to favorites!<br>You will be notified before its set starts."
 msgstr "Ajouté aux favoris!<br>Vous recevrez une notification avant le début de son set."
 
-#: app.ts.js:1973
+#: app.ts.js:2090
 msgid "Added to favorites!<br>You will be notified before this set starts."
 msgstr "Ajouté aux favoris!<br>Vous recevrez une notification avant le début de ce set."
 
@@ -36,7 +36,7 @@ msgstr "Ajouté aux favoris!<br>Vous recevrez une notification avant le début d
 msgid "All"
 msgstr "Tous"
 
-#: main/screens/player/player.html:48
+#: main/screens/player/player.html:55
 msgid "An internet connection is required to use the player"
 msgstr "Une connexion Internet est nécessaire pour utiliser le lecteur"
 
@@ -44,27 +44,31 @@ msgstr "Une connexion Internet est nécessaire pour utiliser le lecteur"
 msgid "App version"
 msgstr "Version de l'app"
 
-#: app.ts.js:500 app.ts.js:571
+#: app.ts.js:501 app.ts.js:573
 msgid "APP_NAME"
 msgstr "Hadra Trance Festival"
 
-#: app.ts.js:260
+#: app.ts.js:264
 msgid "Artist"
 msgstr "Artiste"
 
-#: app.ts.js:250 main/shell/shell.html:39
+#: app.ts.js:254 main/shell/shell.html:39
 msgid "Artists"
 msgstr "Artistes"
 
-#: app.ts.js:1852 app.ts.js:1943
+#: app.ts.js:2002 app.ts.js:2060
 msgid "Break"
 msgstr "Pause"
+
+#: main/screens/lineup/lineup.html:35 main/screens/map/map.html:11
+msgid "Coming soon!"
+msgstr "Bientôt disponible !"
 
 #: main/screens/about/about.html:7
 msgid "Data version"
 msgstr "Version des données"
 
-#: app.ts.js:1853
+#: app.ts.js:2003
 msgid "Enjoy some silence..."
 msgstr "Profitez du silence..."
 
@@ -72,27 +76,27 @@ msgstr "Profitez du silence..."
 msgid "Favorites"
 msgstr "Favoris"
 
-#: main/screens/home/home.html:34
+#: main/screens/home/home.html:36
 msgid "Featured artists"
 msgstr "Artistes présents"
 
-#: app.ts.js:1823
+#: app.ts.js:1973
 msgid "Festival starts in"
 msgstr "Début du festival dans"
 
-#: app.ts.js:240 main/shell/shell.html:25
+#: app.ts.js:244 main/shell/shell.html:25
 msgid "Home"
 msgstr "Accueil"
 
-#: app.ts.js:300
+#: app.ts.js:304
 msgid "Info"
 msgstr "Info"
 
-#: app.ts.js:290 main/shell/shell.html:53
+#: app.ts.js:294 main/shell/shell.html:53
 msgid "Infos"
 msgstr "Infos"
 
-#: main/screens/home/home.html:44
+#: main/screens/home/home.html:46
 msgid "Last edition"
 msgstr "Dernière édition"
 
@@ -101,7 +105,7 @@ msgstr "Dernière édition"
 msgid "License"
 msgstr "Licence"
 
-#: app.ts.js:270 main/shell/shell.html:32
+#: app.ts.js:274 main/shell/shell.html:32
 msgid "Line-up"
 msgstr "Line-up"
 
@@ -109,7 +113,7 @@ msgstr "Line-up"
 msgid "Made with <i class=\"ion-heart assertive\"></i> by noda"
 msgstr "Fait avec <i class=\"ion-heart assertive\"></i> par noda"
 
-#: app.ts.js:280 main/shell/shell.html:46
+#: app.ts.js:284 main/shell/shell.html:46
 msgid "Map"
 msgstr "Plan"
 
@@ -117,11 +121,11 @@ msgstr "Plan"
 msgid "Music"
 msgstr "Musique"
 
-#: app.ts.js:2419
+#: app.ts.js:2515
 msgid "No bio"
 msgstr "Pas de bio"
 
-#: main/screens/player/player.html:15
+#: main/screens/player/player.html:16
 msgid "No cover"
 msgstr "Pas de jaquette"
 
@@ -133,7 +137,7 @@ msgstr "Aucun favoris"
 msgid "Pause"
 msgstr "Pause"
 
-#: app.ts.js:310 main/shell/shell.html:60
+#: app.ts.js:314 main/shell/shell.html:60
 msgid "Player"
 msgstr "Lecteur"
 
@@ -145,7 +149,7 @@ msgstr "Voir sur Github"
 msgid "Special thanks to nstCastus"
 msgstr "Merci également à nstCactus"
 
-#: main/screens/home/home.html:11
+#: main/screens/home/home.html:12
 msgid "T-Shirts"
 msgstr "T-Shirts"
 
@@ -153,6 +157,6 @@ msgstr "T-Shirts"
 msgid "This software is free and open source, you can contribute to make it better!"
 msgstr "Cette application est libre et open source, vous pouvez contribuer à l'améliorer!"
 
-#: main/screens/artists/artist/artist.html:24
+#: main/screens/artists/artist/artist.html:27
 msgid "Website"
 msgstr "Site web"
