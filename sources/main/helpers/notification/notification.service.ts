@@ -80,7 +80,7 @@ export class NotificationService {
             let inFuture = setNotificationDate.isAfter(now);
             console.log('inFuture: ' + inFuture + ' || ' + set.start);
 
-            if (!notificationExist && inFuture) {
+            if (set.start && !notificationExist && inFuture) {
               this.logger.log(`Adding notification for artist: ${id}, set: ${set.start}`);
 
               this.$cordovaLocalNotification.schedule({
