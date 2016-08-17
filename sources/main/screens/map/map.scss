@@ -1,13 +1,13 @@
 // Encapsulate component style into its own "namespace "to avoid naming and css collision
 .map-screen {
 
-  .full .scroll {
+  .content-full .scroll {
     height: 100%;
   }
 
   .block-vertical-center {
     width: 100%;
-    top: calc(50% - #{$bar-height / 2})
+    top: 50%;
   }
 
 }

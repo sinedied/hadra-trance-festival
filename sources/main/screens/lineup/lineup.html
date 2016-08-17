@@ -2,7 +2,8 @@
   <ion-nav-title>{{viewTitle}}</ion-nav-title>
   <ion-nav-buttons side="secondary">
     <button class="button button-icon button-clear ion-radio-waves" ng-disabled="!vm.hasStarted"
-            ng-click="vm.showPlaying()"></button>
+            ng-click="vm.showPlaying()" analytics-on="click" analytics-category="button"
+            analytics-event="Show now playing"></button>
   </ion-nav-buttons>
   <div class="bar bar-subheader">
     <div class="button-bar">
@@ -10,8 +11,9 @@
          ng-class="{ active: vm.selectedScene === $index }">{{::floor.name}}</a>
     </div>
   </div>
-  <ion-content class="light-bg has-subheader" overflow-scroll="false" delegate-handle="lineupScroll">
-    <ion-list type="list-joined" ng-repeat="day in festival.lineup[vm.selectedScene].setsByDay">
+  <ion-content class="light-bg has-subheader content-fill-height" overflow-scroll="false" delegate-handle="lineupScroll">
+    <ion-list type="list-joined" ng-if="festival.showLineup === true"
+              ng-repeat="day in festival.lineup[vm.selectedScene].setsByDay">
       <div class="item item-divider" ion-affix data-affix-within-parent-with-class="list">
         {{vm.getWeekday(day.weekday)}}
       </div>
@@ -22,9 +24,15 @@
         <span class="time">{{::vm.formatDate(set.start)}}-{{::vm.formatDate(set.end)}}</span><span>{{::set.artist ? set.artist.name : vm.breakTime}}</span>
         <ion-option-button class="option-button button-positive ion-android-favorite"
                            ng-click="vm.switchFavorite(festival.artistById[set.artistId])"
+                           analytics-on="click" analytics-category="button" analytics-event="Add favorite from lineup"
+                           analytics-value="{{::set.artist ? set.artist.name : vm.breakTime}}"
                            ng-class=" { 'ion-android-favorite-outline': !vm.favorites[set.artistId] }">
         </ion-option-button>
       </ion-item>
     </ion-list>
+    <div ng-if="festival.showLineup === 'soon'" class="block-vertical-center-absolute full-width text-center padding">
+      <i class="ion-calendar icon-huge grey"></i><br/>
+      <h4 class="grey" translate>Coming soon!</h4>
+    </div>
   </ion-content>
 </ion-view>
