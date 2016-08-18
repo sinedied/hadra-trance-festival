@@ -63,7 +63,8 @@ export class NotificationService {
           let favoriteRemoved = !favorites[artistId];
 
           // Check if set still exist
-          let setRemoved = !_.find(festival.artistById[artistId].sets, {id: set.id});
+          let artist = festival.artistById[artistId];
+          let setRemoved = !artist || !_.find(artist.sets, {id: set.id});
 
           if (favoriteRemoved || setRemoved) {
             this.$cordovaLocalNotification.cancel(notification.id);
