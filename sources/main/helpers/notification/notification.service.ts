@@ -17,6 +17,7 @@ export class NotificationService {
   private logger: ILogger;
 
   constructor(private $window: ng.IWindowService,
+              private $q: ng.IQService,
               private $rootScope: ng.IRootScopeService,
               private $cordovaLocalNotification: any,
               private gettextCatalog: angular.gettext.gettextCatalog,
@@ -36,7 +37,11 @@ export class NotificationService {
 
   updateNotifications() {
     if (!window.cordova) {
-      return;
+      // Mock for browser debugging
+      this.$cordovaLocalNotification = {
+        getAll: () => this.$q.when([]),
+        schedule: angular.noop
+      };
     }
 
     this.logger.log('Updating notifications...');
@@ -70,16 +75,21 @@ export class NotificationService {
         let now = this.moment();
 
         _.each(favorites, (value: any, id: string) => {
-          _.each(festival.artistById[id].sets, (set: Set) => {
-            console.log(set);
+          let artist = festival.artistById[id];
 
+          if (!artist) {
+            this.logger.warning('No artist found with id: ' + id);
+            return;
+          }
+
+          _.each(artist.sets, (set: Set) => {
             let notificationExist = _.find(notifications, notification => JSON.parse(notification.data).id === set.id);
-            console.log('exist: ' + notificationExist + ' || ' + set.id);
+            this.logger.log('exist: ' + notificationExist + ' || ' + set.id);
 
             // Use "real" set date to use setup notification based on device local date
             let setNotificationDate = this.moment(set.start).subtract(NOTIFY_BEFORE_MIN, 'minutes');
             let inFuture = setNotificationDate.isAfter(now);
-            console.log('inFuture: ' + inFuture + ' || ' + set.start);
+            this.logger.log('inFuture: ' + inFuture + ' || ' + set.start);
 
             if (set.start && !notificationExist && inFuture) {
               this.logger.log(`Adding notification for artist: ${id}, set: ${set.start}`);
