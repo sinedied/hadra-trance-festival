@@ -1,5 +1,6 @@
-- Use new GA id / soundcloud id outside github
-- Make builds for stores
+- Add missing ios launch images + artist scroll issues on iphone 4s
+x Use new GA id / soundcloud id outside github
+- Make builds for stores (rebuild android!)
 - Check store URLs
 - Add map
 - Test notifications

@@ -27,6 +27,7 @@
         <icon height="144" src="resources/ios/icon/Icon-72@2x.png" width="144" />
         <icon height="76" src="resources/ios/icon/Icon-76.png" width="76" />
         <icon height="152" src="resources/ios/icon/Icon-76@2x.png" width="152" />
+        <icon height="167" src="resources/ios/icon/Icon-83.5@2x.png" width="167" />
         <icon height="29" src="resources/ios/icon/Icon-Small.png" width="29" />
         <icon height="58" src="resources/ios/icon/Icon-Small@2x.png" width="58" />
         <icon height="87" src="resources/ios/icon/Icon-Small@3x.png" width="87" />
@@ -70,6 +71,7 @@
     </feature>
     <preference name="Fullscreen" value="false" />
     <preference name="webviewbounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
     <preference name="Orientation" value="portrait" />
     <preference name="StatusBarStyle" value="lightcontent" />
     <preference name="AutoHideSplashScreen" value="false" />
@@ -83,8 +85,8 @@
     <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect" />
     <preference name="xwalkMode" value="embedded" />
     <preference name="xwalkMultipleApk" value="true" />
-    <engine name="ios" spec="~4.0.1" />
-    <engine name="android" spec="~5.1.1" />
+    <engine name="ios" spec="~4.2.0" />
+    <engine name="android" spec="~5.2.1" />
     <plugin name="ionic-plugin-keyboard" spec="~2.0.1" />
     <plugin name="cordova-plugin-statusbar" spec="~2.0.0" />
     <plugin name="cordova-plugin-device" spec="~1.1.1" />
@@ -99,6 +101,6 @@
     <plugin name="cordova-custom-config" spec="~2.0.3" />
     <icon src="resources/android/icon/drawable-xhdpi-icon.png" />
     <plugin name="cordova-plugin-apprate" spec="~1.2" />
-    <plugin name="cordova-plugin-music-controls" spec="./custom-plugins/cordova-music-controls-plugin" />
+    <plugin name="cordova-plugin-music-controls" spec="./custom-plugins/cordova-plugin-music-controls" />
     <plugin name="com.rd11.remote-controls" spec="./custom-plugins/com.rd11.remote-controls" />
 </widget>
