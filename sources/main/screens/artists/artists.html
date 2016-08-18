@@ -7,7 +7,7 @@
               ng-click="vm.showAll(false)" translate>Favorites</button>
     </div>
   </ion-nav-title>
-  <ion-content class="dark-bg content-fill-height" delegate-handle="artists-scroll">
+  <ion-content class="dark-bg content-fill-height" delegate-handle="artists-scroll" overflow-scroll="true">
     <div class="artist-tile" ng-repeat="artist in filtered = (festival.artists | filter:vm.favoritesFilter()) track by $index"
          ng-click="vm.showArtist(artist.id)">
       <div class="artist-photo" bg-image="artist.photo"></div>
