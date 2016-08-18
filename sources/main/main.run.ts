@@ -118,7 +118,7 @@ function main($window: ng.IWindowService,
     // Cordova platform and plugins init
     $ionicPlatform.ready(() => {
 
-      // Updaye notifications
+      // Update notifications
       notificationService.updateNotifications();
 
       // Hide splash screen
@@ -195,6 +195,8 @@ function main($window: ng.IWindowService,
           _logger.log('Application resumed from background');
           $rootScope.foreground = true;
           $analytics.eventTrack('App resumed', { value: vm.festival.version });
+
+          notificationService.updateNotifications();
 
           if (!vm.offline) {
             festivalService.checkUpdate();
