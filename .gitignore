@@ -18,6 +18,7 @@ assets/
 /www/
 /plugins/
 /platforms/
+/build.json
 
 ## Mac
 .DS_Store
@@ -43,3 +44,4 @@ log/
 
 ## Others
 /data/out/
+/sign/
