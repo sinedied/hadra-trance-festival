@@ -197,6 +197,7 @@ function main($window: ng.IWindowService,
           $analytics.eventTrack('App resumed', { value: vm.festival.version });
 
           notificationService.updateNotifications();
+          $cordovaAppRate.promptForRating(config.environment.debug);
 
           if (!vm.offline) {
             festivalService.checkUpdate();
