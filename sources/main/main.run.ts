@@ -41,6 +41,7 @@ function main($window: ng.IWindowService,
   vm.festival = null;
   vm.offline = false;
   vm.foreground = true;
+  vm.loaded = false;
 
   /**
    * Utility method to set the language in the tools requiring it.
@@ -117,6 +118,8 @@ function main($window: ng.IWindowService,
 
     // Cordova platform and plugins init
     $ionicPlatform.ready(() => {
+
+      vm.loaded = true;
 
       // Update notifications
       notificationService.updateNotifications();
