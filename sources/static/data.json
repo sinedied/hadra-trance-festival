@@ -1,5 +1,5 @@
 {
-  "version": 1.1,
+  "version": 1.2,
   "utcOffset": 2,
   "social": {
     "facebook": "https://www.facebook.com/hadratrancefestival",
@@ -51,7 +51,7 @@
     "images/home/14.jpg"
   ],
   "featuredVideo": "https://www.youtube.com/watch?v=RX_95mmz59Y",
-  "map": "soon",
+  "map": "images/map.jpg",
   "showLineup": true,
   "infos": [
     {
