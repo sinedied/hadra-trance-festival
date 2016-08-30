@@ -2,7 +2,7 @@
   <ion-nav-title>{{viewTitle}}</ion-nav-title>
   <ion-content scroll="false" class="dark-bg content-full">
     <ion-scroll class="full" direction="xy" scrollbar-x="false" scrollbar-y="false" overflow-scroll="false"
-                zooming="true" min-zoom=".25" locking="false" ng-if="festival.map && festival.map !== 'soon'">
+                zooming="true" min-zoom="1" locking="false" ng-if="festival.map && festival.map !== 'soon'">
       <img class="block-vertical-center" ng-src="{{festival.map}}" alt=""/>
     </ion-scroll>
     <div ng-if="festival.map && festival.map === 'soon'"
