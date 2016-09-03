@@ -21,6 +21,35 @@
     margin-right: $content-padding;
   }
 
+  .item-before-versus {
+    border-bottom: none;
+
+    .item-content {
+      padding-bottom: $item-padding / 2;
+    }
+  }
+
+  .item-versus {
+    border-top: none;
+
+    .item-content {
+      padding-top: $item-padding / 2;
+    }
+
+    .time {
+      visibility: hidden;
+    }
+  }
+
+  .versus {
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    min-width: 75px;
+    left: $item-padding;
+    text-align: right;
+  }
+
   .option-button {
     font-size: 24px;
   }
@@ -31,6 +60,8 @@
     float: right;
     font-size: 10px;
     text-align: center;
+    margin-left: $content-padding / 2;
+    margin-right: 0;
   }
 
   .badge .badge-calm {

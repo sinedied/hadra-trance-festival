@@ -18,9 +18,10 @@
         {{vm.getWeekday(day.weekday)}}
       </div>
       <ion-item class="item-set" ng-repeat="set in day.sets" ng-click="vm.showArtist(set)" id="{{set.id}}"
-                ng-class="{ 'positive current': vm.playing[vm.selectedScene] === set }">
+                ng-class="{ 'positive current': vm.playing[vm.selectedScene] === set || (set.versus && vm.playing[vm.selectedScene] === day.sets[$index - 1]),'item-versus': set.versus, 'item-before-versus': vm.hasVersusNext(set, day.sets, $index) }">
         <span ng-if="::set.artist" class="badge badge-calm">{{::set.type}}</span>
         <span ng-if="vm.favorites[set.artistId]" class="badge badge-positive"><i class="ion-android-favorite"></i></span>
+        <span ng-if="::set.versus" class="versus" translate>vs</span>
         <span class="time">{{::vm.formatDate(set.start)}}-{{::vm.formatDate(set.end)}}</span><span>{{::set.artist ? set.artist.name : vm.breakTime}}</span>
         <ion-option-button class="option-button button-positive ion-android-favorite"
                            ng-click="vm.switchFavorite(festival.artistById[set.artistId])"

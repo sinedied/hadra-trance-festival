@@ -69,6 +69,7 @@ export interface IInfoPage {
 export interface IStartInfo {
   hasStarted: boolean;
   start: moment.Moment;
+  diff: number;
 }
 
 export interface IDailySets {
@@ -127,6 +128,7 @@ export class Festival implements IFestival {
 
     _.each(this.lineup, scene => {
       let days = {};
+      let previousSet = null;
 
       _.each(scene.sets, set => {
         set.id = Set.getHashCode(set);
@@ -153,6 +155,10 @@ export class Festival implements IFestival {
           this.start = set.start;
         }
 
+        // Check for set overlapping (= versus set)
+        set.versus = !!previousSet && previousSet.start === set.start && previousSet.end === set.end;
+        previousSet = set;
+
         // Split sets by day
         let weekday = this.getSetDate(set.start).weekday();
         if (!days[weekday]) {
@@ -177,21 +183,24 @@ export class Festival implements IFestival {
     let now = moment();
     return _.map(this.lineup, (scene: Scene) => {
       return _.find(scene.sets, (set: Set) => {
-        let start = this.getSetDate(set.start);
-        let end = this.getSetDate(set.end);
+        let start = moment(set.start);
+        let end = moment(set.end);
         return now.isBetween(start, end, null, '[)');
       });
     });
   }
 
   startInfo(): IStartInfo {
-    let start = this.getSetDate(this.start);
+    let start = moment(this.start);
+    let now = moment();
     return {
-      hasStarted: moment().isAfter(start),
-      start: start
+      hasStarted: now.isAfter(start),
+      start: start,
+      diff: start.diff(now)
     };
   }
 
+  // Use moment UTC mode + manual timezone fix to display date whatever the local timezone is
   getSetDate(date: Date): moment.Moment {
     return moment.utc(date).add(this.utcOffset, 'h');
   }
@@ -238,6 +247,7 @@ export class Set implements ISet {
   id: string;
   artist: Artist;
   scene: Scene;
+  versus: boolean = false;
 
   static getSerializableCopy(set: Set): ISet {
     return <Set>{

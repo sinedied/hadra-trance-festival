@@ -10,25 +10,21 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.7\n"
+"X-Generator: Poedit 1.8.8\n"
 
-#: app.ts.js:1978
-msgid "{{days}}d {{hours}}h {{minutes}}m {{seconds}}s"
-msgstr "{{days}}j {{hours}}h {{minutes}}m {{seconds}}s"
-
-#: app.ts.js:1058
-msgid "{{name}} {{type}} set starts in 10 minutes on {{scene}} floor!"
-msgstr "Le {{type}} set de {{name}} démarre dans 10 min sur la scène {{scene}}!"
+#: app.ts.js:501 app.ts.js:573
+msgid "APP_NAME"
+msgstr "Hadra Trance Festival"
 
 #: app.ts.js:324 main/screens/infos/infos.html:10
 msgid "About"
 msgstr "A propos"
 
-#: app.ts.js:2527
+#: app.ts.js:2533
 msgid "Added to favorites!<br>You will be notified before its set starts."
 msgstr "Ajouté aux favoris!<br>Vous recevrez une notification avant le début de son set."
 
-#: app.ts.js:2090
+#: app.ts.js:1973
 msgid "Added to favorites!<br>You will be notified before this set starts."
 msgstr "Ajouté aux favoris!<br>Vous recevrez une notification avant le début de ce set."
 
@@ -44,10 +40,6 @@ msgstr "Une connexion Internet est nécessaire pour utiliser le lecteur"
 msgid "App version"
 msgstr "Version de l'app"
 
-#: app.ts.js:501 app.ts.js:573
-msgid "APP_NAME"
-msgstr "Hadra Trance Festival"
-
 #: app.ts.js:264
 msgid "Artist"
 msgstr "Artiste"
@@ -56,11 +48,11 @@ msgstr "Artiste"
 msgid "Artists"
 msgstr "Artistes"
 
-#: app.ts.js:2002 app.ts.js:2060
+#: app.ts.js:1885 app.ts.js:1943
 msgid "Break"
 msgstr "Pause"
 
-#: main/screens/lineup/lineup.html:35 main/screens/map/map.html:11
+#: main/screens/lineup/lineup.html:37 main/screens/map/map.html:11
 msgid "Coming soon!"
 msgstr "Bientôt disponible !"
 
@@ -68,7 +60,7 @@ msgstr "Bientôt disponible !"
 msgid "Data version"
 msgstr "Version des données"
 
-#: app.ts.js:2003
+#: app.ts.js:1886
 msgid "Enjoy some silence..."
 msgstr "Profitez du silence..."
 
@@ -80,7 +72,7 @@ msgstr "Favoris"
 msgid "Featured artists"
 msgstr "Artistes présents"
 
-#: app.ts.js:1973
+#: app.ts.js:1856
 msgid "Festival starts in"
 msgstr "Début du festival dans"
 
@@ -121,7 +113,7 @@ msgstr "Plan"
 msgid "Music"
 msgstr "Musique"
 
-#: app.ts.js:2515
+#: app.ts.js:2521
 msgid "No bio"
 msgstr "Pas de bio"
 
@@ -160,3 +152,15 @@ msgstr "Cette application est libre et open source, vous pouvez contribuer à l'
 #: main/screens/artists/artist/artist.html:27
 msgid "Website"
 msgstr "Site web"
+
+#: main/screens/lineup/lineup.html:24
+msgid "vs"
+msgstr "vs"
+
+#: app.ts.js:1861
+msgid "{{days}}d {{hours}}h {{minutes}}m {{seconds}}s"
+msgstr "{{days}}j {{hours}}h {{minutes}}m {{seconds}}s"
+
+#: app.ts.js:1058
+msgid "{{name}} {{type}} set starts in 10 minutes on {{scene}} floor!"
+msgstr "Le {{type}} set de {{name}} démarre dans 10 min sur la scène {{scene}}!"

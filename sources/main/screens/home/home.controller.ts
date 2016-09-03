@@ -9,7 +9,8 @@ export class HomeController {
   animate = false;
   currentScene = 0;
   nowPlaying = {
-    artist: <any>{},
+    artistId: null,
+    name: null,
     scene: null,
     slot: null
   };
@@ -91,15 +92,16 @@ export class HomeController {
       if (!this.timePromise) {
         this.timePromise = this.$interval(() => {
           // Display time to festival first set
-          let diff = moment.duration(startInfo.start.diff(moment()));
+          let diff = moment.duration(startInfo.diff);
           let time = this.gettextCatalog.getString('{{days}}d {{hours}}h {{minutes}}m {{seconds}}s', {
             days: Math.floor(diff.asDays()),
             hours: diff.hours(),
             minutes: diff.minutes(),
             seconds: diff.seconds()
           });
-          this.nowPlaying.artist = { name: time };
+          this.nowPlaying.name = time;
           this.nowPlaying.slot = null;
+          this.nowPlaying.artistId = null;
         }, 500);
       }
       return;
@@ -111,14 +113,26 @@ export class HomeController {
     }
 
     // Update now playing infos
-    this.nowPlaying.scene = this.festival.lineup[this.currentScene].name;
+    let currentLineup = this.festival.lineup[this.currentScene];
+    this.nowPlaying.scene = currentLineup.name;
 
     if (currentSet && currentSet.type !== SetType.BREAK) {
-      this.nowPlaying.artist = currentSet.artist;
+      this.nowPlaying.name = currentSet.artist.name;
+      this.nowPlaying.artistId = currentSet.artist.id;
+
+      // Check for versus sets
+      let setIndex = _.indexOf(currentLineup.sets, currentSet);
+      let nextSet = setIndex !== -1 ? currentLineup.sets[setIndex + 1] : null;
+
+      if (nextSet && nextSet.versus) {
+        this.nowPlaying.name += ' ' + this.gettextCatalog.getString('vs') + ' ' + nextSet.artist.name;
+      }
+
       this.nowPlaying.slot = this.getFormattedSlot(currentSet);
     } else {
       // Break
-      this.nowPlaying.artist = { name: this.gettextCatalog.getString('Break') };
+      this.nowPlaying.name = this.gettextCatalog.getString('Break');
+      this.nowPlaying.artistId = null;
       this.nowPlaying.slot = this.gettextCatalog.getString('Enjoy some silence...');
     }
 
@@ -126,7 +140,8 @@ export class HomeController {
   }
 
   private getFormattedSlot(set: Set): string {
-    return this.moment(set.start).format('HH:mm') + ' - ' + this.moment(set.end).format('HH:mm');
+    return this.festival.getSetDate(set.start).format('HH:mm') + ' - ' +
+      this.festival.getSetDate(set.end).format('HH:mm');
   }
 
 }

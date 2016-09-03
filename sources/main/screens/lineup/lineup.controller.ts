@@ -5,6 +5,8 @@ import {FavoritesService} from 'helpers/favorites/favorites.service';
 import {FestivalService} from 'web-services/festival/festival.service';
 import {Set, SetType} from 'web-services/festival/festival.model';
 
+const ITEM_DIVIDER_HEIGHT = 38;
+
 export class LineupController {
 
   favorites: Map<string, boolean>;
@@ -89,7 +91,13 @@ export class LineupController {
     if (currentSet) {
       this.$location.hash(currentSet.id);
       this.$ionicScrollDelegate.$getByHandle('lineupScroll').anchorScroll(true);
+      this.$ionicScrollDelegate.$getByHandle('lineupScroll').scrollBy(0, -ITEM_DIVIDER_HEIGHT, true);
     }
+  }
+
+  hasVersusNext(set: Set, sets: Set[], index: number): boolean {
+    let next = sets[index + 1];
+    return next && next.versus;
   }
 
   private updatePlaying() {

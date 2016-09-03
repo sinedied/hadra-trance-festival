@@ -53,12 +53,12 @@
     </div>
     <div class="has-playing-spacer"></div>
   </ion-content>
-  <div class="playing" ng-click="vm.showArtist(vm.nowPlaying.artist.id)">
+  <div class="playing" ng-click="vm.showArtist(vm.nowPlaying.artistId)">
     <img class="speaker left" src="images/speaker.png" ng-class="{pound: vm.animate}"/>
     <img class="speaker right" src="images/speaker.png" ng-class="{pound: vm.animate}"/>
     <div class="playing-info text-center block-vertical-center">
       <h5 class="extra-info light">{{vm.nowPlaying.scene}}</h5>
-      <h3 class="light text-overflow no-margin">{{vm.nowPlaying.artist.name}}</h3>
+      <h3 class="light text-overflow no-margin">{{vm.nowPlaying.name}}</h3>
       <h4 class="extra-info light">{{vm.nowPlaying.slot}}</h4>
     </div>
   </div>

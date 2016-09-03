@@ -76,7 +76,8 @@ export class NotificationService {
             let notificationExist = _.find(notifications, notification => JSON.parse(notification.data).id === set.id);
             console.log('exist: ' + notificationExist + ' || ' + set.id);
 
-            let setNotificationDate = festival.getSetDate(set.start).subtract(NOTIFY_BEFORE_MIN, 'minutes');
+            // Use "real" set date to use setup notification based on device local date
+            let setNotificationDate = this.moment(set.start).subtract(NOTIFY_BEFORE_MIN, 'minutes');
             let inFuture = setNotificationDate.isAfter(now);
             console.log('inFuture: ' + inFuture + ' || ' + set.start);
 
