@@ -47,7 +47,7 @@
     <div class="image-gallery">
       <ion-scroll direction="x" delegate-handle="photos-scroll" image-gallery images="festival.featuredPhotos"></ion-scroll>
     </div>
-    <div class="video-player" ng-if="!offline">
+    <div class="video-player" ng-if="!offline && festival.featuredVideo && loaded">
       <ng-youtube-embed url="festival.featuredVideo" autoplay="false" autohide=true" color="white" hl="fr" width="100%" height="190px"
                         ivloadpolicy="false" showinfo="false"></ng-youtube-embed>
     </div>

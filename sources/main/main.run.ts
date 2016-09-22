@@ -18,6 +18,7 @@ function main($window: ng.IWindowService,
               $cordovaKeyboard: any,
               $cordovaStatusbar: any,
               $cordovaAppRate: any,
+              $cordovaDevice: any,
               $ionicPlatform: ionic.platform.IonicPlatformService,
               gettextCatalog: angular.gettext.gettextCatalog,
               moment: moment.MomentStatic,
@@ -41,6 +42,7 @@ function main($window: ng.IWindowService,
   vm.festival = null;
   vm.offline = false;
   vm.foreground = true;
+  vm.loaded = false;
 
   /**
    * Utility method to set the language in the tools requiring it.
@@ -118,6 +120,8 @@ function main($window: ng.IWindowService,
     // Cordova platform and plugins init
     $ionicPlatform.ready(() => {
 
+      vm.loaded = true;
+
       // Update notifications
       notificationService.updateNotifications();
 
@@ -144,7 +148,15 @@ function main($window: ng.IWindowService,
       // Setup analytics
       if (!config.environment.debug && $window['ga']) {
         // Warning, breaks unit tests if included in debug!
-        $window['ga']('create', config.googleAnalyticsId, 'none');
+        $window['ga']('create', config.googleAnalyticsId, {
+          'storage': 'none',
+          'clientId': $cordovaDevice.getUUID()
+        });
+        // Allow file:// protocol for cordova
+        $window['ga']('set', 'checkProtocolTask', (data: any) => {
+          data.set('location', 'https://htf2016.app');
+        });
+        $window['ga']('set', 'appVersion', config.version);
         $analytics.eventTrack('App started', { value: vm.festival.version });
       }
 
@@ -197,6 +209,7 @@ function main($window: ng.IWindowService,
           $analytics.eventTrack('App resumed', { value: vm.festival.version });
 
           notificationService.updateNotifications();
+          $cordovaAppRate.promptForRating(config.environment.debug);
 
           if (!vm.offline) {
             festivalService.checkUpdate();
