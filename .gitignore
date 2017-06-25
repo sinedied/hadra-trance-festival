@@ -18,6 +18,8 @@ assets/
 /www/
 /plugins/
 /platforms/
+/_plugins/
+/_platforms/
 /build.json
 
 ## Mac
@@ -29,6 +31,9 @@ assets/
 .idea/*
 !.idea/runConfigurations/
 !.idea/codeStyleSettings.xml
+
+# VSCode
+/.vscode/
 
 ## Xcode
 xcuserdata/
