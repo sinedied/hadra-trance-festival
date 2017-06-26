@@ -164,3 +164,6 @@ msgstr "{{days}}j {{hours}}h {{minutes}}m {{seconds}}s"
 #: app.ts.js:1058
 msgid "{{name}} {{type}} set starts in 10 minutes on {{scene}} floor!"
 msgstr "Le {{type}} set de {{name}} démarre dans 10 min sur la scène {{scene}}!"
+
+msgid "Buy tickets"
+msgstr "Préventes"

@@ -1,5 +1,10 @@
 <ion-view id="home-screen" class="home-screen">
   <ion-nav-title>{{viewTitle}}</ion-nav-title>
+  <ion-nav-buttons side="secondary">
+    <button class="button button-clear bg-darker" ng-if="festival.buyTickets"
+            analytics-on="click" analytics-event="Tickets shop" analytics-category="button"
+            ng-click="vm.open(festival.buyTickets)" translate>Buy tickets</button>
+  </ion-nav-buttons>
   <ion-content fading-bar="200" fade-to-rgb="0,68,115" state-name="app.home">
     <div class="title-logo"></div>
     <div class="row">

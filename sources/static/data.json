@@ -10,10 +10,11 @@
   },
   "photo": "images/home/place.jpg",
   "description": "<b>Deux années que nous attendions de pouvoir annoncer la 9ème édition du Hadra Trance Festival…<br>Et ce jour est finalement arrivé !</b><br><br>Après 2 longues années de recherches, la perle rare a enfin été trouvée au coeur d'un écrin de verdure et du <b>département de l'Allier, sur le plan d'eau de la commune de Vieure (03)</b>. Cette dernière accueillera ainsi le grand retour d'un Hadra Trance Festival rétréci.<br><br>Dans l'espoir de voir cet événement perdurer et évoluer sur ses nouvelles terres, cette année se tiendra donc une édition intimiste à l'occasion du 15ème anniversaire de l'association Hadra !<br><br>Le festival se tiendra ainsi sur 50h, du vendredi 2 septembre 16h au dimanche 4 à 18h avec une capacité de 6000 personnes.<br><br>Quelle meilleure opportunité de célébrer, pendant 3 jours et 2 nuits, le retour d'Hadra en plein air et 15 ans d'activisme musical au service de la culture psytrance !",
-  "playerSoundcloud": "https://soundcloud.com/hadratrancefestival/sets/hadracadabra-6-compilation",
+  "playerSoundcloud": "https://soundcloud.com/hadratrancefestival/sets/hadra-trance-festival-2016",
   "playerShop": "http://www.hadra.net/shop/new/category.php?id_category=16",
   "buyMusic": "http://www.hadra.net/shop/new/category.php?id_category=16",
   "buyClothes": "http://www.hadra.net/shop/new/category.php?id_category=13",
+  "buyTickets": "http://www.hadra.net/shop/new/product.php?id_product=2288",
   "featuredArtistIds": [
     "75",
     "34",
@@ -50,7 +51,7 @@
     "images/home/13.jpg",
     "images/home/14.jpg"
   ],
-  "featuredVideo": "https://www.youtube.com/watch?v=RX_95mmz59Y",
+  "featuredVideo": null,
   "map": "images/map.jpg",
   "showLineup": true,
   "infos": [
