@@ -20,8 +20,8 @@ gulp clean:build
 gulp build:demo
 
 # Build android app and copy APKs
-gulp build:android
-cp $APK_FOLDER/android-*-debug.apk $DIST_FOLDER
+# gulp build:android
+# cp $APK_FOLDER/android-*-debug.apk $DIST_FOLDER
 
 cd $DIST_FOLDER
 
