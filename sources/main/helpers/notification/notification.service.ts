@@ -4,6 +4,7 @@ import {FestivalService} from 'web-services/festival/festival.service';
 import {Set, Festival} from 'web-services/festival/festival.model';
 import {FavoritesService} from 'helpers/favorites/favorites.service';
 import {ToastService} from 'toast/toast.service';
+import {IApplicationConfig} from 'main.constants';
 
 const NOTIFY_BEFORE_MIN = 10;  // 10 minutes
 const NOTIFICATION_KEY = 'notificationId';
@@ -23,6 +24,7 @@ export class NotificationService {
               private gettextCatalog: angular.gettext.gettextCatalog,
               private moment: moment.MomentStatic,
               logger: LoggerService,
+              private config: IApplicationConfig,
               private toastService: ToastService,
               private festivalService: FestivalService,
               private favoritesService: FavoritesService) {
@@ -99,8 +101,8 @@ export class NotificationService {
                 id: '' + this.getId(),  // ID needs to be a string convertible to an integer
                 smallicon: 'res://drawable/ic_notification_hadra',
                 icon: 'res://drawable/ic_notification_hadra',
-                color: '9C146A',
-                led: '9C146A',
+                color: this.config.notificationColor,
+                led: this.config.notificationColor,
                 text: this.gettextCatalog.getString('{{name}} {{type}} set starts in 10 minutes on {{scene}} floor!', {
                   name: set.artist.name,
                   type: set.type,

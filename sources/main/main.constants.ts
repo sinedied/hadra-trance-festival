@@ -9,6 +9,7 @@ export interface IApplicationConfig {
   soundCloudClientId: string;
   appStoreUrl: string;
   playStoreUrl: string;
+  notificationColor: string;
 }
 
 export interface IApplicationEnvironment {
@@ -65,6 +66,9 @@ let config: IApplicationConfig = {
     // 'en_US',
     'fr_FR'
   ],
+
+  // Notification color
+  notificationColor: '007f8c',
 
   // TODO: update URLs
   appStoreUrl: '1143449911',
