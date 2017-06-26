@@ -150,7 +150,7 @@ function main($window: ng.IWindowService,
         // Warning, breaks unit tests if included in debug!
         $window['ga']('create', config.googleAnalyticsId, {
           'storage': 'none',
-          'clientId': $cordovaDevice.getUUID()
+          // 'clientId': $cordovaDevice.getUUID()
         });
         // Allow file:// protocol for cordova
         $window['ga']('set', 'checkProtocolTask', (data: any) => {
