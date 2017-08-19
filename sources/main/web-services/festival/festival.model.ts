@@ -18,6 +18,7 @@ export interface IFestival {
   playerShop: string;
   buyMusic: string;
   buyClothes: string;
+  buyTickets: string;
   featuredArtistIds: string[];
   featuredPhotos: string[];
   featuredVideo: string;
@@ -102,6 +103,7 @@ export class Festival implements IFestival {
   playerShop: string;
   buyMusic: string;
   buyClothes: string;
+  buyTickets: string;
   featuredArtistIds: string[];
   featuredPhotos: string[];
   featuredVideo: string;
