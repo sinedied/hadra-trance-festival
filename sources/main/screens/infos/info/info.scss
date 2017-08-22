@@ -25,4 +25,10 @@
     padding-top: $content-padding / 2;
   }
 
+  img {
+    max-width: 100%;
+    vertical-align: middle;
+    padding: $content-padding / 2;
+  }
+
 }
