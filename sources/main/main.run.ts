@@ -146,19 +146,19 @@ function main($window: ng.IWindowService,
       }
 
       // Setup analytics
-      if (!config.environment.debug && $window['ga']) {
-        // Warning, breaks unit tests if included in debug!
-        $window['ga']('create', config.googleAnalyticsId, {
-          'storage': 'none',
-          // 'clientId': $cordovaDevice.getUUID()
-        });
-        // Allow file:// protocol for cordova
-        $window['ga']('set', 'checkProtocolTask', (data: any) => {
-          data.set('location', 'https://htf2016.app');
-        });
-        $window['ga']('set', 'appVersion', config.version);
-        $analytics.eventTrack('App started', { value: vm.festival.version });
-      }
+      // if (!config.environment.debug && $window['ga']) {
+      //   // Warning, breaks unit tests if included in debug!
+      //   $window['ga']('create', config.googleAnalyticsId, {
+      //     'storage': 'none',
+      //     // 'clientId': $cordovaDevice.getUUID()
+      //   });
+      //   // Allow file:// protocol for cordova
+      //   $window['ga']('set', 'checkProtocolTask', (data: any) => {
+      //     data.set('location', 'https://htf2016.app');
+      //   });
+      //   $window['ga']('set', 'appVersion', config.version);
+      //   $analytics.eventTrack('App started', { value: vm.festival.version });
+      // }
 
       if ($window.cordova) {
 
