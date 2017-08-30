@@ -31,6 +31,7 @@ import android.support.v4.app.NotificationCompat;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.json.JSONArray;
 
 import java.util.Date;
 
@@ -132,7 +133,7 @@ public class Options {
         if (options.has("iconUri") && !options.optBoolean("updated"))
             return;
 
-        Uri iconUri  = assets.parse(options.optString("icon", "icon"));
+        Uri iconUri  = assets.parse(options.optString("icon", "res://icon"));
         Uri soundUri = assets.parseSound(options.optString("sound", null));
 
         try {
@@ -242,12 +243,48 @@ public class Options {
         String hex = options.optString("led", null);
 
         if (hex == null) {
-            return NotificationCompat.DEFAULT_LIGHTS;
+            return 0;
         }
 
         int aRGB = Integer.parseInt(hex, 16);
 
         return aRGB + 0xFF000000;
+    }
+
+    /**
+     * @return
+     *      The time that the LED should be on (in milliseconds).
+     */
+    public int getLedOnTime() {
+        String timeOn = options.optString("ledOnTime", null);
+
+        if (timeOn == null) {
+            return 1000;
+        }
+
+        try {
+            return Integer.parseInt(timeOn);
+        } catch (NumberFormatException e) {
+           return 1000;
+        }
+    }
+
+    /**
+     * @return
+     *      The time that the LED should be off (in milliseconds).
+     */
+    public int getLedOffTime() {
+        String timeOff = options.optString("ledOffTime", null);
+
+        if (timeOff == null) {
+            return 1000;
+        }
+
+        try {
+            return Integer.parseInt(timeOff);
+        } catch (NumberFormatException e) {
+           return 1000;
+        }
     }
 
     /**
@@ -280,6 +317,21 @@ public class Options {
         }
 
         return uri;
+    }
+
+    public long[] getVibrate() {
+        JSONArray array = options.optJSONArray("vibrate");
+
+        if (array == null)
+            return null;
+
+        long[] rv = new long[array.length()];
+
+        for (int i = 0; i < array.length(); i++) {
+            rv[i] = array.optInt(i);
+        }
+
+        return rv;
     }
 
     /**

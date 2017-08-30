@@ -117,6 +117,8 @@ public class Builder {
     public Notification build() {
         Uri sound     = options.getSoundUri();
         int smallIcon = options.getSmallIcon();
+        int ledColor  = options.getLedColor();
+        long[] vibrate = options.getVibrate();
         NotificationCompat.Builder builder;
 
         builder = new NotificationCompat.Builder(context)
@@ -129,11 +131,19 @@ public class Builder {
                 .setAutoCancel(options.isAutoClear())
                 .setOngoing(options.isOngoing())
                 .setColor(options.getColor())
-                .setLights(options.getLedColor(), 100, 100)
                 .setStyle(new NotificationCompat.BigTextStyle().bigText(options.getText()));
+
+
+        if (ledColor != 0) {
+            builder.setLights(ledColor, options.getLedOnTime(), options.getLedOffTime());
+        }
 
         if (sound != null) {
             builder.setSound(sound);
+        }
+
+        if (vibrate != null) {
+            builder.setVibrate(vibrate);
         }
 
         if (smallIcon == 0) {
