@@ -112,8 +112,8 @@
             "cordova-plugin-statusbar": {},
             "cordova-plugin-whitelist": {},
             "cordova-plugin-wkwebview-engine": {},
-            "de.appplant.cordova.plugin.local-notification": {},
-            "ionic-plugin-keyboard": {}
+            "ionic-plugin-keyboard": {},
+            "de.appplant.cordova.plugin.local-notification": {}
         }
     },
     "dependencies": {
@@ -121,6 +121,7 @@
         "cordova-android": "^6.2.3",
         "cordova-custom-config": "^4.0.2",
         "cordova-ios": "^4.4.0",
+        "cordova-plugin-app-event": "file:node_modules/cordova-plugin-app-event",
         "cordova-plugin-apprate": "^1.3.0",
         "cordova-plugin-crosswalk-webview": "^2.3.0",
         "cordova-plugin-device": "^1.1.6",
@@ -133,7 +134,7 @@
         "cordova-plugin-statusbar": "^2.2.3",
         "cordova-plugin-whitelist": "^1.3.2",
         "cordova-plugin-wkwebview-engine": "git+https://github.com/driftyco/cordova-plugin-wkwebview-engine.git",
-        "de.appplant.cordova.plugin.local-notification": "./custom-plugins/cordova-plugin-local-notification",
+        "de.appplant.cordova.plugin.local-notification": "file:custom-plugins/cordova-plugin-local-notification",
         "ionic-plugin-keyboard": "^2.2.1"
     }
 }
