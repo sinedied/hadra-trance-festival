@@ -1,4 +1,4 @@
-# Hadra Trance Festival 2016
+# Hadra Trance Festival 2017
 
 [![Build status](https://img.shields.io/travis/sinedied/hadra-trance-festival/master.svg)](https://travis-ci.org/sinedied/hadra-trance-festival)
 
