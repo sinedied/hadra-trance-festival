@@ -25,10 +25,8 @@
     <!-- Include Cordova script only when needed -->
     <script>
       (function() {
-        if (!/^http/.test(location.protocol)) {
-          var c = document.createElement('script');
-          c.setAttribute('src', 'cordova.js');
-          document.body.appendChild(c);
+        if (!/^http/.test(location.protocol)|/^localhost:8080/.test(location.host)) {
+          document.write('<script src="cordova.js"><\/script>');
         }
       })();
     </script>

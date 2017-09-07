@@ -10,6 +10,7 @@ export interface IApplicationConfig {
   appStoreUrl: string;
   playStoreUrl: string;
   notificationColor: string;
+  androidStatusBarColor: string;
 }
 
 export interface IApplicationEnvironment {
@@ -24,7 +25,7 @@ export interface IApplicationEnvironment {
 let environment = {
   local: {
     debug: true,
-    updateUrl: 'https://dl.dropboxusercontent.com/u/1119242/updates/htf2016/update.json?dl=1',
+    updateUrl: 'https://dl.dropboxusercontent.com/s/tvo4qx664kc2fep/update.json?dl=1',
     server: {
       url: '',
       route: 'api'
@@ -32,7 +33,7 @@ let environment = {
   },
   dev: {
     debug: true,
-    updateUrl: 'https://dl.dropboxusercontent.com/u/1119242/updates/htf2016/update.json?dl=1',
+    updateUrl: 'https://dl.dropboxusercontent.com/s/tvo4qx664kc2fep/update.json?dl=1',
     server: {
       url: '',
       route: 'api'
@@ -40,7 +41,7 @@ let environment = {
   },
   prod: {
     debug: false,
-    updateUrl: 'https://dl.dropboxusercontent.com/u/1119242/updates/htf2016/update.json?dl=1',
+    updateUrl: 'https://dl.dropboxusercontent.com/s/tvo4qx664kc2fep/update.json?dl=1',
     server: {
       url: '',
       route: 'api'
@@ -70,9 +71,11 @@ let config: IApplicationConfig = {
   // Notification color
   notificationColor: '007f8c',
 
-  // TODO: update URLs
-  appStoreUrl: '1143449911',
-  playStoreUrl: 'market://details?id=org.nxcode.htf2016',
+  // $royal -10% luminance
+  androidStatusBarColor: '#003459',
+
+  appStoreUrl: '1273532150',
+  playStoreUrl: 'market://details?id=org.nxcode.htf',
 
   googleAnalyticsId: 'UA-81709759-1',                     // for dev only, to be replaced
   soundCloudClientId: 'c893b01b1f81d8cecc69fa8594f68d41'  // for dev only, to be replaced

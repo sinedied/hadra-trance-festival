@@ -182,7 +182,7 @@ function main($window: ng.IWindowService,
 
         // Set status bar color on Android ($royal -10% luminance)
         if (ionic.Platform.isAndroid()) {
-          $cordovaStatusbar.styleHex('#360222');
+          $cordovaStatusbar.styleHex(config.androidStatusBarColor);
         }
 
         // Update initial connection status
