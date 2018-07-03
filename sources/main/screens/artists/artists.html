@@ -10,7 +10,7 @@
   <ion-content class="dark-bg content-fill-height" delegate-handle="artists-scroll" overflow-scroll="true">
     <div class="artist-tile" ng-repeat="artist in filtered = (festival.artists | filter:vm.favoritesFilter()) track by $index"
          ng-click="vm.showArtist(artist.id)">
-      <div class="artist-photo" bg-image="artist.photo"></div>
+      <div class="artist-photo" bg-image="artist.photo || 'images/no-photo.jpg'"></div>
       <h3 class="name">{{artist.name}}</h3>
       <div class="type">{{artist.type}}</div>
     </div>

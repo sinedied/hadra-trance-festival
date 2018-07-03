@@ -167,3 +167,6 @@ msgstr "Le {{type}} set de {{name}} démarre dans 10 min sur la scène {{scene}}
 
 msgid "Buy tickets"
 msgstr "Préventes"
+
+msgid "Photos"
+msgstr "Photos"
