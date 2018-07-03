@@ -69,10 +69,10 @@ let config: IApplicationConfig = {
   ],
 
   // Notification color
-  notificationColor: '007f8c',
+  notificationColor: '009EED',
 
   // $royal -10% luminance
-  androidStatusBarColor: '#003459',
+  androidStatusBarColor: '#3A387F',
 
   appStoreUrl: '1273532150',
   playStoreUrl: 'market://details?id=org.nxcode.htf',
