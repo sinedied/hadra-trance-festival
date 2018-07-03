@@ -1,4 +1,4 @@
-# Hadra Trance Festival 2017
+# Hadra Trance Festival 2018
 
 [![Build status](https://img.shields.io/travis/sinedied/hadra-trance-festival/master.svg)](https://travis-ci.org/sinedied/hadra-trance-festival)
 
@@ -115,7 +115,7 @@ about multiple build environments management.
 
 ```
 Hadra Trance Festival - The Official Mobile Application
-Copyright (C) 2016 Yohan Lasorsa (Hadra)
+Copyright (C) 2016-2018 Yohan Lasorsa (Hadra)
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
