@@ -63,9 +63,14 @@
     min-height: $favorite-filter-height;
     line-height: $favorite-filter-height;
 
-    &.button-outline.active {
-      background: $light;
-      color: $royal;
+    &.button-outline {
+      color: $white;
+      border-color: $white;
+
+      &.active {
+        background: $light;
+        color: $royal;
+      }
     }
   }
 }

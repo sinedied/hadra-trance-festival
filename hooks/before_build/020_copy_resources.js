@@ -1,20 +1,23 @@
 #!/usr/bin/env node
 
-// Copy native resources
-// var fs = require('fs');
-// var path = require('path');
-var rootdir = process.argv[2];
-var exec = require('child_process').exec;
+const execSync = require('child_process').execSync;
+const fs = require('fs');
+const path = require('path');
 
-// Native resources to copy
-var androidNativePath = 'native/android/';
+const rootdir = process.argv[2];
+const isWin = /^win/.test(process.platform);
+const inputPath = process.env.ANDROID_NATIVE_RESOURCES_PATH || path.normalize('native/android');
+let androidResourcesPath = path.normalize('platforms/android/app/src/main/res');
 
-// Android platform resource path
-var androidResPath = 'platforms/android/res/';
+if (!fs.existsSync(androidResourcesPath)) {
+  // For cordova-android < 7 compatibility
+  androidResourcesPath = path.normalize('platforms/android/res');
+}
 
 function copyAndroidResources() {
-  exec('cp -Rf ' + androidNativePath + '* ' + androidResPath);
-  process.stdout.write('Copied android native resources');
+  const command = `${isWin ? 'xcopy /S /Y /I' : 'cp -Rfv'} "${inputPath + path.sep}." "${androidResourcesPath}"`;
+  process.stdout.write(`Copying Android native resources with command: ${command}\n`);
+  execSync(command, {stdio: 'inherit'});
 }
 
 if (rootdir) {
