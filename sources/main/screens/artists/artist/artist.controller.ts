@@ -48,8 +48,12 @@ export class ArtistController {
     }
   }
 
-  formatDate(date: Date) {
+  formatDate(date: Date): string {
     return date ? this.festivalService.festival.getSetDate(date).format('HH:mm') : '';
+  }
+
+  getDay(date: Date): string {
+    return date ? this.festivalService.festival.getSetDate(date).format('ddd') : '';
   }
 
   open(url: string) {
