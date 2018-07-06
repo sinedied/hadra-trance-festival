@@ -7,6 +7,8 @@
 
   .top-spacer {
     height: 14px;
+    height: calc(constant(safe-area-inset-top) - 6px);
+    height: calc(env(safe-area-inset-top) - 6px);
   }
 
   .hadra-logo {
