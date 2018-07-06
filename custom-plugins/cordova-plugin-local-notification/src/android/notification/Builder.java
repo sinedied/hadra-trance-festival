@@ -28,6 +28,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.os.Build;
 
 import org.json.JSONObject;
 
@@ -38,6 +41,9 @@ import java.util.Random;
  * notification specified by JSON object passed from JS side.
  */
 public class Builder {
+
+    // notification channel ID
+    public static String CHANNEL_ID = "cordova-local-notification-id";
 
     // Application context passed by constructor
     private final Context context;
@@ -65,6 +71,15 @@ public class Builder {
     public Builder(Context context, JSONObject options) {
         this.context = context;
         this.options = new Options(context).parse(options);
+
+        if (Build.VERSION.SDK_INT >= 26) {
+          // The user-visible name of the channel.
+        	CharSequence name = "cordova-local-notification-plugin";
+        	NotificationChannel channel = new NotificationChannel(Builder.CHANNEL_ID, name, NotificationManager.IMPORTANCE_DEFAULT);
+
+        	NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+        	notificationManager.createNotificationChannel(channel);
+        }
     }
 
     /**
@@ -151,6 +166,11 @@ public class Builder {
         } else {
             builder.setSmallIcon(options.getSmallIcon());
             builder.setLargeIcon(options.getIconBitmap());
+        }
+
+        // use channelid for Oreo and higher
+        if (Build.VERSION.SDK_INT >= 26) {
+          builder.setChannelId(Builder.CHANNEL_ID);
         }
 
         applyDeleteReceiver(builder);
