@@ -85,6 +85,12 @@
   .speaker {
     height: ($playing-height - 2*$content-padding);
     margin: $content-padding;
+    position: absolute;
+    top: 0;
+
+    &.right {
+      right: 0;
+    }
   }
 
   .playing-info {

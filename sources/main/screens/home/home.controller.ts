@@ -18,6 +18,7 @@ export class HomeController {
   private festival: Festival;
   private logger: ILogger;
   private timePromise = null;
+  private poundPromise = null;
 
   constructor(private $cordovaInAppBrowser: any,
               private $state: angular.ui.IStateService,
@@ -36,22 +37,14 @@ export class HomeController {
     scrollService.fixXScrollWithHandle('photos-scroll');
 
     // Trigger pound animation
-    let poundPromise = null;
-
     $scope.$on('$ionicView.beforeEnter', () => {
       this.festival = festivalService.festival;
       this.updateNowPlayingInfos();
-
-      poundPromise = $interval(() => {
-        this.animate = !this.animate;
-        if (this.animate) {
-          this.updateNowPlayingInfos();
-        }
-      }, 2500);
+      this.resetAnimation();
     });
 
     $scope.$on('$ionicView.afterLeave', () => {
-      $interval.cancel(poundPromise);
+      $interval.cancel(this.poundPromise);
 
       if (this.timePromise) {
         this.$interval.cancel(this.timePromise);
@@ -60,7 +53,7 @@ export class HomeController {
     });
 
     $scope.$on('destroy', () => {
-      $interval.cancel(poundPromise);
+      $interval.cancel(this.poundPromise);
 
       if (this.timePromise) {
         this.$interval.cancel(this.timePromise);
@@ -77,6 +70,24 @@ export class HomeController {
 
   open(url: string) {
     this.$cordovaInAppBrowser.open(url, '_system');
+  }
+
+  nextScene(event: any) {
+    event.preventDefault();
+    this.updateNowPlayingInfos();
+    this.resetAnimation();
+  }
+
+  private resetAnimation() {
+    if (this.poundPromise) {
+      this.$interval.cancel(this.poundPromise);
+    }
+    this.poundPromise = this.$interval(() => {
+      this.animate = !this.animate;
+      if (this.animate) {
+        this.updateNowPlayingInfos();
+      }
+    }, 2500);
   }
 
   private updateNowPlayingInfos() {
