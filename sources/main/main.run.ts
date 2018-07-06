@@ -166,7 +166,8 @@ function main($window: ng.IWindowService,
         angular.extend($window['AppRate'].preferences, {
           useLanguage: $locale.id.split('_')[0],
           displayAppName: gettextCatalog.getString('APP_NAME'),
-          openStoreInApp: true,
+          inAppReview: true,
+          simpleMode: true,
           usesUntilPrompt: 3,
           promptAgainForEachNewVersion: true,
           storeAppURL: {
