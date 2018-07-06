@@ -42,7 +42,7 @@
             <param name="ios-package" value="CDVWKWebViewEngine" />
         </feature>
         <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
-        <splash src="resources/ios/splash/Default@2x~universal~anyany.png" />
+        <splash src="resources/ios/splash/Default@2x~universal~anyany.jpg" />
     </platform>
     <platform name="android">
         <preference name="android-minSdkVersion" value="19" />
@@ -91,6 +91,6 @@
     <plugin name="cordova-custom-config" spec="^5.0.2" />
     <plugin name="de.appplant.cordova.plugin.local-notification" spec="./custom-plugins/cordova-plugin-local-notification" />
     <plugin name="cordova-plugin-ionic-webview" spec="1.1.16" />
-    <plugin name="cordova-plugin-music-controls" spec="^2.1.4" />
     <plugin name="cordova-plugin-apprate" spec="^1.4.0" />
+    <plugin name="cordova-plugin-music-controls" spec="^2.1.4" />
 </widget>
