@@ -56,13 +56,16 @@ export class PlayerService {
   }
 
   eventHandler(action: any) {
+    action = JSON.parse(action);
+    action = action.message ? action.message : action;
     this.logger.log('New player control event: ' + action);
 
     if (!this.context) {
+      this.logger.log('No context!');
       return;
     }
 
-    switch (action.message) {
+    switch (action) {
       case 'music-controls-next':
         this.context.next();
         break;
