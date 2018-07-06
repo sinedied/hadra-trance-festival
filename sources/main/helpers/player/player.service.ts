@@ -5,7 +5,6 @@ export class PlayerService {
 
   private context: any = null;
   private logger: ILogger;
-  private handlerInit: boolean = false;
   private dismissed: boolean = false;
 
   constructor($rootScope: ng.IRootScopeService,
@@ -15,7 +14,6 @@ export class PlayerService {
     this.logger = logger.getLogger('playerService');
 
     let musicControls = $window['MusicControls'];
-    let remoteControls = $window['remoteControls'];
 
     $rootScope.$watch(() => !this.context ? null : [
       this.context.track.src,
@@ -25,7 +23,7 @@ export class PlayerService {
         let track = this.context.track;
         let cover = track.artwork_url ? track.artwork_url.replace('large.jpg', 't500x500.jpg') : null;
 
-        if (ionic.Platform.isAndroid() && musicControls) {
+        if (musicControls) {
           if (this.dismissed) {
             this.dismissed = false;
             return;
@@ -37,26 +35,10 @@ export class PlayerService {
             cover: cover,
             isPlaying: !!this.context.player.playing,
             dismissable: true,
+            notificationIcon: 'ic_notification_hadra'
           });
           musicControls.subscribe(this.eventHandler.bind(this));
           musicControls.listen();
-        }
-
-        if (ionic.Platform.isIOS() && remoteControls) {
-          remoteControls.updateMetas(() => {}, () => {}, [
-            track.user.username,
-            track.title,
-            '', // album
-            cover || '',
-            0, // duration
-            0, // elapsed
-            !!this.context.player.playing
-          ]);
-
-          if (!this.handlerInit) {
-            this.handlerInit = true;
-            $window.document.addEventListener('remote-event', this.iosEventHandler.bind(this));
-          }
         }
 
         this.logger.log('Updated player infos');
@@ -73,40 +55,14 @@ export class PlayerService {
     return this.context;
   }
 
-  iosEventHandler(event: any) {
-    if (!this.context) {
-      return;
-    }
-
-    let action = event.remoteEvent.subtype;
-    this.logger.log('New player control event: ' + action);
-
-    switch (action) {
-      case 'play':
-        this.context.play();
-        break;
-      case 'pause':
-        this.context.pause();
-        break;
-      case 'nextTrack':
-        this.context.next();
-        break;
-      case 'prevTrack':
-        this.context.previous();
-        break;
-      default:
-        break;
-    }
-  }
-
-  eventHandler(action: string) {
+  eventHandler(action: any) {
     this.logger.log('New player control event: ' + action);
 
     if (!this.context) {
       return;
     }
 
-    switch (action) {
+    switch (action.message) {
       case 'music-controls-next':
         this.context.next();
         break;
@@ -126,6 +82,14 @@ export class PlayerService {
       // Headset events (Android only)
       case 'music-controls-headset-unplugged':
         this.context.pause();
+        break;
+      // (iOS only)
+      case 'music-controls-toggle-play-pause':
+        if (!!this.context.player.playing) {
+          this.context.pause();
+        } else {
+          this.context.play();
+        }
         break;
       default:
         break;
