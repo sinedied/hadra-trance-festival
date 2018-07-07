@@ -25,7 +25,7 @@ export interface IApplicationEnvironment {
 let environment = {
   local: {
     debug: true,
-    updateUrl: 'https://dl.dropboxusercontent.com/s/tvo4qx664kc2fep/update.json?dl=1',
+    updateUrl: 'https://dl.dropboxusercontent.com/s/ei9nyt9p88wdlev/update.json?dl=1',
     server: {
       url: '',
       route: 'api'
@@ -33,7 +33,7 @@ let environment = {
   },
   dev: {
     debug: true,
-    updateUrl: 'https://dl.dropboxusercontent.com/s/tvo4qx664kc2fep/update.json?dl=1',
+    updateUrl: 'https://dl.dropboxusercontent.com/s/ei9nyt9p88wdlev/update.json?dl=1',
     server: {
       url: '',
       route: 'api'
@@ -41,7 +41,7 @@ let environment = {
   },
   prod: {
     debug: false,
-    updateUrl: 'https://dl.dropboxusercontent.com/s/tvo4qx664kc2fep/update.json?dl=1',
+    updateUrl: 'https://dl.dropboxusercontent.com/s/ei9nyt9p88wdlev/update.json?dl=1',
     server: {
       url: '',
       route: 'api'
