@@ -11,7 +11,6 @@
     "android": "gulp run:android",
     "test": "gulp test && gulp build",
     "deploy": "./scripts/deploy-demo.sh",
-    "update-data": "./scripts/update-data.sh",
     "prepare": "gulp cordova:prepare && gulp cordova:prepare --fast --nofetch"
   },
   "devDependencies": {
