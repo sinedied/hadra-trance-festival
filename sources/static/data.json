@@ -1,15 +1,15 @@
 {
-  "version": 2018,
+  "version": 2018.0,
   "utcOffset": 2,
   "social": {
     "facebook": "https://www.facebook.com/hadratrancefestival",
     "website": "http://www.hadra.net",
-    "twitter": "https://twitter.com/HadraRecords",
+    "instagram": "https://www.instagram.com/explore/locations/379576964/hadra-trance-festival/",
     "soundcloud": "https://soundcloud.com/hadrarecords",
     "youtube": "https://www.youtube.com/user/hadrarecords"
   },
   "photo": "images/home/place.jpg",
-  "description": "<b>6 Septembre 2018, départ imminent pour une nouvelle expédition au coeur de l’univers du Hadra Trance Festival...</b><br><br>Cette année, Hadra vous embarque dans son vaisseau pour une exploration sur le thème de la science-fiction... Où vous emmènerons-nous cette fois ci ? Dans une jungle épaisse de fleurs bio-mécaniques ? Dans une dimension encore non explorée ? Dans un univers parallèle aux confins de notre galaxie ? Préparez-vous en tout cas à oublier ce que vous connaissez de notre monde ! Un seul point de repère : notre cher coin de fête et de tranquillité entre lac et plaines, au coeur du plan d’eau de Vieure.<br><br>Nous vous invitons pour 4 jours de voyage bercés par plus de 150 artistes, trois ambiances exaltantes entre mainstage, alternative et chill stage, des conférences, de nombreuses performances et activités… 4 jours pour partager ensemble une expérience de vie différente.<br><br>Toute l’association vous souhaite la bienvenue à bord pour cette 11ème édition : accrochez vos ceintures, et que le voyage soit à la hauteur des précédents !",
+  "description": "<b>6 Septembre 2018, départ imminent pour une nouvelle expédition au coeur de l’univers du Hadra Trance Festival...</b><br><br>Cette année, Hadra vous embarque dans son vaisseau pour une exploration au cœur de la science-fiction. Jungle épaisse de fleurs bio-mécaniques, univers parallèle encore non-exploré aux confins de notre galaxie ou vaisseau en excursion dans le vide spatial seront nos aires de jeu. Préparez-vous à oublier ce que vous connaissez de notre monde terrien et rejoignez notre cher coin de voyages et d'expériences.<br><br>Nous vous invitons pour 4 jours de voyage autour d'une programmation de près de 150 artistes musiciens, scénographes et performers et des ambiances à la fois exaltantes et délurées, calmes et reposantes, de découvertes et d'expériences sur 3 scènes, un espace conférences, ateliers et performances, un cinéma et bien d'autres activités.<br><br>Nous vous souhaitons la bienvenue à bord de cette 11ème édition : accrochez vos ceintures et profitez du paysage !",
   "playerSoundcloud": "https://soundcloud.com/hadratrancefestival/sets/mainstage-hadra-trance",
   "playerShop": "http://www.hadra.net/shop/new/category.php?id_category=16",
   "buyMusic": "http://www.hadra.net/shop/new/category.php?id_category=16",
@@ -35,17 +35,16 @@
     "images/home/5.jpg",
     "images/home/6.jpg",
     "images/home/7.jpg",
-    "images/home/8.jpg",
-    "images/home/9.jpg",
-    "images/home/10.jpg"
+    "images/home/8.jpg"
   ],
   "featuredVideo": null,
-  "map": null,
+  "map": "images/map.jpg",
+  "detailedMap": "images/detailed-map.jpg",
   "showLineup": true,
   "infos": [
     {
       "title": "Comment venir",
-      "content": "Le festival se déroulera à Vieure, dans le département de l’Allier, au Nord de l’Auvergne.\nLe site du festival se trouve au bord du **Plan d’eau de Vieure**.\n\n### Par la route\n\n<iframe ng-if=\"!offline\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d351543.88641214976!2d2.5947436516267013!3d46.49946713979648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f095bc5f3b0617%3A0xfe9754c6cb777592!2s03430+Vieure!5e0!3m2!1sfr!2sfr!4v1466720428320\"\n        width=\"100%\" height=\"300\" frameborder=\"0\" style=\"border:0\">\n</iframe>\n\n#### De Paris, Lille, Bourges, Nantes:\n- Suivre direction Bourges\n- Sur l’A71, prendre la sortie 10 en direction de Montluçon/Guéret/Cosne d'Allier/Commentry\n- Continuer sur A714\n- Prendre la sortie en direction de D94\n- Rouler en direction de D94 à Vieure\n- Suivre le fléchage\n\n#### De Genève (CH), Turin (It), Chambéry, Clermont­-Ferrand, Marseille, Bordeaux, Toulouse:\n- Suivre direction Clermont Ferrand, une fois Clermont­-Ferrand passé, suivre Bourges et prendre l’A71\n- Sur l’A71, prendre la sortie 10 en direction de Montluçon/Guéret/Cosne d'Allier/Commentry\n- Sortie 3 depuis le périphérique de Grenoble pour Sassenage (D1532)\n- Aller à Lans­en­Vercors (D531)\n- Suivre le fléchage\n\n#### Distance et durée estimée du trajet depuis les principales grandes villes:\n\n*   **Grenoble** ­ Vieure : 357 km, 03h36 estimée.\n*   **Lyon** ­ Vieure : 250 km, 2h39 estimée.\n*   **Genève** ­ Vieure : 394 km, 4h06 estimées.\n*   **St Etienne** ­ Vieure : 230 km, 2h20 estimées.\n*   **Clermont­Ferrand** ­ Vieure : 102 km, 1h10 estimées.\n*   **Toulouse** ­ Vieure : 454 km, 4h21 estimées.\n*   **Bordeaux** ­ Vieure : 452 km, 4h17 estimées.\n*   **Paris** ­ Vieure : 345 km, 3h36 estimées.\n*   **Rennes** ­ Vieure : 498 km, 4h39 estimées.\n*   **Strasbourg** ­ Vieure : 556 km, 5h35 estimées.\n*   **Milan** ­ Vieure : 641 km, 6h45 estimées.\n*   **Turin** ­ Vieure : 557 km, 5h46 estimées.\n*   **Bruxelles** ­ Vieure : 615 km, 6h09 estimées.\n*   **Barcelone** ­ Vieure : 716 km, 7h02 estimées.\n\n### En bus\n\n**PACK BUS + PASS AVEC NOTRE PARTENAIRE OFFICIEL ONTOURS**\n\n*Voyage convivial entre passionnés et en toute sécurité directement jusqu’au festival.*\n\nDéparts de Grenoble/Lyon et Paris/Orléans\n\nA partir de 69 € (Pass 4 jours non-inclus ) / 174 € (Pass 4 jours inclus)\n\n[![ontours](images/infos/ontours.jpg)](https://www.ontours.fr/hadra-trance-festival-p4140.html?referer=hadra)\n\n### Co-voiturage\n\n**L'impact environnemental le plus important lors de notre événement concerne celui des transports, qui représente la majeure part d'émissions de gaz à effet de serre produites.**\n\nSoucieux de ces enjeux, nous essayons de développer au maximum l'utilisation de transports en commun et de covoiturage afin de minimiser et diminuer ces émissions. \n\n### En train\n\n#### Gares les plus proches\n\n* **Vallon-en-Sully (03)**: 25km\n* **Montluçon (03)**: 32 km\n* **Moulins (03)**: 40km\n\n<button class=\"button button-calm button-outline button-small\" ng-click=\"vm.open('http://www.voyages-sncf.com/')\">SNCF</button>\n\n**Attention, il n'y a pas de transport public entre ces villes et le site du festival !**\n\nLe stop reste une option. Mais cela peut prendre beaucoup de temps sur les petites routes de l'Allier et ne peut pas être considéré comme 100% sûre. \nPour tous ceux qui souhaitent venir en train au festival, nous mettons en place des bus-navette en partance le jeudi après-midi depuis la gare Moulins (40 km) et des retours le dimanche après-midi ainsi que le lundi matin pour les retardataires.\n"
+      "content": "Le festival se déroulera à Vieure, dans le département de l’Allier, au Nord de l’Auvergne.\nLe site du festival se trouve au bord du **Plan d’eau de Vieure**.\n\n### Par la route\n\n<iframe ng-if=\"!offline\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d351543.88641214976!2d2.5947436516267013!3d46.49946713979648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f095bc5f3b0617%3A0xfe9754c6cb777592!2s03430+Vieure!5e0!3m2!1sfr!2sfr!4v1466720428320\"\n        width=\"100%\" height=\"300\" frameborder=\"0\" style=\"border:0\">\n</iframe>\n\n#### De Paris, Lille, Bourges, Nantes:\n- Suivre direction Bourges\n- Sur l’A71, prendre la sortie 10 en direction de Montluçon/Guéret/Cosne d'Allier/Commentry\n- Continuer sur A714\n- Prendre la sortie en direction de D94\n- Rouler en direction de D94 à Vieure\n- Suivre le fléchage\n\n#### De Genève (CH), Turin (It), Chambéry, Clermont­Ferrand, Marseille, Bordeaux, Toulouse:\n- Suivre direction Clermont Ferrand, une fois Clermont­Ferrand passé, suivre Bourges et prendre l’A71\n- Sur l’A71, prendre la sortie 10 en direction de Montluçon/Guéret/Cosne d'Allier/Commentry\n- Suivre le fléchage\n\n#### Distance et durée estimée du trajet depuis les principales grandes villes:\n\n*   **Grenoble** ­ Vieure : 357 km, 03h36 estimée.\n*   **Lyon** ­ Vieure : 250 km, 2h39 estimée.\n*   **Genève** ­ Vieure : 394 km, 4h06 estimées.\n*   **St Etienne** ­ Vieure : 230 km, 2h20 estimées.\n*   **Clermont­Ferrand** ­ Vieure : 102 km, 1h10 estimées.\n*   **Toulouse** ­ Vieure : 454 km, 4h21 estimées.\n*   **Bordeaux** ­ Vieure : 452 km, 4h17 estimées.\n*   **Paris** ­ Vieure : 345 km, 3h36 estimées.\n*   **Rennes** ­ Vieure : 498 km, 4h39 estimées.\n*   **Strasbourg** ­ Vieure : 556 km, 5h35 estimées.\n*   **Milan** ­ Vieure : 641 km, 6h45 estimées.\n*   **Turin** ­ Vieure : 557 km, 5h46 estimées.\n*   **Bruxelles** ­ Vieure : 615 km, 6h09 estimées.\n*   **Barcelone** ­ Vieure : 716 km, 7h02 estimées.\n\n### En bus\n\n**PACK BUS + PASS AVEC NOTRE PARTENAIRE OFFICIEL ONTOURS**\n\n*Voyage convivial entre passionnés et en toute sécurité directement jusqu’au festival.*\n\nDéparts de Grenoble/Lyon et Paris/Orléans\n\nA partir de 69 € (Pass 4 jours non-inclus ) / 174 € (Pass 4 jours inclus)\n\n[![ontours](images/infos/ontours.jpg)](https://www.ontours.fr/hadra-trance-festival-p4140.html?referer=hadra)\n\n### Co-voiturage\n\n**L'impact environnemental le plus important lors de notre événement concerne celui des transports, qui représente la majeure part d'émissions de gaz à effet de serre produites.**\n\nSoucieux de ces enjeux, nous essayons de développer au maximum l'utilisation de transports en commun et de covoiturage afin de minimiser et diminuer ces émissions. \n\n### En train\n\n#### Gares les plus proches\n\n* **Vallon-en-Sully (03)**: 25km\n* **Montluçon (03)**: 32 km\n* **Moulins (03)**: 40km\n\n<button class=\"button button-calm button-outline button-small\" ng-click=\"vm.open('http://www.voyages-sncf.com/')\">SNCF</button>\n\n##### AllonsBonTrain\n\nTon billet de train au prix du covoiturage, et en réduisant plus encore ton empreinte carbone, c'est possible avec AllonsBonTrain !\nCette année, pour te rendre au Hadra Trance Festival, retrouve d'autres festivaliers et accédez ensemble aux tarifs de groupe : jusqu’à 60% moins cher que des billets de train individuels.\n\nViens vite réserver ta place [ici](http://Allonsbontrain.fr/event/hadra2018)!\n\n**Attention, il n'y a pas de transport public entre ces villes et le site du festival !**\n\nLe stop reste une option. Mais cela peut prendre beaucoup de temps sur les petites routes de l'Allier et ne peut pas être considéré comme 100% sûre. \nPour tous ceux qui souhaitent venir en train au festival, nous mettons en place des bus-navette en partance le jeudi après-midi depuis la gare Moulins (40 km) et des retours le dimanche après-midi ainsi que le lundi matin pour les retardataires.\n\n**ALLER**\n(Départ Moulins / gare SNCF) \n\nJeudi 6 sept. 2018 / 13h30 \n\nJeudi 6 sept. 2018 / 15h45 \n\nJeudi 6 sept. 2018 / 18h45 \n\nJeudi 6 sept. 2018 / 21h45\n\nVendredi 7 sept. 2018 / 13h30 \n\nVendredi 7 sept. 2018 / 15h45 \n\nVendredi 7 sept. 2018 / 19h45 \n\nVendredi 7 sept. 2018 / 21h45\n\nSamedi 8 sept. 2018 / 18h45\n\n[Aller 8€](http://www.hadra.net/tickets2018/fr/12-preventes)\n\n**RETOUR**\n(Départ billetterie festival / parking)\n\nDimanche 9 sept. 2018 : 12h00\n\nDimanche 9 sept. 2018 : 14h \n\nDimanche 9 sept. 2018 : 15h30\n\nDimanche 9 sept. 2018 : 17h30\n\nLundi 10 sept. 2018 : 9h\n\nLundi 10 sept. 2018 : 13h\n\n[Retour 8€](http://www.hadra.net/tickets2018/fr/12-preventes?page=2)\n"
     },
     {
       "title": "Camping & parking",
@@ -53,7 +52,11 @@
     },
     {
       "title": "F.A.Q.",
-      "content": "### 10 conseils pour profiter du Hadra Trance Festival !\n1. Venir en forme\n2. Ne pas oublier sa boîte à outils (Lampes, sac de couchage...)\n3. Etre curieux de l’univers qui nous entoure\n4. Faire une liste des artistes à ne pas manquer\n5. Penser à prendre de l’argent liquide (tous les stands ne sont pas équipés de machine à CB)\n6. Prendre soin de l’environnement\n7. Baignade interdite (à cause de la présence de bactéries dangeureuses poour la santé)\n8. Penser à bien s’hydrater et s’alimenter, c’est important !\n9. Prendre le temps de se reposer et d’aller faire un tour au village Hadra\n10. Prendre soin de soi et des autres\n\n### Peut-on sortir et entrer du site du festival durant celui-ci ?\nOui, à pied ou en utilisant les bus-navettes (toutes les 15 ou 20 min suivant la fréquentation).\nChaque festivalier se verra remettre un bracelet d'identification lors de son arrivée. Celui-ci lui permettra de circuler librement entre le festival et l'extérieur durant toute la durée de l'évènement.\nLe port du bracelet est obligatoire dans l'enceinte du festival. Toute personne ne portant pas de bracelet ou munie d'un bracelet détérioré, coupé, altéré d'une façon ou d'une autre, sera reconduite à l'entrée du festival par la sécurité. Le prix d'entrée en vigueur à ce moment-là lui sera demandé pour de nouveau entrer.\nSi, malgré sa solidité, votre bracelet se brise accidentellement, rejoingez au plus vite l'entrée où il vous sera remplacé.\nLes bracelets sont personnels et ne peuvent en aucun cas être prétés, donnés ou revendus à un tiers.\n\n### Peut-on apporter sa propre nourriture et boisson ?\nOui.\nPour sa consommation personnelle, chaque festivalier est autorisé à apporter de la nourriture et des boissons (sauf bouteilles en verre !!!)\nLa revente de nourriture, boissons ou tout autre marchandise est interdite en dehors des stands enregistrés auprès de l'organisation.\nQue manger et boire à Hadra Trance Festival ?\nEn dehors du ravitaillement que chaque festivalier est autorisé a apporter avec lui, de nombreux stands proposeront une nourriture variée : pizzas, crèpes, cuisine du monde ainsi que des boissons chaudes (café, thé, chaï, etc...). Deux bars gérés par Hadra proposeront des boissons fraiches (eau, soda, bières).\nLes festivaliers pourront aussi aller se ravitailler librement dans les commerces des environs.\n\n### Que manger et boire à Hadra Trance Festival ?\nEn dehors du ravitaillement que chaque festivalier est autorisé a apporter avec lui, de nombreux stands proposeront une nourriture variée : pizzas, crèpes, cuisine du monde ainsi que des boissons chaudes (café, thé, chaï, etc...). Deux bars gérés par Hadra proposeront des boissons fraiches (eau, soda, bières).\nLes festivaliers pourront aussi aller se ravitailler librement dans les commerces des environs.\n\n### A quel heure commence le festival ?\nLe site du festival sera ouvert au public à partir du jeudi 7 septembre à 14h.\nLa musique débutera à 20h.\n\n### Puis-je venir uniquement la première nuit ?\nOui... mais il n’existe pas de Pass 1 jour...\nLes billets pour le Hadra Trance Festival 2017 sont uniquement vendus sous la forme d’un Pass 4 jours / 3 nuits. Il est cependant possible d’acheter son Pass 4 jours et de venir sur le site du festival pour une durée réduite.\n\n### Quand se termine le festival ?\nLe festival sera cloturé dimanche à 18h. \nDans la mesure de leurs possibilités, les festivaliers seront invités à quitter le site.\nDans tous les cas, ils devront avoir impérativement quitté le site avant lundi midi au plus tard.\n\n### Où seront situés les parkings ?\nLes parkings sont situés à quelques centaines de mètres de l’entrée du festival à côté de la billetterie. Ils seront séparés en deux espaces : le premier pour les voitures, le deuxième pour les véhicules aménagés pour le camping. \n**Les parkings ne sont accessibles qu’aux festivaliers munis d’un bracelet.**\n\n### Faut-il prévoir des vêtements chauds ?\nLe festival ayant lieu en septembre et en plein air, les nuits peuvent être fraiches. Il est vivement conseillé de prévoir quelques vêtements chauds pour la nuit. Ainsi qu'une tente et un bon sac de couchage pour ceux qui souhaitent se reposer confortablement.\n\nBien qu'habituellement de courte durée, **un orage est toujours possible à cette saison.** Nous y sommes préparé, soyez-le aussi.\n\nPar ailleurs, les journées peuvent être chaudes et très ensolleillées. N'oubliez pas de prendre de la crème solaire et un chapeau.\n\n### Puis-je venir avec mon chien ?\n**NON.**\nLe site du Festival, situé au bord du “Plan d’eau de Vieure”, est formellement interdit aux animaux domestiques. \nLes équipes de sécurité seront à ce titre missionnées pour ne pas laisser entrer les véhicules transportant des chiens. Aucun cas particulier ne sera fait et il en va de même pour les organisateurs et bénévoles. \n\n**Toute personne sans exception accompagnée d'un chien (y compris les bénévoles et propriétaires de stands) se vera priée de quitter le site du festival avec son animal.** \nAucun remboursement ne sera envisageable.\n\n### Puis-je aller directement sur le site du festival en arrivant ?\n**NON.**\nIl est indispensable de passer d'abord par la billetterie pour y valider sa prévente et se voir remettre son bracelet (celui­ci permettant ensuite d'entrer et de sortir librement du festival pendant toute sa durée). \n**Toute personne non munie de son bracelet sera refoulée sur la route d'accès au festival et invitée à se présenter à la billetterie.**\n\n### Les tickets sur place sont-ils disponibles ?\n**OUI.**\nCela dépendra si l'ensemble des places auront été vendues en prévente ou non. Pour être sûr de pouvoir assister au festival, il est recommandé d'acheter sa place en prévente. \n\n### Pour tout renseignement\nMerci de contacter [hadra@hadra.net](mailto:hadra@hadra.net)\n"
+      "content": "#### 10 conseils que le Hadra people doit garder en tête !\n\n1. Venir reposé\n2. Ne pas oublier sa boîte de survie en festival (frontale, sac de couchage, gourde, crème solaire, kway, pull, chapeau/casquette/visière...)\n3. Etre curieux de l’univers du festival en allant faire un tour à la Source pour les conférences, le cinéma, la healing zone et la diversité d’ateliers proposés\n4. Faire une liste des artistes à ne pas manquer sur les 3 scènes du festival\n5. Penser à prendre de l’argent liquide (tous les stands ne sont pas équipés de machine à CB)\n6. Prendre soin de l’environnement qui vous entoure (ne jetez pas vos mégots ni détritus par terre et pensez à emmener des sacs poubelles en plus de ceux qui seront disposés sur le site)\n7. La baignade est malheureusement interdite\n8. Il faut s’hydrater, s’alimenter et se reposer, c’est important !\n9. Télécharger l’application pour suivre les horaires de passage des artistes, avoir le plan.. ou prendre un programme à l’entrée du festival\n10. Et le plus important: prendre soin de soi et des autres !\n\n## TICKETS\n\n### J’ai un problème avec la commande de mon Pass, à qui dois-je m’adresser ?\n\nEn cas de soucis avec votre Pass, vous pouvez contacter [shop@hadra.net](mailto:shop@hadra.net) en expliquant précisément le souci rencontré (en spécifiant le numéro de commande), nous vous répondrons dès que possible !\n\n### Puis-je présenter ma place sur mon téléphone ?\n\nOui, vous pouvez au choix imprimer votre E-ticket, le conserver sur votre téléphone ou noter soigneusement le numéro du ticket pour le présenter à l'entrée du festival dans le but d’obtenir votre billet définitif.\n\n### Les tickets seront-ils disponibles sur place ? Si oui à quel prix ?\n\nOui, dans la limite des stocks disponibles (ATTENTION AU SOLD OUT). Pour être sûr de pouvoir assister au festival, il est recommandé d'acheter sa place en prévente.\n\nLes préventes sont disponibles ici:\n\n[HADRA SHOP](http://www.hadra.net/tickets2018/fr/)\n\n[ELECTROTICKET](http://www.electroticket.fr/hadra-trance-festival-2018/)\n\nLes prix sur place sont les suivants:\n\nPASS 4 JOURS / 3 NUITS : 115 € (accès au site le jeudi à 14h)\nPASS 3 JOURS / 2 NUITS : 100 € (accès au site le vendredi à 16h)\nPASS 2 JOURS / 1 NUIT : 50 € (accès au site le samedi dès 16h)\n\n### Mon billet pour le festival est-il nominatif ?\n\nNon, les E-Tickets pour cet événement ne sont pas nominatifs. Le numéro du E-ticket et le code-barres garantissent l'unicité de passage lors des contrôles.\n\nATTENTION : seule la personne présentant ce ticket en premier à l’entrée sera considérée comme son titulaire légitime et sera admise à assister à l'évènement. N'ACHETEZ PAS VOTRE PRÉVENTE À UN INCONNU. VOUS N'AURIEZ AUCUNE GARANTIE DE VALIDITÉ ET L’ACCÈS A ÉVÉNEMENT POURRAIT VOUS ÊTRE REFUSÉ.\n\nLe festival Hadra ne sera pas responsable quant à l’achat d’une place frauduleuse.\nConservez votre E-ticket en lieu sûr.\n\n### Ma prévente est-elle remboursable ?\n\nNon, les préventes ne sont pas remboursables sauf annulation de l'évènement du fait de l'organisateur et en dehors d'un cas de force majeure (catastrophe naturelle, acte de terrorisme, guerre, etc...). Pour toute autre question concernant votre prévente, merci de contacter shop@hadra.net\n\n## COMMENT VENIR ?\n\nToutes les informations sont disponibles sur la page \"Comment venir ?\". [Une page de covoiturage](https://www.facebook.com/groups/108859486206264/) est également disponible sur Facebook, n’hésitez pas à y déposer votre annonce.\n\n### Des navettes sont-elles prévues pour se rendre sur le site du festival ?\n\nOui, des navettes sont mises en place pour faire les trajets entre la gare SNCF de Moulin sur allier jusqu’au site du plan d’eau de Vieure. Les trajets en bus pour les horaires suivants sont disponible à la réservation depuis notre site.\n\nALLER (Départ Moulins sur allier / gare SNCF) Jeudi 6 sept. 2018 : 13h30 Jeudi 6 sept. 2018 : 15h45 Jeudi 6 sept. 2018 : 18h45 Jeudi 6 sept. 2018 : 21h45 Vendredi 7 sept. 2018 : 13h30 Vendredi 7 sept. 2018 : 15h45 Vendredi 7 sept. 2018 : 19h45 Vendredi 7 sept. 2018 : 21h45 Samedi 8 sept. 2018 : 18h45\n\nRETOUR (Départ billetterie festival / parking) Dimanche 9 sept. 2018 : 12h00 Dimanche 9 sept. 2018 : 14h Dimanche 9 sept. 2018 : 15h30 Dimanche 9 sept. 2018 : 17h30 Lundi 10 sept. 2018 : 9h Lundi 10 sept. 2018 : 13h\n\n## ACCÈS\n\n### A quelle heure commence le festival ?\n\nLe site du festival (le camping 1 et scènes) sera ouvert au public à partir du jeudi 6 septembre à 14h. Les festivaliers souhaitant s’installer plus tôt dans la journée pourront rentrer sur le camping 2. La musique débutera à 20h avec l’ouverture du groupe Deyosan.\n\n### Puis-je venir seulement une nuit ?\n\nOui, cependant il n’existe pas de Pass 1 jour. Il est cependant possible d’acheter son Pass et de venir sur le site du festival pour une durée réduite.\n\n* Pass 4 jours / 3 nuits valable à partir du jeudi 6 à 14h,\n* Pass 3 jours/ 2 nuits valable à partir de vendredi 7 à 16h\n* Pass 2 jours/ 1 nuit valable à partir du samedi 8 à 16h.\n\n### Peut-on sortir et rentrer sur le site lors du festival ?\n\nOui. Chaque festivalier se verra remettre un bracelet d'identification lors de son arrivée. Celui-ci lui permettra de circuler librement entre le festival et l'extérieur durant toute la durée de l'évènement. Le port du bracelet est obligatoire dans l'enceinte du festival.\n\nToute personne ne portant pas de bracelet ou munie d'un bracelet détérioré, coupé, altéré d'une façon ou d'une autre, sera reconduite à l'entrée du festival par la sécurité. Le prix d'entrée en vigueur à ce moment-là lui sera demandé pour de nouveau entrer.\n\nSi, malgré sa solidité, votre bracelet se brise accidentellement, rejoignez au plus vite l'entrée où il vous sera remplacé. Les bracelets sont personnels et ne peuvent en aucun cas être prêtés, donnés ou revendus à un tiers.\n\n### Y a-t’il un accueil pour les personnes en situation de handicap ?\n\nOui, il suffit de vous manifester à l’entrée, nous vous accompagnerons jusqu’au passage prévu. Les personnes pouvant justifier d'une carte d'invalidité à 70% et d'un ticket pour le festival Hadra peuvent bénéficier d'une invitation pour son/sa accompagnateur/trice.\n\nToutes les demandes doivent se faire en amont de l'événement (au plus tard 1 semaine avant le début du festival) à l'adresse [hadra@hadra.net](mailto:hadra@hadra.net).\nNous redirigerons ensuite les personnes vers l'Association AMAAC / Access Festival (Association de Médiation pour l'Accessibilité aux Arts et à la Culture) pour accueillir au mieux les personnes en situation de handicap au sein de l'événement.\nPour toutes questions relatives à votre mobilité et aux infrastructures mises en place par l'organisation, vous pouvez contacter : [accessfestival.asso@gmail.com](mailto:accessfestival.asso@gmail.com).\n\n### Je suis mineur, puis-je avoir accès au Hadra Trance Festival ?\n\nOui, mais seulement muni d’une dérogation complétée et signée par un responsable légale (http://www.hadra.net/HTF2018/HTF2018\\_Autorisation\\_parentale.pdf) et préalablement envoyée à l’adresse [hadra@hadra.net](mailto:hadra@hadra.net). Le festival est gratuit pour les enfants de moins de 14 ans (accompagnés et sous la responsabilité de leurs parents).\n\n## INFOS GÉNÉRALES (parkings, nos animaux, point infos, baignade)\n\n### Point Info\n\nPour toutes questions concernant le festival et ses environs (tourisme, infos pratiques), rendez-vous au Stand Hadra où une équipe de bénévole pourra vous renseigner.\n\n### Où sont situés les parkings ?\n\nLes parkings sont situés à quelques centaines de mètres de l’entrée du festival à côté de la billetterie. Ils seront séparés en deux espaces : le premier pour les voitures, le deuxième pour les véhicules aménagés pour le camping.\nLes parkings ne sont accessibles qu’aux festivaliers munis d’un bracelet.\nLes bouteilles en verres sont autorisées uniquement sur le parking.\n\nNous avons le regret de vous informer une nouvelle fois, comme ça été le cas depuis les débuts du festival Hadra en 2005, que nous n'accepterons pas nos amis les animaux (ni sur les site ni sur les campings et parkings). Les tentes ne sont autorisées que sur le camping et non à côté des voitures et camions sur les parkings.\n\n### Puis-je aller directement sur le site du festival en arrivant ?\n\nNon, vous devez passer d'abord par la billetterie pour y valider votre prévente et se voir remettre son bracelet (celui-­ci permettant d'entrer et de sortir librement du festival pendant toute sa durée).\n\nToute personne non munie de son bracelet se verra refuser l’entrée sur la route d'accès au festival et sera invitée à se présenter à la billetterie.\n\n### Des lockers sont-ils mis à disposition ?\n\nNon, c’est pour cela que nous vous conseillons de ne pas apporter avec vous d’objets de valeurs.\n\n### L'électricité est-elle accessible sur le camping ?\n\nOui, mais seulement dans les sanitaires du camping.\n\n### Faut-il prévoir des vêtements chauds ?\n\nLe festival ayant lieu en septembre et en plein air, les nuits peuvent être fraîches. Il est vivement conseillé de prévoir quelques vêtements chauds pour la nuit. Ainsi qu'une tente et un bon sac de couchage pour ceux qui souhaitent se reposer confortablement.\n\nBien qu'habituellement de courte durée, un orage est toujours possible à cette saison. Nous y sommes préparés. Soyez-­le également, apportez de quoi vous protéger des possibles intempéries.\n\n### Quels sont les objets interdits sur le site du festival ?\n\n* Bouteille ou tout autre objet en verre,\n* Barbecue,\n* Arme, objet tranchant ou jugé dangereux ,\n* Feux d’artifice,\n* Tout matériel de camping doit rester dans le camping,\n* Animaux (excepté chiens guides d’aveugle).\n\n### Comment être informé des news du Hadra Trance Festival 2018 ?\n\nL’application Hadra Trance Festival 2018 est désormais en ligne sur iOS et Android. Vous pourrez y trouver les time table des trois scènes, des informations pratiques ainsi que des playlists de découvertes des artistes du Hadra Trance Festival. Vous pouvez également vous rendre sur notre site internet : www.hadratrancefestival.net ou sur la page Facebook de l’[événement par ici](https://www.facebook.com/events/1658231517569579/) !\n\n### Puis-je venir avec mon chien ?\n\nMalheureusement non. Le site du Festival, situé au bord du “Plan d’eau de Vieure”, est formellement interdit aux animaux domestiques. Les équipes de sécurité seront à ce titre missionnées pour ne pas laisser entrer les véhicules transportant des chiens. Aucun cas particulier ne sera fait et il en va de même pour les organisateurs et bénévoles.\n\nSi vous ne réussissez pas à trouver un ami ou une famille pour votre animal à quatre pattes, voici une liste de pensions à proximité du festival ici.\n\nToute personne (à l’exception des chiens guides d’aveugles) accompagnée d'un chien (y compris les bénévoles et propriétaires de stands) se verra priée de quitter le site du festival avec son animal. Aucun remboursement ne sera envisageable.\n\n\\>>>Nous avons dédié une page à ce propos, n'hésitez pas à y jeter un coup d'oeil.\n\n### A qui dois-je m’adresser si j’ai perdu ou trouvé un objet ?\n\nSi vous avez perdu ou trouvé un objet, nous vous invitons à venir vous renseigner auprès du stand Hadra. Si cet objet ne nous a pas été retourné, nous vous prions de bien vouloir attendre deux semaines (le temps du démontage) après le festival puis nous appeler ou envoyer un e-mail à [hadra@hadra.net](mailto:hadra@hadra.net) pour toute réclamation.\n\n### Quand se termine le festival ?\n\nLe festival fermera ses portes dimanche 9 septembre à 18h. Dans la mesure du possible, les festivaliers seront invités à quitter le site avant 18h. Il est cependant possible de se reposer avant de reprendre la route et repartir avant midi le lundi 10 au plus tard.\n\n### Où se trouvent les premiers secours ?\n\nTrois stands de premiers secours sont dispersés sur le site : un premier dans le camping 2, un deuxième à l’entrée du festival (avant la zone des stands de restauration) et le dernier entre la mainstage et le bar. Pour visualiser le plan du site, c'est par ici !\n\n### Où puis-je trouver un point de prévention / réduction des risques ?\n\nPour tout renseignement, doute ou question, profitez de la présence du stand de prévention et de réduction des risques qui se situe à côté du marché et du stand Hadra et point infos. Seront présentes les association suivantes : Keep smiling, Ekinox et le CAARUD de Montluçon. (cf stand prevention sur le plan du festival).\n\n## COMMODITÉS (restauration, camping)\n\n### Peut-on apporter sa propre nourriture et boisson ?\n\nOui. Pour sa consommation personnelle, chaque festivalier est autorisé à apporter de la nourriture et des boissons. La revente de nourriture, boissons ou tout autre marchandise est interdite en dehors des stands enregistrés auprès de l'organisation.\n\nATTENTION, les bouteilles en verre ne sont pas autorisées dans l'enceinte du festival !\n\n### Est-il possible de se restaurer au sein du Hadra Trance Festival ?\n\nOui. En dehors du ravitaillement que chaque festivalier est autorisé à apporter avec lui, de nombreux stands proposeront une nourriture variée : pizzas, crêpes, cuisine du monde etc. ainsi que des boissons chaudes (café, thé, chaï, etc...).\n\nDeux bars gérés par Hadra proposeront des boissons fraîches (eau, soda, bières). Une épicerie sera mise en place avec vente de produits frais (fruits et légumes de saison), viennoiserie et pain, ainsi que matériel de première nécessité. L’épicerie sera avec le Stand Hadra.\n\nLes festivaliers pourront aussi aller se ravitailler librement dans les commerces des environs.\n\nATTENTION : Les bars, épiceries et stands Hadra sont munis de TPE, nous vous encourageons cependant à retirer bien avant d’arriver à Côsne d’Allier (distributeur le plus proche du site) qui peut rapidement être hors service.\n\n### Puis-je faire du feu sur le site du festival ?\n\nNon, il est interdit de faire du feu sur l’ensemble du terrain, camping et parkings inclus !\n\n### Les commodités (douches et toilettes) sont-elles accessibles sur le site du festival et compris dans le prix du pass ?\n\nOui, l'accès au camping, aux sanitaires et aux douches est inclus dans tous les pass.\n\n## Le petit mot de fin du Hadra\n\nLe Hadra Trance Festival est une expérience à part entière, qui se doit d’être vécue par chacun.e dans la plus grande tranquillité et le respect. C’est pour cela que nous invitons notre public, nos bénévoles, nos artistes ainsi que toute l’équipe du Hadra Trance Festival au respect mutuel et à l’acceptation de l’autre. Nous mettons tout en oeuvre pour vous offrir quatre jours de dépaysement et d’aventure hors du commun, faisons en sorte, ensemble, de faire que ce voyage soit inoubliable pour chacun de nous de la meilleure façon possible.\n\nParce qu’échange, partage, humanisme et respect sont nos mots d’ordres !\n"
+    },
+    {
+      "title": "Ateliers, conférences & performances",
+      "content": "### ATELIERS\n\n#### Vendredi 7 septembre\n\n09h00 - 11h00 : Yoga\n\n11h00 - 12h30 : Balade cueillette et cuisine de plantes\n\n12h30 - 14h30 : Yoga du son\n\n14h30 - 16h00 : Balade cueillette et cuisine de plantes\n\n16h00 - 19h00 : Atelier jonglage\n\n#### Samedi 8 septembre\n\n09h00 - 11h00 : Yoga\n\n11h00 - 15h00 : Labo-fiction (by Les ateliers de l’Antémonde)\n\n15h00 - 18h00 : Atelier jonglage\n\n18h00 - 20h00 : Yoga du son\n\n#### Dimanche 9 septembre\n\n09h00 - 11h00 : Yoga\n\n11h00 - 13h00 : Initiation au Land Art (by Gaïa Garden)\n\n13h00 - 15h00 : Yoga du son\n\n15h00 - 17h00 : Atelier Do It Yourself\n\n### ESPACE CONFÉRENCES\n\n#### Jeudi 6 septembre\n\n21h00 - 03h30 : Cinéma\n\n#### Vendredi 7 septembre\n\n10h00 - 11h00 : Ateliers Do It Yourself (Tawashi, liquide vaisselle et dentifrice)\n\n11h00 - 13h00 : Arpentage des livres d’Ursula K. Le Guin\n\n13h00 - 15h00 : Prévention, médiation et bienveillance en milieu festif\n\n15h00 - 17h00 : Table ronde sur l’environnement\n\n17h00 - 21h00 : Alternatives sociales et politiques : comment construire ensemble et accueillir autrement ? (+ Projection de “Regarde Ailleurs”\n\n21h00 - 03h30 : Cinéma\n\n#### Samedi 8 septembre\n\n10h00 - 12h00 : Ateliers Do It Yourself (Tawashi, liquide vaisselle et dentifrice)\n\n12h00 - 14h00 : Féminisme, consentement, désir et plaisir\n\n14h00 - 16h00 : La place des femmes dans le milieu des musiques électroniques\n\n16h00 - 18h00 : Historique de la psytrance\n\n18h00 - 20h00 : Démonstration DJING\n\n20h00 - 21h00 : Le quizz dans la POP\n\n21h00 - 22h30 : Quel travail mérite nos vies ?\n\n22h30 - 03h30 : Cinéma\n\n#### Dimanche 9 septembre\n\n10h00 - 12h00 : Transition alimentaire et naturopathie vitaliste\n\n12h00 - 14h00 : Préparer soi-même son vélo de voyage (+ Projection de “On the Green Road)\n\n### SPECTACLES & PERFORMANCES\n\n#### DÉAMBULATION\n\n**Le BID** : Déambulation clownesque à toute heure de la journée, tous les jours…\n\n**The Bass Bin** : vous les croiserez aux abords du festival (chemin de passage, campings, billetterie…) tendez l’oreille et ouvrez bien les yeux.\n\n**Les Fêtes Arts** : Déambulation clownesque intergalactique\n\n#### Jeudi 6 septembre\n\n21h30 - 01h00 - Zone feu animée par la Hadra Team\n\n#### Vendredi 7 septembre\n\n18h30 - 22h00 : Spectacle aérien par Zéro Point Cirque\n\n21h30 : Fuego Loko in Fluo\n\n22h00 - 01h00 : Zone feu animée par la team hadra\n\n#### Samedi 8 septembre\n\n17h00 - 20h00 : Spectacle aérien par Zéro Point Cirque\n\n22h30 : Spectacle Paztec par Fuego Loko\n\n### AUTOUR DE LA SOURCE\n\nTout le long du festival en journée :\n\nAnimation de jeux en bois\n\nLibrairie bandes dessinées\n\nRétro-Gaming\n\nZone de sensibilisation à l’environnement & Zone de gratuité\n\n### ZONE BIEN ÊTRE\n\n**Vitalizer healing project** : Dôme géodésique - Soins énergétique / Tous les jours\n\n**Crystal Healing & Louise** : Massage en déambulation / Tous les jours\n\n**Sylvie** : Massage sur chaise et hypnose, de 14h à 18h, du vendredi au dimanche\n"
     },
     {
       "title": "Chiens interdits",
@@ -296,21 +299,6 @@
       "facebook": "https://www.facebook.com/DjBoomShankarBMSS/",
       "photo": "images/artists/photo-53.jpg",
       "banner": "images/artists/banner-53.jpg"
-    },
-    {
-      "id": "122",
-      "name": "Bunkle",
-      "bio": {
-        "en": "EPK can be found here. http://wonkay.co.uk/epk/bunkle.html<br><br>Founder of Wonkay Records, this Genre Bashing Bad Boy has been forcing dance floors into movement since 2000 at festival and clubs through out the UK and Europe as well as London’s underground squat scene. He has always been pushing boundaries looking for darker sounds with high intensity. Smashing steppers was his initial flavour which has finally evolved to what his sets are today pushing the finest in Neurofunk, DnB and Footwork."
-      },
-      "country": "GR",
-      "label": "Wonk#ay Records",
-      "website": "https://wonkay.co.uk/artists/bunkle.html",
-      "mixcloud": null,
-      "soundcloud": "https://www.soundcloud.com/bunkle-music",
-      "facebook": "https://www.facebook.com/bunkled/",
-      "photo": "images/artists/photo-122.jpg",
-      "banner": "images/artists/banner-122.jpg"
     },
     {
       "id": "45",
@@ -978,21 +966,6 @@
       "facebook": "https://www.facebook.com/jezbuddha/",
       "photo": "images/artists/photo-89.jpg",
       "banner": "images/artists/banner-89.jpg"
-    },
-    {
-      "id": "142",
-      "name": "Liisbe",
-      "bio": {
-        "fr": "Amoureux du sample, LIISBE enrichit son univers au gré de ses rencontres musicales et de ses voyages. Souvent teintées d’une douce mélancolie, ses prods aux basses prenantes et aux drums variant de l’électronique au hiphop nous emmène vers des paysages urbains autant que désertique. Son premier EP en création nous promet de belles envolées."
-      },
-      "country": "FR",
-      "label": "Back To Paradise Records",
-      "website": null,
-      "mixcloud": null,
-      "soundcloud": "https://www.soundcloud.com/liisbe",
-      "facebook": "https://www.facebook.com/liisbea/",
-      "photo": "images/artists/photo-142.jpg",
-      "banner": "images/artists/banner-142.jpg"
     },
     {
       "id": "128",
@@ -1800,174 +1773,174 @@
         {
           "type": "dj",
           "start": "2018-09-06T20:30:00.000Z",
-          "end": "2018-09-06T21:30:00.000Z",
+          "end": "2018-09-06T22:00:00.000Z",
           "artistId": "68"
         },
         {
           "type": "live",
-          "start": "2018-09-06T21:30:00.000Z",
-          "end": "2018-09-06T22:30:00.000Z",
+          "start": "2018-09-06T22:00:00.000Z",
+          "end": "2018-09-06T23:00:00.000Z",
           "artistId": "105"
         },
         {
           "type": "live",
-          "start": "2018-09-06T22:30:00.000Z",
-          "end": "2018-09-06T23:30:00.000Z",
+          "start": "2018-09-06T23:00:00.000Z",
+          "end": "2018-09-07T00:00:00.000Z",
           "artistId": "66"
         },
         {
           "type": "dj",
-          "start": "2018-09-06T23:30:00.000Z",
-          "end": "2018-09-07T01:00:00.000Z",
+          "start": "2018-09-07T00:00:00.000Z",
+          "end": "2018-09-07T01:30:00.000Z",
           "artistId": "42"
         },
         {
           "type": "dj",
-          "start": "2018-09-07T01:00:00.000Z",
-          "end": "2018-09-07T02:30:00.000Z",
+          "start": "2018-09-07T01:30:00.000Z",
+          "end": "2018-09-07T03:00:00.000Z",
           "artistId": "47"
         },
         {
           "type": "live",
-          "start": "2018-09-07T02:30:00.000Z",
-          "end": "2018-09-07T03:30:00.000Z",
+          "start": "2018-09-07T03:00:00.000Z",
+          "end": "2018-09-07T04:00:00.000Z",
           "artistId": "65"
         },
         {
           "type": "live",
-          "start": "2018-09-07T03:30:00.000Z",
-          "end": "2018-09-07T04:30:00.000Z",
+          "start": "2018-09-07T04:00:00.000Z",
+          "end": "2018-09-07T05:00:00.000Z",
           "artistId": "69"
         },
         {
           "type": "dj",
-          "start": "2018-09-07T04:30:00.000Z",
-          "end": "2018-09-07T06:00:00.000Z",
+          "start": "2018-09-07T05:00:00.000Z",
+          "end": "2018-09-07T06:30:00.000Z",
           "artistId": "82"
         },
         {
           "type": "dj",
-          "start": "2018-09-07T06:00:00.000Z",
-          "end": "2018-09-07T07:30:00.000Z",
+          "start": "2018-09-07T06:30:00.000Z",
+          "end": "2018-09-07T08:00:00.000Z",
           "artistId": "106"
         },
         {
           "type": "dj",
-          "start": "2018-09-07T07:30:00.000Z",
-          "end": "2018-09-07T09:00:00.000Z",
+          "start": "2018-09-07T08:00:00.000Z",
+          "end": "2018-09-07T09:30:00.000Z",
           "artistId": "72"
         },
         {
           "type": "dj",
-          "start": "2018-09-07T09:00:00.000Z",
-          "end": "2018-09-07T10:30:00.000Z",
+          "start": "2018-09-07T09:30:00.000Z",
+          "end": "2018-09-07T11:00:00.000Z",
           "artistId": "109"
         },
         {
           "type": "dj",
-          "start": "2018-09-07T10:30:00.000Z",
-          "end": "2018-09-07T12:00:00.000Z",
+          "start": "2018-09-07T11:00:00.000Z",
+          "end": "2018-09-07T12:30:00.000Z",
           "artistId": "108"
         },
         {
           "type": "live",
-          "start": "2018-09-07T12:00:00.000Z",
-          "end": "2018-09-07T13:00:00.000Z",
+          "start": "2018-09-07T12:30:00.000Z",
+          "end": "2018-09-07T13:30:00.000Z",
           "artistId": "45"
         },
         {
           "type": "dj",
-          "start": "2018-09-07T13:00:00.000Z",
-          "end": "2018-09-07T14:30:00.000Z",
+          "start": "2018-09-07T13:30:00.000Z",
+          "end": "2018-09-07T15:00:00.000Z",
           "artistId": "9"
         },
         {
           "type": "dj",
-          "start": "2018-09-07T14:30:00.000Z",
-          "end": "2018-09-07T16:00:00.000Z",
+          "start": "2018-09-07T15:00:00.000Z",
+          "end": "2018-09-07T16:30:00.000Z",
           "artistId": "10"
         },
         {
           "type": "dj",
-          "start": "2018-09-07T16:00:00.000Z",
-          "end": "2018-09-07T17:00:00.000Z",
+          "start": "2018-09-07T16:30:00.000Z",
+          "end": "2018-09-07T17:30:00.000Z",
           "artistId": "81"
         },
         {
           "type": "live",
-          "start": "2018-09-07T17:00:00.000Z",
-          "end": "2018-09-07T18:00:00.000Z",
+          "start": "2018-09-07T17:30:00.000Z",
+          "end": "2018-09-07T18:30:00.000Z",
           "artistId": "32"
         },
         {
           "type": "live",
-          "start": "2018-09-07T18:00:00.000Z",
-          "end": "2018-09-07T19:00:00.000Z",
+          "start": "2018-09-07T18:30:00.000Z",
+          "end": "2018-09-07T19:30:00.000Z",
           "artistId": "44"
         },
         {
           "type": "live",
-          "start": "2018-09-07T19:00:00.000Z",
-          "end": "2018-09-07T20:00:00.000Z",
+          "start": "2018-09-07T19:30:00.000Z",
+          "end": "2018-09-07T20:30:00.000Z",
           "artistId": "70"
         },
         {
-          "type": "dj",
-          "start": "2018-09-07T20:00:00.000Z",
+          "type": "live",
+          "start": "2018-09-07T20:30:00.000Z",
           "end": "2018-09-07T21:30:00.000Z",
-          "artistId": "67"
+          "artistId": "39"
         },
         {
           "type": "live",
           "start": "2018-09-07T21:30:00.000Z",
           "end": "2018-09-07T22:30:00.000Z",
-          "artistId": "39"
+          "artistId": "57"
         },
         {
           "type": "live",
           "start": "2018-09-07T22:30:00.000Z",
           "end": "2018-09-07T23:30:00.000Z",
-          "artistId": "57"
-        },
-        {
-          "type": "live",
-          "start": "2018-09-07T23:30:00.000Z",
-          "end": "2018-09-08T00:30:00.000Z",
           "artistId": "46"
         },
         {
           "type": "live",
-          "start": "2018-09-08T00:30:00.000Z",
-          "end": "2018-09-08T01:30:00.000Z",
+          "start": "2018-09-07T23:30:00.000Z",
+          "end": "2018-09-08T00:45:00.000Z",
           "artistId": "48"
         },
         {
           "type": "live",
-          "start": "2018-09-08T01:30:00.000Z",
-          "end": "2018-09-08T02:30:00.000Z",
+          "start": "2018-09-08T00:45:00.000Z",
+          "end": "2018-09-08T02:00:00.000Z",
           "artistId": "62"
         },
         {
           "type": "live",
-          "start": "2018-09-08T02:30:00.000Z",
-          "end": "2018-09-08T03:30:00.000Z",
+          "start": "2018-09-08T02:00:00.000Z",
+          "end": "2018-09-08T03:00:00.000Z",
+          "artistId": "61"
+        },
+        {
+          "type": "live",
+          "start": "2018-09-08T03:00:00.000Z",
+          "end": "2018-09-08T04:00:00.000Z",
           "artistId": "128"
         },
         {
           "type": "dj",
-          "start": "2018-09-08T03:30:00.000Z",
-          "end": "2018-09-08T05:00:00.000Z",
+          "start": "2018-09-08T04:00:00.000Z",
+          "end": "2018-09-08T05:30:00.000Z",
           "artistId": "40"
         },
         {
           "type": "dj",
-          "start": "2018-09-08T05:00:00.000Z",
-          "end": "2018-09-08T06:00:00.000Z",
+          "start": "2018-09-08T05:30:00.000Z",
+          "end": "2018-09-08T06:30:00.000Z",
           "artistId": "73"
         },
         {
           "type": "live",
-          "start": "2018-09-08T06:00:00.000Z",
+          "start": "2018-09-08T06:30:00.000Z",
           "end": "2018-09-08T07:30:00.000Z",
           "artistId": "59"
         },
@@ -2005,7 +1978,7 @@
           "type": "live",
           "start": "2018-09-08T13:00:00.000Z",
           "end": "2018-09-08T14:00:00.000Z",
-          "artistId": "7"
+          "artistId": "36"
         },
         {
           "type": "live",
@@ -2017,7 +1990,7 @@
           "type": "live",
           "start": "2018-09-08T15:00:00.000Z",
           "end": "2018-09-08T16:00:00.000Z",
-          "artistId": "36"
+          "artistId": "7"
         },
         {
           "type": "dj",
@@ -2028,90 +2001,90 @@
         {
           "type": "live",
           "start": "2018-09-08T17:30:00.000Z",
-          "end": "2018-09-08T18:30:00.000Z",
+          "end": "2018-09-08T18:50:00.000Z",
           "artistId": "34"
         },
         {
           "type": "live",
-          "start": "2018-09-08T18:30:00.000Z",
-          "end": "2018-09-08T20:00:00.000Z",
+          "start": "2018-09-08T18:50:00.000Z",
+          "end": "2018-09-08T20:10:00.000Z",
           "artistId": "58"
         },
         {
+          "type": "dj",
+          "start": "2018-09-08T20:10:00.000Z",
+          "end": "2018-09-08T21:40:00.000Z",
+          "artistId": "67"
+        },
+        {
           "type": "live",
-          "start": "2018-09-08T20:00:00.000Z",
-          "end": "2018-09-08T21:30:00.000Z",
+          "start": "2018-09-08T21:40:00.000Z",
+          "end": "2018-09-08T23:00:00.000Z",
           "artistId": "38"
         },
         {
           "type": "live",
-          "start": "2018-09-08T21:30:00.000Z",
-          "end": "2018-09-08T22:30:00.000Z",
-          "artistId": "61"
-        },
-        {
-          "type": "live",
-          "start": "2018-09-08T22:30:00.000Z",
-          "end": "2018-09-08T23:30:00.000Z",
+          "start": "2018-09-08T23:00:00.000Z",
+          "end": "2018-09-09T00:00:00.000Z",
           "artistId": "91"
         },
         {
           "type": "live",
-          "start": "2018-09-08T23:30:00.000Z",
-          "end": "2018-09-09T00:30:00.000Z",
+          "start": "2018-09-09T00:00:00.000Z",
+          "end": "2018-09-09T01:00:00.000Z",
           "artistId": "56"
         },
         {
           "type": "live",
-          "start": "2018-09-09T00:30:00.000Z",
-          "end": "2018-09-09T02:00:00.000Z",
+          "start": "2018-09-09T01:00:00.000Z",
+          "end": "2018-09-09T02:30:00.000Z",
           "artistId": "55"
         },
         {
           "type": "dj",
-          "start": "2018-09-09T02:00:00.000Z",
-          "end": "2018-09-09T03:30:00.000Z",
+          "start": "2018-09-09T02:30:00.000Z",
+          "end": "2018-09-09T04:00:00.000Z",
           "artistId": "54"
         },
         {
           "type": "dj",
-          "start": "2018-09-09T03:30:00.000Z",
-          "end": "2018-09-09T05:00:00.000Z",
+          "start": "2018-09-09T04:00:00.000Z",
+          "end": "2018-09-09T05:30:00.000Z",
           "artistId": "31"
         },
         {
           "type": "live",
-          "start": "2018-09-09T05:00:00.000Z",
-          "end": "2018-09-09T06:00:00.000Z",
+          "start": "2018-09-09T05:30:00.000Z",
+          "end": "2018-09-09T06:30:00.000Z",
           "artistId": "41"
         },
         {
           "type": "live",
-          "start": "2018-09-09T06:00:00.000Z",
+          "start": "2018-09-09T06:30:00.000Z",
           "end": "2018-09-09T07:30:00.000Z",
           "artistId": "60"
         },
         {
           "type": "dj",
           "start": "2018-09-09T07:30:00.000Z",
-          "end": "2018-09-09T09:00:00.000Z",
+          "end": "2018-09-09T09:30:00.000Z",
           "artistId": "53"
         },
         {
           "type": "live",
-          "start": "2018-09-09T09:00:00.000Z",
-          "end": "2018-09-09T10:30:00.000Z",
+          "start": "2018-09-09T09:30:00.000Z",
+          "end": "2018-09-09T11:00:00.000Z",
           "artistId": "89"
         },
         {
           "type": "dj",
-          "start": "2018-09-09T10:30:00.000Z",
-          "end": "2018-09-09T12:00:00.000Z",
+          "start": "2018-09-09T11:00:00.000Z",
+          "end": "2018-09-09T12:30:00.000Z",
           "artistId": "112"
         },
         {
           "type": "live",
-          "start": "2018-09-09T12:00:00.000Z",
+          "start": "2018-09-09T12:30:00.000Z",
           "end": "2018-09-09T13:30:00.000Z",
           "artistId": "6"
         },
@@ -2340,12 +2313,6 @@
         {
           "type": "break",
           "start": "2018-09-09T14:00:00.000Z",
-          "end": "2018-09-09T16:00:00.000Z",
-          "artistId": -1
-        },
-        {
-          "type": "break",
-          "start": "2018-09-09T16:00:00.000Z",
           "end": "2018-09-09T19:00:00.000Z",
           "artistId": -1
         }
@@ -2425,7 +2392,7 @@
           "type": "live",
           "start": "2018-09-07T17:00:00.000Z",
           "end": "2018-09-07T18:30:00.000Z",
-          "artistId": "50"
+          "artistId": "24"
         },
         {
           "type": "live",
@@ -2448,12 +2415,12 @@
         {
           "type": "dj",
           "start": "2018-09-08T00:00:00.000Z",
-          "end": "2018-09-08T02:30:00.000Z",
+          "end": "2018-09-08T02:00:00.000Z",
           "artistId": "121"
         },
         {
           "type": "dj",
-          "start": "2018-09-08T02:30:00.000Z",
+          "start": "2018-09-08T02:00:00.000Z",
           "end": "2018-09-08T05:00:00.000Z",
           "artistId": "14"
         },
@@ -2515,7 +2482,7 @@
           "type": "live",
           "start": "2018-09-09T02:30:00.000Z",
           "end": "2018-09-09T04:00:00.000Z",
-          "artistId": "24"
+          "artistId": "50"
         },
         {
           "type": "live",
@@ -2542,10 +2509,10 @@
           "artistId": "100"
         },
         {
-          "type": "live",
+          "type": "break",
           "start": "2018-09-09T11:00:00.000Z",
-          "end": "2018-09-09T12:30:00.000Z",
-          "artistId": "142"
+          "end": "2018-09-09T19:00:00.000Z",
+          "artistId": -1
         }
       ]
     }

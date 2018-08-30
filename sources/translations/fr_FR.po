@@ -170,3 +170,9 @@ msgstr "Préventes"
 
 msgid "Photos"
 msgstr "Photos"
+
+msgid "Overview"
+msgstr "Général"
+
+msgid "Details"
+msgstr "Détails"

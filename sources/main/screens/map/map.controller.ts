@@ -3,6 +3,8 @@ import {ILogger, LoggerService} from 'helpers/logger/logger';
 
 export class MapController {
 
+  showDetailedMap = false;
+
   private logger: ILogger;
 
   constructor(logger: LoggerService) {

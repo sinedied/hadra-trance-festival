@@ -148,6 +148,11 @@
   @include button-clear($twitter-blue);
 }
 
+.button.button-instagram {
+  $instagram-pink: #de104c;
+  @include button-clear($instagram-pink);
+}
+
 .button.button-soundcloud {
   $soundcloud-orange: #ff7700;
   @include button-clear($soundcloud-orange);

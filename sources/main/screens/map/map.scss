@@ -1,6 +1,17 @@
 // Encapsulate component style into its own "namespace "to avoid naming and css collision
 .map-screen {
 
+  .bar-subheader {
+    padding: 0;
+  }
+
+  .button-bar > .button {
+    // Restore standard sizes
+    line-height: 42px;
+    border-radius: 0;
+    border: 0;
+  }
+
   .content-full .scroll {
     height: 100%;
   }

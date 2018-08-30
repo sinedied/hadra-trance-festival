@@ -9,6 +9,7 @@ export interface IFestival {
     facebook?: string;
     website?: string;
     twitter?: string;
+    instagram?: string;
     soundcloud?: string;
     youtube?: string;
   };
@@ -23,6 +24,7 @@ export interface IFestival {
   featuredPhotos: string[];
   featuredVideo: string;
   map?: string;
+  detailedMap?: string;
   infos: IInfoPage[];
   showLineup: boolean;
   lineup: IScene[];

@@ -1,9 +1,17 @@
 <ion-view id="map-screen" class="map-screen">
   <ion-nav-title>{{viewTitle}}</ion-nav-title>
+  <div class="bar bar-subheader" ng-if="festival.map && festival.detailedMap">
+    <div class="button-bar">
+      <a class="button button-positive" ng-click="vm.showDetailedMap = false"
+         ng-class="{ active: !vm.showDetailedMap }" translate>Overview</a>
+      <a class="button button-positive" ng-click="vm.showDetailedMap = true"
+         ng-class="{ active: vm.showDetailedMap }" translate>Details</a>
+    </div>
+  </div>
   <ion-content scroll="false" class="dark-bg content-full">
     <ion-scroll class="full" direction="xy" scrollbar-x="false" scrollbar-y="false" overflow-scroll="false"
                 zooming="true" min-zoom="1" locking="false" ng-if="festival.map && festival.map !== 'soon'">
-      <img class="block-vertical-center" ng-src="{{festival.map}}" alt=""/>
+      <img class="block-vertical-center" ng-src="{{vm.showDetailedMap ? festival.detailedMap : festival.map}}" alt=""/>
     </ion-scroll>
     <div ng-if="festival.map && festival.map === 'soon'"
          class="block-vertical-center-absolute full-width text-center padding">
