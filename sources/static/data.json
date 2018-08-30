@@ -1,5 +1,5 @@
 {
-  "version": 2018.0,
+  "version": 2018.3,
   "utcOffset": 2,
   "social": {
     "facebook": "https://www.facebook.com/hadratrancefestival",
@@ -14,7 +14,6 @@
   "playerShop": "http://www.hadra.net/shop/new/category.php?id_category=16",
   "buyMusic": "http://www.hadra.net/shop/new/category.php?id_category=16",
   "buyClothes": "http://www.hadra.net/shop/new/category.php?id_category=13",
-  "buyTickets": "http://www.hadra.net/tickets2018/fr/",
   "featuredArtistIds": [
     "83",
     "97",
