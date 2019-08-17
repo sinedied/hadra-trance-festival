@@ -9,6 +9,10 @@
     "start": "gulp serve",
     "ios": "gulp run:ios",
     "android": "gulp run:android",
+    "build:android": "gulp build:android",
+    "build:ios": "gulp build:ios",
+    "release:android": "gulp release:android",
+    "release:ios": "gulp release:ios",
     "test": "gulp test && gulp build",
     "deploy": "./scripts/deploy-demo.sh",
     "prepare": "gulp cordova:prepare && gulp cordova:prepare --fast --nofetch"
