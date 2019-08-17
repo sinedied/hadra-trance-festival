@@ -44,6 +44,10 @@ export class FestivalService {
       .then((response: any) => {
         let update = angular.fromJson(response.data);
 
+        if (typeof update.version === 'string') {
+          update.version = parseFloat(update.version);
+        }
+
         if (update.version > this.festival.version) {
           this.logger.log('Newer data version available!');
           this.startUpdate(update.version, update.url);
