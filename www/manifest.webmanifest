@@ -1,0 +1,17 @@
+{
+  "name": "Hadra Trance Festival",
+  "short_name": "Hadra Festival",
+  "theme_color": "#3A387F",
+  "background_color": "#39377d",
+  "display": "standalone",
+  "orientation": "any",
+  "start_url": "./",
+  "scope": "./",
+  "icons": [
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

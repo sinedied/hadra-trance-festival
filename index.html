@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hadra Trance Festival app demo</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+  <style>
+    .phone {
+      position: relative;
+      background: #111;
+      border-radius: 55px;
+      box-shadow: 0px 0px 0px 2px #aaa;
+      margin: 20px auto;
+      width: 320px;
+      height: 568px;
+      padding: 105px 25px;
+    }
+    .phone::before {
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 10px;
+      border-radius: 10px;
+      left: 50%;
+      margin-left: -30px;
+      background: #333;
+      top: 50px;
+    }
+    .phone::after {
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      left: 50%;
+      margin-left: -30px;
+      bottom: 20px;
+      border-radius: 100%;
+      box-sizing: border-box;
+      border: 5px solid #333;
+    }
+    .phone iframe {
+      display: block;
+      width: 320px;
+      height: 568px;
+      overflow: hidden;
+    }
+    .links {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="phone">
+    <iframe frameborder="0" scrolling="no" src="www/index.html"></iframe>
+  </div>
+  <!--<div class="links">
+    <b>Android app:</b> <a href="android-armv7-debug.apk">armv7</a> | <a href="android-x86-debug.apk">x86</a>
+  </div>-->
+</body>
+</html>
